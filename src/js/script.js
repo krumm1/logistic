@@ -470,29 +470,30 @@ function initTeamSlider() {
         leftContainerPosition = $slider.offset().left;
 
     $slider.slick({
-        slidesToShow: 7,
+        // slidesToShow: 7,
         swipe: false,
         nextArrow: $(".team-slider-button.next"),
         prevArrow: $(".team-slider-button.prev"),
         // mobileFirst: true,
+        variableWidth: true,
         responsive: [
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 5
+                    // slidesToShow: 5
                 }
             },
             {
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 4,
+                    // slidesToShow: 4,
                     swipe: true
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2,
+                    // slidesToShow: 2,
                     swipe: true
                 }
             }
