@@ -274,7 +274,7 @@ body
 	&__main-description
 		position: relative
 		z-index: 3
-		min-height: 176px
+		min-height: 220px
 	&__block-title
 		max-width: 722px
 		margin-bottom: 20px
@@ -318,6 +318,40 @@ body
 			& .col-10
 				display: flex
 				justify-content: center
+
+	&-slider-btn-block
+		margin-top: 30px
+		display: none
+		justify-content: center
+		align-items: center
+		
+		&-wrapper
+			display: flex
+			justify-content: center
+			align-items: center
+	&__back-btn, &__forward-btn
+		position: relative
+		font-family: $title-font
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		margin: 0 30px
+	&__back-btn
+		&::after
+			content: ""
+			position: absolute
+			right: -55px
+			top: 50%
+			width: 50px
+			height: 1px
+			background: white
+	&__link-btn
+		color: #FFFFFF
+		text-decoration: none
+		transition: 0.3s linear
+		cursor: pointer
+		&:hover
+			color: #ffffff70
 
 	&__first-slider
 		display: flex
@@ -468,6 +502,8 @@ body
 	display: flex
 	justify-content: flex-end
 	align-items: center
+	&.bottom
+            display: none
 	&-wrapper
 		display: flex
 		justify-content: center
@@ -561,6 +597,8 @@ body
 
 .news__description-one-news
 	display: none
+	&-image
+		max-width: 330px
 
 .news__more-details-block
 	display: flex

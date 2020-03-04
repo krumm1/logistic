@@ -34,8 +34,9 @@ $('.projects__slider-wrapper').slick({
     infinite: true,
     speed: 500,
     fade: true,
-    cssEase: 'linear',
-    arrows: false
+    cssEase: 'linear',    
+    nextArrow: $(".projects__forward-btn"),
+    prevArrow: $(".projects__back-btn")
 });
 
 $('.projects__navigation-item-link').click(function (event) {
