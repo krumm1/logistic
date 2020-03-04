@@ -1,0 +1,76 @@
+// .fixed-contacts-btns
+//     position: fixed
+//     top: 50%
+//     right: 10px
+//     z-index: 3
+//     height: 
+//     transform: translateY(-50%)
+//     &__inner
+//         display: flex
+//         justify-content: center
+//         flex-wrap: nowrap
+//         flex-direction: column
+//     &__btn-item
+//         position: relative
+//         border: 1px solid white
+//         display: inline-block
+//         padding: 10px 0
+//         font-family: $title-font
+//         font-size: 16px
+//         line-height: 33px
+//         text-transform: uppercase
+//         color: #FFFFFF
+//         cursor: pointer
+//         text-decoration: none
+//         margin: 10px 0
+//         writing-mode: vertical-rl
+//         transform: rotate(180deg)
+//         &:hover
+//             color: $orange-color
+//             border-color: $orange-color
+//         &.email
+//             span
+//                 display: inline-block
+//                 background-image: url('../img/icons/mail.svg')
+//                 width: 20px
+//                 height: 16px
+//                 transform: rotate(90deg)
+//                 margin-bottom: 10px
+//             &:hover span                
+//                 background-image: url('../img/icons/mail-orange.svg')
+
+.fixed-contacts-btns
+    position: fixed
+    right: 10px
+    top: 50%
+    z-index: 4
+    transform: rotate(-90deg)
+    max-width: 33px
+    &__inner
+        display: flex
+        justify-content: center
+        align-items: center
+    &__btn-item
+        font-family: $title-font
+        font-size: 16px
+        text-transform: uppercase
+        display: flex
+        align-items: center
+        border: 1px solid white
+        text-decoration: none
+        color: white
+        line-height: 33px
+        margin: 0 10px
+        padding: 0 10px
+        &:hover
+            color: $orange-color
+            border-color: $orange-color
+        &.email
+            span
+                display: inline-block
+                background-image: url('../img/icons/mail.svg')
+                width: 20px
+                height: 16px
+                margin-right: 10px
+            &:hover span                
+                background-image: url('../img/icons/mail-orange.svg')

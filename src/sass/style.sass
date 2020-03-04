@@ -1,0 +1,794 @@
+@import 'vars'
+	
+*
+	box-sizing: border-box
+
+html
+	font-size: 10px
+body
+	margin: 0
+	overflow-x: hidden
+	background: #010125
+	font-family: $text-font
+	&.overflow
+		overflow: hidden
+.relative
+	position: relative
+	
+
+@import 'popups'
+
+.content
+	position: relative
+
+.content.active
+	filter: blur(3px)
+
+.header
+	padding: 40px 15px
+	position: absolute
+	top: 0
+	width: 100%
+	display: flex
+	justify-content: center
+	z-index: 10
+	&_bottom
+		position: relative
+		padding: 0 15px 120px
+		z-index: 0
+		.menu
+			border: 0
+			border-top: 1px solid #fff
+			padding: 10px 0 0
+		.created-by
+			position: absolute
+			bottom: 60px
+			left: 50%
+			transform: translate(-50%, 0)
+			font-size: 12px
+			font-family: $title-font
+			color: #c4c4c4
+			text-decoration: none
+
+.menu
+	display: flex
+	justify-content: space-between
+	border-bottom: 1px solid white
+	padding: 0 0 10px 0
+
+.menu__first-section	
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.menu__logo
+	width: 245px
+	padding-right: 25px
+	&-img
+		max-width: 100%
+
+.menu__tablet-logo-block, .menu__tablet-footer
+	display: none
+
+.menu__tablet-close-button
+	display: none
+
+.menu__nav-list
+	margin: 0
+	padding: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	list-style: none
+
+.menu__nav-item
+	padding: 0 25px
+	transition: 0.3s linear
+
+.menu__nav-item:hover
+	opacity: 0.5
+
+.menu__nav-link
+	font-family: $title-font
+	font-size: 16px
+	line-height: 16px
+	color: #FFFFFF
+	text-decoration: none
+
+.menu__second-section
+	display: flex
+	justify-content: center
+	align-items: center
+
+.menu__languages-list
+	margin: 0
+	padding: 0
+	list-style: none
+	display: flex
+	justify-content: space-between
+
+.menu__language-item
+	padding: 0 10px
+	transition: 0.3s linear
+
+.menu__language-item:hover, .menu__language-item.active
+	opacity: .5
+
+.menu__language-link
+	text-decoration: none
+	font-family: $title-font
+	font-size: 16px
+	line-height: 16px
+	color: #FFFFFF
+	transition: 0.3s linear
+
+.menu__contacts-block
+	display: flex
+	flex-direction: column
+	align-items: center
+	margin: 0 0 0 50px
+
+.menu__phone-block
+	margin-bottom: 14px
+
+.menu__phone-link
+	font-family: $text-font
+	font-size: 20px
+	line-height: 30px
+	color: #EC4E20
+	text-decoration: none
+	text-transform: uppercase
+
+.menu__back-call-link
+	font-family: $title-font
+	font-size: 16px
+	line-height: 16px
+	color: #FFFFFF
+	text-decoration: none
+	transition: 0.3s linear
+	&:hover
+		opacity: 0.5
+.menu__burger-block
+	display: none
+
+.projects
+	&__wrapper
+		padding-top: 80px
+	&__title-wrapper
+		margin-bottom: 40px
+	&__main
+		position: relative
+		z-index: 1
+	// & .slick-dots
+	// 	bottom: 100px
+	// 	li			
+	// 		button
+	// 			width: 44px
+	// 			height: 44px
+	// 			border: 1px solid white
+	// 			border-radius: 50%
+	// 			position: relative
+	// 		&::before
+	// 			content: ""
+	// 			display: block
+	// 			top: 50%
+	// 			left: 50%
+	// 			width: 34px
+	// 			height: 34px
+	// 			border: 1px solid white
+	// 			border-radius: 50%
+	// 			transform: translate(-50%, -50%)
+	// 		// &.slick-active
+			// 	button
+			// 		&::before
+			// 			background: white
+	&__navigation-wrapper
+		position: absolute
+		bottom: 20px
+		left: 50%
+		transform: translateX(-50%)
+		z-index: 3
+		& .row
+			justify-content: center
+	&__navigation-bar
+		display: flex
+		justify-content: space-around
+		position: relative
+		&::after
+			content: ""
+			z-index: 0
+			position: absolute
+			left: 0
+			top: 21px
+			width: 100%
+			height: 1px
+			background: white
+			opacity: 0.5
+	&__navigation-item
+		position: 
+		z-index: 1
+		max-width: 250px
+		font-family: $text-font
+		font-weight: 300
+		font-size: 20px
+		line-height: 30px
+		text-transform: uppercase
+		color: #FFFFFF
+		&.active .projects__navigation-btn			
+			background: white
+		&.active .projects__navigation-text-block
+			opacity: 1
+	&__navigation-item-link
+		text-decoration: none
+		color: inherit
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__navigation-btn-block
+		width: 44px
+		height: 44px
+		padding: 3px
+		border: 1px solid white
+		border-radius: 50%
+		margin-bottom: 30px
+		cursor: pointer
+		display: flex
+		justify-content: center
+		align-items: center
+	&__navigation-btn
+		display: inline-block
+		width: 100%
+		height: 100%
+		border: 1px solid white
+		border-radius: 50%
+		transition: 0.3s linear
+		cursor: pointer
+		outline: none
+		background: transparent
+		&:hover
+			background: white
+	&__navigation-text-block
+		text-align: center
+		opacity: 0.5
+		transition: 0.3s linear
+	&__main_wrapper
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-position: top
+		background-size: cover
+		padding-top: 145px
+		padding-bottom: 235px
+		transition: 0.5s linear
+		&::after
+			content: ""
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background:  #01012581
+	&__main-description
+		position: relative
+		z-index: 3
+		min-height: 176px
+	&__block-title
+		max-width: 722px
+		margin-bottom: 20px
+		font-family: $title-font
+		font-style: normal
+		font-weight: bold
+		font-size: 65px
+		line-height: 70px
+		color: #FFFFFF
+	&__more-details-block
+		display: flex
+		justify-content: flex-start
+		align-items: center
+	&__more-details-link
+		position: relative
+		font-family: $title-font
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		color: #FFFFFF
+		text-decoration: none
+		outline: none
+		display: inline-flex
+		transition: 0.3s linear
+		&:hover
+			opacity: 0.5
+		&::before
+			content: ""
+			position: absolute
+			width: 64px
+			height: 1px
+			background: white
+			top: 50%
+			right: -74px
+	&__popup-tasks-text, &__popup-difficulties-text, &__popup-result-text
+		display: none
+	&__slider-container
+		margin-top: 85px
+		& .row
+			justify-content: center
+			& .col-10
+				display: flex
+				justify-content: center
+
+	&__first-slider
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__slider-button-container
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 44px
+		height: 44px
+		padding: 5px
+		border: 1px solid white
+		border-radius: 50%
+	&__slider-button_link
+		display: inline-block
+		width: 100%
+		height: 100%
+		border-radius: 50%
+		border: 1px solid white
+		transition: 0.3s linear
+		&:hover			
+			background: white
+	&__slider-title
+		font-family: $text-font
+		font-size: 20px
+		line-height: 30px
+		text-transform: uppercase
+		color: #FFFFFF
+
+
+.start-work
+	padding: 0 15px
+	background: #010125
+	height: 100%
+
+.start-work__title
+	font-family: $title-font
+	font-style: normal
+	font-weight: bold
+	font-size: 85px
+	line-height: 85px
+	text-align: center
+	color: #ffffff50
+	margin-bottom: 46px
+	margin-top: 100px
+	opacity: 0
+
+.start-work__button-block
+	text-align: center
+	opacity: 0
+
+// Skew button
+.skew-button
+	cursor: pointer
+	outline: none
+	backface-visibility: hidden
+	position: relative
+	display: inline-block
+	padding: 0
+	background-color: transparent
+	border: none
+	font: 20px 'Oswald', sans-serif
+	text-transform: uppercase
+	letter-spacing: 0.1em
+	color: #fff
+
+	// Text
+	.skew-button__button-text
+		transform: translate3d(0, 0, 0)
+		backface-visibility: hidden
+		position: relative
+		display: block
+		width: 100%
+		height: 100%
+		padding: 20px 50px
+		z-index: 3
+		line-height: 20px
+
+	// Border
+	&:before,
+	.skew-button__button-text:before
+		content: ''
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%) skewX(-20deg)
+		width: 100%
+		height: 60px
+		border: 1px solid #EC4E20
+		z-index: 2
+		box-sizing: unset
+
+	.skew-button__button-text:before
+		display: block
+		transform: translate(-50%, -50%) skew(-20deg)
+		transform-origin: center center
+		z-indeX: -1
+
+	// Fill
+	&:after
+		transition: all 100ms ease-out
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		transform: skewX(-20deg) scaleX(0)
+		width: 100%
+		height: 100%
+		background-color: #EC4E20
+		border: 1px solid transparent
+		z-index: 1
+
+	// Hover
+	&:hover
+		.skew-button__button-text:before
+			animation: fill .5s ease-out
+			animation-fill-mode: forwards
+
+		&:after
+			animation: swoosh .7s ease-in
+
+	// Active
+	&:active
+		&:before
+			background-color: darken(#EC4E20, 20%)
+
+// Animation
+// ==========================================================================
+@import "animations"
+
+.skew-button:hover
+	cursor: pointer
+
+.section__title
+	font-family: $title-font
+	font-style: normal
+	font-weight: bold
+	font-size: 85px
+	line-height: 85px
+	display: flex
+	align-items: center
+	color: rgba(#FFFFFF, .5)
+	opacity: 0
+	margin: 100px 0 0 0
+
+.news-slider-btn-block
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	&-wrapper
+		display: flex
+		justify-content: center
+		align-items: center
+
+.news__back-btn, .news__forward-btn
+	font-family: $title-font
+	font-style: normal
+	font-weight: normal
+	font-size: 16px
+
+.news__link-btn
+	color: #FFFFFF
+	text-decoration: none
+	transition: 0.3s linear
+	cursor: pointer
+	&:hover
+		color: #ffffff70
+
+.news__line-between-btn
+	display: inline-flex
+	width: 64px
+	border-top: 1px solid #FFFFFF
+	margin: 0 10px
+
+.news__all-news
+	margin-top: 30px
+	margin-left: -30px
+
+.news__all-news .slick-list
+	min-height: 650px
+	height: auto
+
+.news__all-news .slick-track
+	min-height: 650px
+	height: auto
+
+.news__all-news .slick-prev:before, .team .slick-prev:before
+	content: "НАЗАД"
+	font-style: normal
+	font-weight: 400
+	font-size: 16px
+	color: white
+	font-family: $title-font
+
+.news__all-news .slick-next:before, .team .slick-next:before
+	content: "ВПЕРЕД"
+	font-style: normal
+	font-weight: 400
+	font-size: 16px
+	color: white
+	font-family: $title-font
+
+.news__one-news-block
+	padding: 0 30px
+	position: relative
+
+.news__one-news-block.slick-active:before
+	content: ''
+	display: block
+	width: 1px
+	height: 610px
+	background: white
+	position: absolute
+	left: 0
+	top: 0
+
+.news__one-news-block.slick-current:before
+	display: none
+
+.news__image-block
+	height: 423px
+	background: #717175
+
+.news__image
+	width: 100%
+	height: 100%
+	object-fit: cover
+
+.news__open-popup 
+	cursor: pointer
+
+.news__title-one-news
+	font-family: $text-font
+	font-size: 20px
+	line-height: 35px
+	text-transform: uppercase
+	color: #FFFFFF
+	margin-top: 30px
+	margin-bottom: 20px
+
+.news__description-one-news
+	display: none
+
+.news__more-details-block
+	display: flex
+	justify-content: flex-start
+	align-items: center
+
+.news__more-details-link
+	position: relative
+	font-family: $title-font
+	font-size: 16px
+	color: #FFFFFF
+	text-decoration: none
+	outline: none
+	transition: 0.3s linear
+	&:hover
+		opacity: 0.5
+		cursor: pointer
+	&::before
+		content: ""
+		position: absolute
+		width: 64px
+		height: 1px
+		background: white
+		top: 50%
+		right: -74px
+
+.contacts
+	padding-bottom: 200px
+	margin-top: 100px
+
+.contacts .section__title
+	margin-top: 0
+	margin-bottom: 90px
+
+.contacts__address-section
+	position: relative
+
+.contacts__contact-information
+	font-family: $text-font
+	font-size: 20px
+	line-height: 35px
+	vertical-align: center
+	color: white
+
+.contact-information__address-block, .contact-information__phone-block
+	margin-bottom: 35px
+	line-height: 35px
+	text-transform: uppercase
+
+
+.contact-information__phone-link, .contact-information__mail-link
+	text-decoration: none
+	color: white
+	text-transform: uppercase
+
+
+.contacts__form-section
+	position: relative
+	padding-left: 30px
+
+.contacts__form-section:before
+	content: ''
+	position: absolute
+	width: 1px
+	height: 660px
+	background: white
+	top: 0
+	left: 0
+
+.contacts__form
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	align-content: stretch
+
+.contacts__form-section-title
+	font-family: $text-font
+	font-style: normal
+	font-weight: normal
+	font-size: 35px
+	line-height: 40px
+	text-transform: uppercase
+	color: #FFFFFF
+	margin-bottom: 16px
+
+.contacts__form-section-description
+	font-family: $title-font
+	font-style: normal
+	font-weight: normal
+	font-size: 16px
+	line-height: 25px
+	color: #FFFFFF
+	margin-bottom: 70px
+
+.form__input-text
+	width: 70%
+	padding-bottom: 15px
+	margin-bottom: 30px
+	font-family: $title-font
+	font-size: 16px
+	color: #FFFFFF
+	background: rgba(0, 0, 0, 0)
+	border: none
+	border-bottom: 1px solid white
+	outline: none
+
+.form__input-text::placeholder
+	color: #FFFFFF
+	transition: 0.3s linear
+.form__input-text:focus::placeholder
+	color: transparent
+	transition: 0.3s linear
+
+.form__input-text::-webkit-input-placeholder
+	color: #FFFFFF
+	transition: 0.3s linear
+.form__input-text:focus::-webkit-input-placeholder
+	color: transparent
+	transition: 0.3s linear
+
+.form__input-text::-moz-placeholder
+	color: #FFFFFF
+	transition: 0.3s linear
+.form__input-text:focus::-moz-placeholder
+	color: transparent
+	transition: 0.3s linear
+
+
+.form__input-text:-moz-placeholder
+	color: #FFFFFF
+	transition: 0.3s linear
+.form__input-text:focus:-moz-placeholder
+	color: transparent
+	transition: 0.3s linear
+
+
+.form__input-text:-ms-input-placeholder
+	color: #FFFFFF
+	transition: 0.3s linear
+.form__input-text:focus:-ms-input-placeholder
+	color: transparent
+	transition: 0.3s linear
+
+.form__label-checkbox
+	cursor: pointer
+	position: relative
+
+.form__label-checkbox:after
+	content: ""
+	display: block
+	position: absolute
+	top: 0
+	width: 14px
+	height: 14px
+	border: 1px solid gray
+
+.form__label-checkbox:before
+	content: ""
+	display: block
+	position: absolute
+	top: 4px
+	left: 2px
+	width: 10px
+	height: 5px
+	border-left: 2px solid gray
+	border-bottom: 2px solid gray
+	transform: rotate(-55deg)
+	opacity: 0
+	transition: 0.3s linear
+
+.form__input-checkbox
+	display: none
+
+.form__input-checkbox:checked + .form__label-checkbox:before
+	opacity: 1
+	transition: 0.3s linear
+
+.form__input-checkbox-text
+	font-family: $title-font
+	font-size: 10px
+	line-height: 10px
+	color: #C4C4C4
+	margin-left: 20px
+
+.form__alert-checkbox
+	font-family: $title-font
+	font-weight: bold
+	font-size: 14px
+	line-height: 10px
+	color: #EC4E20
+	margin-left: 20px
+	visibility: hidden
+	opacity: 0
+
+.form__alert-checkbox.active
+	visibility: visible
+	opacity: 1
+
+.form__message-protection
+	font-family: "Bebas Neue", sans-serif
+	font-size: 10px
+	line-height: 10px
+	color: #C4C4C4
+	margin-top: 21px
+
+.form__submit-block
+	margin-top: 8px
+	display: flex
+	justify-content: space-between
+
+.form__not-a-robot
+	height: 74px
+.form__not-a-robot-img
+	max-width: 100%
+
+.form__submit-button-container
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-left: 12px
+
+@import 'main-slider'
+@import 'slider-pagination'
+@import 'slider'
+@import 'about'
+@import 'reviews'
+@import 'team'
+@import 'close-btn'
+@import 'hamburger'
+@import 'fixed-contacts-btns'
+@import 'media'

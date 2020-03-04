@@ -1,0 +1,589 @@
+// POPUP-CALL START
+.popup-call
+	position: fixed
+	top: 0
+	right: 0
+	width: 100%
+	height: 100%
+	background: rgba(0, 0, 0, 0.5)
+	display: flex
+	visibility: hidden
+	opacity: 0
+	justify-content: center
+	align-items: center
+	transition: 0.3s linear
+	overflow: hidden
+
+.popup-call.popup-call__open
+	visibility: visible
+	opacity: 1
+
+.popup-call__wrapper
+	position: absolute
+	top: 0
+	right: -450px
+	height: 100%
+	background: white
+	display: flex
+	justify-content: center
+	align-items: flex-start
+	z-index: 999
+	transition: 0.3s linear
+	overflow-y: auto
+
+.popup-call__wrapper.active
+	right: 0
+
+.popup-call__block
+	width: 450px
+	margin: 0 auto
+	background: white
+	padding: 25px
+	position: relative
+	z-index: 999
+
+.popup-call__success
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	z-index: 5
+	padding: 25px
+	background: white
+	display: flex
+	flex-direction: column
+	justify-content: center
+
+.success__title
+	font-family: "Oswald", sans-serif
+	font-size: 35px
+	line-height: 50px
+	text-align: center
+	text-transform: uppercase
+	color: #717175
+	margin-bottom: 11px
+
+.success__dexcription
+	font-family: $title-font
+	font-size: 20px
+	line-height: 25px
+	text-align: center
+	color: #717175
+
+.close-button
+	position: absolute
+	top: 15px
+	right: 15px
+	width: 70px
+	height: 70px
+	cursor: pointer
+	z-index: 5
+
+.close-button:after
+	content: ""
+	display: block
+	position: absolute
+	top: 35px
+	left: 0
+	width: 70px
+	height: 1px
+	background: #717175
+	transform: rotate(45deg)
+    
+.close-button:before
+	content: ""
+	display: block
+	position: absolute
+	top: 35px
+	left: 0
+	width: 70px
+	height: 1px
+	background: #717175
+	transform: rotate(-45deg)
+
+.popup-call__title
+	font-family: "Oswald", sans-serif
+	font-size: 35px
+	line-height: 50px
+	display: flex
+	align-items: center
+	color: #717175
+	transform: rotate(0.41deg)
+
+.popup-call__description
+	font-family: "Bebas Neue", sans-serif
+	font-size: 16px
+	line-height: 25px
+	color: #717175
+	margin-bottom: 40px
+
+.popup-call__form
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	align-content: stretch
+
+.popup-call__form .form__input-text
+	width: 100%
+	padding-bottom: 15px
+	margin-bottom: 30px
+	font-family: $title-font
+	font-size: 16px
+	color: #717175
+	background: rgba(0, 0, 0, 0)
+	border: none
+	border-bottom: 1px solid #717175
+	outline: none
+
+.popup-call__form .form__input-text::placeholder
+	color: #717175
+.popup-call__form .form__input-text:focus::placeholder
+	color: transparent
+
+.popup-call__form .form__input-text::-webkit-input-placeholder
+	color: #717175
+	transition: 0.3s linear
+.popup-call__form .form__input-text:focus::-webkit-input-placeholder
+	color: transparent
+	transition: 0.3s linear
+
+.popup-call__form .form__input-text::-moz-placeholder
+	color: #717175
+	transition: 0.3s linear
+.popup-call__form .form__input-text:focus::-moz-placeholder
+	color: transparent
+	transition: 0.3s linear
+
+.popup-call__form .form__input-text:-moz-placeholder
+	color: #717175
+	transition: 0.3s linear
+.popup-call__form .form__input-text:focus:-moz-placeholder
+	color: transparent
+	transition: 0.3s linear
+
+.popup-call__form .form__input-text:-ms-input-placeholder
+	color: #717175
+	transition: 0.3s linear
+.popup-call__form .form__input-text:focus:-ms-input-placeholder
+	color: transparent
+	transition: 0.3s linear
+
+.popup-call__message-protection
+	font-family: "Bebas Neue", sans-serif
+	font-size: 10px
+	line-height: 10px
+	color: #C4C4C4
+	margin-top: 21px
+
+.popup-call .form__submit-block
+	margin-top: 10px
+	flex-direction: column
+
+.popup-call .form__not-a-robot
+	margin-bottom: 30px
+
+.popup-call .form__button-block
+	width: 100%
+	padding: 0 20px
+
+// Skew button
+.skew-button.full-width
+	color: #010125
+	width: 100%
+
+	// // Text
+	// .popup .skew-button__button-text
+	// 	transform: translate3d(0, 0, 0)
+	// 	backface-visibility: hidden
+	// 	position: relative
+	// 	display: block
+	// 	width: 100%
+	// 	height: 100%
+	// 	padding: 20px 50px
+	// 	z-index: 3
+
+	// // Border
+	// &:before,
+	// .skew-button__button-text:before
+	// 	content: ''
+	// 	position: absolute
+	// 	left: 50%
+	// 	top: 50%
+	// 	transform: translate(-50%, -50%) skewX(-20deg)
+	// 	width: 100%
+	// 	height: 68px
+	// 	border: 1px solid #EC4E20
+	// 	z-index: 2
+
+	// .skew-button__button-text:before
+	// 	display: block
+	// 	transform: translate(-50%, -50%) skew(-20deg)
+	// 	transform-origin: center center
+	// 	z-indeX: -1
+
+	// // Fill
+	// &:after
+	// 	transition: all 100ms ease-in
+	// 	content: ''
+	// 	position: absolute
+	// 	left: 0
+	// 	top: 0
+	// 	transform: skewX(-20deg) scaleX(0)
+	// 	width: 100%
+	// 	height: 100%
+	// 	background-color: #010125
+	// 	border: 1px solid transparent
+	// 	z-index: 1
+
+	// // Hover
+	// &:hover
+	// 	.skew-button__button-text:before
+	// 		animation: fill .9s ease-out
+	// 		animation-fill-mode: forwards
+
+	// 	&:after
+	// 		animation: swoosh .9s ease-in
+
+	// // Active
+	// &:active
+	// 	&:before
+	// 		background-color: darken(#010125, 20%)
+
+// POPUP-CALL END
+
+// PROJECTS-POPUP START
+.projects-popup
+	position: fixed
+	top: 0
+	right: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	height: 100%
+	color: white
+	background: #010125
+	visibility: hidden
+	opacity: 0
+	transition: 0.3s linear
+	overflow-y: auto
+	z-index: 11
+
+	&.open
+		visibility: visible
+		opacity: 1
+	&__wrapper
+		position: absolute
+		top: 0
+		left: -100%
+		z-index: 999
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 40px
+		width: 100%
+		height: 100%
+		background: #010125
+		transition: 0.5s linear
+		overflow-y: auto
+		&.active
+			left: 0
+	&__main
+		position: relative
+		min-height: 580px
+		background-size: cover
+		background-position: center
+		&::after
+			content: ""
+			position: absolute
+			z-index: 0
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: #01012581
+		& .row
+			position: relative
+			z-index: 3
+			padding-right: 25px
+			& .close-button::after
+				background: white
+				transition: 0.3s linear
+			& .close-button::before
+				background: white
+				transition: 0.3s linear
+	&__title
+		font-family: $title-font
+		font-style: normal
+		font-weight: bold
+		font-size: 65px
+		line-height: 70px
+		color: #FFFFFF
+		margin-bottom: 45px
+		padding-left: 30px
+		padding-top: 20px
+	&__column
+		position: relative
+		padding-left: 30px
+		height: 350px
+		// overflow: auto
+		&::after
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			width: 1px
+			height: 350px
+			background: white
+	&__column-title
+		margin-bottom: 24px
+		font-family: $text-font
+		font-style: normal
+		font-weight: normal
+		font-size: 20px
+		line-height: 22px
+		text-transform: uppercase
+		color: #FFFFFF
+	&__column-text
+		font-family: $text-font
+		font-style: normal
+		font-weight: 300
+		font-size: 20px
+		line-height: 30px
+		color: #FFFFFF
+		max-width: 270px
+		&-list
+			margin: 0
+			padding: 0
+			list-style: none      
+	&__image-block
+		display: flex
+		align-items: flex-end
+		width: 270px
+		height: 190px
+		margin-bottom: 20px
+		background-size: cover
+		background-position: center
+	&__image-title
+		position: absolute
+		bottom: 2px
+		left: 10px
+		font-family: $title-font
+		font-size: 16px
+		line-height: 30px
+		color: #FFFFFF
+		text-transform: uppercase
+	&__image-link
+		position: relative
+		display: block
+		width: 270px
+		max-width: 100%
+		height: 190px
+		margin-bottom: 20px
+	&__image
+		width: 100%
+		height: 100%
+		object-fit: cover
+	&__mobile-form-wrapper
+		display: none
+	& .menu__contacts-block
+		display: none
+
+// light-gallery start
+.lg-backdrop 
+	background: #010125
+.lg-outer
+	font-family: $title-font
+.lg-sub-html, .lg-toolbar
+    background-color: transparent
+.lg-toolbar .lg-close
+	position: absolute
+	top: 30px
+	right: 100px
+	width: 80px
+	height: 80px
+	padding: 0
+.lg-toolbar .lg-close::after
+	content: ""
+	display: block
+	position: absolute
+	top: 40px
+	left: 5px
+	width: 70px
+	height: 1px
+	background: white
+	transform: rotate(45deg)
+.lg-toolbar .lg-close::before   
+	content: ""
+	display: block
+	position: absolute
+	top: 40px
+	left: 5px
+	width: 70px
+	height: 1px
+	background: white
+	transform: rotate(-45deg)
+.lg-outer .lg-thumb-outer	
+    background-color: transparent
+.lg-autoplay-button, .lg-fullscreen, #lg-zoom-in, #lg-zoom-out, #lg-actual-size, #lg-share, #lg-counter
+	display: none
+.lg-outer .lg-image
+	height: 70%!important
+	object-fit: cover
+.lg-actions
+	position: absolute
+	top: 85%
+	left: 61%
+	width: 132px
+	height: auto
+	padding-top: 13px
+	& .lg-prev, & .lg-next
+		z-index: 9999
+		background-color: transparent
+		padding: 0
+	& .lg-prev
+		left: auto
+		position: relative
+		&::after
+			display: none
+	& .lg-next
+		right: 0
+		&::before
+			display: none
+.projects-popup__next-button, .projects-popup__prev-button
+	position: relative
+	font-family: $title-font
+	font-style: normal
+	font-weight: normal
+	font-size: 16px
+	color: #FFFFFF
+	text-decoration: none
+	transition: 0.3s linear
+	cursor: pointer
+	&:hover
+		color: #ffffff70
+.projects-popup__prev-button::after
+			content: ""
+			position: absolute
+			width: 50px
+			height: 1px
+			background: white
+			top: 50%
+			right: -55px
+.lg-sub-html
+	top: 85%
+.lg-outer .lg-pager-outer
+	top: 90%
+	counter-reset: list 0
+.lg-outer .lg-pager-cont
+	vertical-align:	bottom
+	margin: 0 15px
+	overflow: visible
+.lg-outer .lg-pager-cont::after
+	counter-increment: list 1
+	content: "0"counter(list)
+	position: absolute
+	bottom: -25px
+	left: 0px
+	width: 100%
+	text-align: center
+	color: white
+	font-size: 18px
+	z-index: 1000000
+.lg-outer .lg-pager-cont .lg-pager
+	width: 20px
+	height: 1px
+	border-radius: 0
+.lg-outer .lg-pager-cont.lg-pager-active .lg-pager
+	height: 3px
+	box-shadow: 0 0 0 3px #fff inset
+
+.lg-pager-thumb-cont
+	display: none
+
+// light-gallery end
+
+// Simplebar start
+
+.simplebar-scrollbar.simplebar-visible
+	right: 0
+	&::before
+		background: white
+		opacity: 1
+		border-radius: 0
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before
+		top: 0
+		bottom: 0	
+
+// Simplebar end
+
+// news-popup start
+.news-popup
+	position: fixed
+	top: 0
+	right: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	height: 100%
+	color: white
+	background: #010125
+	visibility: hidden
+	opacity: 0
+	transition: 0.3s linear
+	overflow-x: auto
+	&.open
+		visibility: visible
+		opacity: 1
+		z-index: 10
+	&__wrapper
+		position: absolute
+		top: 0
+		left: -100%
+		z-index: 999
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 40px
+		width: 100%
+		height: 100%
+		background: #010125
+		transition: 0.5s linear
+		overflow-y: auto
+		&.active
+			left: 0
+	&__main
+		padding: 30px
+		position: relative		
+		min-height: 580px
+	&__image-block
+		width: 100%
+	&__image
+		width: 100%
+		height: 100%
+		object-fit: cover
+	&__column
+		&-title
+			font-family: $text-font
+			font-size: 20px
+			line-height: 35px
+			text-transform: uppercase
+			color: #010125
+		&-line
+			width: 100%
+			height: 1px
+			background: black
+			margin-top: 10px
+			margin-bottom: 10px
+		&-text
+			font-family: $text-font
+			font-style: normal
+			font-weight: 300
+			font-size: 20px
+			line-height: 30px
+			color: #010125
+// news-popup end
+
+// PROJECTS-POPUP END

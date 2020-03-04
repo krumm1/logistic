@@ -1,0 +1,88 @@
+.reviews
+    &-slider-container
+        margin-top: 50px
+    &-slider
+        &-item
+            color: #fff
+            min-height: 477px
+            width: 690px
+            padding: 190px 120px 0
+            background-color: rgba($dark-blue-color, .4)
+            margin: 0 15px
+            position: relative
+            opacity: .4
+            img
+                position: absolute
+                top: 18px
+                left: 70px
+            &.slick-current
+                color: #fff
+                opacity: 1
+        .slick-track, .slick-list
+            min-height: auto     
+        &-buttons
+            color: #fff
+            font-size: 16px
+            font-family: $title-font
+            text-transform: uppercase  
+            display: flex
+            justify-content: flex-end
+            align-items: center 
+            margin-bottom: 20px
+            &::before
+                content: ""
+                width: 50px
+                height: 1px
+                background-color: #fff
+                display: block 
+                order: 1
+                margin: 0 4px
+        &-button
+            cursor: pointer
+            &:hover
+                color: rgba(#fff, .5)
+            &.prev
+                order: 0
+            &.next
+                order: 2          
+    &-content
+        font-size: 20px
+        line-height: 30px
+        margin-bottom: 70px
+    &-name
+        font-size: 20px
+        text-transform: uppercase
+@media screen and (max-width: 1199px)
+    .reviews
+        &-slider
+            &-item
+                width: 600px
+                padding: 190px 100px 40px  
+                margin: 0 10px     
+@media screen and (max-width: 991px)
+    .reviews
+        &-slider
+            &-item
+                width: 450px
+                padding: 90px 50px 20px
+                min-height: 380px
+                margin: 0 4px
+@media screen and (max-width: 767px)
+    .reviews
+        &-slider
+            &-item
+                width: 220px
+                padding: 100px 20px 15px
+                img
+                    width: 90px         
+                    left: 25px
+            &-container
+                position: relative
+                padding-bottom: 50px
+            &-buttons
+                position: absolute  
+                bottom: 0
+                left: 50%
+                transform: translateX(-50%)       
+        &-content
+            margin-bottom: 40px        

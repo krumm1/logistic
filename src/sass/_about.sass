@@ -1,0 +1,104 @@
+.about
+    color: #fff
+    &-features
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        margin-bottom: 40px
+        margin-top: 50px
+        &-block
+            width: 360px
+            opacity: 0
+            &.active
+                opacity: 1
+                .about
+                    &-number
+                        animation: fadeIn .5s ease forwards
+                        &::before
+                            width: 100%
+                    &-text
+                        animation: fadeIn .5s ease forwards
+                        animation-delay: .5s        
+    &-number
+        font-size: 65px
+        position: relative
+        opacity: 0
+        &::before
+            content: ""
+            height: 1px
+            width: 0
+            background-color: #fff
+            position: absolute
+            left: 0
+            bottom: 0
+            transition: 1.5s ease   
+    &-text
+        font-size: 35px
+        text-transform: uppercase      
+        opacity: 0      
+    .slider-content
+        min-height: 660px
+    &-partners
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            left: 100%
+            border: 1px solid $accent-color
+        &-item
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 167px
+            height: 167px
+            border: 1px solid $gray-color
+            float: left
+            margin: 0 -1px -1px 0 
+            padding: 5px
+            img
+                max-width: 100%
+                max-height: 100%
+    &-docs
+        li
+            display: flex
+            justify-content: space-between
+            align-items: center            
+            a
+                color: inherit
+                font-size: 20px
+                text-decoration: none
+                &::before
+                    content: ""
+                    display: inline-block
+                    width: 33px
+                    height: 24px
+                    background: url('../img/icons/download.svg') center no-repeat
+                    background-size: cover
+                    margin-right: 28px
+                &:hover::before
+                    opacity: .5
+@media screen and (max-width: 1199px)
+    .about
+        &-partners
+            &-item
+                width: 140px
+                height: 140px
+@media screen and (max-width: 991px)
+    .about
+        .slider-img
+            img
+                display: none
+        &-partners
+            display: flex
+            flex-wrap: wrap
+            padding: 1px
+            &-item
+                width: 100px
+                height: 100px    
+                float: none
+        .slider-content
+            min-height: auto     
+            overflow: hidden                  

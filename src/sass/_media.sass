@@ -1,0 +1,383 @@
+// 1200 - 1300
+@media screen and (min-width: 1300px)
+    .container
+        max-width: 1200px
+        
+// 1300 - 1400
+@media screen and (min-width: 1400px)
+    .container
+        max-width: 1300px
+    
+    // 1400 - 1500 
+@media screen and (min-width: 1500px)
+    .container
+        max-width: 1440px
+
+@media screen and (max-width: 1499px)
+    .lg-actions
+        left: 65%
+
+@media screen and (max-width: 1399px)
+    .menu__logo
+	    width: 200px
+    .menu__contacts-block
+        margin-left: 20px
+
+    .lg-actions
+        left: 67%
+
+    .news__image-block
+        height: 320px
+
+    .contacts .form__submit-block
+        flex-direction: column
+        align-items: flex-start
+    .form__not-a-robot
+        margin-bottom: 30px
+    
+@media screen and (max-width: 1299px)
+    .menu__nav-list
+    .menu__nav-item
+        padding: 0 15px
+
+    .news-popup
+        &__wrapper
+            align-items: flex-start
+    
+    .projects-popup
+        &__wrapper
+            align-items: flex-start
+
+    .lg-actions
+        left: 68%
+
+@media screen and (max-width: 1199px)    
+    .menu__burger-block
+	    display: block
+    .menu__nav-section
+        opacity: 0
+        position: fixed
+        width: 100%
+        height: 100%
+        top: 0
+        left: -100%
+        background: white
+        overflow: auto
+        transition: 0.5s ease
+        padding: 30px 25px 50px 25px
+        &.active
+            left: 0
+            opacity: 1
+            z-index: 2
+    .menu__tablet-logo-block, .menu__tablet-close-button
+	    display: block
+    .menu__tablet-footer
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-top: 25px
+        border-top: 1px solid $gray-color
+        max-width: 450px
+        margin: 0 auto
+        .menu__phone-link
+            margin-bottom: 25px
+        .menu__tablet-call-back
+            margin-bottom: 55px
+            font-family: $title-font
+            font-size: 20px
+            color: $gray-color
+        .menu__tablet-button
+            color: $gray-color
+            padding: 0 50px
+    .menu__tablet-close-button
+        top: 30px
+        right: 25px
+    .menu__nav-list
+        flex-direction: column
+        margin-top: 85px
+    .menu__nav-item
+        margin: 15px 0
+    .menu__nav-link
+        font-size: 20px
+        text-align: center
+        color: $gray-color
+    .menu__contacts-block
+        margin: 0 40px 0 50px
+
+    .projects__navigation-item
+        width: 200px
+        font-size: 18px
+    .projects-popup__title
+        font-weight: bold
+        font-size: 35px
+        line-height: 70px
+    .projects-popup__column
+        height: 427px
+        &::after
+           height: 427px
+    .projects-popup__image-link
+        width: 188px
+        height: 137px
+    .projects-popup__image-title
+        line-height: 20px
+    .lg-actions
+        left: 69%
+
+    .news__image-block
+        height: 427px
+
+    .contacts
+        padding-bottom: 100px
+
+    .contact-information__first-block
+        margin-bottom: 60px
+
+    footer
+        .menu__nav-section
+            display: none
+    
+@media screen and (max-width: 991px)
+    .start-work__title
+        font-size: 84px
+
+    .projects__navigation-item
+        font-size: 16px
+    .projects-popup__title
+        font-weight: bold
+        font-size: 25px
+        line-height: 50px
+        padding-left: 15px
+    .projects-popup__column
+        padding-left: 15px
+    .projects-popup__column-text
+        font-size: 15px
+        line-height: 25px
+    .projects-popup__image-link
+        width: 152px
+        height: 128px
+    .projects-popup__image-title
+        font-size: 14px
+        line-height: 18px
+
+    .lg-actions
+        left: 74%
+
+    .news__image-block
+        height: 320px
+
+@media screen and (max-width: 767px)
+    header
+        .menu__languages-block, .menu__contacts-block
+            display: none
+
+    .header_bottom .menu
+        border-top: 0
+
+    .section__title
+        font-size: 60px
+        line-height: 80px
+        margin-top: 50px
+
+    .start-work__title
+        font-size: 60px
+        line-height: 80px
+        margin-top: 50px
+    
+    .content.active
+	    filter: none
+
+    .fixed-contacts-btns
+        display: none
+
+    .projects__wrapper
+        padding-top: 0
+    .projects__navigation-wrapper
+        display: none
+    .projects__main_wrapper
+        padding-top: 100px
+    .projects__block-title        
+        font-size: 45px
+        line-height: 55px
+
+    .popup-call
+        z-index: 12
+    .popup-call__wrapper
+        width: 100%
+    .popup-call__block
+        width: 100%
+        padding-top: 70px
+
+    .projects-popup
+        z-index: 11
+    .projects-popup__title
+        padding-top: 100px
+        font-size: 35px
+        line-height: 45px
+        margin-bottom: 20px
+    .projects-popup__wrapper
+        padding: 0 0 20px 0
+        flex-direction: column
+        align-items: center
+        overflow: auto
+        height: auto
+    .projects-popup__main
+        min-height: auto
+        margin: 0
+        width: 100%
+        max-width: 100%
+        & .row
+        overflow: auto
+        align-items: flex-start
+    .projects-popup__column
+        height: auto
+        margin-bottom: 25px
+        &::after
+            display: none
+        &-title
+            margin-bottom: 10px
+        &-text
+            max-width: 100%
+        & #lightgallery
+            display: flex
+            flex-direction: column
+            align-items: center
+    #projects-popup__photo-column
+        margin-bottom: 0
+    .projects-popup__image-link
+        width: 450px
+        height: 287px
+    .projects-popup__mobile-form-wrapper
+        display: block
+        padding-top: 30px
+        padding-bottom: 30px
+        .contacts__form-section
+            padding-right: 0
+            padding-left: 0
+        .form__submit-block
+            flex-direction: column
+    .projects-popup__wrapper .menu__contacts-block
+        display: block
+    .lg-toolbar .lg-close
+        right: 30px
+    .lg-actions
+        display: none
+
+    .news__all-news
+        margin-top: 10px
+    .news__all-news .slick-list
+        min-height: 0
+    .news__all-news .slick-track
+        min-height: 0
+    .news__one-news-block
+        padding-right: 0
+        &::after
+            content: ""
+            position: absolute
+            top: 0
+            left: -1px
+            width: 2px
+            height: 100%
+            background: $accent-color  
+    .news-popup__image-block
+        margin-bottom: 20px
+    .news-slider-btn-block
+        justify-content: center
+        margin-top: 15px
+
+    .news-popup__wrapper
+        padding: 0
+        align-items: flex-start
+        overflow: auto
+    .news-popup__main
+        padding: 120px 30px
+        max-width: 100%
+        min-height: 100%
+        height: auto
+    .news-popup__column.first
+
+    .contacts
+        padding-bottom: 45px
+        margin-top: 50px
+    .contacts__address-section
+        margin-bottom: 100px
+    .contacts .section__title
+        margin-bottom: 20px
+    .contact-information__first-block
+        margin-bottom: 45px
+    .contact-information__address-block, .contact-information__phone-block
+        margin-bottom: 25px
+    .contact-information__address-block br
+        display: none
+    .contacts__form-section
+        padding-left: 15px
+        &::before
+            display: none
+        .form__input-text
+            width: 100%
+    .form__submit-button-container
+        margin: 0 auto
+
+    footer
+        .menu
+            justify-content: center
+        .menu__first-section, .menu__languages-block, .menu__burger-block
+            display: none
+
+    .container
+        padding-left: 30px
+        padding-right: 30px
+
+@media screen and (max-width: 575px)    
+    .section__title
+        font-size: 50px
+        line-height: 70px
+    .start-work__title
+        font-size: 50px
+        line-height: 70px
+
+    .projects__block-title
+        font-size: 35px
+
+    .projects-popup__image-link
+        width: 350px
+        height: 223px
+    .lg-outer .lg-image
+        max-height: 55%
+        height: auto!important
+@media screen and (max-width: 480px)
+    .section__title
+        font-size: 45px
+        line-height: 60px
+    .start-work__title
+        font-size: 45px
+        line-height: 60px
+
+    .skew-button
+        font-size: 16px
+    .menu__tablet-logo-block
+        padding-top: 13px
+    .menu__tablet-logo-img
+        width: 200px
+
+    .projects-popup__main .row
+        padding-right: 0
+    .projects-popup__image-link
+        width: 298px
+        height: 190px
+    .lg-outer .lg-image
+        max-height: 40%
+        height: auto!important    
+    
+    footer .menu-wrapper
+        padding: 0 15px
+
+@media screen and (max-width: 360px)
+    .projects-popup__image-link
+        width: 250px
+        height: 160px
+
+@media screen and (max-width: 320px)
+    .lg-outer .lg-image
+        height: 30%!important
+@media screen and (max-width: 280px)
+    // 
