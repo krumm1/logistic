@@ -1,6 +1,6 @@
 .reviews
     &-slider-container
-        margin-top: 50px
+        position: relative
     &-slider
         &-item
             color: #fff
@@ -28,7 +28,11 @@
             display: flex
             justify-content: flex-end
             align-items: center 
-            margin-bottom: 20px
+            position: absolute
+            top: -40px
+            right: 0
+            width: 100%
+            height: 20px
             &::before
                 content: ""
                 width: 50px
