@@ -281,13 +281,14 @@
         top: 95%
 
     .news__all-news
-        margin-top: 10px
+        margin: 0
     .news__all-news .slick-list
         min-height: 0
     .news__all-news .slick-track
         min-height: 0
     .news__one-news-block
-        padding-right: 0
+        padding: 0
+        width: 220px
         &::after
             content: ""
             position: absolute
@@ -296,6 +297,14 @@
             width: 2px
             height: 100%
             background: $accent-color  
+        &.slick-active
+            &::before
+                display: none
+    .news__image-block
+        height: 100%
+    .news__title-one-news
+        font-size: 16px
+
     .news-popup__image-block
         margin-bottom: 20px
     .news-slider-btn-block

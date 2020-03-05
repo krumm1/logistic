@@ -86,3 +86,5 @@ function reload(done) {
 exports.default = parallel(initBrowserSync, watchChanges, compileStyles);
 // Tasks on gulp build
 exports.build = parallel(buildHtml, buildCss, buildJs, buildLibs, buildImages, buildFonts);
+
+exports.compileStyles = compileStyles;
