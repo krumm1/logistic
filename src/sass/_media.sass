@@ -289,21 +289,20 @@
     .news__one-news-block
         padding: 0
         width: 220px
-        &::after
-            content: ""
-            position: absolute
-            top: 0
-            left: -1px
-            width: 2px
-            height: 100%
-            background: $accent-color  
+        margin: 0 10px
         &.slick-active
             &::before
                 display: none
+        & .news__title-one-news, & .news__more-details-block
+            visibility: hidden
+        &.slick-current
+            & .news__title-one-news, & .news__more-details-block
+                visibility: visible
     .news__image-block
-        height: 100%
+        height: 220px
     .news__title-one-news
         font-size: 16px
+        line-height: 25px
 
     .news-popup__image-block
         margin-bottom: 20px

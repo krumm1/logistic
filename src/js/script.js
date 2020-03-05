@@ -77,7 +77,8 @@ $('.news__all-news').slick({
         {
             breakpoint: 768,
             settings: {
-                adaptiveWidth: true                
+                variableWidth: true,
+                centerMode: true               
             }
         }
     ]
