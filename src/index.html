@@ -17,6 +17,17 @@
 </head>
 
 <body>
+    <svg width="0" height="0" viewbox="0 0 0 0">
+        <defs>
+            <filter id="filter">
+                <fecomponenttransfer>
+                    <fefuncr type="discrete" tablevalues="1 0" />
+                    <fefuncg type="discrete" tablevalues="0.25 0" />
+                    <fefuncb type="discrete" tablevalues="0.1 0" />
+                </fecomponenttransfer>
+            </filter>
+        </defs>
+    </svg>
     <div class="content">
         <div class="fixed-contacts-btns">
             <div class="fixed-contacts-btns__inner">
@@ -526,40 +537,48 @@
                                         <div class="slider-content border-vertical">
                                             <div class="about-partners">
                                                 <div class="about-partners-item">
-                                                    <img src="img/partners/geldor.svg" alt="ЖелДор экспедиция">
+                                                    <img src="" data-src="img/partners/geldor.svg"
+                                                        alt="ЖелДор экспедиция" class="lazy">
                                                 </div>
                                                 <div class="about-partners-item">
-                                                    <img src="img/partners/fesco.svg" alt="FESCO Tranportation Group">
+                                                    <img src="" data-src="img/partners/fesco.svg"
+                                                        alt="FESCO Tranportation Group" class="lazy">
                                                 </div>
                                                 <div class="about-partners-item">
-                                                    <img src="img/partners/aeroflot.svg"
-                                                        alt="Аэрофлот. Российские авиалинии">
+                                                    <img src="" data-src="img/partners/aeroflot.svg"
+                                                        alt="Аэрофлот. Российские авиалинии" class="lazy">
                                                 </div>
                                                 <div class="about-partners-item">
-                                                    <img src="img/partners/seven_airlines.svg" alt="S7 Airlines">
+                                                    <img src="" data-src="img/partners/seven_airlines.svg"
+                                                        alt="S7 Airlines" class="lazy">
                                                 </div>
                                                 <div class="about-partners-item">
-                                                    <img src="img/partners/maersk.svg" alt="Maersk Line">
+                                                    <img src="" data-src="" data-src="img/partners/maersk.svg"
+                                                        alt="Maersk Line" class="lazy" class="lazy">
                                                 </div>
                                                 <div class="about-partners-item">
-                                                    <img src="img/partners/vietnam_airlines.svg" alt="Vietnam Airlines">
+                                                    <img src="" data-src="img/partners/vietnam_airlines.svg"
+                                                        alt="Vietnam Airlines" class="lazy">
                                                 </div>
                                                 <div class="about-partners-item">
-                                                    <img src="img/partners/Hainan_Airlines.svg" alt="Hainan Airlines">
+                                                    <img src="" data-src="img/partners/Hainan_Airlines.svg"
+                                                        alt="Hainan Airlines" class="lazy">
                                                 </div>
                                                 <div class="about-partners-item">
-                                                    <img src="img/partners/China-Southern-Airlines.svg"
-                                                        alt="Chine Southern">
+                                                    <img src="" data-src="img/partners/China-Southern-Airlines.svg"
+                                                        alt="Chine Southern" class="lazy">
                                                 </div>
                                                 <div class="about-partners-item">
-                                                    <img src="img/partners/airlines_astana.svg" alt="air astana">
+                                                    <img src="" data-src="img/partners/airlines_astana.svg"
+                                                        alt="air astana" class="lazy">
                                                 </div>
                                                 <div class="about-partners-item">
-                                                    <img src="img/partners/cmacgm.svg" alt="CMA CGM">
+                                                    <img src="" data-src="img/partners/cmacgm.svg" alt="CMA CGM"
+                                                        class="lazy">
                                                 </div>
                                                 <div class="about-partners-item">
-                                                    <img src="img/partners/Airbridge_cargo_white.svg"
-                                                        alt="AirBridgeCargo">
+                                                    <img src="" data-src="img/partners/Airbridge_cargo_white.svg"
+                                                        alt="AirBridgeCargo" class="lazy">
                                                 </div>
                                             </div>
                                         </div>
@@ -619,9 +638,9 @@
                                     <div class="team-slider-element-job">Руководитель компании</div>
                                     <div class="team-slider-element-more">Подробнее</div>
                                 </div>
-                                <div class="team-slider-element-img"
+                                <div class="team-slider-element-img lazy-inline-bg"
                                     style="background-image:url(img/team/anna-morozova.jpg)"></div>
-                                <div class="team-slider-element-img"
+                                <div class="team-slider-element-img lazy-inline-bg"
                                     style="background-image:url(img/team/anna-morozova-hover.jpg)">
                                 </div>
                             </div>
@@ -677,9 +696,9 @@
                                     <div class="team-slider-element-job">Главный бухгалтер</div>
                                     <div class="team-slider-element-more">Подробнее</div>
                                 </div>
-                                <div class="team-slider-element-img"
+                                <div class="team-slider-element-img lazy-inline-bg"
                                     style="background-image:url(img/team/olga-tihonova.jpg)"></div>
-                                <div class="team-slider-element-img"
+                                <div class="team-slider-element-img lazy-inline-bg"
                                     style="background-image:url(img/team/olga-tihonova-hover.jpg)">
                                 </div>
                             </div>
@@ -737,9 +756,10 @@
                                     <div class="team-slider-element-job">Ведущий менеджер</div>
                                     <div class="team-slider-element-more">Подробнее</div>
                                 </div>
-                                <div class="team-slider-element-img" style="background-image:url(img/team/blue.jpg)">
+                                <div class="team-slider-element-img lazy-inline-bg"
+                                    style="background-image:url(img/team/blue.jpg)">
                                 </div>
-                                <div class="team-slider-element-img"
+                                <div class="team-slider-element-img lazy-inline-bg"
                                     style="background-image:url(img/team/blue-hover.jpg)">
                                 </div>
                             </div>
@@ -794,10 +814,10 @@
                                     <div class="team-slider-element-job">Ведущий менеджер</div>
                                     <div class="team-slider-element-more">Подробнее</div>
                                 </div>
-                                <div class="team-slider-element-img"
+                                <div class="team-slider-element-img lazy-inline-bg"
                                     style="background-image:url(img/team/marina-plotnikova.jpg)">
                                 </div>
-                                <div class="team-slider-element-img"
+                                <div class="team-slider-element-img lazy-inline-bg"
                                     style="background-image:url(img/team/marina-plotnikova-hover.jpg)">
                                 </div>
                             </div>
@@ -852,9 +872,10 @@
                                     <div class="team-slider-element-job">Должность сотрудника</div>
                                     <div class="team-slider-element-more">Подробнее</div>
                                 </div>
-                                <div class="team-slider-element-img" style="background-image:url(img/team/glasses.jpg)">
+                                <div class="team-slider-element-img lazy-inline-bg"
+                                    style="background-image:url(img/team/glasses.jpg)">
                                 </div>
-                                <div class="team-slider-element-img"
+                                <div class="team-slider-element-img lazy-inline-bg"
                                     style="background-image:url(img/team/glasses-hover.jpg)">
                                 </div>
                             </div>
@@ -910,9 +931,10 @@
                                     <div class="team-slider-element-job">Ведущий мегеджер</div>
                                     <div class="team-slider-element-more">Подробнее</div>
                                 </div>
-                                <div class="team-slider-element-img" style="background-image:url(img/team/yulya.jpg)">
+                                <div class="team-slider-element-img lazy-inline-bg"
+                                    style="background-image:url(img/team/yulya.jpg)">
                                 </div>
-                                <div class="team-slider-element-img"
+                                <div class="team-slider-element-img lazy-inline-bg"
                                     style="background-image:url(img/team/yulya-hover.jpg)">
                                 </div>
                             </div>
@@ -968,9 +990,10 @@
                                     <div class="team-slider-element-job">Ведущий менеджер</div>
                                     <div class="team-slider-element-more">Подробнее</div>
                                 </div>
-                                <div class="team-slider-element-img" style="background-image:url(img/team/john.jpg)">
+                                <div class="team-slider-element-img lazy-inline-bg"
+                                    style="background-image:url(img/team/john.jpg)">
                                 </div>
-                                <div class="team-slider-element-img"
+                                <div class="team-slider-element-img lazy-inline-bg"
                                     style="background-image:url(img/team/john-hover.jpg)">
                                 </div>
                             </div>
@@ -1120,7 +1143,7 @@
                         </div>
                     </div>
                     <div class="projects__slider-wrapper">
-                        <div data-index="1" class="projects__main_wrapper" style="
+                        <div data-index="1" class="projects__main_wrapper lazy-inline-bg" style="
                     background-image: url('img/projects-bg-1.png')">
                             <div class="projects__main-description container">
                                 <div class="projects__block-title">
@@ -1133,7 +1156,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div data-index="2" class="projects__main_wrapper" style="
+                        <div data-index="2" class="projects__main_wrapper lazy-inline-bg" style="
                     background-image: url('img/projects-bg-2.jpg')">
                             <div class="projects__main-description container">
                                 <div class="projects__block-title">
@@ -1146,7 +1169,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div data-index="3" class="projects__main_wrapper" style="
+                        <div data-index="3" class="projects__main_wrapper lazy-inline-bg" style="
                     background-image: url('img/projects-bg-1.png')">
                             <div class="projects__main-description container">
                                 <div class="projects__block-title">
@@ -1159,7 +1182,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div data-index="4" class="projects__main_wrapper" style="
+                        <div data-index="4" class="projects__main_wrapper lazy-inline-bg" style="
                     background-image: url('img/projects-bg-2.jpg')">
                             <div class="projects__main-description container">
                                 <div class="projects__block-title">
@@ -1226,18 +1249,20 @@
             <div class="news__all-news">
                 <div class="news__one-news-block news__open-popup">
                     <div class="news__image-block">
-                        <img src="img/news-1.png" alt="news-1" class="news__image">
+                        <img src="" data-src="img/news-1.png" alt="news-1" class="news__image lazy">
                     </div>
                     <div class="news__title-one-news">
                         За время эпидемии 265 поездов пересекли границу через Маньчжурию и 206 — через Эрлянь
                     </div>
                     <div class="news__description-one-news">
                         <p>
-                            С момента начала эпидемии до 19 февраля границу с Китаем через переход Маньчжурия – Забайкальск пересекли 265 грузовых поездов, которые перевезли 24144 стандартных контейнера.
+                            С момента начала эпидемии до 19 февраля границу с Китаем через переход Маньчжурия –
+                            Забайкальск пересекли 265 грузовых поездов, которые перевезли 24144 стандартных контейнера.
                         </p>
                         <p>
                             После того, как предприятия Китая начали возобновлять работу, стали восстанавливаться и активные перевозки на маршруте Китай – Европа – Китай через Маньчжурию. Харбинская железная дорога координировала движение поездов, оперативно передавая информацию в китайские и российские таможенные службы. Усилия были направлены на ускорение таможенного оформления поездов — особенно тех, которые везли в Китай грузы медицинского назначения и сырье, необходимое для восстановления производства. Таможенные службы по максимуму использовали цифровые технологии, благодаря чему время ожидания поездов на таможенных постах не превышало 3 часов.
                         </p>                        
+
                     </div>
                     <div class="news__more-details-block">
                         <a href="#" class="news__more-details-link">
@@ -1247,7 +1272,7 @@
                 </div>
                 <div class="news__one-news-block news__open-popup">
                     <div class="news__image-block">
-                        <img src="img/news-2.png" alt="news-2" class="news__image">
+                        <img src="" data-src="img/news-2.png" alt="news-2" class="news__image lazy">
                     </div>
                     <div class="news__title-one-news">
                         компания “Восток логистик” стала спонсором бейсбольной команды
@@ -1257,7 +1282,7 @@
                             Lick sang представляет собой восьмые международные соревнования по бейсболу, организованные
                             ассоциацией бейсбола Гонконга, финансируемые за счёт Home Affairs и центром досуга и
                             культурного обслуживания, санкционированный Всемирной бейсбольной и софтбольной
-                            конфедерацией, празднуется восьмая годовщина в 2019 году. 
+                            конфедерацией, празднуется восьмая годовщина в 2019 году.
                         </p>
                         <p>
                             Соревнования проходили в Sai Tso Wan 13-16 декабря 2019. Команда Бейсболистов из города
@@ -1277,17 +1302,18 @@
                 </div>
                 <div class="news__one-news-block news__open-popup">
                     <div class="news__image-block">
-                        <img src="img/news-3.png" alt="news-3" class="news__image">
+                        <img src="" data-src="img/news-3.png" alt="news-3" class="news__image lazy">
                     </div>
                     <div class="news__title-one-news">
                         с праздником 23 февраля!
                     </div>
                     <div class="news__description-one-news ">
                         <p>
-                            Женская половина коллектива ТЛК Восток Логистик искренне поздравляет всех своих клиентов, коллег и партнеров в лице мужской половины с праздником 23 февраля!
+                            Женская половина коллектива ТЛК Восток Логистик искренне поздравляет всех своих клиентов,
+                            коллег и партнеров в лице мужской половины с праздником 23 февраля!
                         </p>
                         <p>
-                            <img class="news__description-one-news-image" src="img/34.png" alt="">
+                            <img class="news__description-one-news-image lazy" src="" data-src="img/34.png" alt="">
                         </p>
                     </div>
                     <div class="news__more-details-block">
@@ -1298,7 +1324,7 @@
                 </div>
                 <div class="news__one-news-block news__open-popup">
                     <div class="news__image-block">
-                        <img src="img/news-2.png" alt="news-4" class="news__image">
+                        <img src="" data-src="img/news-2.png" alt="news-4" class="news__image lazy">
                     </div>
                     <div class="news__title-one-news">
                         компания “Восток логистик” стала спонсором бейсбольной команды
@@ -1317,7 +1343,7 @@
                 </div>
                 <div class="news__one-news-block news__open-popup">
                     <div class="news__image-block">
-                        <img src="img/projects-popup-1.png" alt="news-5" class="news__image">
+                        <img src="" data-src="img/projects-popup-1.png" alt="news-5" class="news__image lazy">
                     </div>
                     <div class="news__title-one-news">
                         “Восток логистик” получила членство проимосркой торгово-промышленной палаты
@@ -1449,7 +1475,7 @@
                 <div class="menu container">
                     <div class="menu__first-section">
                         <div class="menu__logo">
-                            <a href="index.html" class="menu__logo-link">
+                            <a href="/" class="menu__logo-link">
                                 <img src="img/logo.png" alt="logo" class="menu__logo-img">
                             </a>
                         </div>
@@ -1643,28 +1669,28 @@
                     <div id="projects-popup__photo-column" class="col-12 col-md-3 projects-popup__column">
                         <div id="lightgallery">
                             <a class="projects-popup__image-link" href="img/projects-popup-1.png">
-                                <img class="projects-popup__image" src="img/projects-popup-1.png"
+                                <img class="projects-popup__image lazy" src="" data-src="img/projects-popup-1.png"
                                     alt="ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ">
                                 <span class="projects-popup__image-title">
                                     ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ
                                 </span>
                             </a>
                             <a class="projects-popup__image-link" href="img/projects-popup-2.png">
-                                <img class="projects-popup__image" src="img/projects-popup-2.png"
+                                <img class="projects-popup__image lazy" src="" data-src="img/projects-popup-2.png"
                                     alt="ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ">
                                 <span class="projects-popup__image-title">
                                     ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ
                                 </span>
                             </a>
                             <a class="projects-popup__image-link" href="img/projects-popup-1.png">
-                                <img class="projects-popup__image" src="img/projects-popup-1.png"
+                                <img class="projects-popup__image lazy" src="" data-src="img/projects-popup-1.png"
                                     alt="ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ">
                                 <span class="projects-popup__image-title">
                                     ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ
                                 </span>
                             </a>
                             <a class="projects-popup__image-link" href="img/projects-popup-2.png">
-                                <img class="projects-popup__image" src="img/projects-popup-2.png"
+                                <img class="projects-popup__image lazy" src="" data-src="img/projects-popup-2.png"
                                     alt="ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ">
                                 <span class="projects-popup__image-title">
                                     ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ

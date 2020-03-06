@@ -160,6 +160,11 @@
                         display: block
                         text-decoration: inherit
                         color: inherit
+                        &:hover
+                            color: $orange-color
+                    &:hover
+                        &::before
+                            filter: url(#filter)
                     &::before
                         content: ""
                         position: absolute
