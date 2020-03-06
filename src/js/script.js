@@ -574,7 +574,6 @@ function initTeamSlider() {
         }
     });
 
-
 }
 
 function setAccordionToSliders() {
@@ -584,3 +583,10 @@ function setAccordionToSliders() {
         $(this).closest('.slider-item').toggleClass('expanded');
     })
 }
+
+$('a[href^="#"]').click(function(e) {
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 1000);
+    e.preventDefault();
+});
