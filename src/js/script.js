@@ -591,10 +591,15 @@ function setAccordionToSliders() {
 
 
 $('a[href^="#"]').click(function(e) {
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 1000);
     e.preventDefault();
+    let idString = $(this).attr('href');
+    if (idString.length === 1 || idString === "#") {
+        return
+    };
+    $('html, body').animate({
+        scrollTop: $(idString).offset().top
+    }, 1000);
+    $('.menu__nav-section').removeClass('active');
 });
 
 function lazyLoad() {
