@@ -298,10 +298,7 @@ function animateNumber(element) {
 }
 
 function addZeroToNumber(number) {
-    if (number < 10) {
-        return '0' + number;
-    }
-    return number;
+    return number < 10 ? '0' + number : number;
 }
 
 function appendNumberstoSliderPagination($pagination, slick) {
@@ -325,11 +322,10 @@ function initMainSlider() {
             duration = 0;
 
         if ($video) {
+            duration = $video.duration;
             $video.play();
 
-
             $($video).on('timeupdate', function () {
-                duration = $video.duration;
                 let currentPagination = $('.main-slider-pagination-item div').get(currentSlide);
                 $(currentPagination).css('width', $video.currentTime / duration * 100 + '%');
             });
@@ -590,7 +586,7 @@ function setAccordionToSliders() {
 }
 
 
-$('a[href^="#"]').click(function(e) {
+$('a[href^="#"]').click(function (e) {
     e.preventDefault();
     let idString = $(this).attr('href');
     if (idString.length === 1 || idString === "#") {
