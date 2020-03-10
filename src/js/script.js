@@ -67,6 +67,7 @@ $('.news__all-news').slick({
     infinite: true,
     nextArrow: $(".news__forward-btn"),
     prevArrow: $(".news__back-btn"),
+    swipeToSlide: true,
     responsive: [
         {
             breakpoint: 1200,
@@ -483,6 +484,7 @@ function initTeamSlider() {
         prevArrow: $(".team-slider-button.prev"),
         // mobileFirst: true,
         variableWidth: true,
+        swipeToSlide: true,
         responsive: [
             {
                 breakpoint: 1200,
