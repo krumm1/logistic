@@ -191,10 +191,15 @@ $('.news__open-popup').click(function (event) {
     event.preventDefault();
 });
 
-new SimpleBar($('#projects-popup__photo-column')[0], {
-    autoHide: false,
-    scrollbarMaxSize: 50
-});
+function simleBar() {
+    let simpleBarElement = $('#projects-popup__photo-column');
+    if (simpleBarElement.length) {
+        new SimpleBar(simpleBarElement[0], {
+            autoHide: false,
+            scrollbarMaxSize: 50
+        });
+    }
+};
 
 $(document).ready(function () {
     $("#lightgallery").lightGallery({
@@ -221,6 +226,7 @@ $(document).ready(function () {
     initReviewsSlider();
     initTeamSlider();
     lazyLoad();
+    simleBar()
 
     if ($(window).width() > 991) {
         setTimeout(initSlider, 100)
