@@ -5,11 +5,13 @@
 
 html
 	font-size: 10px
+	height: 100%
 body
 	margin: 0
 	overflow-x: hidden
 	background: #010125
 	font-family: $text-font
+	height: 100%
 	&.overflow
 		overflow: hidden
 .relative
@@ -22,10 +24,17 @@ body
 @import 'popups'
 
 .content
-	position: relative
+	display: flex
+	flex-direction: column
+	min-height: 100%
+	&__inner
+		position: relative
+		flex: 1 0 auto
 
 .content.active
 	filter: blur(3px)
+
+
 
 .header
 	padding: 40px 15px
@@ -39,6 +48,7 @@ body
 		position: relative
 		padding: 0 15px 120px
 		z-index: 0
+		flex: 0 0 auto
 		.menu
 			border: 0
 			border-top: 1px solid #fff
