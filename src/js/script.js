@@ -475,113 +475,115 @@ $(document).ready( () => {
     }
 
     function initTeamSlider() {
-        let $slider = $('.team-slider'),
-            imgWidth = 330,
-            leftContainerPosition = $slider.offset().left;
-
-        $slider.slick({
-            // slidesToShow: 7,
-            swipe: false,
-            nextArrow: $(".team-slider-button.next"),
-            prevArrow: $(".team-slider-button.prev"),
-            // mobileFirst: true,
-            variableWidth: true,
-            swipeToSlide: true,
-            responsive: [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        // slidesToShow: 5
+        if ($('.team-slider').length) {
+            let $slider = $('.team-slider'),
+                imgWidth = 330,
+                leftContainerPosition = $slider.offset().left;
+            
+            $slider.slick({
+                // slidesToShow: 7,
+                swipe: false,
+                nextArrow: $(".team-slider-button.next"),
+                prevArrow: $(".team-slider-button.prev"),
+                // mobileFirst: true,
+                variableWidth: true,
+                swipeToSlide: true,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            // slidesToShow: 5
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            // slidesToShow: 4,
+                            swipe: true
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            // slidesToShow: 2,
+                            swipe: true
+                        }
                     }
-                },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        // slidesToShow: 4,
-                        swipe: true
+                ]
+            });
+    
+            let clickedSlide, slideWidth, closeBtn;
+            $slider.on('click', '.team-slider-element', function (e) {
+                clickedSlide = $(this);
+                if (window.outerWidth >= 992) {
+                    let containerWidth = $slider.outerWidth();
+                    closeBtn = clickedSlide.find('.close-btn');
+                    $('.team-slider-header').addClass('disabled');
+    
+                    if (clickedSlide.hasClass('active') && !$(e.target).hasClass('close-btn')) return;
+    
+                    let content = clickedSlide.find('.team-slider-element-content'),
+                        contentInner = content.find('.team-slider-element-inner'),
+                        position = clickedSlide.offset().left;
+    
+                    if ($(e.target).hasClass('close-btn')) {
+                        $('.team-slider-header').removeClass('disabled');
+                        clickedSlide.removeClass('active');
+                        clickedSlide.css({
+                            "width": slideWidth + "px",
+                            "transform": "none"
+                        });
+                        $('.team-slider-element').removeClass('hidden');
+                        closeBtn.hide();
+                        content.css({ "width": 0 });
+                        setTimeout(function () {
+                            content.hide()
+                        }, 800);
+                        contentInner.hide();
+                        return;
                     }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        // slidesToShow: 2,
-                        swipe: true
-                    }
-                }
-            ]
-        });
-
-        let clickedSlide, slideWidth, closeBtn;
-        $slider.on('click', '.team-slider-element', function (e) {
-            clickedSlide = $(this);
-            if (window.outerWidth >= 992) {
-                let containerWidth = $slider.outerWidth();
-                closeBtn = clickedSlide.find('.close-btn');
-                $('.team-slider-header').addClass('disabled');
-
-                if (clickedSlide.hasClass('active') && !$(e.target).hasClass('close-btn')) return;
-
-                let content = clickedSlide.find('.team-slider-element-content'),
-                    contentInner = content.find('.team-slider-element-inner'),
-                    position = clickedSlide.offset().left;
-
-                if ($(e.target).hasClass('close-btn')) {
-                    $('.team-slider-header').removeClass('disabled');
-                    clickedSlide.removeClass('active');
-                    clickedSlide.css({
-                        "width": slideWidth + "px",
-                        "transform": "none"
+    
+                    slideWidth = clickedSlide.outerWidth();
+    
+                    $('.team-slider-element').addClass('hidden');
+                    clickedSlide.addClass('active');
+                    position -= leftContainerPosition;
+                    clickedSlide.removeClass('hidden');
+    
+                    clickedSlide
+                        .removeClass('hidden')
+                        .css({
+                            "transform": "translateX(-" + position + "px)"
+                        });
+                    setTimeout(function () {
+                        clickedSlide.css({ "width": imgWidth + "px" });
+                        content.show();
+                        content.css({ "width": containerWidth - imgWidth + "px" })
+                        setTimeout(function () {
+                            contentInner.show();
+                            closeBtn.show();
+                        }, 500)
+                    }, 800)
+                } else {
+                    let $popup = $('<div class="team-slider-popup"></div>'),
+                        $img = clickedSlide.find('.team-slider-element-img-wrapper'),
+                        $content = clickedSlide.find('.team-slider-element-content');
+                    $popup.append($img);
+                    $popup.append($content);
+                    $('body').append($popup);
+                    $popup.animate({ "right": "0" }, () => {
+                        $popup.find('.close-btn').show()
                     });
-                    $('.team-slider-element').removeClass('hidden');
-                    closeBtn.hide();
-                    content.css({ "width": 0 });
-                    setTimeout(function () {
-                        content.hide()
-                    }, 800);
-                    contentInner.hide();
-                    return;
+                    $popup.on('click', '.close-btn', function () {
+                        clickedSlide.append($img, $content);
+                        $popup.animate({ "right": "100%" });
+                        setTimeout(function () {
+                            $popup.remove();
+                        }, 400)
+                    })
                 }
-
-                slideWidth = clickedSlide.outerWidth();
-
-                $('.team-slider-element').addClass('hidden');
-                clickedSlide.addClass('active');
-                position -= leftContainerPosition;
-                clickedSlide.removeClass('hidden');
-
-                clickedSlide
-                    .removeClass('hidden')
-                    .css({
-                        "transform": "translateX(-" + position + "px)"
-                    });
-                setTimeout(function () {
-                    clickedSlide.css({ "width": imgWidth + "px" });
-                    content.show();
-                    content.css({ "width": containerWidth - imgWidth + "px" })
-                    setTimeout(function () {
-                        contentInner.show();
-                        closeBtn.show();
-                    }, 500)
-                }, 800)
-            } else {
-                let $popup = $('<div class="team-slider-popup"></div>'),
-                    $img = clickedSlide.find('.team-slider-element-img-wrapper'),
-                    $content = clickedSlide.find('.team-slider-element-content');
-                $popup.append($img);
-                $popup.append($content);
-                $('body').append($popup);
-                $popup.animate({ "right": "0" }, () => {
-                    $popup.find('.close-btn').show()
-                });
-                $popup.on('click', '.close-btn', function () {
-                    clickedSlide.append($img, $content);
-                    $popup.animate({ "right": "100%" });
-                    setTimeout(function () {
-                        $popup.remove();
-                    }, 400)
-                })
-            }
-        });
+            });
+        };
 
     }
 
