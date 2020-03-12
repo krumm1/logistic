@@ -467,7 +467,7 @@ $(document).ready( () => {
             prevArrow: $slider.closest('.reviews-slider-container').find('.prev'),
             nextArrow: $slider.closest('.reviews-slider-container').find('.next'),
             centerMode: true,
-            slidesToShow: 3,
+            // slidesToShow: 3,
             slidesToScroll: 1,
             variableWidth: true,
             focusOnSelect: true
