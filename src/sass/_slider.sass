@@ -17,17 +17,23 @@
         opacity: 0
         animation-duration: 1s
         animation-delay: .3s
+        display: none
     &-heading
         font-size: 35px
         text-transform: uppercase
         opacity: 0
         animation-delay: .6s
         animation-duration: 1s
+        display: none
     &-text
         font-size: 20px   
         opacity: 0 
         animation-delay: .9s
         animation-duration: 1s
+        display: none
+    &-item.slick-current
+        .slider-title, .slider-heading, .slider-text
+            display: block
     &-list
         margin: 0
         padding: 0
