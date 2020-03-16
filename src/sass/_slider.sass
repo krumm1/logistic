@@ -142,6 +142,11 @@
             position: static
             right: 0
             max-width: 90%
+            display: block
+            &.prevent-animation
+                animation: none
+                display: block
+                opacity: 1
             &::before
                 content: ""
                 position: absolute
@@ -159,8 +164,10 @@
                     transform: rotate(-135deg)    
         &-heading
             font-size: 20px
+            display: block
         &-text
             font-size: 16px
+            display: block
         &-content
             width: auto
             padding-left: 0

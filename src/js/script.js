@@ -212,6 +212,25 @@ $(document).ready( () => {
         prevHtml: '<span class="projects-popup__prev-button">НАЗАД</span>'
     });
 
+
+    function removeFadeInUpMobile() {
+        if ($(window).width() < 992) {
+            let parent = $('.slider-item');
+            parent.find('.slider-heading').css('animation-delay', '.3s');
+            parent.find('.slider-text').css('animation-delay', '.3s');
+            if (parent.find('.slider-title').hasClass('page-fade-in-up')) {
+                parent.find('.slider-title').removeClass('page-fade-in-up');
+                parent.find('.slider-title').addClass('fadeInUp');
+                parent.find('.slider-heading').removeClass('page-fade-in-up');
+                parent.find('.slider-heading').addClass('fadeInUp');
+                parent.find('.slider-text').removeClass('page-fade-in-up');
+                parent.find('.slider-text').addClass('fadeInUp');
+            }
+        }
+    };
+
+    removeFadeInUpMobile();
+
     // $('.hamburger').on('click', function () {
     //     $(this).toggleClass('open');
     // });
