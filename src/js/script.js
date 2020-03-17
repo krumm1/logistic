@@ -1,4 +1,4 @@
-$(document).ready( () => {
+$(document).ready(() => {
 
     "use strict"
 
@@ -12,6 +12,8 @@ $(document).ready( () => {
         return elementBottom > viewportTop && elementTop < viewportBottom;
     };
 
+
+
     $('form').submit(function (event) {
         event.preventDefault();
         let $this = $(this);
@@ -24,6 +26,8 @@ $(document).ready( () => {
                 $('#popup-call').addClass('popup-call__open');
                 $('.popup-call__wrapper').addClass('active');
                 $('.popup-call__success').show();
+                grecaptcha.reset();
+                $this.reset();
             },
             error: (res) => {
                 alert(res.responseText);
@@ -229,18 +233,18 @@ $(document).ready( () => {
         }
     };
 
-    $(function() {
+    $(function () {
         let upButton = $('.up-button');
-        $(window).scroll(function() {
-            if($(this).scrollTop() != 0) {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() != 0) {
                 upButton.fadeIn();
             } else {
                 upButton.fadeOut();
             }
         });
-         
-        upButton.click(function() {
-            $('body,html').animate({scrollTop:0},800);
+
+        upButton.click(function () {
+            $('body,html').animate({ scrollTop: 0 }, 800);
         });
     });
 
@@ -513,7 +517,7 @@ $(document).ready( () => {
             let $slider = $('.team-slider'),
                 imgWidth = 330,
                 leftContainerPosition = $slider.offset().left;
-            
+
             $slider.slick({
                 // slidesToShow: 7,
                 swipe: false,
@@ -545,7 +549,7 @@ $(document).ready( () => {
                     }
                 ]
             });
-    
+
             let clickedSlide, slideWidth, closeBtn;
             $slider.on('click', '.team-slider-element', function (e) {
                 clickedSlide = $(this);
@@ -553,13 +557,13 @@ $(document).ready( () => {
                     let containerWidth = $slider.outerWidth();
                     closeBtn = clickedSlide.find('.close-btn');
                     $('.team-slider-header').addClass('disabled');
-    
+
                     if (clickedSlide.hasClass('active') && !$(e.target).hasClass('close-btn')) return;
-    
+
                     let content = clickedSlide.find('.team-slider-element-content'),
                         contentInner = content.find('.team-slider-element-inner'),
                         position = clickedSlide.offset().left;
-    
+
                     if ($(e.target).hasClass('close-btn')) {
                         $('.team-slider-header').removeClass('disabled');
                         clickedSlide.removeClass('active');
@@ -576,14 +580,14 @@ $(document).ready( () => {
                         contentInner.hide();
                         return;
                     }
-    
+
                     slideWidth = clickedSlide.outerWidth();
-    
+
                     $('.team-slider-element').addClass('hidden');
                     clickedSlide.addClass('active');
                     position -= leftContainerPosition;
                     clickedSlide.removeClass('hidden');
-    
+
                     clickedSlide
                         .removeClass('hidden')
                         .css({
