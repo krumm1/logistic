@@ -2,7 +2,8 @@
     color: #fff
     &-img
         position: absolute
-        top: 160px
+        top: 50%
+        transform: translate(0, -50%)
         left: 0	
         overflow: hidden
     &-title
@@ -96,7 +97,7 @@
     top: -100%
     width: 300%
     height: 300%
-    background: radial-gradient(circle at 58% 50%, rgba($accent-color, 0) 5%, rgba($accent-color, 0.98) 12%)
+    background: radial-gradient(circle at 58% 50%, rgba($accent-color, 0) 8%, rgba($accent-color, 0.98) 19%)
     filter: blur(4px)
     transition: 2s ease
     
@@ -190,4 +191,15 @@
         &-item
             .about-docs li a
                 display: block    
-                animation-delay: .3s                  
+                animation-delay: .3s        
+
+    @media screen and (max-width: 480px)    
+        .about-docs
+                & li
+                    .slider-heading
+                        width: 150px
+                    & a
+                        width: 160px
+                        font-size: 18px
+                        &::before
+                            margin-right: 15px      
