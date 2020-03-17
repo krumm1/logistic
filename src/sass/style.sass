@@ -839,15 +839,20 @@ body
 	left: 50%
 	transform: translate(-50%, 0)
 	z-index: 10
-	display: none
+	height: 30px
+	display: block
+	pointer-events: none
 .up-button
-	width: 100%
-	display: flex
+	position: absolute
+	right: 0
+	width: 55px
+	display: none
 	justify-content: flex-end
 	font-family: Bebas Neue
 	font-size: 16px
 	text-transform: uppercase
 	color: #FFFFFF
+	pointer-events: auto
 	&__inner
 		cursor: pointer
 		position: relative

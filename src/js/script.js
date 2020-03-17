@@ -230,7 +230,7 @@ $(document).ready( () => {
     };
 
     $(function() {
-        let upButton = $('.up-button__wrapper');
+        let upButton = $('.up-button');
         $(window).scroll(function() {
             if($(this).scrollTop() != 0) {
                 upButton.fadeIn();
