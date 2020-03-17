@@ -229,6 +229,21 @@ $(document).ready( () => {
         }
     };
 
+    $(function() {
+        let upButton = $('.up-button__wrapper');
+        $(window).scroll(function() {
+            if($(this).scrollTop() != 0) {
+                upButton.fadeIn();
+            } else {
+                upButton.fadeOut();
+            }
+        });
+         
+        upButton.click(function() {
+            $('body,html').animate({scrollTop:0},800);
+        });
+    });
+
     removeFadeInUpMobile();
 
     // $('.hamburger').on('click', function () {
