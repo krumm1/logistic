@@ -15,6 +15,14 @@
     <link rel="stylesheet" href="libs/light-gallery/css/lightgallery.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            let preloader = document.querySelector('#p_prldr'),
+                svg_anm   = document.querySelector('.svg_anm');
+            svg_anm.classList.add("closed")
+            preloader.classList.add("closed")
+        };
+        </script>
 </head>
 
 <body>
@@ -29,6 +37,17 @@
             </filter>
         </defs>
     </svg>
+
+    <div id="p_prldr">
+        <div class="contpre">
+            <span class="svg_anm"></span>
+            <br>
+            Подождите
+            <br>
+            <small>Идет загрузка</small>
+        </div>
+    </div>
+
     <div class="content">
         <div class="content__inner">
             <div class="fixed-contacts-btns">
@@ -1657,8 +1676,11 @@
                             Защита от автоматических сообщений
                         </div>
                         <div class="form__submit-block">
-                            <div class="form__not-a-robot">
+                            <!-- <div class="form__not-a-robot">
                                 <img src="img/not-a-robot.png" alt="">
+                            </div> -->
+                            <div class="form__submit-block g-recaptcha"
+                                data-sitekey="6LeXKt8UAAAAAIjeFbwzyhhfH_4rLT3zBJ6CTwqZ" id="contacts-recaptcha">
                             </div>
                             <div class="form__submit-button-container">
                                 <div class="form__button-block">
@@ -1792,8 +1814,11 @@
                                 Защита от автоматических сообщений
                             </div>
                             <div class="form__submit-block">
-                                <div class="form__not-a-robot">
+                                <!-- <div class="form__not-a-robot">
                                     <img src="img/not-a-robot.png" alt="">
+                                </div> -->
+                                <div class="form__submit-block g-recaptcha"
+                                    data-sitekey="6LeXKt8UAAAAAIjeFbwzyhhfH_4rLT3zBJ6CTwqZ" id="contacts-recaptcha">
                                 </div>
                                 <div class="form__submit-button-container">
                                     <div class="start-work__button-block">

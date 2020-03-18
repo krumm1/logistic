@@ -27,7 +27,7 @@ $(document).ready(() => {
                 $('.popup-call__wrapper').addClass('active');
                 $('.popup-call__success').show();
                 grecaptcha.reset();
-                $this.reset();
+                $this.trigger("reset");
             },
             error: (res) => {
                 alert(res.responseText);
