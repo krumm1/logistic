@@ -16,13 +16,28 @@
     <link rel="stylesheet" href="css/style.min.css">
     <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="text/javascript">
-        window.onload = function () {
-            let preloader = document.querySelector('#p_prldr'),
-                svg_anm   = document.querySelector('.svg_anm');
-            svg_anm.classList.add("closed")
-            preloader.classList.add("closed")
-            initMainSlider();
-        };
+        function work() {
+            document.onreadystatechange = function () {
+                console.log(document.readyState)
+                if (document.readyState == "complete") {
+                    let preloader = document.querySelector('#p_prldr'),
+                        svg_anm   = document.querySelector('.svg_anm');
+                    svg_anm.classList.add("closed")
+                    preloader.classList.add("closed")
+                    initMainSlider();
+                };
+            }
+         };
+
+         work();
+
+        // window.onload = function () {
+        //     let preloader = document.querySelector('#p_prldr'),
+        //         svg_anm   = document.querySelector('.svg_anm');
+        //     svg_anm.classList.add("closed")
+        //     preloader.classList.add("closed")
+        //     initMainSlider();
+        // };
         </script>
 </head>
 
