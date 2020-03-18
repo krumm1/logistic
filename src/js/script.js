@@ -449,6 +449,7 @@ $(document).ready(() => {
                 // mobileFirst: true,
                 variableWidth: true,
                 swipeToSlide: true,
+                touchThreshold: 30,
                 responsive: [
                     {
                         breakpoint: 1200,
@@ -673,10 +674,15 @@ function initMainSlider() {
         let $slide = $slider.find('.slick-current'),
             $video = $slide.find('video').get(0),
             duration = 0;
-
+        console.log($video);
         if ($video) {
             duration = $video.duration;
-            $video.play();
+            // $($video).on('canplaythrough', function () {
+            //     $video.play();
+            // });
+            if ($video.readyState > 3) {
+                $video.play();
+              };
 
             $($video).on('timeupdate', function () {
                 let currentPagination = $('.main-slider-pagination-item div').get(currentSlide);
