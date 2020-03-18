@@ -389,6 +389,7 @@ $(document).ready(() => {
         $slider.slick({
             speed: 850,
             dots: true,
+            lazyLoad: "progressive",
             swipe: false,
             dotsClass: 'slider-pagination-list',
             appendDots: $pagination.find('.main-slider-pagination'),
