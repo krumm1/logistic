@@ -261,7 +261,7 @@ $(document).ready(() => {
     //     }
     // });
 
-    initMainSlider();
+    
     initReviewsSlider();
     initTeamSlider();
     lazyLoad();
@@ -342,89 +342,11 @@ $(document).ready(() => {
         }, animationInterval)
     }
 
-    function addZeroToNumber(number) {
-        return number < 10 ? '0' + number : number;
-    }
 
-    function appendNumberstoSliderPagination($pagination, slick) {
-        $pagination.find('.slider-pagination-left').text('01');
-        $pagination.find('.slider-pagination-right').text(addZeroToNumber(slick.slideCount));
-    }
 
-    function initMainSlider() {
-        let $slider = $('.main-slider'),
-            $parent = $slider.closest('.main-slider-container'),
-            $pagination = $parent.find('.main-slider-footer');
+    
 
-        $slider.on('init', function (e, slick) {
-            appendNumberstoSliderPagination($pagination, slick);
-        })
-
-        $slider.on('init reinit afterChange', function (event, slick, currentSlide = 0) {
-            $parent.removeClass('sliding');
-            let $slide = $slider.find('.slick-current'),
-                $video = $slide.find('video').get(0),
-                duration = 0;
-
-            if ($video) {
-                duration = $video.duration;
-                $video.play();
-
-                $($video).on('timeupdate', function () {
-                    let currentPagination = $('.main-slider-pagination-item div').get(currentSlide);
-                    $(currentPagination).css('width', $video.currentTime / duration * 100 + '%');
-                });
-            }
-        });
-        $slider.on('beforeChange', function (event, slick) {
-            let $slide = $slider.find('.slick-current'),
-                $video = $slide.find('video').get(0);
-
-            if ($video) {
-                $video.pause();
-                $video.currentTime = 0;
-            }
-        })
-
-        $slider.slick({
-            speed: 850,
-            dots: true,
-            lazyLoad: "progressive",
-            swipe: false,
-            dotsClass: 'slider-pagination-list',
-            appendDots: $pagination.find('.main-slider-pagination'),
-            customPaging: function (slick, index) {
-                return '<div class="main-slider-pagination-item"><div></div></div>'
-            },
-            arrows: false,
-            responsive: [
-                {
-                    breakpoint: 1199,
-                    settings: {
-                        swipe: true
-                    }
-                }
-            ]
-        });
-        $slider.find('video').each(function (index, item) {
-            $(item).on('ended', function () {
-                // $slider.slick('slickNext');
-                $pagination.find('.next').trigger('click');
-            })
-        })
-        $pagination.on('click', '.main-slider-button', function () {
-            $parent.addClass('sliding');
-            let $this = $(this);
-            setTimeout(function () {
-                if ($this.hasClass('prev')) {
-                    $slider.slick('slickPrev');
-                }
-                if ($this.hasClass('next')) {
-                    $slider.slick('slickNext');
-                }
-            }, 500)
-        })
-    }
+    
 
     function initSlider() {
         let $slider = $('.slider:not(.slick-initialized)'),
@@ -727,3 +649,87 @@ $(document).ready(() => {
     };
 
 })
+
+function addZeroToNumber(number) {
+    return number < 10 ? '0' + number : number;
+};
+
+function appendNumberstoSliderPagination($pagination, slick) {
+    $pagination.find('.slider-pagination-left').text('01');
+    $pagination.find('.slider-pagination-right').text(addZeroToNumber(slick.slideCount));
+};
+
+function initMainSlider() {
+    let $slider = $('.main-slider'),
+        $parent = $slider.closest('.main-slider-container'),
+        $pagination = $parent.find('.main-slider-footer');
+
+    $slider.on('init', function (e, slick) {
+        appendNumberstoSliderPagination($pagination, slick);
+    })
+
+    $slider.on('init reinit afterChange', function (event, slick, currentSlide = 0) {
+        $parent.removeClass('sliding');
+        let $slide = $slider.find('.slick-current'),
+            $video = $slide.find('video').get(0),
+            duration = 0;
+
+        if ($video) {
+            duration = $video.duration;
+            $video.play();
+
+            $($video).on('timeupdate', function () {
+                let currentPagination = $('.main-slider-pagination-item div').get(currentSlide);
+                $(currentPagination).css('width', $video.currentTime / duration * 100 + '%');
+            });
+        }
+    });
+    $slider.on('beforeChange', function (event, slick) {
+        let $slide = $slider.find('.slick-current'),
+            $video = $slide.find('video').get(0);
+
+        if ($video) {
+            $video.pause();
+            $video.currentTime = 0;
+        }
+    })
+
+    $slider.slick({
+        speed: 850,
+        dots: true,
+        lazyLoad: "progressive",
+        swipe: false,
+        dotsClass: 'slider-pagination-list',
+        appendDots: $pagination.find('.main-slider-pagination'),
+        customPaging: function (slick, index) {
+            return '<div class="main-slider-pagination-item"><div></div></div>'
+        },
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    swipe: true
+                }
+            }
+        ]
+    });
+    $slider.find('video').each(function (index, item) {
+        $(item).on('ended', function () {
+            // $slider.slick('slickNext');
+            $pagination.find('.next').trigger('click');
+        })
+    })
+    $pagination.on('click', '.main-slider-button', function () {
+        $parent.addClass('sliding');
+        let $this = $(this);
+        setTimeout(function () {
+            if ($this.hasClass('prev')) {
+                $slider.slick('slickPrev');
+            }
+            if ($this.hasClass('next')) {
+                $slider.slick('slickNext');
+            }
+        }, 500)
+    })
+};
