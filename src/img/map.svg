@@ -85,7 +85,7 @@
     <animate attributeType="SVG" attributeName="r" begin="0.5s" dur="2s" repeatCount="indefinite" from="0" to="15px"></animate>
     <animate attributeType="CSS" attributeName="opacity" begin="0.5s" dur="2s" repeatCount="indefinite" from="1" to="0"></animate>
 </circle>
-<text x="386.155" y="318.028" class="map-text small">НИМБО</text>
+<text x="386.155" y="318.028" class="map-text small">НИНБО</text>
 <ellipse cx="437.155" cy="315.028" rx="5" ry="5" fill="#00D7DF"/>
 </g>
 
