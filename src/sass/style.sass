@@ -41,6 +41,9 @@ body
  
  
 .contpre
+	display: flex
+	flex-direction: column
+	align-items: center
 	width: 250px
 	height: 100px
 	position: absolute
@@ -53,21 +56,25 @@ body
 	letter-spacing: -2px
 	text-align: center
 	line-height: 35px
-	small
+	&_small
 		font-size: 25px
 		letter-spacing: 1px
+		animation: preloader-animation 2.5s ease infinite
+		animation-delay: 1.75s
+	&_big
+		animation: preloader-animation 2.5s ease infinite
+		animation-delay: 1.75s
  
 #p_prldr .svg_anm 
-	position: absolute
-	width: 41px
-	height: 41px
-	background: url(../img/pre-loader.svg) center center no-repeat
-	background-size: 41px   
-	margin: -16px 0 0 -16px
+	width: 139px
 	transition: 0.3s ease
+	margin-bottom: 30px
+	animation: preloader-animation 2.5s ease infinite
 	&.closed
 		opacity: 0
 		visibility: hidden
+	img 
+		width: 100%
 
 .content
 	display: flex
@@ -79,8 +86,6 @@ body
 
 .content.active
 	filter: blur(3px)
-
-
 
 .header
 	padding: 40px 15px

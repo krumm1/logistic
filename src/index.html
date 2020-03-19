@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Транспортная логистическая компания Восток логистик</title>
+    <link rel="preload" href="css/fonts.min.css" as="style">
     <link rel="shortcut icon" href="img/icons/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/fonts.min.css">
     <link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css">
@@ -14,6 +15,19 @@
     <link rel="stylesheet" href="libs/simplebar/simplebar.css">
     <link rel="stylesheet" href="libs/light-gallery/css/lightgallery.min.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <style>
+        @keyframes preloader-animation {
+            0% {
+                opacity: 0
+            }
+            50% {
+                opacity: 1
+            }
+            100% {
+                opacity: 0
+            }
+        }
+    </style>
     <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="text/javascript">
         // function work() {
@@ -56,11 +70,15 @@
 
     <div id="p_prldr">
         <div class="contpre">
-            <span class="svg_anm"></span>
-            <br>
-            Подождите
-            <br>
-            <small>Идет загрузка</small>
+            <span class="svg_anm">
+                <img src="img/logo_preload.svg" alt="">
+            </span>
+            <!-- <div class="contpre_big">
+                Подождите
+            </div>
+            <div class="contpre_small">
+                Идет загрузка
+            </div> -->
         </div>
     </div>
 
@@ -1637,8 +1655,8 @@
                         ваша заявка успешно отправлена
                     </div>
                     <div class="success__dexcription">
-                        В ближайшее время с вами свяжутся специалисты
-                        <br> "ТЛК ВОСТОК ЛОГИСТИК".
+                        В ближайшее время с вами свяжутся
+                        <br> специалисты "ТЛК ВОСТОК ЛОГИСТИК".
                     </div>
                 </div>
                 <div class="close-button"></div>
