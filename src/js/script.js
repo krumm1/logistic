@@ -670,7 +670,6 @@ function initMainSlider() {
     })
 
     $slider.on('init reinit afterChange', function (event, slick, currentSlide = 0) {
-        $parent.removeClass('sliding');
         let $slide = $slider.find('.slick-current'),
             $video = $slide.find('video').get(0),
             duration = 0;
@@ -727,7 +726,6 @@ function initMainSlider() {
         })
     })
     $pagination.on('click', '.main-slider-button', function () {
-        $parent.addClass('sliding');
         let $this = $(this);
         setTimeout(function () {
             if ($this.hasClass('prev')) {
@@ -736,6 +734,6 @@ function initMainSlider() {
             if ($this.hasClass('next')) {
                 $slider.slick('slickNext');
             }
-        }, 500)
+        }, 1000)
     })
 };
