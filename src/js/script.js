@@ -702,6 +702,7 @@ function initMainSlider() {
     $slider.slick({
         speed: 850,
         dots: true,
+        fade: true,
         lazyLoad: "progressive",
         swipe: false,
         dotsClass: 'slider-pagination-list',
@@ -734,6 +735,6 @@ function initMainSlider() {
             if ($this.hasClass('next')) {
                 $slider.slick('slickNext');
             }
-        }, 1000)
+        }, 0)
     })
 };
