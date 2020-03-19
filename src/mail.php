@@ -9,7 +9,7 @@ $data = array(
     'response' => $recaptchaResponse
 );
 
-$emailTo = "pikpr.dev@gmail.com";
+$emailTo = "vostok@vlogistic.ru";
 $content = "";
 $projectName = "VL логистик";
 
