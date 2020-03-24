@@ -91,7 +91,7 @@ $(document).ready(() => {
         ]
     });
 
-    $('.input-phone').mask('+7  9 9 9  9 9 9 9 9 9 9');
+    // $('.input-phone').mask('+7  9 9 9  9 9 9 9 9 9 9');
 
     $('.contacts__form-button').click((event) => {
         let checkboxChecked = $('#form__checkbox-contacts').prop('checked');
@@ -249,6 +249,9 @@ $(document).ready(() => {
     });
 
     removeFadeInUpMobile();
+    
+
+    
 
     // $('.hamburger').on('click', function () {
     //     $(this).toggleClass('open');
@@ -661,6 +664,19 @@ function appendNumberstoSliderPagination($pagination, slick) {
 };
 
 function initMainSlider() {
+
+    document.querySelectorAll('.video-js').forEach( (item) => {
+        videojs(item, {
+            controls: false,
+            autoplay: true,
+            preload: 'auto',
+            readyState: 4,
+            muted: true,
+            videoWidth: 1920,
+            videoHeight: 1080
+        });
+    });
+
     let $slider = $('.main-slider'),
         $parent = $slider.closest('.main-slider-container'),
         $pagination = $parent.find('.main-slider-footer');
