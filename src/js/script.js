@@ -407,9 +407,8 @@ $(document).ready(() => {
 
             $parent.on('click', '.slider-tab-item', function () {
                 if ($(this).hasClass('active')) return;
-                // $parent.find('.slider-tab-item').removeClass('active');
-                // // debugger;
-                // $(this).addClass('active');
+                $(this).closest('.slider-container').find('.slider-tab-item').removeClass('active');
+                $(this).addClass('active');
                 $(this).closest('.slider-container').find('.slider').slick('slickGoTo', $(this).index());
             });
 
