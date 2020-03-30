@@ -675,6 +675,7 @@ function appendNumberstoSliderPagination($pagination, slick) {
     $pagination.find('.slider-pagination-right').text(addZeroToNumber(slick.slideCount));
 };
 
+
 function initMainSlider() {
 
     document.querySelectorAll('.video-js').forEach( (item) => {
@@ -765,3 +766,4 @@ function initMainSlider() {
         }, 0)
     })
 };
+
