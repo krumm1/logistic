@@ -172,14 +172,17 @@
             img
                 width: auto
                 max-width: 100%  
+        &-item
+            &.expanded
+                .slider-title
+                    margin-bottom: 10px
         &-title
             text-align: left
             font-size: 35px
-            padding-right: 0
-            margin-bottom: 10px
+            padding-right: 10%
             position: static
             right: 0
-            max-width: 90%
+            // max-width: 90%
             display: block
             &.prevent-animation
                 animation: none
@@ -188,8 +191,8 @@
             &::before
                 content: ""
                 position: absolute
-                right: 0
-                top: 25px
+                right: 4px
+                top: 13px
                 border-left: 3px solid #fff
                 border-top: 3px solid #fff
                 border-radius: 2px
