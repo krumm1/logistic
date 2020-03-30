@@ -680,14 +680,14 @@ function initMainSlider() {
         $pagination = $video.parents('.main-slider-container').find('.slider-pagination'),
         duration = 0;
 
-    function initPagination() {
+    function playVideoAndSetPaginationWidth() {
         duration = $($video).get(i).duration;
         // $($video).on('canplaythrough', function () {
         //     $video.play();
         // });
-        if ($video[i].readyState > 3) {
-            $video[i].play();
-        };
+        // if ($video[i].readyState > 3) {
+        //     $video[i].play();
+        // };
 
         $video.on('timeupdate', function () {
             let currentPagination = $('.main-slider-pagination-item div').get(i);
@@ -696,7 +696,8 @@ function initMainSlider() {
     }
 
     if ($video) {
-        initPagination();
+        playVideoAndSetPaginationWidth();
+        $video[i].play();
     }
 
     appendNumberstoSliderPagination($pagination, $video.length);
@@ -710,7 +711,7 @@ function initMainSlider() {
         }
         setTimeout(function () {
             $('.main-slider-item')[++i].classList.add('active');
-            initPagination();
+            playVideoAndSetPaginationWidth();
             $video[i].play();
 
         }, 400)
@@ -731,7 +732,7 @@ function initMainSlider() {
                 }
                 $('.main-slider-pagination-item div').css('width', 0);
                 $slides[--i].classList.add('active');
-                initPagination();
+                playVideoAndSetPaginationWidth();
                 $video[i].play();
             }, 400)
 
@@ -748,7 +749,7 @@ function initMainSlider() {
                 }
                 $('.main-slider-pagination-item div').css('width', 0);
                 $slides[++i].classList.add('active');
-                initPagination();
+                playVideoAndSetPaginationWidth();
                 $video[i].play();
             }, 400)
         }
