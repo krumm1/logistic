@@ -1,0 +1,21 @@
+.main-slider-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -ms-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+}
+
+.main-slider-item.active {
+    z-index: 1;
+    opacity: 1;
+}
+
+.main-slider-footer {
+    position: absolute;
+    bottom: 0;
+}

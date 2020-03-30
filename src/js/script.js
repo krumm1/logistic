@@ -12,8 +12,6 @@ $(document).ready(() => {
         return elementBottom > viewportTop && elementTop < viewportBottom;
     };
 
-
-
     $('form').submit(function (event) {
         event.preventDefault();
         let $this = $(this);
@@ -93,7 +91,7 @@ $(document).ready(() => {
 
     $('.input-phone').mask('+7  9 9 9  9 9 9 9 9 9 9');
 
-    $('.contacts__form-button').click( function (event) {
+    $('.contacts__form-button').click(function (event) {
         let checkboxChecked = $('#form__checkbox-contacts').prop('checked');
         if (!checkboxChecked) {
             $('.form__alert-checkbox').addClass('active');
@@ -259,9 +257,9 @@ $(document).ready(() => {
     });
 
     removeFadeInUpMobile();
-    
 
-    
+
+
 
     // $('.hamburger').on('click', function () {
     //     $(this).toggleClass('open');
@@ -274,7 +272,7 @@ $(document).ready(() => {
     //     }
     // });
 
-    
+
     initReviewsSlider();
     initTeamSlider();
     lazyLoad();
@@ -357,9 +355,9 @@ $(document).ready(() => {
 
 
 
-    
 
-    
+
+
 
     function initSlider() {
         let $slider = $('.slider:not(.slick-initialized)'),
@@ -670,15 +668,93 @@ function addZeroToNumber(number) {
     return number < 10 ? '0' + number : number;
 };
 
-function appendNumberstoSliderPagination($pagination, slick) {
+function appendNumberstoSliderPagination($pagination, number) {
     $pagination.find('.slider-pagination-left').text('01');
-    $pagination.find('.slider-pagination-right').text(addZeroToNumber(slick.slideCount));
+    $pagination.find('.slider-pagination-right').text(addZeroToNumber(number));
 };
 
 
 function initMainSlider() {
+    let i = 0;
+    let $video = $('.video-js'),
+        $pagination = $video.parents('.main-slider-container').find('.slider-pagination'),
+        duration = 0;
 
-    document.querySelectorAll('.video-js').forEach( (item) => {
+    function initPagination() {
+        duration = $($video).get(i).duration;
+        // $($video).on('canplaythrough', function () {
+        //     $video.play();
+        // });
+        if ($video[i].readyState > 3) {
+            $video[i].play();
+        };
+
+        $video.on('timeupdate', function () {
+            let currentPagination = $('.main-slider-pagination-item div').get(i);
+            $(currentPagination).css('width', $($video).get(i).currentTime / duration * 100 + '%');
+        });
+    }
+
+    if ($video) {
+        initPagination();
+    }
+
+    appendNumberstoSliderPagination($pagination, $video.length);
+
+    // $video[i].play();
+    $video.on('ended', function () {
+        $('.main-slider-item')[i].classList.remove('active');
+        $('.main-slider-pagination-item div').css('width', 0);
+        if (i === $video.length - 1) {
+            i = -1;
+        }
+        setTimeout(function () {
+            $('.main-slider-item')[++i].classList.add('active');
+            initPagination();
+            $video[i].play();
+
+        }, 400)
+    });
+    let $slides = $('.main-slider-item');
+    $('.main-slider-button').on('click', function () {
+
+        if ($(this).hasClass('prev')) {
+            if (!$($slides.get(i)).hasClass('active')) {
+                return
+            }
+            $video[i].pause();
+            $slides[i].classList.remove('active');
+            setTimeout(function () {
+                $video[i].currentTime = 0;
+                if (i === 0) {
+                    i = $video.length;
+                }
+                $('.main-slider-pagination-item div').css('width', 0);
+                $slides[--i].classList.add('active');
+                initPagination();
+                $video[i].play();
+            }, 400)
+
+        } else if ($(this).hasClass('next')) {
+            if (!$($slides.get(i)).hasClass('active')) {
+                return
+            }
+            $video[i].pause();
+            $slides[i].classList.remove('active');
+            setTimeout(function () {
+                $video[i].currentTime = 0;
+                if (i === $video.length - 1) {
+                    i = -1;
+                }
+                $('.main-slider-pagination-item div').css('width', 0);
+                $slides[++i].classList.add('active');
+                initPagination();
+                $video[i].play();
+            }, 400)
+        }
+    });
+
+    /*document.querySelectorAll('.video-js').forEach( (item) => {
         videojs(item, {
             controls: false,
             autoplay: false,
@@ -764,6 +840,6 @@ function initMainSlider() {
                 $slider.slick('slickNext');
             }
         }, 0)
-    })
+    })*/
 };
 
