@@ -685,9 +685,10 @@ function initMainSlider() {
         // $($video).on('canplaythrough', function () {
         //     $video.play();
         // });
-        if ($video[i].readyState > 3) {
-            $video[i].play();
-        };
+        // if ($video[i].readyState > 3) {
+        //     $video[i].play();
+        // };
+        $video[i].play();
     }
 
     function playVideoAndSetPaginationWidth() {
