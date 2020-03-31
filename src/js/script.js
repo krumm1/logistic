@@ -678,7 +678,8 @@ function initMainSlider() {
     let i = 0;
     let $video = $('.video-js'),
         $pagination = $video.parents('.main-slider-container').find('.slider-pagination'),
-        duration = 0;
+        duration = 0,
+        $slides = $('.main-slider-item');
 
     function playVideoAndSetPaginationWidth() {
         duration = $($video).get(i).duration;
@@ -696,6 +697,7 @@ function initMainSlider() {
     }
 
     if ($video) {
+        $slides[i].classList.add('active');
         playVideoAndSetPaginationWidth();
         $video[i].play();
     }
@@ -704,19 +706,19 @@ function initMainSlider() {
 
     // $video[i].play();
     $video.on('ended', function () {
-        $('.main-slider-item')[i].classList.remove('active');
+        $slides[i].classList.remove('active');
         $('.main-slider-pagination-item div').css('width', 0);
         if (i === $video.length - 1) {
             i = -1;
         }
         setTimeout(function () {
-            $('.main-slider-item')[++i].classList.add('active');
+            $slides[++i].classList.add('active');
             playVideoAndSetPaginationWidth();
             $video[i].play();
 
         }, 400)
     });
-    let $slides = $('.main-slider-item');
+
     $('.main-slider-button').on('click', function () {
 
         if ($(this).hasClass('prev')) {
