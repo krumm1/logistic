@@ -681,14 +681,17 @@ function initMainSlider() {
         duration = 0,
         $slides = $('.main-slider-item');
 
-    function playVideoAndSetPaginationWidth() {
-        duration = $($video).get(i).duration;
+    function playVideo() {
         // $($video).on('canplaythrough', function () {
         //     $video.play();
         // });
-        // if ($video[i].readyState > 3) {
-        //     $video[i].play();
-        // };
+        if ($video[i].readyState > 3) {
+            $video[i].play();
+        };
+    }
+
+    function playVideoAndSetPaginationWidth() {
+        duration = $($video).get(i).duration;
 
         $video.on('timeupdate', function () {
             let currentPagination = $('.main-slider-pagination-item div').get(i);
@@ -699,7 +702,7 @@ function initMainSlider() {
     if ($video) {
         $slides[i].classList.add('active');
         playVideoAndSetPaginationWidth();
-        $video[i].play();
+        playVideo();
     }
 
     appendNumberstoSliderPagination($pagination, $video.length);
@@ -714,7 +717,7 @@ function initMainSlider() {
         setTimeout(function () {
             $slides[++i].classList.add('active');
             playVideoAndSetPaginationWidth();
-            $video[i].play();
+            playVideo();
 
         }, 400)
     });
@@ -735,7 +738,7 @@ function initMainSlider() {
                 $('.main-slider-pagination-item div').css('width', 0);
                 $slides[--i].classList.add('active');
                 playVideoAndSetPaginationWidth();
-                $video[i].play();
+                playVideo();
             }, 400)
 
         } else if ($(this).hasClass('next')) {
@@ -752,7 +755,7 @@ function initMainSlider() {
                 $('.main-slider-pagination-item div').css('width', 0);
                 $slides[++i].classList.add('active');
                 playVideoAndSetPaginationWidth();
-                $video[i].play();
+                playVideo();
             }, 400)
         }
     });
