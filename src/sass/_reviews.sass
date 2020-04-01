@@ -3,23 +3,81 @@
         position: relative
     &-slider
         &-item
+            font-family: $text-font-light
             color: #fff
             min-height: 477px
+            height: auto
             width: 690px
-            padding: 190px 120px 0
+            padding: 65px 30px 30px 30px
             background-color: rgba($dark-blue-color, .4)
             margin: 0 15px
             position: relative
             opacity: .4
-            img
+            .reviews-slider-item__quotes-image
                 position: absolute
                 top: 18px
-                left: 70px
+                left: 30px
+                z-index: 0
             &.slick-current
                 color: #fff
                 opacity: 1
+            &__header
+                position: relative
+                display: flex
+                justify-content: flex-start
+                &-description
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                    align-items: flex-start
+                &-description-top
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-start
+                    align-items: flex-start
+                &-description-category
+                    display: flex
+                    justify-content: flex-start
+                    font-size: 19px
+                    line-height: 30px
+                    text-transform: capitalize
+                &-description-route
+                    display: flex
+                    justify-content: flex-start
+                    font-size: 19px
+                    line-height: 30px
+                &-description-title
+                    min-width: 75px
+                    margin-right: 10px
+                    font-size: 19px
+                    line-height: 30px
+                    text-transform: capitalize
+                    opacity: 0.5
+                &-description-bottom
+                    line-height: 30px
+                    text-transform: uppercase
+            &__photo-block
+                margin: 0 30px
+                width: 160px
+                height: 160px
+            &__photo
+                height: 100%
+                object-fit: cover
+            &__name
+                font-size: 19px
+            &__position
+                font-size: 16px
+            &__date
+                position: absolute
+                bottom: 30px
+                left: 30px
+                font-size: 16px
+                line-height: 30px
+                opacity: 0.5
         .slick-track, .slick-list
-            min-height: auto     
+            min-height: auto    
+        .slick-track
+            display: flex 
         &-buttons
             color: #fff
             font-size: 16px
@@ -89,4 +147,4 @@
                 left: 50%
                 transform: translateX(-50%)       
         &-content
-            margin-bottom: 40px        
+            margin-bottom: 40px
