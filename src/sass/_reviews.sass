@@ -13,7 +13,7 @@
             margin: 0 15px
             position: relative
             opacity: .4
-            .reviews-slider-item__quotes-image
+            &__quotes-image
                 position: absolute
                 top: 18px
                 left: 30px
@@ -25,6 +25,7 @@
                 position: relative
                 display: flex
                 justify-content: flex-start
+                padding-left: 30px
                 &-description
                     display: flex
                     flex-direction: column
@@ -57,7 +58,7 @@
                     line-height: 30px
                     text-transform: uppercase
             &__photo-block
-                margin: 0 30px
+                margin: 0 30px 0 0
                 width: 160px
                 height: 160px
             &__photo
@@ -119,25 +120,56 @@
         &-slider
             &-item
                 width: 600px
-                padding: 190px 100px 40px  
+                padding: 80px 30px  
                 margin: 0 10px     
+                &__header
+                    flex-direction: column
+                    &-description-top
+                        margin-bottom: 20px
+                &__photo-block
+                    margin-bottom: 10px
+
 @media screen and (max-width: 991px)
     .reviews
         &-slider
             &-item
                 width: 450px
-                padding: 90px 50px 20px
+                padding: 18px 20px
                 min-height: 380px
                 margin: 0 4px
+                &__quotes-image
+                    left: auto
+                    right: 30px
+                &__header
+                    padding: 0
+
 @media screen and (max-width: 767px)
     .reviews
         &-slider
             &-item
                 width: 220px
                 padding: 100px 20px 15px
-                img
+                &__quotes-image
                     width: 90px         
                     left: 25px
+                &__header
+                    &-description-category
+                        font-size: 16px
+                        flex-direction: column
+                    &-description-route   
+                        font-size: 16px
+                        flex-direction: column
+                &__photo-block
+                    width: 100px
+                    height: 100px
+                &__name
+                    font-size: 16px
+                &__position
+                    font-size: 14px
+                &__date
+                    left: 20px
+                    bottom: 20px
+                    font-size: 14px
             &-container
                 position: relative
                 padding-bottom: 50px
@@ -148,3 +180,4 @@
                 transform: translateX(-50%)       
         &-content
             margin-bottom: 40px
+            font-size: 16px
