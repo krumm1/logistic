@@ -54,6 +54,25 @@
         //     initMainSlider();
         // };
     </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(61594867, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/61594867" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
@@ -87,10 +106,12 @@
         <div class="content__inner">
             <div class="fixed-contacts-btns">
                 <div class="fixed-contacts-btns__inner">
-                    <a href="#" class="fixed-contacts-btns__btn-item btn-open-modal">
+                    <a href="#" class="fixed-contacts-btns__btn-item btn-open-modal"
+                        onclick="ym(61594867,'reachGoal','zapros'); return true;">
                         ОТПРАВЬТЕ&nbsp;&nbsp;ЗАПРОС
                     </a>
-                    <a href="mailto:vostok@vlogistic.ru" class="fixed-contacts-btns__btn-item email">
+                    <a href="mailto:vostok@vlogistic.ru" class="fixed-contacts-btns__btn-item email"
+                        onclick="ym(61594867,'reachGoal','email'); return true;">
                         <span></span>
                         VOSTOK@VLOGISTIC.RU
                     </a>
@@ -134,13 +155,16 @@
                                     <a href="tel:+74236904990" class="menu__phone-link">
                                         +7 (4236) 90-49-90
                                     </a>
-                                    <a href="mailto:vostok@vlogistic.ru" class="menu__phone-link">
+                                    <a href="mailto:vostok@vlogistic.ru" class="menu__email-link"
+                                        onclick="ym(61594867,'reachGoal','email'); return true;">
                                         vostok@vlogistic.ru
                                     </a>
-                                    <span class="menu__tablet-call-back btn-open-modal">
+                                    <span class="menu__tablet-call-back btn-open-modal"
+                                        onclick="ym(61594867,'reachGoal','obratnyi'); return true;">
                                         заказать обратный звонок
                                     </span>
-                                    <button class="menu__tablet-button skew-button btn-open-modal">
+                                    <button class="menu__tablet-button skew-button btn-open-modal"
+                                        onclick="ym(61594867,'reachGoal','luchshie_ceny'); return true;">
                                         получить лучшие цены
                                     </button>
                                 </div>
@@ -173,7 +197,8 @@
                                     </a>
                                 </div>
                                 <div class="menu__back-call-block">
-                                    <a href="#" class="menu__back-call-link btn-open-modal">
+                                    <a href="#" class="menu__back-call-link btn-open-modal"
+                                        onclick="ym(61594867,'reachGoal','obratnyi'); return true;">
                                         ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
                                     </a>
                                 </div>
@@ -209,7 +234,8 @@
                                 <div class="offset-xl-2 offset-lg-2 offset-md-1 col">
                                     <div class="main-slider-title">Доставка грузов</div>
                                     <div class="main-slider-subtitle">по рф и всему миру от 10 кг</div>
-                                    <button class="skew-button btn-open-modal">
+                                    <button class="skew-button btn-open-modal"
+                                        onclick="ym(61594867,'reachGoal','luchshie_ceny'); return true;">
                                         <span class="skew-button__button-text">
                                             Получить лучшие
                                             цены
@@ -229,7 +255,8 @@
                                 <div class="offset-xl-2 offset-lg-2 offset-md-1 col">
                                     <div class="main-slider-title">Таможенное оформление</div>
                                     <div class="main-slider-subtitle">Экспортных и импортных товаров</div>
-                                    <button class="skew-button btn-open-modal">
+                                    <button class="skew-button btn-open-modal"
+                                        onclick="ym(61594867,'reachGoal','luchshie_ceny'); return true;">
                                         <span class="skew-button__button-text">
                                             Получить лучшие
                                             цены
@@ -249,7 +276,8 @@
                                 <div class="offset-xl-2 offset-lg-2 offset-md-1 col">
                                     <div class="main-slider-title">Складские услуги</div>
                                     <div class="main-slider-subtitle">хранение груза бесплатно до 7 дней</div>
-                                    <button class="skew-button btn-open-modal">
+                                    <button class="skew-button btn-open-modal"
+                                        onclick="ym(61594867,'reachGoal','luchshie_ceny'); return true;">
                                         <span class="skew-button__button-text">
                                             Получить лучшие
                                             цены
@@ -270,7 +298,8 @@
                                 <div class="offset-xl-2 offset-lg-2 offset-md-1 col">
                                     <div class="main-slider-title">Поиск производителей</div>
                                     <div class="main-slider-subtitle">Консалтинг и индивидуальный поиск товаров</div>
-                                    <button class="skew-button btn-open-modal">
+                                    <button class="skew-button btn-open-modal"
+                                        onclick="ym(61594867,'reachGoal','luchshie_ceny'); return true;">
                                         <span class="skew-button__button-text">
                                             Получить лучшие цены
                                         </span>
@@ -481,7 +510,8 @@
                     Начать работать с нами
                 </div>
                 <div class="start-work__button-block page-fade-in-up">
-                    <button type="button" class="start-work__button skew-button btn-open-modal">
+                    <button type="button" class="start-work__button skew-button btn-open-modal"
+                        onclick="ym(61594867,'reachGoal','otpravit_zayavku2'); return true;">
                         <span class="skew-button__button-text">
                             ОТПРАВИТЬ ЗАЯВКУ
                         </span>
@@ -1453,7 +1483,8 @@
                         Начать работать с нами
                     </div>
                     <div class="start-work__button-block page-fade-in-up">
-                        <button type="button" class="start-work__button skew-button btn-open-modal">
+                        <button type="button" class="start-work__button skew-button btn-open-modal"
+                            onclick="ym(61594867,'reachGoal','otpravit_zayavku2'); return true;">
                             <span class="skew-button__button-text">
                                 ОТПРАВИТЬ ЗАЯВКУ
                             </span>
@@ -1713,7 +1744,8 @@
                                     </div>
                                     <div class="form__submit-button-container">
                                         <div class="start-work__button-block">
-                                            <button type="submit" class="contacts__form-button skew-button">
+                                            <button type="submit" class="contacts__form-button skew-button"
+                                                onclick="ym(61594867,'reachGoal','otpravit_zayavku3'); return true;">
                                                 <span class="skew-button__button-text">
                                                     ОТПРАВИТЬ ЗАЯВКУ
                                                 </span>
@@ -1873,7 +1905,8 @@
                             <div class="form__submit-button-container">
                                 <div class="form__button-block">
                                     <button type="submit" class="form__button skew-button full-width"
-                                        id="popup-call__button">
+                                        id="popup-call__button"
+                                        onclick="ym(61594867,'reachGoal','otpravit zayavku'); return true;">
                                         <span class="skew-button__button-text">
                                             ОТПРАВИТЬ ЗАЯВКУ
                                         </span>
@@ -2010,7 +2043,8 @@
                                 </div>
                                 <div class="form__submit-button-container">
                                     <div class="start-work__button-block">
-                                        <button type="submit" class="contacts__form-button skew-button">
+                                        <button type="submit" class="contacts__form-button skew-button"
+                                            onclick="ym(61594867,'reachGoal','otpravit_zayavku4'); return true;">
                                             <span class="skew-button__button-text">
                                                 ОТПРАВИТЬ ЗАЯВКУ
                                             </span>
@@ -2024,12 +2058,14 @@
             </div>
             <div class="menu__contacts-block">
                 <div class="menu__phone-block">
-                    <a href="tel:+74236904990" class="menu__phone-link">
+                    <a href="tel:+74236904990" class="menu__phone-link"
+                        onclick="ym(61594867,'reachGoal','zvonok'); return true;">
                         +7 (4236) 90-49-90
                     </a>
                 </div>
                 <div class="menu__back-call-block">
-                    <a href="#" class="menu__back-call-link btn-open-modal">
+                    <a href="#" class="menu__back-call-link btn-open-modal"
+                        onclick="ym(61594867,'reachGoal','obratnyi'); return true;">
                         ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
                     </a>
                 </div>

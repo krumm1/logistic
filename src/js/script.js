@@ -2,6 +2,59 @@ $(document).ready(() => {
 
     "use strict"
 
+    //YandexMetrica begin
+    $('.menu__phone-link').on("click", () => {
+        ym(61594867, 'reachGoal', 'zvonok');
+        return true;
+    });
+
+    $('.menu__back-call-link').on("click", () => {
+        ym(61594867, 'reachGoal', 'obratnyi');
+        return true;
+    });
+
+    $('.popup-call .skew-button').on("click", () => {
+        ym(61594867, 'reachGoal', 'otpravit zayavku'); return true;
+    });
+
+    $('.main-slider .skew-button').on("click", () => {
+        ym(61594867, 'reachGoal', 'luchshie_ceny'); return true;
+    });
+
+    $('.fixed-contacts-btns__btn-item.btn-open-modal').on("click", () => {
+        ym(61594867, 'reachGoal', 'zapros'); return true;
+    });
+
+    $('.fixed-contacts-btns__btn-item.email').on("click", () => {
+        ym(61594867, 'reachGoal', 'email'); return true;
+    });
+
+    $('.start-work .skew-button').on("click", () => {
+        ym(61594867, 'reachGoal', 'otpravit_zayavku2'); return true;
+    });
+
+    $('.contacts .skew-button').on("click", () => {
+        ym(61594867, 'reachGoal', 'otpravit_zayavku3'); return true;
+    });
+
+    $('.projects-popup .skew-button').on("click", () => {
+        ym(61594867, 'reachGoal', 'otpravit_zayavku4'); return true;
+    });
+
+    $('.menu__email-link').on("click", () => {
+        ym(61594867, 'reachGoal', 'email'); return true;
+    });
+
+    $('.menu__tablet-call-back').on("click", () => {
+        ym(61594867, 'reachGoal', 'obratnyi'); return true;
+    });
+
+    $('.menu__tablet-button.skew-button').on("click", () => {
+        ym(61594867, 'reachGoal', 'luchshie_ceny'); return true;
+    });
+
+    //YandexMetrica end
+
     $.fn.isInViewport = function () {
         let elementTop = $(this).offset().top + 100;
         let elementBottom = elementTop + $(this).outerHeight();
