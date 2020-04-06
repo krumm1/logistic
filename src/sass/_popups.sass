@@ -13,6 +13,7 @@
 	align-items: center
 	transition: 0.3s linear
 	overflow: hidden
+	z-index: 2
 
 .popup-call.popup-call__open
 	visibility: visible
@@ -364,7 +365,7 @@
 		&-list
 			margin: 0
 			padding: 0
-			list-style: none      
+			list-style: none
 	&__image-block
 		display: flex
 		align-items: flex-end
@@ -404,7 +405,7 @@
 .lg-outer
 	font-family: $title-font
 .lg-sub-html, .lg-toolbar
-    background-color: transparent
+	background-color: transparent
 .lg-toolbar .lg-close
 	position: absolute
 	top: 30px
@@ -433,7 +434,7 @@
 	background: white
 	transform: rotate(-45deg)
 .lg-outer .lg-thumb-outer	
-    background-color: transparent
+	background-color: transparent
 .lg-autoplay-button, .lg-fullscreen, #lg-zoom-in, #lg-zoom-out, #lg-actual-size, #lg-share, #lg-counter
 	display: none
 .lg-outer .lg-image
@@ -472,20 +473,20 @@
 	&:hover
 		color: #ffffff70
 .projects-popup__prev-button::after
-			content: ""
-			position: absolute
-			width: 50px
-			height: 1px
-			background: white
-			top: 50%
-			right: -55px
+	content: ""
+	position: absolute
+	width: 50px
+	height: 1px
+	background: white
+	top: 50%
+	right: -55px
 .lg-sub-html
 	top: 85%
 .lg-outer .lg-pager-outer
 	top: 90%
 	counter-reset: list 0
 .lg-outer .lg-pager-cont
-	vertical-align:	bottom
+	vertical-align: bottom
 	margin: 0 15px
 	overflow: visible
 .lg-outer .lg-pager-cont::after
@@ -521,8 +522,8 @@
 		opacity: 1
 		border-radius: 0
 .simplebar-track.simplebar-vertical .simplebar-scrollbar:before
-		top: 0
-		bottom: 0	
+	top: 0
+	bottom: 0
 
 // Simplebar end
 
