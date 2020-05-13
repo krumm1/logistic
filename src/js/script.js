@@ -779,7 +779,7 @@ function initMainSlider() {
     if ($video) {
         $slides[i].classList.add('active');
         playVideoAndSetPaginationWidth();
-        playVideo();
+        // playVideo();
     }
 
     appendNumberstoSliderPagination($pagination, $video.length);
