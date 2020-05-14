@@ -98,13 +98,45 @@ form label
 	display: flex
 	justify-content: center
 	z-index: 10
+	&__currency
+		&-name
+			color: #fff
+		&-container
+			display: flex	
+			> div:first-child
+				margin-right: 5px
+	&__login
+		font-size: 16px
+		color: #fff
+		align-self: center 
+		text-decoration: none
+		text-transform: uppercase
+		&::before
+			content: ""
+			display: inline-block
+			width: 28px
+			height: 30px
+			background: url('../img/icons/login.svg') center no-repeat
+			background-size: cover		
+			margin-right: 7px
+			vertical-align: middle	
 
 .menu
 	display: flex
 	justify-content: space-between
 	border-bottom: 1px solid white
 	padding: 0 0 10px 0
-
+	&__date-currency
+		font-size: 16px
+		font-family: $title-font
+		color: rgba($blue-color, .5)
+		display: flex
+		flex-direction: column
+		justify-content: center
+		position: relative
+		> div:first-child
+			position: absolute
+			top: 8px
 .menu__first-section	
 	display: flex
 	justify-content: space-between
