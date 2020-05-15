@@ -1,0 +1,16 @@
+.breadcrumbs
+    font-family: $title-font
+    font-size: 16px
+    text-transform: uppercase
+    margin-bottom: 44px
+    &__item
+        color: #fff
+        text-decoration: none
+        &::before
+            content: "/"
+            margin: 0 3px
+            color: inherit
+        &--last
+            color: rgba(#fff, .5)   
+        &:first-child::before
+            display: none      

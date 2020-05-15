@@ -1,0 +1,81 @@
+.vl-popup
+    position: fixed
+    top: 0
+    left: 100%
+    width: 100%
+    height: 100%
+    background-color: $accent-color
+    overflow: auto
+    opacity: 0
+    visibility: 0
+    z-index: 99
+    transition: .5s ease
+    &--active
+        left: 0
+        opacity: 1
+        visibility: 1
+    &__inner
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        text-align: center
+        &::before
+            content: ''
+            display: inline-block
+            height: 100%
+            vertical-align: middle
+    &__content
+        position: relative
+        display: inline-block
+        vertical-align: middle
+        margin: 0 auto
+        text-align-last: left
+    &__container
+        background-color: #e5e5e5    
+        color: $accent-color
+        font-size: 20px
+        font-weight: 300
+        line-height: 30px
+        min-height: 580px
+        padding: 30px
+        text-align: left
+        position: relative
+    &__title
+        font-weight: normal
+        text-transform: uppercase
+        border-bottom: 1px solid $accent-color
+        padding-bottom: 15px
+        margin-bottom: 28px
+    &__subtitle
+        font-weight: normal
+        text-transform: uppercase
+        margin-bottom: 10px
+    &__list
+        padding: 0
+        padding-left: 20px
+        margin: 0
+        list-style: square
+        &-item
+            margin-bottom: 10px
+            &:last-child
+                margin-bottom: 0
+    &__column
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            right: 15px
+            width: 1px
+            height: 100%
+            background-color: #000
+    .skew-button
+        display: block
+        margin: 48px auto 0
+        &::before
+            background-color: $orange-color   
+        &:hover
+            &::before
+                background-color: transparent         
