@@ -249,7 +249,14 @@ $(document).ready(() => {
 		event.preventDefault();
 	});
 
+	$(".open-career-popup").on("click", function () {
+		let popupContent = $(this).siblings(".career__description").html();
+		$(".vl-popup__data").html(popupContent);
+		$(".vl-popup").addClass("vl-popup--active");
+	});
+
 	$(".close-button").click(() => {
+		// эта кнопка убирает активный класс (кроме fadeOut) у родителя, зачем стока строк? Эх...
 		$(".popup-call").removeClass("popup-call__open");
 		$(".content").removeClass("active");
 		$(".popup-call__wrapper").removeClass("active");
