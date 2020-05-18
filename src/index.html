@@ -272,7 +272,7 @@
 									</div>
 								</div>
 							</div>
-							<a href="#" class="header__login">Войти</a>
+							<a href="#" class="header__login open-auth-popup">Войти</a>
 						</div>
 					</div>
 				</header>
@@ -2615,6 +2615,109 @@
 			</div>
 		</div>
 		<!-- call popup end -->
+
+		<div class="personal-popup">
+			<div class="popup-call__wrapper">
+				<div class="popup-call__block" id="auth">
+					<div class="close-button"></div>
+					<div class="popup-call__title">ВХОД В ЛИЧНЫЙ КАБИНЕТ</div>
+					<form action="#" class="popup-call__form" method="POST">
+						<label for="personal-user-login" class="personal-popup__label"
+							>Логин*</label
+						>
+						<input
+							type="text"
+							class="personal-popup__input"
+							id="personal-user-login"
+						/>
+						<label for="personal-user-pass" class="personal-popup__label"
+							>Пароль*</label
+						>
+						<input
+							type="password"
+							class="personal-popup__input"
+							id="personal-user-pass"
+						/>
+						<div class="personal-popup__check">
+							<label class="checkbox-wrap">
+								<input type="checkbox" />
+								<span>ЗАПОМНИТЬ МЕНЯ</span>
+							</label>
+							<a href="#" class="personal-popup__forgot-pass">Забыли пароль?</a>
+						</div>
+
+						<button class="skew-button skew-button--orange">
+							<span class="skew-button__button-text">Войти</span>
+						</button>
+					</form>
+					<div class="personal-popup__social">
+						<div class="personal-popup__social-header">
+							Войти как пользователь
+						</div>
+						<a href="#" class="personal-popup__social-item google"></a>
+						<a href="#" class="personal-popup__social-item mail"></a>
+						<a href="#" class="personal-popup__social-item facebook"></a>
+						<div style="clear: both;"></div>
+					</div>
+					<div class="personal-popup__footer">
+						<button class="personal-popup__button">Регистрация</button>
+						<span class="personal-popup__reg-text"
+							>Вам будет доступно управление рассылками, использование
+							персональных данных, связь профиля с аккаунтом соцсети и
+							т.д.</span
+						>
+					</div>
+				</div>
+				<div class="popup-call__block" id="registration" style="display: none;">
+					<div class="close-button"></div>
+					<div class="popup-call__title">РЕГИСТРАЦИЯ</div>
+					<form action="#" class="popup-call__form" method="POST">
+						<label for="personal-user-email" class="personal-popup__label"
+							>E-mail*</label
+						>
+						<input
+							type="email"
+							class="personal-popup__input"
+							id="personal-user-email"
+						/>
+						<label for="personal-user-reg-pass" class="personal-popup__label"
+							>Пароль*</label
+						>
+						<input
+							type="password"
+							class="personal-popup__input"
+							id="personal-user-reg-pass"
+						/>
+						<label for="personal-user-phone" class="personal-popup__label"
+							>Телефон*</label
+						>
+						<input
+							type="tel"
+							class="personal-popup__input"
+							id="personal-user-phone"
+						/>
+
+						<label class="checkbox-wrap personal-popup__checkbox">
+							<input type="checkbox" />
+							<span
+								>Нажимая на кнопку «Зарегистрироваться» Вы даёте согласие на
+								обработку персональных данных в соответствии со статьей 9 ФЗ от
+								27 июля 2006 г. № 152 ФЗ «О персональных данных».</span
+							>
+						</label>
+
+						<button class="skew-button skew-button--orange">
+							<span class="skew-button__button-text">Зарегистрироваться</span>
+						</button>
+					</form>
+					<div class="personal-popup__footer">
+						<button class="personal-popup__button">
+							Вход в личный кабинет
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- projects-popup start -->
 		<div class="projects-popup">

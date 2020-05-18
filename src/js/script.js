@@ -87,6 +87,18 @@ $(document).ready(() => {
 		return elementBottom > viewportTop && elementTop < viewportBottom;
 	};
 
+	$(".open-auth-popup").on("click", function (e) {
+		e.preventDefault();
+		let personalPopup = $(".personal-popup");
+		personalPopup.addClass("personal-popup--active");
+		personalPopup.find(".popup-call__wrapper").addClass("active");
+		$(".content").addClass("active");
+	});
+
+	$(".personal-popup__button").on("click", function () {
+		$(".personal-popup .popup-call__block").toggle();
+	});
+
 	$("form").submit(function (event) {
 		event.preventDefault();
 		let $this = $(this);
@@ -172,7 +184,7 @@ $(document).ready(() => {
 		],
 	});
 
-	$(".input-phone").mask("+7  9 9 9  9 9 9 9 9 9 9");
+	$("input[type='tel']").mask("+7  9 9 9  9 9 9 9 9 9 9");
 
 	$(".contacts__form-button").click(function (event) {
 		let checkboxChecked = $("#form__checkbox-contacts").prop("checked");
@@ -242,6 +254,7 @@ $(document).ready(() => {
 	});
 
 	$(".btn-open-modal").click((event) => {
+		// у нас дохера попапов, и на каждый вид попапа писать своё действие... Эх. Про стили и разметку вообще молчу
 		$(".popup-call").addClass("popup-call__open");
 		$(".popup-call__wrapper").addClass("active");
 		$(".content").addClass("active");
@@ -266,6 +279,7 @@ $(document).ready(() => {
 		$(".news-popup__wrapper").removeClass("active");
 		$(".popup-call__success").fadeOut();
 		$(".vl-popup").removeClass("vl-popup--active");
+		$(".personal-popup").removeClass("personal-popup--active");
 		$("body").removeClass("overflow");
 	});
 
