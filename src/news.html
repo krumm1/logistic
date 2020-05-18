@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Новости</title>
+	<link rel="preload" href="css/fonts.min.css" as="style" />
+	<link rel="shortcut icon" href="img/icons/favicon.png" type="image/png" />
+	<link rel="stylesheet" href="css/fonts.min.css" />
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css" />
+	<link rel="stylesheet" href="libs/slick/slick.css" />
+	<link rel="stylesheet" href="libs/slick/slick-theme.css" />
+	<link rel="stylesheet" href="libs/simplebar/simplebar.css" />
+	<link rel="stylesheet" href="libs/light-gallery/css/lightgallery.min.css" />
+	<link rel="stylesheet" href="libs/videojs/video-js.css" />
+	<link rel="stylesheet" href="css/style.min.css" />
+	<style>
+		@keyframes preloader-animation {
+			0% {
+				opacity: 0;
+			}
+
+			50% {
+				opacity: 1;
+			}
+
+			100% {
+				opacity: 0;
+			}
+		}
+	</style>
+	<script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script type="text/javascript">
+		function work() {
+			document.onreadystatechange = function () {
+				if (document.readyState == "complete") {
+					document.querySelector(".svg_anm").classList.add("closed");
+					document.querySelector("#p_prldr").classList.add("closed");
+					initMainSlider();
+				}
+			};
+		}
+
+		work();
+	</script>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function (m, e, t, r, i, k, a) {
+			m[i] =
+				m[i] ||
+				function () {
+					(m[i].a = m[i].a || []).push(arguments);
+				};
+			m[i].l = 1 * new Date();
+			(k = e.createElement(t)),
+				(a = e.getElementsByTagName(t)[0]),
+				(k.async = 1),
+				(k.src = r),
+				a.parentNode.insertBefore(k, a);
+		})(
+			window,
+			document,
+			"script",
+			"https://mc.yandex.ru/metrika/tag.js",
+			"ym"
+		);
+
+		ym(61594867, "init", {
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true,
+			webvisor: true,
+		});
+	</script>
+	<noscript>
+		<div>
+			<img src="https://mc.yandex.ru/watch/61594867" style="position: absolute; left: -9999px;" alt="" />
+		</div>
+	</noscript>
+	<!-- /Yandex.Metrika counter -->
+</head>
+
+<body>
+	<svg width="0" height="0" viewbox="0 0 0 0">
+		<defs>
+			<filter id="filter">
+				<fecomponenttransfer>
+					<fefuncr type="discrete" tablevalues="1 0" />
+					<fefuncg type="discrete" tablevalues="0.25 0" />
+					<fefuncb type="discrete" tablevalues="0.1 0" />
+				</fecomponenttransfer>
+			</filter>
+		</defs>
+	</svg>
+
+	<div id="p_prldr">
+		<div class="contpre">
+			<span class="svg_anm">
+				<img src="img/logo_preload.svg" alt="" />
+			</span>
+			<!-- <div class="contpre_big">
+                Подождите
+            </div>
+            <div class="contpre_small">
+                Идет загрузка
+            </div> -->
+		</div>
+	</div>
+
+	<div class="content news-page">
+		<div class="content__inner">
+			<div class="fixed-contacts-btns">
+				<div class="fixed-contacts-btns__inner">
+					<a href="#" class="fixed-contacts-btns__btn-item btn-open-modal"
+						onclick="ym(61594867,'reachGoal','zapros'); return true;">
+						ОТПРАВЬТЕ&nbsp;&nbsp;ЗАПРОС
+					</a>
+					<a href="mailto:vostok@vlogistic.ru" class="fixed-contacts-btns__btn-item email"
+						onclick="ym(61594867,'reachGoal','email'); return true;">
+						<span></span>
+						VOSTOK@VLOGISTIC.RU
+					</a>
+				</div>
+			</div>
+			<header class="header header--static">
+				<div class="menu-wrapper container">
+					<div class="menu container">
+						<div class="menu__first-section">
+							<div class="menu__logo">
+								<a href="/" class="menu__logo-link">
+									<img src="img/logo-header.svg" alt="logo" class="menu__logo-img" />
+								</a>
+							</div>
+							<div class="menu__nav-section">
+								<div class="menu__tablet-logo-block">
+									<img class="menu__tablet-logo-img" src="img/logo-tablet-menu.png" alt="logo" />
+								</div>
+								<div class="menu__tablet-close-button close-button"></div>
+								<ul class="menu__nav-list">
+									<li class="menu__nav-item">
+										<a href="#services" class="menu__nav-link">УСЛУГИ</a>
+									</li>
+									<li class="menu__nav-item">
+										<a href="#about" class="menu__nav-link">О КОМПАНИИ</a>
+									</li>
+									<li class="menu__nav-item">
+										<a href="#team" class="menu__nav-link">НАША КОМАНДА</a>
+									</li>
+									<li class="menu__nav-item">
+										<a href="#projects" class="menu__nav-link">ПРОЕКТЫ</a>
+									</li>
+									<li class="menu__nav-item">
+										<a href="#news" class="menu__nav-link">НОВОСТИ</a>
+									</li>
+									<li class="menu__nav-item">
+										<a href="#contacts" class="menu__nav-link">КОНТАКТЫ</a>
+									</li>
+								</ul>
+								<div class="menu__tablet-footer">
+									<a href="tel:+74236904990" class="menu__phone-link">
+										+7 (4236) 90-49-90
+									</a>
+									<a href="mailto:vostok@vlogistic.ru" class="menu__email-link"
+										onclick="ym(61594867,'reachGoal','email'); return true;">
+										vostok@vlogistic.ru
+									</a>
+									<span class="menu__tablet-call-back btn-open-modal"
+										onclick="ym(61594867,'reachGoal','obratnyi'); return true;">
+										заказать обратный звонок
+									</span>
+									<button class="menu__tablet-button skew-button btn-open-modal"
+										onclick="ym(61594867,'reachGoal','luchshie_ceny'); return true;">
+										получить лучшие цены
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="menu__date-currency">
+							<div>
+								<span>30/04</span> <span id="header-time">14:30</span>
+							</div>
+							<div id="header-currency" class="header__currency-container">
+								<div>
+									<span class="header__currency-name">USD</span>
+									<span class="header__currency-value">73,68</span>
+								</div>
+								<div>
+									<span class="header__currency-name">CNY</span>
+									<span class="header__currency-value">10,41</span>
+								</div>
+							</div>
+						</div>
+						<div class="menu__second-section">
+							<div class="menu__languages-block">
+								<ul class="menu__languages-list">
+									<li class="menu__language-item active">
+										<a href="#" class="menu__language-link">
+											RU
+										</a>
+									</li>
+									<li class="menu__language-item">
+										<a href="#" class="menu__language-link">
+											EN
+										</a>
+									</li>
+									<li class="menu__language-item">
+										<a href="#" class="menu__language-link">
+											CH
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="menu__contacts-block">
+								<div class="menu__phone-block">
+									<a href="tel:+74236904990" class="menu__phone-link">
+										+7 (4236) 90-49-90
+									</a>
+								</div>
+								<div class="menu__back-call-block">
+									<a href="#" class="menu__back-call-link btn-open-modal"
+										onclick="ym(61594867,'reachGoal','obratnyi'); return true;">
+										ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
+									</a>
+								</div>
+							</div>
+							<div class="menu__burger-block">
+								<div class="hamburger">
+									<div class="hamburger-inner">
+										<span></span>
+										<span></span>
+										<span></span>
+									</div>
+									<div class="hamburger-cross">
+										<span></span>
+										<span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a href="#" class="header__login">Войти</a>
+					</div>
+				</div>
+			</header>
+
+			<div class="container">
+				<div class="breadcrumbs">
+					<a href="/" class="breadcrumbs__item">Главная</a>
+					<span class="breadcrumbs__item breadcrumbs__item--last">Новости</span>
+				</div>
+			</div>
+
+			<section class="news container w-100 section">
+				<h2 class="section__title page-fade-in-left">
+					НОВОСТИ
+				</h2>
+				<div class="news__filter">
+					<h3 class="news__filter-title">Поиск</h3>
+					<form class="news__filter-form">
+						<label class="news__filter-form--label text">
+							<span>Ключевые слова</span>
+							<input class="news__filter-form--input text" type="text" name="" id=""
+								placeholder="Введите слова для поиска">
+						</label>
+						<label class="news__filter-form--label date">
+							<span>Период публикации</span>
+							<input class="news__filter-form--input date" type="date" name="" id="" placeholder="от">
+						</label>
+						<label class="news__filter-form--label date">
+							<input class="news__filter-form--input date" type="date" name="" id="" placeholder="до">
+						</label>
+						<button type="reset" class="skew-button">
+							<span class="skew-button__button-text">Очистить</span>
+						</button>
+						<button type="submit" class="skew-button">
+							<span class="skew-button__button-text">Найти</span>
+						</button>
+					</form>
+				</div>
+				<div class="news__all-news--page">
+					<div class="news__one-news-block">
+						<div class="news__image-block">
+							<img src="" data-src="img/news-1.png" alt="news-1" class="news__image lazy" />
+							<div class="news__date-one-news">20/02/2020</div>
+						</div>
+						<div class="news__title-one-news">
+							За время эпидемии 265 поездов пересекли границу через Маньчжурию
+							и 206 — через Эрлянь
+						</div>
+						<div class="news__description-one-news">
+							<p>
+								С момента начала эпидемии до 19 февраля границу с Китаем через
+								переход Маньчжурия – Забайкальск пересекли 265 грузовых
+								поездов, которые перевезли 24144 стандартных контейнера.
+							</p>
+							<p>
+								После того, как предприятия Китая начали возобновлять работу,
+								стали восстанавливаться и активные перевозки на маршруте Китай
+								– Европа – Китай через Маньчжурию. Харбинская железная дорога
+								координировала движение поездов, оперативно передавая
+								информацию в китайские и российские таможенные службы. Усилия
+								были направлены на ускорение таможенного оформления поездов —
+								особенно тех, которые везли в Китай грузы медицинского
+								назначения и сырье, необходимое для восстановления
+								производства. Таможенные службы по максимуму использовали
+								цифровые технологии, благодаря чему время ожидания поездов на
+								таможенных постах не превышало 3 часов.
+							</p>
+						</div>
+						<div class="news__more-details-block">
+							<div class="news__more-details-link">
+								Подробнее
+							</div>
+						</div>
+					</div>
+					<div class="news__one-news-block">
+						<div class="news__image-block">
+							<img src="" data-src="img/news-2.png" alt="news-2" class="news__image lazy" />
+							<div class="news__date-one-news">20/02/2020</div>
+						</div>
+						<div class="news__title-one-news">
+							компания “ТЛК Восток логистик” стала спонсором бейсбольной
+							команды
+						</div>
+						<div class="news__description-one-news">
+							<p>
+								Lick sang представляет собой восьмые международные
+								соревнования по бейсболу, организованные ассоциацией бейсбола
+								Гонконга, финансируемые за счёт Home Affairs и центром досуга
+								и культурного обслуживания, санкционированный Всемирной
+								бейсбольной и софтбольной конфедерацией, празднуется восьмая
+								годовщина в 2019 году.
+							</p>
+							<p>
+								Соревнования проходили в Sai Tso Wan 13-16 декабря 2019.
+								Команда Бейсболистов из города Владивостока и Находка (под
+								руководством тренера Жук Л.В.), приняла участие в данном
+								международном мероприятии.
+							</p>
+							<p>
+								Руководство компании ТЛК Восток Логистик всегда рады оказать
+								помощь молодым спортсменам. За Вами будущее!
+							</p>
+						</div>
+						<div class="news__more-details-block">
+							<div class="news__more-details-link">
+								Подробнее
+							</div>
+						</div>
+					</div>
+					<div class="news__one-news-block">
+						<div class="news__image-block">
+							<img src="" data-src="img/news-3.png" alt="news-3" class="news__image lazy" />
+							<div class="news__date-one-news">20/02/2020</div>
+						</div>
+						<div class="news__title-one-news">
+							с праздником 23 февраля!
+						</div>
+						<div class="news__description-one-news">
+							<p>
+								Женская половина коллектива ТЛК Восток Логистик искренне
+								поздравляет всех своих клиентов, коллег и партнеров в лице
+								мужской половины с праздником 23 февраля!
+							</p>
+							<p>
+								<img class="news__description-one-news-image lazy" src="" data-src="img/34.png"
+									alt="" />
+							</p>
+						</div>
+						<div class="news__more-details-block">
+							<div class="news__more-details-link">
+								Подробнее
+							</div>
+						</div>
+					</div>
+					<div class="news__one-news-block">
+						<div class="news__image-block">
+							<img src="" data-src="img/news-2.png" alt="news-4" class="news__image lazy" />
+							<div class="news__date-one-news">20/02/2020</div>
+						</div>
+						<div class="news__title-one-news">
+							компания “Восток логистик” стала спонсором бейсбольной команды
+						</div>
+						<div class="news__description-one-news">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
+							quae quia id nobis, dicta iste neque nihil! Odit, officia
+							quisquam. Ipsam, totam consequatur! Veniam explicabo asperiores
+							illo cumque amet deleniti!
+						</div>
+						<div class="news__more-details-block">
+							<div class="news__more-details-link">
+								Подробнее
+							</div>
+							<div class="news__line-between-btn"></div>
+						</div>
+					</div>
+					<div class="news__one-news-block">
+						<div class="news__image-block">
+							<img src="" data-src="img/projects-popup-1.png" alt="news-5" class="news__image lazy" />
+							<div class="news__date-one-news">20/02/2020</div>
+						</div>
+						<div class="news__title-one-news">
+							“Восток логистик” получила членство проимосркой
+							торгово-промышленной палаты
+						</div>
+						<div class="news__description-one-news">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
+							quae quia id nobis, dicta iste neque nihil! Odit, officia
+							quisquam. Ipsam, totam consequatur! Veniam explicabo asperiores
+							illo cumque amet deleniti!
+						</div>
+						<div class="news__more-details-block">
+							<div class="news__more-details-link">
+								Подробнее
+							</div>
+							<div class="news__line-between-btn"></div>
+						</div>
+					</div>
+					<div class="news__one-news-block"></div>
+				</div>
+				<div class="news__pages">
+					<div class="news__pages--previous-btn">НАЗАД</div>
+					<div class="news__pages-block">
+						<span class="news__pages-block-item active">01</span>
+						<span class="news__pages-block-item">02</span>
+						<span class="news__pages-block-item">03</span>
+						<span class="news__pages-block-item">04</span>
+					</div>
+					<div class="news__pages--next-btn">ВПЕРЕД</div>
+				</div>
+			</section>
+
+			<section id="contacts" class="contacts container w-100">
+				<div class="row contacts__wrapper">
+					<div class="col-12 col-md-6 contacts__address-section">
+						<h2 class="section__title page-fade-in-left">
+							КОНТАКТЫ
+						</h2>
+						<div class="row contacts__contact-information">
+							<div class="col-12 col-xl-6 contact-information__first-block">
+								<div class="contact-information__address-block">
+									Приморский край, г. Находка, <br />
+									ул. Дзержинского, 9Ж, оф. 201
+								</div>
+								<div class="contact-information__phone-block">
+									<a href="tel:+74236904990" class="contact-information__phone-link">
+										+7 (4236) 90-49-90
+									</a>
+								</div>
+								<div class="contact-information__mail-block">
+									<a href="mailto:vostok@vlogistic.ru" class="contact-information__mail-link">
+										vostok@vlogistic.ru
+									</a>
+								</div>
+								<div class="contact-information__insta-block">
+									<span>Instagram: </span>
+									<a href="https://www.instagram.com/vlogistic.ru/"
+										class="contact-information__insta-link" target="_blank">
+										@vlogistic.ru
+									</a>
+								</div>
+							</div>
+							<div class="col-12 col-xl-6 contact-information__second-block">
+								<div class="contact-information__address-block">
+									Приморский край, г. владивосток, <br />
+									ул. Стрельникова д7, ОФ. 603
+								</div>
+								<div class="contact-information__phone-block">
+									<a href="tel:+74236904990" class="contact-information__phone-block"></a>+7 (4232)
+									ХХ-ХХ-ХХ
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 contacts__form-section left-border">
+						<div class="contacts__form-section-title">
+							Начать работать с нами
+						</div>
+						<div class="contacts__form-section-description">
+							Пожалуйста, заполните простую форму. В ближайшее время с вами
+							свяжутся специалисты "ТЛК ВОСТОК ЛОГИСТИК".
+						</div>
+						<div class="contacts__form-block">
+							<form action="mail.php" method="POST" class="contacts__form">
+								<label>
+									<input type="text" class="form__input-text input-name" name="user_name"
+										placeholder="ВВЕДИТЕ ВАШЕ ИМЯ*" required />
+								</label>
+								<label>
+									<input type="email" class="form__input-text input-email"
+										placeholder="ВВЕДИТЕ ВАШ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ*" name="user_email" required />
+								</label>
+								<label class="form__phone-label">
+									<input type="tel" class="form__input-text input-phone" name="user_phone"
+										placeholder="ВВЕДИТЕ ВАШ ТЕЛЕФОН" />
+								</label>
+								<label>
+									<input type="text" class="form__input-text input-comment" name="user_comment"
+										placeholder="НАПИШИТЕ КОММЕНТАРИЙ" />
+								</label>
+								<input type="checkbox" class="form__input-checkbox" id="form__checkbox-contacts"
+									name="user_agreement" checked />
+								<label for="form__checkbox-contacts" class="form__label-checkbox">
+									<span class="form__input-checkbox-text">
+										Я согласен на обработку персональных данных
+									</span>
+									<span class="form__alert-checkbox">Вы не согласны?</span>
+								</label>
+								<div class="form__message-protection">
+									Защита от автоматических сообщений
+								</div>
+								<div class="form__submit-block">
+									<!--<div class="form__not-a-robot">
+                                        <img src="img/not-a-robot.png" alt="not-a-robot" class="form__not-a-robot-img">
+                                    </div>-->
+									<div class="form__submit-block g-recaptcha"
+										data-sitekey="6LeXKt8UAAAAAIjeFbwzyhhfH_4rLT3zBJ6CTwqZ" id="contacts-recaptcha">
+									</div>
+									<div class="form__submit-button-container">
+										<div class="start-work__button-block">
+											<button type="submit" class="contacts__form-button skew-button"
+												onclick="ym(61594867,'reachGoal','otpravit_zayavku3'); return true;">
+												<span class="skew-button__button-text">
+													ОТПРАВИТЬ ЗАЯВКУ
+												</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="menu">
+					<div class="menu__first-section">
+						<div class="menu__logo">
+							<a href="/" class="menu__logo-link">
+								<img src="img/logo.png" alt="logo" class="menu__logo-img" />
+							</a>
+						</div>
+					</div>
+					<div class="menu-footer">
+						<div class="menu-footer__item">
+							<div class="menu-footer__title">Услуги</div>
+							<ul class="menu-footer__list">
+								<li class="menu-footer__list-item">
+									<a href="#">Грузоперевозки</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Таможенное оформление</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Складские услуги</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Поиск производителей</a>
+								</li>
+							</ul>
+						</div>
+						<div class="menu-footer__item">
+							<div class="menu-footer__title">О компании</div>
+							<ul class="menu-footer__list">
+								<li class="menu-footer__list-item">
+									<a href="#">О компании</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Преимущества</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Условия работы</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Партнеры</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Документы</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Наша команда</a>
+								</li>
+								<li class="menu-footer__list-item"><a href="#">Отзывы</a></li>
+							</ul>
+						</div>
+						<div class="menu-footer__item">
+							<div class="menu-footer__title">Проекты</div>
+							<div class="menu-footer__title">Новости</div>
+							<div class="menu-footer__title">Карьера</div>
+							<div class="menu-footer__title">Контакты</div>
+						</div>
+					</div>
+					<div class="menu__contacts-block">
+						<div class="menu__phone-block">
+							<a href="tel:+74236904990" class="menu__phone-link">
+								+7 (4236) 90-49-90
+							</a>
+						</div>
+						<address class="menu__address">
+							Приморский край, г. Находка, ул. Дзержинского, 9Ж, оф. 201
+						</address>
+						<a href="mailto:vostok@vlogistic.ru" class="contact-information__mail-link">
+							vostok@vlogistic.ru
+						</a>
+						<a href="https://www.instagram.com/vlogistic.ru/" class="contact-information__insta-link"
+							target="_blank">
+							<img src="img/icons/instagram-white.svg" alt="" />
+						</a>
+						<div class="menu__callback btn-open-modal">
+							Заказать обратный звонок
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__info">
+						<div>© 2020 ТЛК “Восток Логистик”</div>
+						<a href="#" class="footer__link">Политика конфиденциальности</a>
+					</div>
+					<a href="#" class="footer__created-by footer__link" target="_blank">Created by PIK production</a>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- content end -->
+
+	<!-- call popup start -->
+	<div class="popup-call" id="popup-call">
+		<div class="popup-call__wrapper">
+			<div class="popup-call__block">
+				<div class="popup-call__success" style="display: none;">
+					<div class="success__title">
+						ваша заявка успешно отправлена
+					</div>
+					<div class="success__dexcription">
+						В ближайшее время с вами свяжутся
+						<br />
+						специалисты "ТЛК ВОСТОК ЛОГИСТИК".
+					</div>
+				</div>
+				<div class="close-button"></div>
+				<div class="popup-call__title">
+					ОТПРАВИТЬ ЗАЯВКУ
+				</div>
+				<div class="popup-call__description">
+					Пожалуйста, заполните простую форму. В ближайшее время с вами
+					свяжутся специалисты "ТЛК ВОСТОК ЛОГИСТИК".
+				</div>
+				<div class="popup-call__form">
+					<form method="POST" class="popup-call__form">
+						<label>
+							<input type="text" class="form__input-text input-name" placeholder="ВВЕДИТЕ ВАШЕ ИМЯ*"
+								name="user_name" required />
+						</label>
+						<label>
+							<input type="email" class="form__input-text input-email" name="user_email"
+								placeholder="ВВЕДИТЕ ВАШ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ*" required />
+						</label>
+						<label>
+							<input type="tel" class="form__input-text input-phone" name="user_phone"
+								placeholder="ВВЕДИТЕ ВАШ ТЕЛЕФОН" />
+						</label>
+						<label>
+							<input type="text" class="form__input-text input-comment" name="user_comment"
+								placeholder="НАПИШИТЕ КОММЕНТАРИЙ" />
+						</label>
+						<input type="checkbox" class="form__input-checkbox" id="form__checkbox-popap-call"
+							name="user_agreement" checked />
+						<label for="form__checkbox-popap-call" class="form__label-checkbox">
+							<span class="form__input-checkbox-text">
+								Я согласен на обработку персональных данных
+							</span>
+							<span class="form__alert-checkbox popup-call__alert">Вы не согласны?</span>
+						</label>
+						<div class="popup-call__message-protection">
+							Защита от автоматических сообщений
+						</div>
+						<div class="form__submit-block">
+							<!-- <div class="form__not-a-robot">
+                                <img src="img/not-a-robot.png" alt="">
+                            </div> -->
+							<div class="form__submit-block g-recaptcha"
+								data-sitekey="6LeXKt8UAAAAAIjeFbwzyhhfH_4rLT3zBJ6CTwqZ" id="contacts-recaptcha"></div>
+							<div class="form__submit-button-container">
+								<div class="form__button-block">
+									<button type="submit" class="form__button skew-button full-width"
+										id="popup-call__button"
+										onclick="ym(61594867,'reachGoal','otpravit zayavku'); return true;">
+										<span class="skew-button__button-text">
+											ОТПРАВИТЬ ЗАЯВКУ
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- call popup end -->
+
+
+	<div class="up-button__wrapper container">
+		<div class="up-button">
+			<div class="up-button__inner">
+				<img src="img/icons/up.svg" alt="" />
+				<span>ВВЕРХ</span>
+			</div>
+		</div>
+	</div>
+
+	<script src="libs/jquery/jquery.min.js"></script>
+	<script src="libs/slick/slick.min.js"></script>
+	<script src="libs/masked-input/jquery.maskedinput.js"></script>
+	<script src="libs/simplebar/simplebar-min.js"></script>
+	<script src="libs/light-gallery/js/lightgallery-all.min.js"></script>
+	<script src="libs/light-gallery/js/lg-fullscreen.min.js"></script>
+	<!-- <script src="libs/light-gallery/js/lg-thumbnail.min.js"></script> -->
+	<script src="libs/light-gallery/js/lg-pager.min.js"></script>
+	<!-- <script src="libs/videojs/video.js"></script> -->
+	<script src="js/script.js"></script>
+</body>
+
+</html>
