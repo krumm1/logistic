@@ -78,6 +78,8 @@
                 background-image: url('../img/icons/social-mail.svg')
             &.facebook
                 background-image: url('../img/icons/social-facebook.svg')
+    &__checkbox
+        margin-bottom: 30px
     &__footer
         background-color: #c4c4c4
         margin: 0 -25px
@@ -92,11 +94,16 @@
         line-height: 50px
         background-color: transparent
         font-size: 20px
+        font-family: $text-font
         text-transform: uppercase    
         display: inline-block
         padding: 0 8px
         cursor: pointer
         margin-right: 23px
+        transition: .3s ease
+        &:hover
+            background-color: $orange-color
+            color: #fff
     &__reg-text
         color: $gray-color
         line-height: 16px

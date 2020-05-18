@@ -272,7 +272,7 @@
 									</div>
 								</div>
 							</div>
-							<a href="#" class="header__login">Войти</a>
+							<a href="#" class="header__login open-auth-popup">Войти</a>
 						</div>
 					</div>
 				</header>
@@ -2618,7 +2618,7 @@
 
 		<div class="personal-popup">
 			<div class="popup-call__wrapper">
-				<div class="popup-call__block">
+				<div class="popup-call__block" id="auth">
 					<div class="close-button"></div>
 					<div class="popup-call__title">ВХОД В ЛИЧНЫЙ КАБИНЕТ</div>
 					<form action="#" class="popup-call__form" method="POST">
@@ -2666,6 +2666,54 @@
 							персональных данных, связь профиля с аккаунтом соцсети и
 							т.д.</span
 						>
+					</div>
+				</div>
+				<div class="popup-call__block" id="registration" style="display: none;">
+					<div class="close-button"></div>
+					<div class="popup-call__title">РЕГИСТРАЦИЯ</div>
+					<form action="#" class="popup-call__form" method="POST">
+						<label for="personal-user-email" class="personal-popup__label"
+							>E-mail*</label
+						>
+						<input
+							type="email"
+							class="personal-popup__input"
+							id="personal-user-email"
+						/>
+						<label for="personal-user-reg-pass" class="personal-popup__label"
+							>Пароль*</label
+						>
+						<input
+							type="password"
+							class="personal-popup__input"
+							id="personal-user-reg-pass"
+						/>
+						<label for="personal-user-phone" class="personal-popup__label"
+							>Телефон*</label
+						>
+						<input
+							type="tel"
+							class="personal-popup__input"
+							id="personal-user-phone"
+						/>
+
+						<label class="checkbox-wrap personal-popup__checkbox">
+							<input type="checkbox" />
+							<span
+								>Нажимая на кнопку «Зарегистрироваться» Вы даёте согласие на
+								обработку персональных данных в соответствии со статьей 9 ФЗ от
+								27 июля 2006 г. № 152 ФЗ «О персональных данных».</span
+							>
+						</label>
+
+						<button class="skew-button skew-button--orange">
+							<span class="skew-button__button-text">Зарегистрироваться</span>
+						</button>
+					</form>
+					<div class="personal-popup__footer">
+						<button class="personal-popup__button">
+							Вход в личный кабинет
+						</button>
 					</div>
 				</div>
 			</div>
