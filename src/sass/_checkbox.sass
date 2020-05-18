@@ -1,0 +1,39 @@
+.checkbox-wrap
+    color: #c4c4c4
+    position: relative
+    cursor: pointer
+    font-size: 12px
+    input[type="checkbox"]
+        display: none
+    input[type="checkbox"]:checked + span,
+    input[type="checkbox"]:not(:checked) + span
+        display: inline-block
+        position: relative
+        padding-left: 22px
+        cursor: pointer
+        &::before
+            content: ""
+            position: absolute
+            left: 0
+            top: 2px
+            width: 15px
+            height: 15px
+            border: 1px solid #c4c4c4
+            background-color: transparent
+        &::after
+            content: ""
+            position: absolute
+            left: 3px
+            top: 6px
+            width: 10px
+            height: 6px
+            border-radius: 1px
+            border-left: 2px solid
+            border-bottom: 2px solid
+            border-color: #cc44cc
+            transform: rotate(-45deg)
+            transition: .3s ease
+    input[type="checkbox"]:not(:checked) + span::after
+        opacity: 0
+    input[type="checkbox"]:checked + span::after
+        opacity: 1

@@ -242,6 +242,7 @@ $(document).ready(() => {
 	});
 
 	$(".btn-open-modal").click((event) => {
+		// у нас дохера попапов, и на каждый вид попапа писать своё действие... Эх. Про стили и разметку вообще молчу
 		$(".popup-call").addClass("popup-call__open");
 		$(".popup-call__wrapper").addClass("active");
 		$(".content").addClass("active");
@@ -266,6 +267,7 @@ $(document).ready(() => {
 		$(".news-popup__wrapper").removeClass("active");
 		$(".popup-call__success").fadeOut();
 		$(".vl-popup").removeClass("vl-popup--active");
+		$(".personal-popup").removeClass("personal-popup--active");
 		$("body").removeClass("overflow");
 	});
 

@@ -476,7 +476,14 @@ form label
     text-transform: uppercase
     letter-spacing: 0.1em
     color: #fff
-    .skew-button__button-text
+    &--orange
+        &::before
+            background-color: $orange-color
+        &:hover
+            color: $orange-color
+            &::before
+                background-color: transparent    
+    &__button-text
         transform: translate3d(0, 0, 0)
         backface-visibility: hidden
         position: relative
@@ -486,8 +493,13 @@ form label
         padding: 20px 50px
         z-index: 3
         line-height: 20px
+        &::before
+            display: block
+            transform: translate(-50%, -50%) skew(-20deg)
+            transform-origin: center center
+            z-index: -1
     &:before,
-    .skew-button__button-text:before
+    &__button-text:before
         content: ''
         position: absolute
         left: 50%
@@ -498,12 +510,6 @@ form label
         border: 1px solid #EC4E20
         z-index: 2
         box-sizing: unset
-
-    .skew-button__button-text:before
-        display: block
-        transform: translate(-50%, -50%) skew(-20deg)
-        transform-origin: center center
-        z-index: -1
     &:after
         transition: all 100ms ease-out
         content: ''
@@ -520,7 +526,6 @@ form label
         .skew-button__button-text:before
             animation: fill .5s ease-out
             animation-fill-mode: forwards
-
         &:after
             animation: swoosh .7s ease-in
     &:active
