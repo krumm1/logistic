@@ -185,8 +185,6 @@ $(document).ready(() => {
 		],
 	});
 
-
-
 	$("input[type='tel']").mask("+7  9 9 9  9 9 9 9 9 9 9");
 
 	$(".contacts__form-button").click(function (event) {
@@ -487,11 +485,11 @@ $(document).ready(() => {
 		});
 
 		const flashlightCoords = [
-			"transform: translate(-3%, 3%)",
-			"transform: translate(-15%, -6%)",
-			"transform: translate(4%, -5%)",
-			"transform: translate(-6%, 10%)",
-		],
+				"transform: translate(-3%, 3%)",
+				"transform: translate(-15%, -6%)",
+				"transform: translate(4%, -5%)",
+				"transform: translate(-6%, 10%)",
+			],
 			flashlight = $(".flashlight");
 
 		$("#services .slider").on("afterChange", function (e, slick, currentSlide) {
@@ -766,7 +764,7 @@ $(document).ready(() => {
 						lazyBackgrounds.forEach((lazyBackground) => {
 							if (
 								lazyBackground.getBoundingClientRect().top <=
-								window.innerHeight &&
+									window.innerHeight &&
 								lazyBackground.getBoundingClientRect().bottom >= 0 &&
 								getComputedStyle(lazyBackground).display !== "none"
 							) {
@@ -991,24 +989,25 @@ function initMainSlider() {
 	// 	})
 	// };
 
-
 	function initMapNakhodka() {
 		var map;
 
-		DG.then(function () {
-			map = DG.map('map', {
-				center: [42.836453, 132.91164],
-				zoom: 16,
-				scrollWheelZoom: false
-			});
+		if (typeof DG !== "undefined") {
+			DG.then(function () {
+				map = DG.map("map", {
+					center: [42.836453, 132.91164],
+					zoom: 16,
+					scrollWheelZoom: false,
+				});
 
-			DG.marker([42.836453, 132.91164]).addTo(map);
-			// DG.control.location({ position: 'bottomright' }).addTo(map);
-			DG.control.scale().addTo(map);
-			DG.control.ruler({ position: 'bottomleft' }).addTo(map);
-			DG.control.traffic().addTo(map);
-		});
-	};
+				DG.marker([42.836453, 132.91164]).addTo(map);
+				// DG.control.location({ position: 'bottomright' }).addTo(map);
+				DG.control.scale().addTo(map);
+				DG.control.ruler({ position: "bottomleft" }).addTo(map);
+				DG.control.traffic().addTo(map);
+			});
+		}
+	}
 
 	// function initMapVladivostok() {
 	// 	var map;
@@ -1031,34 +1030,50 @@ function initMainSlider() {
 	initMapNakhodka();
 
 	function changeCityMap() {
-		let $city = $('.contacts-page__city-map--city');
-		$city.on('click', function () {
-			if ($(this).hasClass('active')) {
-				return
+		let $city = $(".contacts-page__city-map--city");
+		$city.on("click", function () {
+			if ($(this).hasClass("active")) {
+				return;
 			}
-			$city.removeClass('active');
-			$(this).addClass('active');
-			if ($(this).hasClass('nakhodka')) {
-				if ($('.contacts-page__city-map-information-content.nakhodka').hasClass('active')) {
-					return
+			$city.removeClass("active");
+			$(this).addClass("active");
+			if ($(this).hasClass("nakhodka")) {
+				if (
+					$(".contacts-page__city-map-information-content.nakhodka").hasClass(
+						"active"
+					)
+				) {
+					return;
 				} else {
-					$('.contacts-page__city-map-information-content').removeClass('active');
-					$('.contacts-page__city-map-information-content.nakhodka').addClass('active');
+					$(".contacts-page__city-map-information-content").removeClass(
+						"active"
+					);
+					$(".contacts-page__city-map-information-content.nakhodka").addClass(
+						"active"
+					);
 					// deleteMap();
 					// initMapNakhodka();
-				};
-			} else if ($(this).hasClass('vladivostok')) {
-				if ($('.contacts-page__city-map-information-content.vladivostok').hasClass('active')) {
-					return
+				}
+			} else if ($(this).hasClass("vladivostok")) {
+				if (
+					$(
+						".contacts-page__city-map-information-content.vladivostok"
+					).hasClass("active")
+				) {
+					return;
 				} else {
-					$('.contacts-page__city-map-information-content').removeClass('active');
-					$('.contacts-page__city-map-information-content.vladivostok').addClass('active');
+					$(".contacts-page__city-map-information-content").removeClass(
+						"active"
+					);
+					$(
+						".contacts-page__city-map-information-content.vladivostok"
+					).addClass("active");
 					// deleteMap();
 					// initMapVladivostok();
-				};
-			};
-		})
-	};
+				}
+			}
+		});
+	}
 
 	changeCityMap();
 }
