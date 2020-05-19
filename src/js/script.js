@@ -983,50 +983,52 @@ function initMainSlider() {
             }
         }, 0)
 	})*/
-	// function deleteMap() {
-	// 	var map;
+	function deleteMap() {
+		map.remove();
+	};
 
-	// 	DG.then(function () {
-	// 		map = null;
-	// 	})
-	// };
+	function createMapContainer() {
+		$('.contacts-page__city-map-wrapper').append('<div id="map" style="width: 100%; height: 100%;"></div>');
+	};
 
 
 	function initMapNakhodka() {
 		var map;
 
+		if ($('#map').length) {
+			DG.then(function () {
+				map = DG.map('map', {
+					center: [42.841316, 132.891993],
+					zoom: 17,
+					scrollWheelZoom: false
+				});
+
+				DG.marker([42.841316, 132.891993]).addTo(map);
+				// DG.control.location({ position: 'bottomright' }).addTo(map);
+				DG.control.scale().addTo(map);
+				DG.control.ruler({ position: 'bottomleft' }).addTo(map);
+				DG.control.traffic().addTo(map);
+			});
+		}
+	};
+
+	function initMapVladivostok() {
+		var map;
+
 		DG.then(function () {
 			map = DG.map('map', {
-				center: [42.836453, 132.91164],
-				zoom: 16,
+				center: [43.097315, 131.864826],
+				zoom: 17,
 				scrollWheelZoom: false
 			});
 
-			DG.marker([42.836453, 132.91164]).addTo(map);
+			DG.marker([43.097315, 131.864826]).addTo(map);
 			// DG.control.location({ position: 'bottomright' }).addTo(map);
 			DG.control.scale().addTo(map);
 			DG.control.ruler({ position: 'bottomleft' }).addTo(map);
 			DG.control.traffic().addTo(map);
 		});
 	};
-
-	// function initMapVladivostok() {
-	// 	var map;
-
-	// 	DG.then(function () {
-	// 		map = DG.map('map', {
-	// 			center: [62.836453, 132.91164],
-	// 			zoom: 16,
-	// 			scrollWheelZoom: false
-	// 		});
-
-	// 		DG.marker([62.836453, 132.91164]).addTo(map);
-	// 		// DG.control.location({ position: 'bottomright' }).addTo(map);
-	// 		DG.control.scale().addTo(map);
-	// 		DG.control.ruler({ position: 'bottomleft' }).addTo(map);
-	// 		DG.control.traffic().addTo(map);
-	// 	});
-	// };
 
 	initMapNakhodka();
 
@@ -1044,8 +1046,9 @@ function initMainSlider() {
 				} else {
 					$('.contacts-page__city-map-information-content').removeClass('active');
 					$('.contacts-page__city-map-information-content.nakhodka').addClass('active');
-					// deleteMap();
-					// initMapNakhodka();
+					deleteMap();
+					createMapContainer();
+					initMapNakhodka();
 				};
 			} else if ($(this).hasClass('vladivostok')) {
 				if ($('.contacts-page__city-map-information-content.vladivostok').hasClass('active')) {
@@ -1053,8 +1056,9 @@ function initMainSlider() {
 				} else {
 					$('.contacts-page__city-map-information-content').removeClass('active');
 					$('.contacts-page__city-map-information-content.vladivostok').addClass('active');
-					// deleteMap();
-					// initMapVladivostok();
+					deleteMap();
+					createMapContainer();
+					initMapVladivostok();
 				};
 			};
 		})
