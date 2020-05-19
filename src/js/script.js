@@ -78,6 +78,7 @@ $(document).ready(() => {
 	//YandexMetrica end
 
 	$.fn.isInViewport = function () {
+		if ($(this).length < 1) return;
 		let elementTop = $(this).offset().top + 100;
 		let elementBottom = elementTop + $(this).outerHeight();
 
