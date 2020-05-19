@@ -1,2510 +1,1678 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>О компании</title>
-		<link rel="preload" href="css/fonts.min.css" as="style" />
-		<link rel="shortcut icon" href="img/icons/favicon.png" type="image/png" />
-		<link rel="stylesheet" href="css/fonts.min.css" />
-		<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css" />
-		<link rel="stylesheet" href="libs/slick/slick.css" />
-		<link rel="stylesheet" href="libs/slick/slick-theme.css" />
-		<link rel="stylesheet" href="libs/simplebar/simplebar.css" />
-		<link rel="stylesheet" href="libs/light-gallery/css/lightgallery.min.css" />
-		<link rel="stylesheet" href="libs/videojs/video-js.css" />
-		<link rel="stylesheet" href="css/style.min.css" />
-		<style>
-			@keyframes preloader-animation {
-				0% {
-					opacity: 0;
-				}
 
-				50% {
-					opacity: 1;
-				}
-
-				100% {
-					opacity: 0;
-				}
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>О компании</title>
+	<link rel="preload" href="css/fonts.min.css" as="style" />
+	<link rel="shortcut icon" href="img/icons/favicon.png" type="image/png" />
+	<link rel="stylesheet" href="css/fonts.min.css" />
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css" />
+	<link rel="stylesheet" href="libs/slick/slick.css" />
+	<link rel="stylesheet" href="libs/slick/slick-theme.css" />
+	<link rel="stylesheet" href="libs/simplebar/simplebar.css" />
+	<link rel="stylesheet" href="libs/light-gallery/css/lightgallery.min.css" />
+	<link rel="stylesheet" href="libs/videojs/video-js.css" />
+	<link rel="stylesheet" href="libs/air-datepicker/css/datepicker.min.css" />
+	<link rel="stylesheet" href="css/style.min.css" />
+	<style>
+		@keyframes preloader-animation {
+			0% {
+				opacity: 0;
 			}
-		</style>
-		<script
-			type="text/javascript"
-			src="https://www.google.com/recaptcha/api.js"
-			async
-			defer
-		></script>
-		<script type="text/javascript">
-			function work() {
-				document.onreadystatechange = function () {
-					if (document.readyState == "complete") {
-						document.querySelector(".svg_anm").classList.add("closed");
-						document.querySelector("#p_prldr").classList.add("closed");
-						initMainSlider();
-					}
+
+			50% {
+				opacity: 1;
+			}
+
+			100% {
+				opacity: 0;
+			}
+		}
+	</style>
+	<script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script type="text/javascript">
+		function work() {
+			document.onreadystatechange = function () {
+				if (document.readyState == "complete") {
+					document.querySelector(".svg_anm").classList.add("closed");
+					document.querySelector("#p_prldr").classList.add("closed");
+					initMainSlider();
+				}
+			};
+		}
+
+		work();
+	</script>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function (m, e, t, r, i, k, a) {
+			m[i] =
+				m[i] ||
+				function () {
+					(m[i].a = m[i].a || []).push(arguments);
 				};
-			}
+			m[i].l = 1 * new Date();
+			(k = e.createElement(t)),
+				(a = e.getElementsByTagName(t)[0]),
+				(k.async = 1),
+				(k.src = r),
+				a.parentNode.insertBefore(k, a);
+		})(
+			window,
+			document,
+			"script",
+			"https://mc.yandex.ru/metrika/tag.js",
+			"ym"
+		);
 
-			work();
-		</script>
-		<!-- Yandex.Metrika counter -->
-		<script type="text/javascript">
-			(function (m, e, t, r, i, k, a) {
-				m[i] =
-					m[i] ||
-					function () {
-						(m[i].a = m[i].a || []).push(arguments);
-					};
-				m[i].l = 1 * new Date();
-				(k = e.createElement(t)),
-					(a = e.getElementsByTagName(t)[0]),
-					(k.async = 1),
-					(k.src = r),
-					a.parentNode.insertBefore(k, a);
-			})(
-				window,
-				document,
-				"script",
-				"https://mc.yandex.ru/metrika/tag.js",
-				"ym"
-			);
+		ym(61594867, "init", {
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true,
+			webvisor: true,
+		});
+	</script>
+	<noscript>
+		<div>
+			<img src="https://mc.yandex.ru/watch/61594867" style="position: absolute; left: -9999px;" alt="" />
+		</div>
+	</noscript>
+	<!-- /Yandex.Metrika counter -->
+</head>
 
-			ym(61594867, "init", {
-				clickmap: true,
-				trackLinks: true,
-				accurateTrackBounce: true,
-				webvisor: true,
-			});
-		</script>
-		<noscript>
-			<div>
-				<img
-					src="https://mc.yandex.ru/watch/61594867"
-					style="position: absolute; left: -9999px;"
-					alt=""
-				/>
-			</div>
-		</noscript>
-		<!-- /Yandex.Metrika counter -->
-	</head>
+<body>
+	<svg width="0" height="0" viewbox="0 0 0 0">
+		<defs>
+			<filter id="filter">
+				<fecomponenttransfer>
+					<fefuncr type="discrete" tablevalues="1 0" />
+					<fefuncg type="discrete" tablevalues="0.25 0" />
+					<fefuncb type="discrete" tablevalues="0.1 0" />
+				</fecomponenttransfer>
+			</filter>
+		</defs>
+	</svg>
 
-	<body>
-		<svg width="0" height="0" viewbox="0 0 0 0">
-			<defs>
-				<filter id="filter">
-					<fecomponenttransfer>
-						<fefuncr type="discrete" tablevalues="1 0" />
-						<fefuncg type="discrete" tablevalues="0.25 0" />
-						<fefuncb type="discrete" tablevalues="0.1 0" />
-					</fecomponenttransfer>
-				</filter>
-			</defs>
-		</svg>
-
-		<div id="p_prldr">
-			<div class="contpre">
-				<span class="svg_anm">
-					<img src="img/logo_preload.svg" alt="" />
-				</span>
-				<!-- <div class="contpre_big">
+	<div id="p_prldr">
+		<div class="contpre">
+			<span class="svg_anm">
+				<img src="img/logo_preload.svg" alt="" />
+			</span>
+			<!-- <div class="contpre_big">
                 Подождите
             </div>
             <div class="contpre_small">
                 Идет загрузка
             </div> -->
-			</div>
 		</div>
+	</div>
 
-		<div class="content">
-			<div class="content__inner">
-				<div class="fixed-contacts-btns">
-					<div class="fixed-contacts-btns__inner">
-						<a
-							href="#"
-							class="fixed-contacts-btns__btn-item btn-open-modal"
-							onclick="ym(61594867,'reachGoal','zapros'); return true;"
-						>
-							ОТПРАВЬТЕ&nbsp;&nbsp;ЗАПРОС
-						</a>
-						<a
-							href="mailto:vostok@vlogistic.ru"
-							class="fixed-contacts-btns__btn-item email"
-							onclick="ym(61594867,'reachGoal','email'); return true;"
-						>
-							<span></span>
-							VOSTOK@VLOGISTIC.RU
-						</a>
-					</div>
+	<div class="content">
+		<div class="content__inner">
+			<div class="fixed-contacts-btns">
+				<div class="fixed-contacts-btns__inner">
+					<a href="#" class="fixed-contacts-btns__btn-item btn-open-modal"
+						onclick="ym(61594867,'reachGoal','zapros'); return true;">
+						ОТПРАВЬТЕ&nbsp;&nbsp;ЗАПРОС
+					</a>
+					<a href="mailto:vostok@vlogistic.ru" class="fixed-contacts-btns__btn-item email"
+						onclick="ym(61594867,'reachGoal','email'); return true;">
+						<span></span>
+						VOSTOK@VLOGISTIC.RU
+					</a>
 				</div>
-				<header class="header header--static">
-					<div class="menu-wrapper container">
-						<div class="menu container">
-							<div class="menu__first-section">
-								<div class="menu__logo">
-									<a href="/" class="menu__logo-link">
-										<img
-											src="img/logo-header.svg"
-											alt="logo"
-											class="menu__logo-img"
-										/>
+			</div>
+			<header class="header header--static">
+				<div class="menu-wrapper container">
+					<div class="menu container">
+						<div class="menu__first-section">
+							<div class="menu__logo">
+								<a href="/" class="menu__logo-link">
+									<img src="img/logo-header.svg" alt="logo" class="menu__logo-img" />
+								</a>
+							</div>
+							<div class="menu__nav-section">
+								<div class="menu__tablet-logo-block">
+									<img class="menu__tablet-logo-img" src="img/logo-tablet-menu.png" alt="logo" />
+								</div>
+								<div class="menu__tablet-close-button close-button"></div>
+								<ul class="menu__nav-list">
+									<li class="menu__nav-item">
+										<a href="#services" class="menu__nav-link">УСЛУГИ</a>
+									</li>
+									<li class="menu__nav-item">
+										<a href="#about" class="menu__nav-link">О КОМПАНИИ</a>
+									</li>
+									<li class="menu__nav-item">
+										<a href="#team" class="menu__nav-link">НАША КОМАНДА</a>
+									</li>
+									<li class="menu__nav-item">
+										<a href="#projects" class="menu__nav-link">ПРОЕКТЫ</a>
+									</li>
+									<li class="menu__nav-item">
+										<a href="#news" class="menu__nav-link">НОВОСТИ</a>
+									</li>
+									<li class="menu__nav-item">
+										<a href="#contacts" class="menu__nav-link">КОНТАКТЫ</a>
+									</li>
+								</ul>
+								<div class="menu__tablet-footer">
+									<a href="tel:+74236904990" class="menu__phone-link">
+										+7 (4236) 90-49-90
+									</a>
+									<a href="mailto:vostok@vlogistic.ru" class="menu__email-link"
+										onclick="ym(61594867,'reachGoal','email'); return true;">
+										vostok@vlogistic.ru
+									</a>
+									<span class="menu__tablet-call-back btn-open-modal"
+										onclick="ym(61594867,'reachGoal','obratnyi'); return true;">
+										заказать обратный звонок
+									</span>
+									<button class="menu__tablet-button skew-button btn-open-modal"
+										onclick="ym(61594867,'reachGoal','luchshie_ceny'); return true;">
+										получить лучшие цены
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="menu__date-currency">
+							<div>
+								<span>30/04</span> <span id="header-time">14:30</span>
+							</div>
+							<div id="header-currency" class="header__currency-container">
+								<div>
+									<span class="header__currency-name">USD</span>
+									<span class="header__currency-value">73,68</span>
+								</div>
+								<div>
+									<span class="header__currency-name">CNY</span>
+									<span class="header__currency-value">10,41</span>
+								</div>
+							</div>
+						</div>
+						<div class="menu__second-section">
+							<div class="menu__languages-block">
+								<ul class="menu__languages-list">
+									<li class="menu__language-item active">
+										<a href="#" class="menu__language-link">
+											RU
+										</a>
+									</li>
+									<li class="menu__language-item">
+										<a href="#" class="menu__language-link">
+											EN
+										</a>
+									</li>
+									<li class="menu__language-item">
+										<a href="#" class="menu__language-link">
+											CH
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="menu__contacts-block">
+								<div class="menu__phone-block">
+									<a href="tel:+74236904990" class="menu__phone-link">
+										+7 (4236) 90-49-90
 									</a>
 								</div>
-								<div class="menu__nav-section">
-									<div class="menu__tablet-logo-block">
-										<img
-											class="menu__tablet-logo-img"
-											src="img/logo-tablet-menu.png"
-											alt="logo"
-										/>
+								<div class="menu__back-call-block">
+									<a href="#" class="menu__back-call-link btn-open-modal"
+										onclick="ym(61594867,'reachGoal','obratnyi'); return true;">
+										ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
+									</a>
+								</div>
+							</div>
+							<div class="menu__burger-block">
+								<div class="hamburger">
+									<div class="hamburger-inner">
+										<span></span>
+										<span></span>
+										<span></span>
 									</div>
-									<div class="menu__tablet-close-button close-button"></div>
-									<ul class="menu__nav-list">
-										<li class="menu__nav-item">
-											<a href="#services" class="menu__nav-link">УСЛУГИ</a>
-										</li>
-										<li class="menu__nav-item">
-											<a href="#about" class="menu__nav-link">О КОМПАНИИ</a>
-										</li>
-										<li class="menu__nav-item">
-											<a href="#team" class="menu__nav-link">НАША КОМАНДА</a>
-										</li>
-										<li class="menu__nav-item">
-											<a href="#projects" class="menu__nav-link">ПРОЕКТЫ</a>
-										</li>
-										<li class="menu__nav-item">
-											<a href="#news" class="menu__nav-link">НОВОСТИ</a>
-										</li>
-										<li class="menu__nav-item">
-											<a href="#contacts" class="menu__nav-link">КОНТАКТЫ</a>
-										</li>
-									</ul>
-									<div class="menu__tablet-footer">
-										<a href="tel:+74236904990" class="menu__phone-link">
-											+7 (4236) 90-49-90
-										</a>
-										<a
-											href="mailto:vostok@vlogistic.ru"
-											class="menu__email-link"
-											onclick="ym(61594867,'reachGoal','email'); return true;"
-										>
-											vostok@vlogistic.ru
-										</a>
-										<span
-											class="menu__tablet-call-back btn-open-modal"
-											onclick="ym(61594867,'reachGoal','obratnyi'); return true;"
-										>
-											заказать обратный звонок
-										</span>
-										<button
-											class="menu__tablet-button skew-button btn-open-modal"
-											onclick="ym(61594867,'reachGoal','luchshie_ceny'); return true;"
-										>
-											получить лучшие цены
-										</button>
+									<div class="hamburger-cross">
+										<span></span>
+										<span></span>
 									</div>
 								</div>
 							</div>
-							<div class="menu__date-currency">
-								<div>
-									<span>30/04</span> <span id="header-time">14:30</span>
-								</div>
-								<div id="header-currency" class="header__currency-container">
-									<div>
-										<span class="header__currency-name">USD</span>
-										<span class="header__currency-value">73,68</span>
-									</div>
-									<div>
-										<span class="header__currency-name">CNY</span>
-										<span class="header__currency-value">10,41</span>
-									</div>
-								</div>
-							</div>
-							<div class="menu__second-section">
-								<div class="menu__languages-block">
-									<ul class="menu__languages-list">
-										<li class="menu__language-item active">
-											<a href="#" class="menu__language-link">
-												RU
-											</a>
-										</li>
-										<li class="menu__language-item">
-											<a href="#" class="menu__language-link">
-												EN
-											</a>
-										</li>
-										<li class="menu__language-item">
-											<a href="#" class="menu__language-link">
-												CH
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="menu__contacts-block">
-									<div class="menu__phone-block">
-										<a href="tel:+74236904990" class="menu__phone-link">
-											+7 (4236) 90-49-90
-										</a>
-									</div>
-									<div class="menu__back-call-block">
-										<a
-											href="#"
-											class="menu__back-call-link btn-open-modal"
-											onclick="ym(61594867,'reachGoal','obratnyi'); return true;"
-										>
-											ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
-										</a>
-									</div>
-								</div>
-								<div class="menu__burger-block">
-									<div class="hamburger">
-										<div class="hamburger-inner">
-											<span></span>
-											<span></span>
-											<span></span>
-										</div>
-										<div class="hamburger-cross">
-											<span></span>
-											<span></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<a href="#" class="header__login">Войти</a>
 						</div>
-					</div>
-				</header>
-
-				<div class="container">
-					<div class="breadcrumbs">
-						<a href="/" class="breadcrumbs__item">Главная</a>
-						<span class="breadcrumbs__item breadcrumbs__item--last"
-							>О компании</span
-						>
+						<a href="#" class="header__login">Войти</a>
 					</div>
 				</div>
+			</header>
 
-				<section class="history section">
-					<div class="container">
-						<h2 class="section__title">О компании</h2>
-						<h3 class="history__title">История компании</h3>
-						<div class="history__container">
-							<div class="history__block">
-								<div class="history__numb">2013</div>
-								<div class="history__text">
-									Год основания ТЛК “Восток Логистик”.
-								</div>
+			<div class="container">
+				<div class="breadcrumbs">
+					<a href="/" class="breadcrumbs__item">Главная</a>
+					<span class="breadcrumbs__item breadcrumbs__item--last">О компании</span>
+				</div>
+			</div>
+
+			<section class="history section">
+				<div class="container">
+					<h2 class="section__title">О компании</h2>
+					<h3 class="history__title">История компании</h3>
+					<div class="history__container">
+						<div class="history__block">
+							<div class="history__numb">2013</div>
+							<div class="history__text">
+								Год основания ТЛК “Восток Логистик”.
 							</div>
-							<div class="history__block history__block--right">
-								<div class="history__numb">2015</div>
-								<div class="history__text">
-									Формулируем новые задачи и цели.
-								</div>
+						</div>
+						<div class="history__block history__block--right">
+							<div class="history__numb">2015</div>
+							<div class="history__text">
+								Формулируем новые задачи и цели.
 							</div>
-							<div class="history__block">
-								<div class="history__numb">2018</div>
-								<div class="history__text">
-									Расширение бизнеса. Оказание услуг в сфере таможенного
-									оформления.
-								</div>
+						</div>
+						<div class="history__block">
+							<div class="history__numb">2018</div>
+							<div class="history__text">
+								Расширение бизнеса. Оказание услуг в сфере таможенного
+								оформления.
 							</div>
-							<div class="history__block history__block--right">
-								<div class="history__numb">2020</div>
-								<div class="history__text">
-									Формулируем новые задачи и цели.
-								</div>
+						</div>
+						<div class="history__block history__block--right">
+							<div class="history__numb">2020</div>
+							<div class="history__text">
+								Формулируем новые задачи и цели.
 							</div>
 						</div>
 					</div>
-				</section>
+				</div>
+			</section>
 
-				<section id="about" class="about section">
-					<div class="container slider-container">
-						<h2 class="section__title page-fade-in-left">О нас цифрах</h2>
-						<div class="about-features">
-							<div class="about-features-block">
-								<div class="about-number">2350</div>
-								<div class="about-text">Проверенных поставщиков</div>
-							</div>
-							<div class="about-features-block">
-								<div class="about-number">24</div>
-								<div class="about-text">Посещенных страны в поисках товара</div>
-							</div>
-							<div class="about-features-block">
-								<div class="about-number">160</div>
-								<div class="about-text">
-									Часов в неделю общаемся с клиентами
-								</div>
+			<section id="about" class="about section">
+				<div class="container slider-container">
+					<h2 class="section__title page-fade-in-left">О нас цифрах</h2>
+					<div class="about-features">
+						<div class="about-features-block">
+							<div class="about-number">2350</div>
+							<div class="about-text">Проверенных поставщиков</div>
+						</div>
+						<div class="about-features-block">
+							<div class="about-number">24</div>
+							<div class="about-text">Посещенных страны в поисках товара</div>
+						</div>
+						<div class="about-features-block">
+							<div class="about-number">160</div>
+							<div class="about-text">
+								Часов в неделю общаемся с клиентами
 							</div>
 						</div>
+					</div>
 
-						<div class="slider-header">
-							<ul class="slider-tab">
-								<li class="slider-tab-item active">Преимущества</li>
-								<li class="slider-tab-item">Условия работы</li>
-								<li class="slider-tab-item">Наши партнеры</li>
-								<li class="slider-tab-item">Документы</li>
-							</ul>
+					<div class="slider-header">
+						<ul class="slider-tab">
+							<li class="slider-tab-item active">Преимущества</li>
+							<li class="slider-tab-item">Условия работы</li>
+							<li class="slider-tab-item">Наши партнеры</li>
+							<li class="slider-tab-item">Документы</li>
+						</ul>
+					</div>
+
+					<div class="relative">
+						<div class="slider-img">
+							<img src="img/about/ship.svg" alt="" />
+							<img src="img/about/truck.svg" alt="" style="display: none;" />
+							<img src=" img/about/airplane.svg" alt="" style="display: none;" />
+							<img src="img/about/loader.svg" alt="" style="display: none;" />
 						</div>
-
-						<div class="relative">
-							<div class="slider-img">
-								<img src="img/about/ship.svg" alt="" />
-								<img src="img/about/truck.svg" alt="" style="display: none;" />
-								<img
-									src=" img/about/airplane.svg"
-									alt=""
-									style="display: none;"
-								/>
-								<img src="img/about/loader.svg" alt="" style="display: none;" />
-							</div>
-							<div class="row">
-								<div class="offset-lg-2 col-lg-10">
-									<div class="relative">
-										<div class="slider" id="about-slider">
-											<div class="slider-item">
-												<div class="slider-title page-fade-in-up">
-													Преимущества
-												</div>
-												<div class="slider-content border-vertical">
-													<ul class="slider-list">
-														<li>
-															<div class="slider-heading page-fade-in-up">
-																Открытая ценовая политика
-															</div>
-															<div class="slider-text page-fade-in-up">
-																Прямые договоры с линиями, Авиа и ЖД
-																перевозчиками, собственный транспорт и
-																контейнерный парк.
-															</div>
-														</li>
-														<li>
-															<div class="slider-heading page-fade-in-up">
-																Отсрочка платежа
-															</div>
-															<div class="slider-text page-fade-in-up">
-																Отсрочка платежа для клиентов с постоянным
-																объёмом перевозок за доставку и товар до момента
-																прибытия в пункт назначения.
-															</div>
-														</li>
-														<li>
-															<div class="slider-heading page-fade-in-up">
-																Надежность
-															</div>
-															<div class="slider-text page-fade-in-up">
-																Контроль процесса на всех уровнях.
-																Предоставление полного пакета документов.
-															</div>
-														</li>
-														<li>
-															<div class="slider-heading page-fade-in-up">
-																Быстрые сроки и гарантия
-															</div>
-															<div class="slider-text page-fade-in-up">
-																Авиа от 3 дней, море+ЖД 26-35 суток, через порты
-																Балтики 60 суток. Страхование грузов, услуги
-																сюрвейера, проверка качества на складе
-																поставщика.
-															</div>
-														</li>
-													</ul>
-												</div>
+						<div class="row">
+							<div class="offset-lg-2 col-lg-10">
+								<div class="relative">
+									<div class="slider" id="about-slider">
+										<div class="slider-item">
+											<div class="slider-title page-fade-in-up">
+												Преимущества
 											</div>
-
-											<div class="slider-item">
-												<div class="slider-title fadeInUp">Условия работы</div>
-												<div class="slider-content border-vertical">
-													<ul class="slider-list">
-														<li>
-															<div class="slider-text fadeInUp">
-																Работаем со всеми: с физическими и юридическими
-																лицами, с малым и крупным бизнесом, с
-																интернет-магазинами и крупнейшими сетями продаж.
-															</div>
-														</li>
-														<li>
-															<div class="slider-text fadeInUp">
-																Отправляем грузы от 10 кг до 10 000 тонн и более
-																(генеральные и насыпные), от одной коробки до
-																фрахтования целого парохода.
-															</div>
-														</li>
-														<li>
-															<div class="slider-text fadeInUp">
-																Доставляем любые грузыво все регионы России:
-																опасные, тяжёлые и негабаритные, сыпучие,
-																наливные, продукты питания, скоропортящиеся.
-															</div>
-														</li>
-														<li>
-															<div class="slider-text fadeInUp">
-																Можем привезти и растаможить через все
-																погран/переходы в РФ (Забайкальск, ДВ, СПб,
-																Новороссийск, Котка, Балтика и т.д.) на всех
-																видах транспорта.
-															</div>
-														</li>
-														<li>
-															<div class="slider-text fadeInUp">
-																Предоставляем прозрачные документы: накладные,
-																акты, счета-фактуры, ДТ, а также полный комплект
-																перевозочных документов.
-															</div>
-														</li>
-													</ul>
-												</div>
+											<div class="slider-content border-vertical">
+												<ul class="slider-list">
+													<li>
+														<div class="slider-heading page-fade-in-up">
+															Открытая ценовая политика
+														</div>
+														<div class="slider-text page-fade-in-up">
+															Прямые договоры с линиями, Авиа и ЖД
+															перевозчиками, собственный транспорт и
+															контейнерный парк.
+														</div>
+													</li>
+													<li>
+														<div class="slider-heading page-fade-in-up">
+															Отсрочка платежа
+														</div>
+														<div class="slider-text page-fade-in-up">
+															Отсрочка платежа для клиентов с постоянным
+															объёмом перевозок за доставку и товар до момента
+															прибытия в пункт назначения.
+														</div>
+													</li>
+													<li>
+														<div class="slider-heading page-fade-in-up">
+															Надежность
+														</div>
+														<div class="slider-text page-fade-in-up">
+															Контроль процесса на всех уровнях.
+															Предоставление полного пакета документов.
+														</div>
+													</li>
+													<li>
+														<div class="slider-heading page-fade-in-up">
+															Быстрые сроки и гарантия
+														</div>
+														<div class="slider-text page-fade-in-up">
+															Авиа от 3 дней, море+ЖД 26-35 суток, через порты
+															Балтики 60 суток. Страхование грузов, услуги
+															сюрвейера, проверка качества на складе
+															поставщика.
+														</div>
+													</li>
+												</ul>
 											</div>
+										</div>
 
-											<div class="slider-item">
-												<div class="slider-title fadeInUp">Наши партнеры</div>
-												<div class="slider-content border-vertical">
-													<div class="about-partners">
-														<div class="about-partners-item">
-															<img
-																src=""
-																data-src="img/partners/geldor.svg"
-																alt="ЖелДор экспедиция"
-																class="lazy"
-															/>
+										<div class="slider-item">
+											<div class="slider-title fadeInUp">Условия работы</div>
+											<div class="slider-content border-vertical">
+												<ul class="slider-list">
+													<li>
+														<div class="slider-text fadeInUp">
+															Работаем со всеми: с физическими и юридическими
+															лицами, с малым и крупным бизнесом, с
+															интернет-магазинами и крупнейшими сетями продаж.
 														</div>
-														<div class="about-partners-item">
-															<img
-																src=""
-																data-src="img/partners/fesco.svg"
-																alt="FESCO Tranportation Group"
-																class="lazy"
-															/>
+													</li>
+													<li>
+														<div class="slider-text fadeInUp">
+															Отправляем грузы от 10 кг до 10 000 тонн и более
+															(генеральные и насыпные), от одной коробки до
+															фрахтования целого парохода.
 														</div>
-														<div class="about-partners-item">
-															<img
-																src=""
-																data-src="img/partners/aeroflot.svg"
-																alt="Аэрофлот. Российские авиалинии"
-																class="lazy"
-															/>
+													</li>
+													<li>
+														<div class="slider-text fadeInUp">
+															Доставляем любые грузыво все регионы России:
+															опасные, тяжёлые и негабаритные, сыпучие,
+															наливные, продукты питания, скоропортящиеся.
 														</div>
-														<div class="about-partners-item">
-															<img
-																src=""
-																data-src="img/partners/seven_airlines.svg"
-																alt="S7 Airlines"
-																class="lazy"
-															/>
+													</li>
+													<li>
+														<div class="slider-text fadeInUp">
+															Можем привезти и растаможить через все
+															погран/переходы в РФ (Забайкальск, ДВ, СПб,
+															Новороссийск, Котка, Балтика и т.д.) на всех
+															видах транспорта.
 														</div>
-														<div class="about-partners-item">
-															<img
-																src=""
-																data-src="img/partners/maersk.svg"
-																alt="Maersk Line"
-																class="lazy"
-															/>
+													</li>
+													<li>
+														<div class="slider-text fadeInUp">
+															Предоставляем прозрачные документы: накладные,
+															акты, счета-фактуры, ДТ, а также полный комплект
+															перевозочных документов.
 														</div>
-														<div class="about-partners-item">
-															<img
-																src=""
-																data-src="img/partners/vietnam_airlines.svg"
-																alt="Vietnam Airlines"
-																class="lazy"
-															/>
-														</div>
-														<div class="about-partners-item">
-															<img
-																src=""
-																data-src="img/partners/Hainan_Airlines.svg"
-																alt="Hainan Airlines"
-																class="lazy"
-															/>
-														</div>
-														<div class="about-partners-item">
-															<img
-																src=""
-																data-src="img/partners/China-Southern-Airlines.svg"
-																alt="Chine Southern"
-																class="lazy"
-															/>
-														</div>
-														<div class="about-partners-item">
-															<img
-																src=""
-																data-src="img/partners/airlines_astana.svg"
-																alt="air astana"
-																class="lazy"
-															/>
-														</div>
-														<div class="about-partners-item">
-															<img
-																src=""
-																data-src="img/partners/cmacgm.svg"
-																alt="CMA CGM"
-																class="lazy"
-															/>
-														</div>
-														<div class="about-partners-item">
-															<img
-																src=""
-																data-src="img/partners/Airbridge_cargo_white.svg"
-																alt="AirBridgeCargo"
-																class="lazy"
-															/>
-														</div>
-														<div class="about-partners-item">
-															<img
-																src=""
-																data-src="img/partners/vmrp.png"
-																alt="AirBridgeCargo"
-																class="lazy"
-															/>
-														</div>
-														<div class="about-partners-item">
-															<img
-																src=""
-																data-src="img/partners/vmtp.png"
-																alt="AirBridgeCargo"
-																class="lazy"
-															/>
-														</div>
-														<div class="about-partners-item">
-															<img
-																src=""
-																data-src="img/partners/transkontainer.png"
-																alt="AirBridgeCargo"
-																class="lazy"
-															/>
-														</div>
-														<div class="about-partners-item">
-															<img
-																src=""
-																data-src="img/partners/nmtp.png"
-																alt="AirBridgeCargo"
-																class="lazy"
-															/>
-														</div>
-														<div class="about-partners-item">
-															<img
-																src=""
-																data-src="img/partners/zabayikals.png"
-																alt="AirBridgeCargo"
-																class="lazy"
-															/>
-														</div>
-														<div class="about-partners-item">
-															<img
-																src=""
-																data-src="img/partners/vostochny.png"
-																alt="AirBridgeCargo"
-																class="lazy"
-															/>
-														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+
+										<div class="slider-item">
+											<div class="slider-title fadeInUp">Наши партнеры</div>
+											<div class="slider-content border-vertical">
+												<div class="about-partners">
+													<div class="about-partners-item">
+														<img src="" data-src="img/partners/geldor.svg"
+															alt="ЖелДор экспедиция" class="lazy" />
+													</div>
+													<div class="about-partners-item">
+														<img src="" data-src="img/partners/fesco.svg"
+															alt="FESCO Tranportation Group" class="lazy" />
+													</div>
+													<div class="about-partners-item">
+														<img src="" data-src="img/partners/aeroflot.svg"
+															alt="Аэрофлот. Российские авиалинии" class="lazy" />
+													</div>
+													<div class="about-partners-item">
+														<img src="" data-src="img/partners/seven_airlines.svg"
+															alt="S7 Airlines" class="lazy" />
+													</div>
+													<div class="about-partners-item">
+														<img src="" data-src="img/partners/maersk.svg" alt="Maersk Line"
+															class="lazy" />
+													</div>
+													<div class="about-partners-item">
+														<img src="" data-src="img/partners/vietnam_airlines.svg"
+															alt="Vietnam Airlines" class="lazy" />
+													</div>
+													<div class="about-partners-item">
+														<img src="" data-src="img/partners/Hainan_Airlines.svg"
+															alt="Hainan Airlines" class="lazy" />
+													</div>
+													<div class="about-partners-item">
+														<img src="" data-src="img/partners/China-Southern-Airlines.svg"
+															alt="Chine Southern" class="lazy" />
+													</div>
+													<div class="about-partners-item">
+														<img src="" data-src="img/partners/airlines_astana.svg"
+															alt="air astana" class="lazy" />
+													</div>
+													<div class="about-partners-item">
+														<img src="" data-src="img/partners/cmacgm.svg" alt="CMA CGM"
+															class="lazy" />
+													</div>
+													<div class="about-partners-item">
+														<img src="" data-src="img/partners/Airbridge_cargo_white.svg"
+															alt="AirBridgeCargo" class="lazy" />
+													</div>
+													<div class="about-partners-item">
+														<img src="" data-src="img/partners/vmrp.png"
+															alt="AirBridgeCargo" class="lazy" />
+													</div>
+													<div class="about-partners-item">
+														<img src="" data-src="img/partners/vmtp.png"
+															alt="AirBridgeCargo" class="lazy" />
+													</div>
+													<div class="about-partners-item">
+														<img src="" data-src="img/partners/transkontainer.png"
+															alt="AirBridgeCargo" class="lazy" />
+													</div>
+													<div class="about-partners-item">
+														<img src="" data-src="img/partners/nmtp.png"
+															alt="AirBridgeCargo" class="lazy" />
+													</div>
+													<div class="about-partners-item">
+														<img src="" data-src="img/partners/zabayikals.png"
+															alt="AirBridgeCargo" class="lazy" />
+													</div>
+													<div class="about-partners-item">
+														<img src="" data-src="img/partners/vostochny.png"
+															alt="AirBridgeCargo" class="lazy" />
 													</div>
 												</div>
 											</div>
+										</div>
 
-											<div class="slider-item">
-												<div class="slider-title fadeInUp">Документы</div>
-												<div class="slider-content border-vertical">
-													<ul class="slider-list about-docs">
-														<li>
-															<div class="slider-heading fadeInUp">
-																Уставные документы
-															</div>
-															<a
-																href="documents/ustavniye.rar"
-																class="fadeInUp"
-																style="opacity: 0;"
-																download
-																>RAR 2,48 мб</a
-															>
-														</li>
-														<li>
-															<div class="slider-heading fadeInUp">
-																Договор ТЭО
-															</div>
-															<a
-																href="documents/dogovor_TEO_shablon.pdf"
-																class="fadeInUp"
-																download
-																>PDF 0,58 мб</a
-															>
-														</li>
-														<li>
-															<div class="slider-heading fadeInUp">
-																Договор поставки
-															</div>
-															<a
-																href="documents/dogovor_postavki_tovara.pdf"
-																class="fadeInUp"
-																download
-																>PDF 0,31 мб</a
-															>
-														</li>
-													</ul>
-												</div>
+										<div class="slider-item">
+											<div class="slider-title fadeInUp">Документы</div>
+											<div class="slider-content border-vertical">
+												<ul class="slider-list about-docs">
+													<li>
+														<div class="slider-heading fadeInUp">
+															Уставные документы
+														</div>
+														<a href="documents/ustavniye.rar" class="fadeInUp"
+															style="opacity: 0;" download>RAR 2,48 мб</a>
+													</li>
+													<li>
+														<div class="slider-heading fadeInUp">
+															Договор ТЭО
+														</div>
+														<a href="documents/dogovor_TEO_shablon.pdf" class="fadeInUp"
+															download>PDF 0,58 мб</a>
+													</li>
+													<li>
+														<div class="slider-heading fadeInUp">
+															Договор поставки
+														</div>
+														<a href="documents/dogovor_postavki_tovara.pdf" class="fadeInUp"
+															download>PDF 0,31 мб</a>
+													</li>
+												</ul>
 											</div>
 										</div>
-										<div class="slider-pagination"></div>
 									</div>
+									<div class="slider-pagination"></div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</section>
+				</div>
+			</section>
 
-				<section id="team" class="team section">
-					<div class="container">
-						<h2 class="section__title page-fade-in-left">Команда</h2>
-						<div class="team-slider-container">
-							<div class="team-slider-header">
-								<div class="team-slider-buttons">
-									<span class="team-slider-button prev">Назад</span>
-									<span class="team-slider-button next">Вперед</span>
-								</div>
+			<section id="team" class="team section">
+				<div class="container">
+					<h2 class="section__title page-fade-in-left">Команда</h2>
+					<div class="team-slider-container">
+						<div class="team-slider-header">
+							<div class="team-slider-buttons">
+								<span class="team-slider-button prev">Назад</span>
+								<span class="team-slider-button next">Вперед</span>
 							</div>
-							<div class="team-slider">
-								<div class="team-slider-element">
-									<div class="team-slider-element-img-wrapper">
-										<div class="team-slider-element-hover">
-											<div class="team-slider-element-name">Анна Морозова</div>
-											<div class="team-slider-element-job">
-												Руководитель компании
-											</div>
-											<div class="team-slider-element-more">Подробнее</div>
+						</div>
+						<div class="team-slider">
+							<div class="team-slider-element">
+								<div class="team-slider-element-img-wrapper">
+									<div class="team-slider-element-hover">
+										<div class="team-slider-element-name">Анна Морозова</div>
+										<div class="team-slider-element-job">
+											Руководитель компании
 										</div>
-										<div
-											class="team-slider-element-img lazy-inline-bg"
-											style="background-image: url(img/team/anna-morozova.jpg);"
-										></div>
-										<div
-											class="team-slider-element-img lazy-inline-bg"
-											style="
+										<div class="team-slider-element-more">Подробнее</div>
+									</div>
+									<div class="team-slider-element-img lazy-inline-bg"
+										style="background-image: url(img/team/anna-morozova.jpg);"></div>
+									<div class="team-slider-element-img lazy-inline-bg" style="
 												background-image: url(img/team/anna-morozova-hover.jpg);
-											"
-										></div>
-									</div>
-									<div class="team-slider-element-content">
-										<div class="team-slider-element-inner">
-											<div class="close-btn close-btn_dark"></div>
-											<div class="team-slider-element-title fadeInUp">
-												Логистика для меня это любимая работа, идеальный
-												комфортный офис
-											</div>
-											<div class="team-slider-element-content-inner">
-												<div class="team-slider-element-info">
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Образование
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															Высшее. Диплом с отличием<br />Владивостокский
-															Государственный Университет Экономики и Сервиса г.
-															Владивостока<br />
-															Специалист по гостиничному и ресторанному сервису
-															и туризму.
-														</div>
+											"></div>
+								</div>
+								<div class="team-slider-element-content">
+									<div class="team-slider-element-inner">
+										<div class="close-btn close-btn_dark"></div>
+										<div class="team-slider-element-title fadeInUp">
+											Логистика для меня это любимая работа, идеальный
+											комфортный офис
+										</div>
+										<div class="team-slider-element-content-inner">
+											<div class="team-slider-element-info">
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Образование
 													</div>
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Знание языков
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															Английский
-														</div>
-													</div>
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Опыт работы
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															14 лет
-														</div>
+													<div class="team-slider-element-info-text fadeInUp">
+														Высшее. Диплом с отличием<br />Владивостокский
+														Государственный Университет Экономики и Сервиса г.
+														Владивостока<br />
+														Специалист по гостиничному и ресторанному сервису
+														и туризму.
 													</div>
 												</div>
-												<div
-													class="team-slider-element-contacts border-vertical active"
-												>
-													<div
-														class="team-slider-element-contacts-item whatsapp fadeInUp"
-													>
-														<a href="https://wa.me/79149617765"
-															>+7 (914) 961-77-65</a
-														>
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Знание языков
 													</div>
-													<div
-														class="team-slider-element-contacts-item skype fadeInUp"
-													>
-														<a href="skype:anna778770?chat">ANNA779770</a>
+													<div class="team-slider-element-info-text fadeInUp">
+														Английский
 													</div>
-													<div
-														class="team-slider-element-contacts-item instagram fadeInUp"
-													>
-														<a
-															href="https://instagram.com/anna779770"
-															target="_blank"
-															>ANNA779770</a
-														>
+												</div>
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Опыт работы
 													</div>
-													<div
-														class="team-slider-element-contacts-item email fadeInUp"
-													>
-														<a href="mailto:vostok@vlogistic.ru"
-															>vostok@vlogistic.ru</a
-														>
+													<div class="team-slider-element-info-text fadeInUp">
+														14 лет
 													</div>
+												</div>
+											</div>
+											<div class="team-slider-element-contacts border-vertical active">
+												<div class="team-slider-element-contacts-item whatsapp fadeInUp">
+													<a href="https://wa.me/79149617765">+7 (914) 961-77-65</a>
+												</div>
+												<div class="team-slider-element-contacts-item skype fadeInUp">
+													<a href="skype:anna778770?chat">ANNA779770</a>
+												</div>
+												<div class="team-slider-element-contacts-item instagram fadeInUp">
+													<a href="https://instagram.com/anna779770"
+														target="_blank">ANNA779770</a>
+												</div>
+												<div class="team-slider-element-contacts-item email fadeInUp">
+													<a href="mailto:vostok@vlogistic.ru">vostok@vlogistic.ru</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="team-slider-element">
-									<div class="team-slider-element-img-wrapper">
-										<div class="team-slider-element-hover">
-											<div class="team-slider-element-name">Ольга Тихонова</div>
-											<div class="team-slider-element-job">
-												Главный бухгалтер
-											</div>
-											<div class="team-slider-element-more">Подробнее</div>
+							</div>
+							<div class="team-slider-element">
+								<div class="team-slider-element-img-wrapper">
+									<div class="team-slider-element-hover">
+										<div class="team-slider-element-name">Ольга Тихонова</div>
+										<div class="team-slider-element-job">
+											Главный бухгалтер
 										</div>
-										<div
-											class="team-slider-element-img lazy-inline-bg"
-											style="background-image: url(img/team/olga-tihonova.jpg);"
-										></div>
-										<div
-											class="team-slider-element-img lazy-inline-bg"
-											style="
+										<div class="team-slider-element-more">Подробнее</div>
+									</div>
+									<div class="team-slider-element-img lazy-inline-bg"
+										style="background-image: url(img/team/olga-tihonova.jpg);"></div>
+									<div class="team-slider-element-img lazy-inline-bg" style="
 												background-image: url(img/team/olga-tihonova-hover.jpg);
-											"
-										></div>
-									</div>
-									<div class="team-slider-element-content">
-										<div class="team-slider-element-inner">
-											<div class="close-btn close-btn_dark"></div>
-											<div class="team-slider-element-title fadeInUp">
-												Логистика для меня это любимая работа, которая каждый
-												день ставит передо мной новые интересные задачи.
-											</div>
-											<div class="team-slider-element-content-inner">
-												<div class="team-slider-element-info">
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Образование
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															Высшее. Диплом с отличием<br />Владивостокский
-															Государственный Технический Университет (ДВПИ им.
-															Куйбышева).<br />
-															Экономист-менеджер.<br />
-															Переводчик в сфере профессиональных коммуникаций.
-														</div>
+											"></div>
+								</div>
+								<div class="team-slider-element-content">
+									<div class="team-slider-element-inner">
+										<div class="close-btn close-btn_dark"></div>
+										<div class="team-slider-element-title fadeInUp">
+											Логистика для меня это любимая работа, которая каждый
+											день ставит передо мной новые интересные задачи.
+										</div>
+										<div class="team-slider-element-content-inner">
+											<div class="team-slider-element-info">
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Образование
 													</div>
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Знание языков
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															Английский
-														</div>
-													</div>
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Опыт работы
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															9 лет
-														</div>
+													<div class="team-slider-element-info-text fadeInUp">
+														Высшее. Диплом с отличием<br />Владивостокский
+														Государственный Технический Университет (ДВПИ им.
+														Куйбышева).<br />
+														Экономист-менеджер.<br />
+														Переводчик в сфере профессиональных коммуникаций.
 													</div>
 												</div>
-												<div
-													class="team-slider-element-contacts border-vertical active"
-												>
-													<div
-														class="team-slider-element-contacts-item whatsapp fadeInUp"
-													>
-														<a href="https://wa.me/79243310020"
-															>+7 (924) 331-00-20</a
-														>
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Знание языков
 													</div>
-													<div
-														class="team-slider-element-contacts-item instagram fadeInUp"
-													>
-														<a
-															href="https://instagram.com/tihonova9000"
-															target="_blank"
-															>TIHONOVA9000</a
-														>
+													<div class="team-slider-element-info-text fadeInUp">
+														Английский
 													</div>
-													<div
-														class="team-slider-element-contacts-item email fadeInUp"
-													>
-														<a href="mailto:buh@vlogistic.ru"
-															>BUH@VLOGISTIC.RU</a
-														>
-														<a href="mailto:vostok-log.buh@hotmail.com"
-															>VOSTOK-LOG.BUH@HOTMAIL.COM</a
-														>
+												</div>
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Опыт работы
 													</div>
+													<div class="team-slider-element-info-text fadeInUp">
+														9 лет
+													</div>
+												</div>
+											</div>
+											<div class="team-slider-element-contacts border-vertical active">
+												<div class="team-slider-element-contacts-item whatsapp fadeInUp">
+													<a href="https://wa.me/79243310020">+7 (924) 331-00-20</a>
+												</div>
+												<div class="team-slider-element-contacts-item instagram fadeInUp">
+													<a href="https://instagram.com/tihonova9000"
+														target="_blank">TIHONOVA9000</a>
+												</div>
+												<div class="team-slider-element-contacts-item email fadeInUp">
+													<a href="mailto:buh@vlogistic.ru">BUH@VLOGISTIC.RU</a>
+													<a
+														href="mailto:vostok-log.buh@hotmail.com">VOSTOK-LOG.BUH@HOTMAIL.COM</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
+							</div>
 
-								<div class="team-slider-element">
-									<div class="team-slider-element-img-wrapper">
-										<div class="team-slider-element-hover">
-											<div class="team-slider-element-name">???</div>
-											<div class="team-slider-element-job">
-												Ведущий менеджер
-											</div>
-											<div class="team-slider-element-more">Подробнее</div>
+							<div class="team-slider-element">
+								<div class="team-slider-element-img-wrapper">
+									<div class="team-slider-element-hover">
+										<div class="team-slider-element-name">???</div>
+										<div class="team-slider-element-job">
+											Ведущий менеджер
 										</div>
-										<div
-											class="team-slider-element-img lazy-inline-bg"
-											style="background-image: url(img/team/blue.jpg);"
-										></div>
-										<div
-											class="team-slider-element-img lazy-inline-bg"
-											style="background-image: url(img/team/blue-hover.jpg);"
-										></div>
+										<div class="team-slider-element-more">Подробнее</div>
 									</div>
-									<div class="team-slider-element-content">
-										<div class="team-slider-element-inner">
-											<div class="close-btn close-btn_dark"></div>
-											<div class="team-slider-element-title fadeInUp">
-												Логистика для меня это любимая работа, которая дает
-												возможность путешествовать по всему миру не выходя из
-												офиса.
-											</div>
-											<div class="team-slider-element-content-inner">
-												<div class="team-slider-element-info">
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Образование
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															Высшее.<br />Владивостокский филиал Российской
-															Таможенной Академии.<br />
-															Менеджер таможенного дела.
-														</div>
+									<div class="team-slider-element-img lazy-inline-bg"
+										style="background-image: url(img/team/blue.jpg);"></div>
+									<div class="team-slider-element-img lazy-inline-bg"
+										style="background-image: url(img/team/blue-hover.jpg);"></div>
+								</div>
+								<div class="team-slider-element-content">
+									<div class="team-slider-element-inner">
+										<div class="close-btn close-btn_dark"></div>
+										<div class="team-slider-element-title fadeInUp">
+											Логистика для меня это любимая работа, которая дает
+											возможность путешествовать по всему миру не выходя из
+											офиса.
+										</div>
+										<div class="team-slider-element-content-inner">
+											<div class="team-slider-element-info">
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Образование
 													</div>
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Знание языков
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															Английский
-														</div>
-													</div>
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Опыт работы
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															2 года
-														</div>
+													<div class="team-slider-element-info-text fadeInUp">
+														Высшее.<br />Владивостокский филиал Российской
+														Таможенной Академии.<br />
+														Менеджер таможенного дела.
 													</div>
 												</div>
-												<div
-													class="team-slider-element-contacts border-vertical active"
-												>
-													<div
-														class="team-slider-element-contacts-item whatsapp fadeInUp"
-													>
-														<a href="https://wa.me/79240036619"
-															>+7 (924) 003-66-19</a
-														>
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Знание языков
 													</div>
-													<div
-														class="team-slider-element-contacts-item instagram fadeInUp"
-													>
-														<a
-															href="https://instagram.com/marinap872"
-															target="_blank"
-															>MARINAP872</a
-														>
+													<div class="team-slider-element-info-text fadeInUp">
+														Английский
 													</div>
-													<div
-														class="team-slider-element-contacts-item email fadeInUp"
-													>
-														<a href="mailto:logist@vlogistic.ru"
-															>logist@vlogistic.ru</a
-														>
+												</div>
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Опыт работы
 													</div>
+													<div class="team-slider-element-info-text fadeInUp">
+														2 года
+													</div>
+												</div>
+											</div>
+											<div class="team-slider-element-contacts border-vertical active">
+												<div class="team-slider-element-contacts-item whatsapp fadeInUp">
+													<a href="https://wa.me/79240036619">+7 (924) 003-66-19</a>
+												</div>
+												<div class="team-slider-element-contacts-item instagram fadeInUp">
+													<a href="https://instagram.com/marinap872"
+														target="_blank">MARINAP872</a>
+												</div>
+												<div class="team-slider-element-contacts-item email fadeInUp">
+													<a href="mailto:logist@vlogistic.ru">logist@vlogistic.ru</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="team-slider-element">
-									<div class="team-slider-element-img-wrapper">
-										<div class="team-slider-element-hover">
-											<div class="team-slider-element-name">
-												Марина Плотникова
-											</div>
-											<div class="team-slider-element-job">
-												Ведущий менеджер
-											</div>
-											<div class="team-slider-element-more">Подробнее</div>
+							</div>
+							<div class="team-slider-element">
+								<div class="team-slider-element-img-wrapper">
+									<div class="team-slider-element-hover">
+										<div class="team-slider-element-name">
+											Марина Плотникова
 										</div>
-										<div
-											class="team-slider-element-img lazy-inline-bg"
-											style="
+										<div class="team-slider-element-job">
+											Ведущий менеджер
+										</div>
+										<div class="team-slider-element-more">Подробнее</div>
+									</div>
+									<div class="team-slider-element-img lazy-inline-bg" style="
 												background-image: url(img/team/marina-plotnikova.jpg);
-											"
-										></div>
-										<div
-											class="team-slider-element-img lazy-inline-bg"
-											style="
+											"></div>
+									<div class="team-slider-element-img lazy-inline-bg" style="
 												background-image: url(img/team/marina-plotnikova-hover.jpg);
-											"
-										></div>
-									</div>
-									<div class="team-slider-element-content">
-										<div class="team-slider-element-inner">
-											<div class="close-btn close-btn_dark"></div>
-											<div class="team-slider-element-title fadeInUp">
-												Логистика для меня это любимая работа, которая дает
-												возможность путешествовать по всему миру не выходя из
-												офиса.
-											</div>
-											<div class="team-slider-element-content-inner">
-												<div class="team-slider-element-info">
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Образование
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															Высшее. Диплом с отличием<br />Новосибирская
-															Государственная Академия водного транспорта.<br />
-															Экономика и управление на предприятии водным
-															транспортом
-														</div>
-													</div>
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Знание языков
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															Английский
-														</div>
-													</div>
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Опыт работы
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															2 лет
-														</div>
-													</div>
-												</div>
-												<div
-													class="team-slider-element-contacts border-vertical active"
-												>
-													<div
-														class="team-slider-element-contacts-item whatsapp fadeInUp"
-													>
-														<a href="https://wa.me/79240036619"
-															>+7 (924) 003-66-19</a
-														>
-													</div>
-													<div
-														class="team-slider-element-contacts-item instagram fadeInUp"
-													>
-														<a
-															href="https://instagram.com/marinap872"
-															target="_blank"
-															>ANNA779770</a
-														>
-													</div>
-													<div
-														class="team-slider-element-contacts-item email fadeInUp"
-													>
-														<a href="mailto:logist@vlogistic.ru"
-															>logist@vlogistic.ru</a
-														>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+											"></div>
 								</div>
-								<div class="team-slider-element">
-									<div class="team-slider-element-img-wrapper">
-										<div class="team-slider-element-hover">
-											<div class="team-slider-element-name">???</div>
-											<div class="team-slider-element-job">
-												Должность сотрудника
-											</div>
-											<div class="team-slider-element-more">Подробнее</div>
+								<div class="team-slider-element-content">
+									<div class="team-slider-element-inner">
+										<div class="close-btn close-btn_dark"></div>
+										<div class="team-slider-element-title fadeInUp">
+											Логистика для меня это любимая работа, которая дает
+											возможность путешествовать по всему миру не выходя из
+											офиса.
 										</div>
-										<div
-											class="team-slider-element-img lazy-inline-bg"
-											style="background-image: url(img/team/glasses.jpg);"
-										></div>
-										<div
-											class="team-slider-element-img lazy-inline-bg"
-											style="background-image: url(img/team/glasses-hover.jpg);"
-										></div>
-									</div>
-									<div class="team-slider-element-content">
-										<div class="team-slider-element-inner">
-											<div class="close-btn close-btn_dark"></div>
-											<div class="team-slider-element-title fadeInUp">
-												Логистика для меня это любимая работа, которая дает
-												возможность путешествовать по всему миру не выходя из
-												офиса.
-											</div>
-											<div class="team-slider-element-content-inner">
-												<div class="team-slider-element-info">
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Образование
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															Высшее.<br />Владивостокский филиал Российской
-															Таможенной Академии.<br />
-															Менеджер таможенного дела.
-														</div>
+										<div class="team-slider-element-content-inner">
+											<div class="team-slider-element-info">
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Образование
 													</div>
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Знание языков
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															Английский
-														</div>
-													</div>
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Опыт работы
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															2 года
-														</div>
+													<div class="team-slider-element-info-text fadeInUp">
+														Высшее. Диплом с отличием<br />Новосибирская
+														Государственная Академия водного транспорта.<br />
+														Экономика и управление на предприятии водным
+														транспортом
 													</div>
 												</div>
-												<div
-													class="team-slider-element-contacts border-vertical active"
-												>
-													<div
-														class="team-slider-element-contacts-item whatsapp fadeInUp"
-													>
-														<a href="https://wa.me/79240036619"
-															>+7 (924) 003-66-19</a
-														>
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Знание языков
 													</div>
-													<div
-														class="team-slider-element-contacts-item instagram fadeInUp"
-													>
-														<a
-															href="https://instagram.com/marinap872"
-															target="_blank"
-															>MARINAP872</a
-														>
+													<div class="team-slider-element-info-text fadeInUp">
+														Английский
 													</div>
-													<div
-														class="team-slider-element-contacts-item email fadeInUp"
-													>
-														<a href="mailto:logist@vlogistic.ru"
-															>logist@vlogistic.ru</a
-														>
+												</div>
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Опыт работы
+													</div>
+													<div class="team-slider-element-info-text fadeInUp">
+														2 лет
 													</div>
 												</div>
 											</div>
-										</div>
-									</div>
-								</div>
-								<div class="team-slider-element">
-									<div class="team-slider-element-img-wrapper">
-										<div class="team-slider-element-hover">
-											<div class="team-slider-element-name">Юля</div>
-											<div class="team-slider-element-job">
-												Ведущий менеджер
-											</div>
-											<div class="team-slider-element-more">Подробнее</div>
-										</div>
-										<div
-											class="team-slider-element-img lazy-inline-bg"
-											style="background-image: url(img/team/yulya.jpg);"
-										></div>
-										<div
-											class="team-slider-element-img lazy-inline-bg"
-											style="background-image: url(img/team/yulya-hover.jpg);"
-										></div>
-									</div>
-									<div class="team-slider-element-content">
-										<div class="team-slider-element-inner">
-											<div class="close-btn close-btn_dark"></div>
-											<div class="team-slider-element-title fadeInUp">
-												Логистика для меня это любимая работа, которая дает
-												возможность путешествовать по всему миру не выходя из
-												офиса.
-											</div>
-											<div class="team-slider-element-content-inner">
-												<div class="team-slider-element-info">
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Образование
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															Высшее.<br />Владивостокский филиал Российской
-															Таможенной Академии.<br />
-															Менеджер таможенного дела.
-														</div>
-													</div>
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Знание языков
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															Английский
-														</div>
-													</div>
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Опыт работы
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															2 года
-														</div>
-													</div>
+											<div class="team-slider-element-contacts border-vertical active">
+												<div class="team-slider-element-contacts-item whatsapp fadeInUp">
+													<a href="https://wa.me/79240036619">+7 (924) 003-66-19</a>
 												</div>
-												<div
-													class="team-slider-element-contacts border-vertical active"
-												>
-													<div
-														class="team-slider-element-contacts-item whatsapp fadeInUp"
-													>
-														<a href="https://wa.me/79240036613"
-															>+7 (924) 003-66-19</a
-														>
-													</div>
-													<div
-														class="team-slider-element-contacts-item instagram fadeInUp"
-													>
-														<a
-															href="https://instagram.com/marinap872"
-															target="_blank"
-															>MARINAP872</a
-														>
-													</div>
-													<div
-														class="team-slider-element-contacts-item email fadeInUp"
-													>
-														<a href="mailto:logist@vlogistic.ru"
-															>logist@vlogistic.ru</a
-														>
-													</div>
+												<div class="team-slider-element-contacts-item instagram fadeInUp">
+													<a href="https://instagram.com/marinap872"
+														target="_blank">ANNA779770</a>
 												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="team-slider-element">
-									<div class="team-slider-element-img-wrapper">
-										<div class="team-slider-element-hover">
-											<div class="team-slider-element-name">Евгений</div>
-											<div class="team-slider-element-job">
-												Ведущий менеджер
-											</div>
-											<div class="team-slider-element-more">Подробнее</div>
-										</div>
-										<div
-											class="team-slider-element-img lazy-inline-bg"
-											style="background-image: url(img/team/john.jpg);"
-										></div>
-										<div
-											class="team-slider-element-img lazy-inline-bg"
-											style="background-image: url(img/team/john-hover.jpg);"
-										></div>
-									</div>
-									<div class="team-slider-element-content">
-										<div class="team-slider-element-inner">
-											<div class="close-btn close-btn_dark"></div>
-											<div class="team-slider-element-title fadeInUp">
-												Логистика для меня это любимая работа, которая дает
-												возможность путешествовать по всему миру не выходя из
-												офиса.
-											</div>
-											<div class="team-slider-element-content-inner">
-												<div class="team-slider-element-info">
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Образование
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															Высшее.<br />Владивостокский филиал Российской
-															Таможенной Академии.<br />
-															Менеджер таможенного дела.
-														</div>
-													</div>
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Знание языков
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															Английский
-														</div>
-													</div>
-													<div class="team-slider-element-content-block">
-														<div
-															class="team-slider-element-info-title fadeInUp"
-														>
-															Опыт работы
-														</div>
-														<div class="team-slider-element-info-text fadeInUp">
-															2 года
-														</div>
-													</div>
-												</div>
-												<div
-													class="team-slider-element-contacts border-vertical active"
-												>
-													<div
-														class="team-slider-element-contacts-item whatsapp fadeInUp"
-													>
-														<a href="https://wa.me/79240036619"
-															>+7 (924) 003-66-19</a
-														>
-													</div>
-													<div
-														class="team-slider-element-contacts-item instagram fadeInUp"
-													>
-														<a
-															href="https://instagram.com/marinap872"
-															target="_blank"
-															>MARINAP872</a
-														>
-													</div>
-													<div
-														class="team-slider-element-contacts-item email fadeInUp"
-													>
-														<a href="mailto:logist@vlogistic.ru"
-															>logist@vlogistic.ru</a
-														>
-													</div>
+												<div class="team-slider-element-contacts-item email fadeInUp">
+													<a href="mailto:logist@vlogistic.ru">logist@vlogistic.ru</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="slider-pagination"></div>
+							<div class="team-slider-element">
+								<div class="team-slider-element-img-wrapper">
+									<div class="team-slider-element-hover">
+										<div class="team-slider-element-name">???</div>
+										<div class="team-slider-element-job">
+											Должность сотрудника
+										</div>
+										<div class="team-slider-element-more">Подробнее</div>
+									</div>
+									<div class="team-slider-element-img lazy-inline-bg"
+										style="background-image: url(img/team/glasses.jpg);"></div>
+									<div class="team-slider-element-img lazy-inline-bg"
+										style="background-image: url(img/team/glasses-hover.jpg);"></div>
+								</div>
+								<div class="team-slider-element-content">
+									<div class="team-slider-element-inner">
+										<div class="close-btn close-btn_dark"></div>
+										<div class="team-slider-element-title fadeInUp">
+											Логистика для меня это любимая работа, которая дает
+											возможность путешествовать по всему миру не выходя из
+											офиса.
+										</div>
+										<div class="team-slider-element-content-inner">
+											<div class="team-slider-element-info">
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Образование
+													</div>
+													<div class="team-slider-element-info-text fadeInUp">
+														Высшее.<br />Владивостокский филиал Российской
+														Таможенной Академии.<br />
+														Менеджер таможенного дела.
+													</div>
+												</div>
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Знание языков
+													</div>
+													<div class="team-slider-element-info-text fadeInUp">
+														Английский
+													</div>
+												</div>
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Опыт работы
+													</div>
+													<div class="team-slider-element-info-text fadeInUp">
+														2 года
+													</div>
+												</div>
+											</div>
+											<div class="team-slider-element-contacts border-vertical active">
+												<div class="team-slider-element-contacts-item whatsapp fadeInUp">
+													<a href="https://wa.me/79240036619">+7 (924) 003-66-19</a>
+												</div>
+												<div class="team-slider-element-contacts-item instagram fadeInUp">
+													<a href="https://instagram.com/marinap872"
+														target="_blank">MARINAP872</a>
+												</div>
+												<div class="team-slider-element-contacts-item email fadeInUp">
+													<a href="mailto:logist@vlogistic.ru">logist@vlogistic.ru</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="team-slider-element">
+								<div class="team-slider-element-img-wrapper">
+									<div class="team-slider-element-hover">
+										<div class="team-slider-element-name">Юля</div>
+										<div class="team-slider-element-job">
+											Ведущий менеджер
+										</div>
+										<div class="team-slider-element-more">Подробнее</div>
+									</div>
+									<div class="team-slider-element-img lazy-inline-bg"
+										style="background-image: url(img/team/yulya.jpg);"></div>
+									<div class="team-slider-element-img lazy-inline-bg"
+										style="background-image: url(img/team/yulya-hover.jpg);"></div>
+								</div>
+								<div class="team-slider-element-content">
+									<div class="team-slider-element-inner">
+										<div class="close-btn close-btn_dark"></div>
+										<div class="team-slider-element-title fadeInUp">
+											Логистика для меня это любимая работа, которая дает
+											возможность путешествовать по всему миру не выходя из
+											офиса.
+										</div>
+										<div class="team-slider-element-content-inner">
+											<div class="team-slider-element-info">
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Образование
+													</div>
+													<div class="team-slider-element-info-text fadeInUp">
+														Высшее.<br />Владивостокский филиал Российской
+														Таможенной Академии.<br />
+														Менеджер таможенного дела.
+													</div>
+												</div>
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Знание языков
+													</div>
+													<div class="team-slider-element-info-text fadeInUp">
+														Английский
+													</div>
+												</div>
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Опыт работы
+													</div>
+													<div class="team-slider-element-info-text fadeInUp">
+														2 года
+													</div>
+												</div>
+											</div>
+											<div class="team-slider-element-contacts border-vertical active">
+												<div class="team-slider-element-contacts-item whatsapp fadeInUp">
+													<a href="https://wa.me/79240036613">+7 (924) 003-66-19</a>
+												</div>
+												<div class="team-slider-element-contacts-item instagram fadeInUp">
+													<a href="https://instagram.com/marinap872"
+														target="_blank">MARINAP872</a>
+												</div>
+												<div class="team-slider-element-contacts-item email fadeInUp">
+													<a href="mailto:logist@vlogistic.ru">logist@vlogistic.ru</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="team-slider-element">
+								<div class="team-slider-element-img-wrapper">
+									<div class="team-slider-element-hover">
+										<div class="team-slider-element-name">Евгений</div>
+										<div class="team-slider-element-job">
+											Ведущий менеджер
+										</div>
+										<div class="team-slider-element-more">Подробнее</div>
+									</div>
+									<div class="team-slider-element-img lazy-inline-bg"
+										style="background-image: url(img/team/john.jpg);"></div>
+									<div class="team-slider-element-img lazy-inline-bg"
+										style="background-image: url(img/team/john-hover.jpg);"></div>
+								</div>
+								<div class="team-slider-element-content">
+									<div class="team-slider-element-inner">
+										<div class="close-btn close-btn_dark"></div>
+										<div class="team-slider-element-title fadeInUp">
+											Логистика для меня это любимая работа, которая дает
+											возможность путешествовать по всему миру не выходя из
+											офиса.
+										</div>
+										<div class="team-slider-element-content-inner">
+											<div class="team-slider-element-info">
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Образование
+													</div>
+													<div class="team-slider-element-info-text fadeInUp">
+														Высшее.<br />Владивостокский филиал Российской
+														Таможенной Академии.<br />
+														Менеджер таможенного дела.
+													</div>
+												</div>
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Знание языков
+													</div>
+													<div class="team-slider-element-info-text fadeInUp">
+														Английский
+													</div>
+												</div>
+												<div class="team-slider-element-content-block">
+													<div class="team-slider-element-info-title fadeInUp">
+														Опыт работы
+													</div>
+													<div class="team-slider-element-info-text fadeInUp">
+														2 года
+													</div>
+												</div>
+											</div>
+											<div class="team-slider-element-contacts border-vertical active">
+												<div class="team-slider-element-contacts-item whatsapp fadeInUp">
+													<a href="https://wa.me/79240036619">+7 (924) 003-66-19</a>
+												</div>
+												<div class="team-slider-element-contacts-item instagram fadeInUp">
+													<a href="https://instagram.com/marinap872"
+														target="_blank">MARINAP872</a>
+												</div>
+												<div class="team-slider-element-contacts-item email fadeInUp">
+													<a href="mailto:logist@vlogistic.ru">logist@vlogistic.ru</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
+						<div class="slider-pagination"></div>
 					</div>
-				</section>
+				</div>
+			</section>
 
-				<section id="reviews" class="reviews section">
-					<div class="container">
-						<h2 class="section__title page-fade-in-left">Отзывы</h2>
-						<div class="reviews-slider-container">
-							<div class="reviews-slider-buttons">
-								<span class="reviews-slider-button prev">Назад</span>
-								<span class="reviews-slider-button next">Вперед</span>
-							</div>
-							<div class="reviews-slider">
-								<!-- <div class="reviews-slider-item">
+			<section id="reviews" class="reviews section">
+				<div class="container">
+					<h2 class="section__title page-fade-in-left">Отзывы</h2>
+					<div class="reviews-slider-container">
+						<div class="reviews-slider-buttons">
+							<span class="reviews-slider-button prev">Назад</span>
+							<span class="reviews-slider-button next">Вперед</span>
+						</div>
+						<div class="reviews-slider">
+							<!-- <div class="reviews-slider-item">
                                 <img src="img/icons/quotes.svg" alt="">
                                 <div class="reviews-content">Благодарим компанию "ВОСТОК-ЛОГИСТИК" за качественную и
                                     быструю
                                     доставку комплектующих из Китая. Быстрые сроки, адекватные цены.</div>
                                 <div class="reviews-name">Имя клиента</div>
                             </div> -->
-								<div class="reviews-slider-item">
-									<img
-										class="reviews-slider-item__quotes-image"
-										src="img/icons/quotes.svg"
-										alt=""
-									/>
-									<div class="reviews-slider-item__header">
-										<div class="reviews-slider-item__photo-block">
-											<img
-												class="reviews-slider-item__photo"
-												src="img/reviews/1.png"
-												alt=""
-											/>
-										</div>
-										<div class="reviews-slider-item__header-description">
-											<div class="reviews-slider-item__header-description-top">
-												<div
-													class="reviews-slider-item__header-description-category"
-												>
-													<div
-														class="reviews-slider-item__header-description-title"
-													>
-														Категория
-													</div>
-													<div
-														class="reviews-slider-item__header-description-text"
-													>
-														СБОРНЫЕ ПЕРЕВОЗКИ
-													</div>
+							<div class="reviews-slider-item">
+								<img class="reviews-slider-item__quotes-image" src="img/icons/quotes.svg" alt="" />
+								<div class="reviews-slider-item__header">
+									<div class="reviews-slider-item__photo-block">
+										<img class="reviews-slider-item__photo" src="img/reviews/1.png" alt="" />
+									</div>
+									<div class="reviews-slider-item__header-description">
+										<div class="reviews-slider-item__header-description-top">
+											<div class="reviews-slider-item__header-description-category">
+												<div class="reviews-slider-item__header-description-title">
+													Категория
 												</div>
-												<div
-													class="reviews-slider-item__header-description-route"
-												>
-													<div
-														class="reviews-slider-item__header-description-title"
-													>
-														Маршрут
-													</div>
-													<div
-														class="reviews-slider-item__header-description-text"
-													>
-														Владивосток - Петропавловск - Камчатский
-													</div>
+												<div class="reviews-slider-item__header-description-text">
+													СБОРНЫЕ ПЕРЕВОЗКИ
 												</div>
 											</div>
-											<div
-												class="reviews-slider-item__header-description-bottom"
-											>
-												<div class="reviews-slider-item__name">
-													Алексей Гладких
+											<div class="reviews-slider-item__header-description-route">
+												<div class="reviews-slider-item__header-description-title">
+													Маршрут
 												</div>
-												<div class="reviews-slider-item__position">
-													Предприниматель
+												<div class="reviews-slider-item__header-description-text">
+													Владивосток - Петропавловск - Камчатский
 												</div>
 											</div>
 										</div>
+										<div class="reviews-slider-item__header-description-bottom">
+											<div class="reviews-slider-item__name">
+												Алексей Гладких
+											</div>
+											<div class="reviews-slider-item__position">
+												Предприниматель
+											</div>
+										</div>
 									</div>
-									<div class="reviews-content">
-										<p>
-											Столкнулся с проблемой покупки пластиковых окон на
-											Камчатке. Хотелось купить качественные, у нас с этим
-											проблема. Нашел производителя в Новосибирске по
-											изготовлению.
-										</p>
-										<p>
-											Обратился в компанию ТЛК "Восток Логистик" за доставкой, в
-											приоритете было довезти их целыми и невредимыми. Менеджер
-											компании Евгений подошел к проблеме с полной отдачей:
-											нашли такого же производителя во Владивостоке, помогли
-											оформить заказ, забрать готовые окна, за неделю доставили
-											в Петропавловск целыми и невредимыми, в качественной
-											обрешётке.
-										</p>
-										<p>
-											Пусть заказ небольшой, но для меня важный. Окна вез для
-											строительства собственного дома. Благодарен за помощь,
-											качественную и оперативную работу компании.
-											<br />
-											Молодцы ребята.
-										</p>
-									</div>
-									<div class="reviews-slider-item__date">30.03.2020</div>
 								</div>
-								<div class="reviews-slider-item">
-									<img
-										class="reviews-slider-item__quotes-image"
-										src="img/icons/quotes.svg"
-										alt=""
-									/>
-									<div class="reviews-slider-item__header">
-										<div class="reviews-slider-item__photo-block">
-											<img
-												class="reviews-slider-item__photo"
-												src="img/reviews/2.png"
-												alt=""
-											/>
-										</div>
-										<div class="reviews-slider-item__header-description">
-											<div class="reviews-slider-item__header-description-top">
-												<div
-													class="reviews-slider-item__header-description-category"
-												>
-													<div
-														class="reviews-slider-item__header-description-title"
-													>
-														Категория
-													</div>
-													<div
-														class="reviews-slider-item__header-description-text"
-													>
-														СБОРНЫЕ ПЕРЕВОЗКИ, ИНДИВИДУАЛЬНЫЙ ПОИСК И ПОСТАВКА
-														ТОВАРА
-													</div>
-												</div>
-												<div
-													class="reviews-slider-item__header-description-route"
-												>
-													<div
-														class="reviews-slider-item__header-description-title"
-													>
-														Маршрут
-													</div>
-													<div
-														class="reviews-slider-item__header-description-text"
-													>
-														Находка - Москва
-													</div>
-												</div>
-											</div>
-											<div
-												class="reviews-slider-item__header-description-bottom"
-											>
-												<div class="reviews-slider-item__name">
-													Ольга Пениоза
-												</div>
-												<div class="reviews-slider-item__position">
-													шеф-кондитер
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="reviews-content">
-										<p>
-											При переезде на постоянное место жительства в Москву из
-											города Находка столкнулась с проблемой доставки хрупкого
-											оборудования для кондитерской студии. Обратилась в
-											компанию "Восток Логистик", так как ранее имела
-											положительный опыт заказов через данную компанию
-											оборудования и товаров из стран АТР (от упаковки до
-											витрин).
-										</p>
-										<p>
-											Доставку произвели за 20 суток, ни одно стекло не
-											пострадало. Получили все в Москве в том же виде. С
-											благодарностью и надеждой на дальнейшее сотрудничество
-											оставляем свой отзыв, и всегда рады будем видеть в нашей
-											кондитерской г.Москва сотрудников компании ТЛК "Восток
-											Логистик". Накормим вкуснейшими десертами в знак
-											благодарности.
-										</p>
-									</div>
-									<div class="reviews-slider-item__date">17.02.2020</div>
+								<div class="reviews-content">
+									<p>
+										Столкнулся с проблемой покупки пластиковых окон на
+										Камчатке. Хотелось купить качественные, у нас с этим
+										проблема. Нашел производителя в Новосибирске по
+										изготовлению.
+									</p>
+									<p>
+										Обратился в компанию ТЛК "Восток Логистик" за доставкой, в
+										приоритете было довезти их целыми и невредимыми. Менеджер
+										компании Евгений подошел к проблеме с полной отдачей:
+										нашли такого же производителя во Владивостоке, помогли
+										оформить заказ, забрать готовые окна, за неделю доставили
+										в Петропавловск целыми и невредимыми, в качественной
+										обрешётке.
+									</p>
+									<p>
+										Пусть заказ небольшой, но для меня важный. Окна вез для
+										строительства собственного дома. Благодарен за помощь,
+										качественную и оперативную работу компании.
+										<br />
+										Молодцы ребята.
+									</p>
 								</div>
-								<div class="reviews-slider-item">
-									<img
-										class="reviews-slider-item__quotes-image"
-										src="img/icons/quotes.svg"
-										alt=""
-									/>
-									<div class="reviews-slider-item__header">
-										<div class="reviews-slider-item__photo-block">
-											<img
-												class="reviews-slider-item__photo"
-												src="img/reviews/3.png"
-												alt=""
-											/>
-										</div>
-										<div class="reviews-slider-item__header-description">
-											<div class="reviews-slider-item__header-description-top">
-												<div
-													class="reviews-slider-item__header-description-category"
-												>
-													<div
-														class="reviews-slider-item__header-description-title"
-													>
-														Категория
-													</div>
-													<div
-														class="reviews-slider-item__header-description-text"
-													>
-														АВИАПЕРЕВОЗКИ
-													</div>
+								<div class="reviews-slider-item__date">30.03.2020</div>
+							</div>
+							<div class="reviews-slider-item">
+								<img class="reviews-slider-item__quotes-image" src="img/icons/quotes.svg" alt="" />
+								<div class="reviews-slider-item__header">
+									<div class="reviews-slider-item__photo-block">
+										<img class="reviews-slider-item__photo" src="img/reviews/2.png" alt="" />
+									</div>
+									<div class="reviews-slider-item__header-description">
+										<div class="reviews-slider-item__header-description-top">
+											<div class="reviews-slider-item__header-description-category">
+												<div class="reviews-slider-item__header-description-title">
+													Категория
 												</div>
-												<div
-													class="reviews-slider-item__header-description-route"
-												>
-													<div
-														class="reviews-slider-item__header-description-title"
-													>
-														Маршрут
-													</div>
-													<div
-														class="reviews-slider-item__header-description-text"
-													>
-														Япония - Москва
-													</div>
+												<div class="reviews-slider-item__header-description-text">
+													СБОРНЫЕ ПЕРЕВОЗКИ, ИНДИВИДУАЛЬНЫЙ ПОИСК И ПОСТАВКА
+													ТОВАРА
 												</div>
 											</div>
-											<div
-												class="reviews-slider-item__header-description-bottom"
-											>
-												<div class="reviews-slider-item__name">AIR DOCTOR</div>
-												<div class="reviews-slider-item__position">
-													Магазин японских товаров
+											<div class="reviews-slider-item__header-description-route">
+												<div class="reviews-slider-item__header-description-title">
+													Маршрут
+												</div>
+												<div class="reviews-slider-item__header-description-text">
+													Находка - Москва
 												</div>
 											</div>
 										</div>
+										<div class="reviews-slider-item__header-description-bottom">
+											<div class="reviews-slider-item__name">
+												Ольга Пениоза
+											</div>
+											<div class="reviews-slider-item__position">
+												шеф-кондитер
+											</div>
+										</div>
 									</div>
-									<div class="reviews-content">
-										<p>
-											Интернет магазин Японских товаров AIR DOCTOR выражает
-											благодарность коллективу компании ТЛК "Восток Логистик" за
-											оперативную авиа достаку срочных товаров - блокаторы
-											вирусов в г. Москва из Японии. Огромное значение для нас
-											имеет скорость доставки в условиях срочной необходимости и
-											дефицита товаров.
-										</p>
-									</div>
-									<div class="reviews-slider-item__date">29.03.2020</div>
 								</div>
+								<div class="reviews-content">
+									<p>
+										При переезде на постоянное место жительства в Москву из
+										города Находка столкнулась с проблемой доставки хрупкого
+										оборудования для кондитерской студии. Обратилась в
+										компанию "Восток Логистик", так как ранее имела
+										положительный опыт заказов через данную компанию
+										оборудования и товаров из стран АТР (от упаковки до
+										витрин).
+									</p>
+									<p>
+										Доставку произвели за 20 суток, ни одно стекло не
+										пострадало. Получили все в Москве в том же виде. С
+										благодарностью и надеждой на дальнейшее сотрудничество
+										оставляем свой отзыв, и всегда рады будем видеть в нашей
+										кондитерской г.Москва сотрудников компании ТЛК "Восток
+										Логистик". Накормим вкуснейшими десертами в знак
+										благодарности.
+									</p>
+								</div>
+								<div class="reviews-slider-item__date">17.02.2020</div>
+							</div>
+							<div class="reviews-slider-item">
+								<img class="reviews-slider-item__quotes-image" src="img/icons/quotes.svg" alt="" />
+								<div class="reviews-slider-item__header">
+									<div class="reviews-slider-item__photo-block">
+										<img class="reviews-slider-item__photo" src="img/reviews/3.png" alt="" />
+									</div>
+									<div class="reviews-slider-item__header-description">
+										<div class="reviews-slider-item__header-description-top">
+											<div class="reviews-slider-item__header-description-category">
+												<div class="reviews-slider-item__header-description-title">
+													Категория
+												</div>
+												<div class="reviews-slider-item__header-description-text">
+													АВИАПЕРЕВОЗКИ
+												</div>
+											</div>
+											<div class="reviews-slider-item__header-description-route">
+												<div class="reviews-slider-item__header-description-title">
+													Маршрут
+												</div>
+												<div class="reviews-slider-item__header-description-text">
+													Япония - Москва
+												</div>
+											</div>
+										</div>
+										<div class="reviews-slider-item__header-description-bottom">
+											<div class="reviews-slider-item__name">AIR DOCTOR</div>
+											<div class="reviews-slider-item__position">
+												Магазин японских товаров
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="reviews-content">
+									<p>
+										Интернет магазин Японских товаров AIR DOCTOR выражает
+										благодарность коллективу компании ТЛК "Восток Логистик" за
+										оперативную авиа достаку срочных товаров - блокаторы
+										вирусов в г. Москва из Японии. Огромное значение для нас
+										имеет скорость доставки в условиях срочной необходимости и
+										дефицита товаров.
+									</p>
+								</div>
+								<div class="reviews-slider-item__date">29.03.2020</div>
 							</div>
 						</div>
 					</div>
-				</section>
+				</div>
+			</section>
 
-				<section class="start-work container w-100 section">
-					<div class="section">
-						<div class="start-work__title page-fade-in-up">
-							Начать работать с нами
+			<section class="start-work container w-100 section">
+				<div class="section">
+					<div class="start-work__title page-fade-in-up">
+						Начать работать с нами
+					</div>
+					<div class="start-work__button-block page-fade-in-up">
+						<button type="button" class="start-work__button skew-button btn-open-modal"
+							onclick="ym(61594867,'reachGoal','otpravit_zayavku2'); return true;">
+							<span class="skew-button__button-text">
+								ОТПРАВИТЬ ЗАЯВКУ
+							</span>
+						</button>
+					</div>
+				</div>
+				<h2 id="news" class="section__title page-fade-in-left">
+					Мы в инстаграм
+					<a href="https://www.instagram.com/vlogistic.ru/" target="_blank">@vlogistic.ru</a>
+				</h2>
+				<div class="news-slider-btn-block top">
+					<div class="news-slider-btn-block-wrapper">
+						<div class="news__back-btn">
+							<div class="news__link-btn">
+								НАЗАД
+							</div>
 						</div>
-						<div class="start-work__button-block page-fade-in-up">
-							<button
-								type="button"
-								class="start-work__button skew-button btn-open-modal"
-								onclick="ym(61594867,'reachGoal','otpravit_zayavku2'); return true;"
-							>
-								<span class="skew-button__button-text">
-									ОТПРАВИТЬ ЗАЯВКУ
-								</span>
-							</button>
+						<div class="news__line-between-btn"></div>
+						<div class="news__forward-btn">
+							<div class="news__link-btn">
+								ВПЕРЕД
+							</div>
 						</div>
 					</div>
-					<h2 id="news" class="section__title page-fade-in-left">
-						Мы в инстаграм
-						<a href="https://www.instagram.com/vlogistic.ru/" target="_blank"
-							>@vlogistic.ru</a
-						>
-					</h2>
-					<div class="news-slider-btn-block top">
-						<div class="news-slider-btn-block-wrapper">
-							<div class="news__back-btn">
-								<div class="news__link-btn">
-									НАЗАД
-								</div>
+				</div>
+				<div class="news__all-news">
+					<div class="news__one-news-block news__open-popup">
+						<div class="news__image-block">
+							<img src="" data-src="img/news-1.png" alt="news-1" class="news__image lazy" />
+						</div>
+						<div class="news__title-one-news">
+							За время эпидемии 265 поездов пересекли границу через Маньчжурию
+							и 206 — через Эрлянь
+						</div>
+						<div class="news__description-one-news">
+							<p>
+								С момента начала эпидемии до 19 февраля границу с Китаем через
+								переход Маньчжурия – Забайкальск пересекли 265 грузовых
+								поездов, которые перевезли 24144 стандартных контейнера.
+							</p>
+							<p>
+								После того, как предприятия Китая начали возобновлять работу,
+								стали восстанавливаться и активные перевозки на маршруте Китай
+								– Европа – Китай через Маньчжурию. Харбинская железная дорога
+								координировала движение поездов, оперативно передавая
+								информацию в китайские и российские таможенные службы. Усилия
+								были направлены на ускорение таможенного оформления поездов —
+								особенно тех, которые везли в Китай грузы медицинского
+								назначения и сырье, необходимое для восстановления
+								производства. Таможенные службы по максимуму использовали
+								цифровые технологии, благодаря чему время ожидания поездов на
+								таможенных постах не превышало 3 часов.
+							</p>
+						</div>
+						<div class="news__more-details-block">
+							<div class="news__more-details-link">
+								Подробнее
+							</div>
+						</div>
+					</div>
+					<div class="news__one-news-block news__open-popup">
+						<div class="news__image-block">
+							<img src="" data-src="img/news-2.png" alt="news-2" class="news__image lazy" />
+						</div>
+						<div class="news__title-one-news">
+							компания “ТЛК Восток логистик” стала спонсором бейсбольной
+							команды
+						</div>
+						<div class="news__description-one-news">
+							<p>
+								Lick sang представляет собой восьмые международные
+								соревнования по бейсболу, организованные ассоциацией бейсбола
+								Гонконга, финансируемые за счёт Home Affairs и центром досуга
+								и культурного обслуживания, санкционированный Всемирной
+								бейсбольной и софтбольной конфедерацией, празднуется восьмая
+								годовщина в 2019 году.
+							</p>
+							<p>
+								Соревнования проходили в Sai Tso Wan 13-16 декабря 2019.
+								Команда Бейсболистов из города Владивостока и Находка (под
+								руководством тренера Жук Л.В.), приняла участие в данном
+								международном мероприятии.
+							</p>
+							<p>
+								Руководство компании ТЛК Восток Логистик всегда рады оказать
+								помощь молодым спортсменам. За Вами будущее!
+							</p>
+						</div>
+						<div class="news__more-details-block">
+							<div class="news__more-details-link">
+								Подробнее
+							</div>
+						</div>
+					</div>
+					<div class="news__one-news-block news__open-popup">
+						<div class="news__image-block">
+							<img src="" data-src="img/news-3.png" alt="news-3" class="news__image lazy" />
+						</div>
+						<div class="news__title-one-news">
+							с праздником 23 февраля!
+						</div>
+						<div class="news__description-one-news">
+							<p>
+								Женская половина коллектива ТЛК Восток Логистик искренне
+								поздравляет всех своих клиентов, коллег и партнеров в лице
+								мужской половины с праздником 23 февраля!
+							</p>
+							<p>
+								<img class="news__description-one-news-image lazy" src="" data-src="img/34.png"
+									alt="" />
+							</p>
+						</div>
+						<div class="news__more-details-block">
+							<div class="news__more-details-link">
+								Подробнее
+							</div>
+						</div>
+					</div>
+					<div class="news__one-news-block news__open-popup">
+						<div class="news__image-block">
+							<img src="" data-src="img/news-2.png" alt="news-4" class="news__image lazy" />
+						</div>
+						<div class="news__title-one-news">
+							компания “Восток логистик” стала спонсором бейсбольной команды
+						</div>
+						<div class="news__description-one-news">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
+							quae quia id nobis, dicta iste neque nihil! Odit, officia
+							quisquam. Ipsam, totam consequatur! Veniam explicabo asperiores
+							illo cumque amet deleniti!
+						</div>
+						<div class="news__more-details-block">
+							<div class="news__more-details-link news__open-popup">
+								Подробнее
 							</div>
 							<div class="news__line-between-btn"></div>
-							<div class="news__forward-btn">
-								<div class="news__link-btn">
-									ВПЕРЕД
-								</div>
-							</div>
 						</div>
 					</div>
-					<div class="news__all-news">
-						<div class="news__one-news-block news__open-popup">
-							<div class="news__image-block">
-								<img
-									src=""
-									data-src="img/news-1.png"
-									alt="news-1"
-									class="news__image lazy"
-								/>
-							</div>
-							<div class="news__title-one-news">
-								За время эпидемии 265 поездов пересекли границу через Маньчжурию
-								и 206 — через Эрлянь
-							</div>
-							<div class="news__description-one-news">
-								<p>
-									С момента начала эпидемии до 19 февраля границу с Китаем через
-									переход Маньчжурия – Забайкальск пересекли 265 грузовых
-									поездов, которые перевезли 24144 стандартных контейнера.
-								</p>
-								<p>
-									После того, как предприятия Китая начали возобновлять работу,
-									стали восстанавливаться и активные перевозки на маршруте Китай
-									– Европа – Китай через Маньчжурию. Харбинская железная дорога
-									координировала движение поездов, оперативно передавая
-									информацию в китайские и российские таможенные службы. Усилия
-									были направлены на ускорение таможенного оформления поездов —
-									особенно тех, которые везли в Китай грузы медицинского
-									назначения и сырье, необходимое для восстановления
-									производства. Таможенные службы по максимуму использовали
-									цифровые технологии, благодаря чему время ожидания поездов на
-									таможенных постах не превышало 3 часов.
-								</p>
-							</div>
-							<div class="news__more-details-block">
-								<div class="news__more-details-link">
-									Подробнее
-								</div>
-							</div>
+					<div class="news__one-news-block news__open-popup">
+						<div class="news__image-block">
+							<img src="" data-src="img/projects-popup-1.png" alt="news-5" class="news__image lazy" />
 						</div>
-						<div class="news__one-news-block news__open-popup">
-							<div class="news__image-block">
-								<img
-									src=""
-									data-src="img/news-2.png"
-									alt="news-2"
-									class="news__image lazy"
-								/>
-							</div>
-							<div class="news__title-one-news">
-								компания “ТЛК Восток логистик” стала спонсором бейсбольной
-								команды
-							</div>
-							<div class="news__description-one-news">
-								<p>
-									Lick sang представляет собой восьмые международные
-									соревнования по бейсболу, организованные ассоциацией бейсбола
-									Гонконга, финансируемые за счёт Home Affairs и центром досуга
-									и культурного обслуживания, санкционированный Всемирной
-									бейсбольной и софтбольной конфедерацией, празднуется восьмая
-									годовщина в 2019 году.
-								</p>
-								<p>
-									Соревнования проходили в Sai Tso Wan 13-16 декабря 2019.
-									Команда Бейсболистов из города Владивостока и Находка (под
-									руководством тренера Жук Л.В.), приняла участие в данном
-									международном мероприятии.
-								</p>
-								<p>
-									Руководство компании ТЛК Восток Логистик всегда рады оказать
-									помощь молодым спортсменам. За Вами будущее!
-								</p>
-							</div>
-							<div class="news__more-details-block">
-								<div class="news__more-details-link">
-									Подробнее
-								</div>
-							</div>
+						<div class="news__title-one-news">
+							“Восток логистик” получила членство проимосркой
+							торгово-промышленной палаты
 						</div>
-						<div class="news__one-news-block news__open-popup">
-							<div class="news__image-block">
-								<img
-									src=""
-									data-src="img/news-3.png"
-									alt="news-3"
-									class="news__image lazy"
-								/>
-							</div>
-							<div class="news__title-one-news">
-								с праздником 23 февраля!
-							</div>
-							<div class="news__description-one-news">
-								<p>
-									Женская половина коллектива ТЛК Восток Логистик искренне
-									поздравляет всех своих клиентов, коллег и партнеров в лице
-									мужской половины с праздником 23 февраля!
-								</p>
-								<p>
-									<img
-										class="news__description-one-news-image lazy"
-										src=""
-										data-src="img/34.png"
-										alt=""
-									/>
-								</p>
-							</div>
-							<div class="news__more-details-block">
-								<div class="news__more-details-link">
-									Подробнее
-								</div>
-							</div>
+						<div class="news__description-one-news">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
+							quae quia id nobis, dicta iste neque nihil! Odit, officia
+							quisquam. Ipsam, totam consequatur! Veniam explicabo asperiores
+							illo cumque amet deleniti!
 						</div>
-						<div class="news__one-news-block news__open-popup">
-							<div class="news__image-block">
-								<img
-									src=""
-									data-src="img/news-2.png"
-									alt="news-4"
-									class="news__image lazy"
-								/>
-							</div>
-							<div class="news__title-one-news">
-								компания “Восток логистик” стала спонсором бейсбольной команды
-							</div>
-							<div class="news__description-one-news">
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
-								quae quia id nobis, dicta iste neque nihil! Odit, officia
-								quisquam. Ipsam, totam consequatur! Veniam explicabo asperiores
-								illo cumque amet deleniti!
-							</div>
-							<div class="news__more-details-block">
-								<div class="news__more-details-link news__open-popup">
-									Подробнее
-								</div>
-								<div class="news__line-between-btn"></div>
-							</div>
-						</div>
-						<div class="news__one-news-block news__open-popup">
-							<div class="news__image-block">
-								<img
-									src=""
-									data-src="img/projects-popup-1.png"
-									alt="news-5"
-									class="news__image lazy"
-								/>
-							</div>
-							<div class="news__title-one-news">
-								“Восток логистик” получила членство проимосркой
-								торгово-промышленной палаты
-							</div>
-							<div class="news__description-one-news">
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
-								quae quia id nobis, dicta iste neque nihil! Odit, officia
-								quisquam. Ipsam, totam consequatur! Veniam explicabo asperiores
-								illo cumque amet deleniti!
-							</div>
-							<div class="news__more-details-block">
-								<div class="news__more-details-link">
-									Подробнее
-								</div>
-								<div class="news__line-between-btn"></div>
-							</div>
-						</div>
-					</div>
-					<div class="news-slider-btn-block bottom">
-						<div class="news-slider-btn-block-wrapper">
-							<div class="news__back-btn">
-								<div class="news__link-btn">
-									НАЗАД
-								</div>
+						<div class="news__more-details-block">
+							<div class="news__more-details-link">
+								Подробнее
 							</div>
 							<div class="news__line-between-btn"></div>
-							<div class="news__forward-btn">
-								<div class="news__link-btn">
-									ВПЕРЕД
-								</div>
+						</div>
+					</div>
+				</div>
+				<div class="news-slider-btn-block bottom">
+					<div class="news-slider-btn-block-wrapper">
+						<div class="news__back-btn">
+							<div class="news__link-btn">
+								НАЗАД
+							</div>
+						</div>
+						<div class="news__line-between-btn"></div>
+						<div class="news__forward-btn">
+							<div class="news__link-btn">
+								ВПЕРЕД
 							</div>
 						</div>
 					</div>
-				</section>
+				</div>
+			</section>
 
-				<section class="section career">
-					<div class="container">
-						<h2 class="section__title page-fade-in-left">Карьера</h2>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="career__advantages">
-									<div class="career__block">
-										Стабильные социальные гарантии
-									</div>
-									<div class="career__block">
-										Возможности профессионального и личностного роста
-									</div>
-									<div class="career__block">
-										Индивидуальный подход и мотивация
-									</div>
-									<div class="career__block">
-										Комфортная корпоративная культура
-									</div>
-									<div class="career__block">
-										Внедрение современных технологий
-									</div>
-									<div class="career__block">Постоянное обучение</div>
+			<section class="section career">
+				<div class="container">
+					<h2 class="section__title page-fade-in-left">Карьера</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="career__advantages">
+								<div class="career__block">
+									Стабильные социальные гарантии
 								</div>
+								<div class="career__block">
+									Возможности профессионального и личностного роста
+								</div>
+								<div class="career__block">
+									Индивидуальный подход и мотивация
+								</div>
+								<div class="career__block">
+									Комфортная корпоративная культура
+								</div>
+								<div class="career__block">
+									Внедрение современных технологий
+								</div>
+								<div class="career__block">Постоянное обучение</div>
 							</div>
-							<div class="col-md-6">
-								<div class="career__vacancies">
-									<h3 class="career__title">Вакансии</h3>
-									<div class="career__row">
-										<span class="career__name"
-											>Менеджер по работе с клиентами</span
-										>
-										<div class="career__link open-career-popup">Подробнее</div>
-										<div style="display: none;" class="career__description">
-											<div class="row">
-												<div class="col-md-4">
-													<div class="vl-popup__title">
-														Менеджер по работе с клиентами
-													</div>
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-md-4 vl-popup__column">
-													<div class="vl-popup__subtitle">Обязанности</div>
-													<ul class="vl-popup__list">
-														<li class="vl-popup__list-item">
-															Организация международных и внутрироссийских
-															мультимодальных перевозок всеми видами транспорта
-															(ж/д, море, авто)
-														</li>
-														<li class="vl-popup__list-item">
-															Взаимодействие с экспедиторами, агентами, портами,
-															морскими линиями, автоперевовзчиками, владельцами
-															контейнерного оборудования
-														</li>
-														<li class="vl-popup__list-item">
-															Котировка ставок и формирование предложений для
-															клиентов
-														</li>
-														<li class="vl-popup__list-item">
-															Ведение внутренней БД
-														</li>
-														<li class="vl-popup__list-item">
-															Отчетность по установленной форме
-														</li>
-													</ul>
-												</div>
-												<div class="col-md-4 vl-popup__column">
-													<div class="vl-popup__subtitle">Требования</div>
-													<ul class="vl-popup__list">
-														<li class="vl-popup__list-item">
-															Опыт работы в транспортно-логистической компании
-															не менее 5 лет
-														</li>
-														<li class="vl-popup__list-item">
-															Понимание принципов функционирования морских,
-															авто, ж/д перевозок
-														</li>
-														<li class="vl-popup__list-item">
-															Успешный опыт организации мультимодальных
-															перевозок
-														</li>
-														<li class="vl-popup__list-item">
-															Знание базовых принципов формирования
-															бухгалтерских документов
-														</li>
-														<li class="vl-popup__list-item">
-															INCOTERMS (основные термины, правила применения)
-														</li>
-														<li class="vl-popup__list-item">
-															Опыт перевоозок через сухопутные погран переходы
-															будет являться преимуществом
-														</li>
-														<li class="vl-popup__list-item">
-															Английский язык - уровень intermediate
-														</li>
-													</ul>
-												</div>
-												<div class="col-md-4 vl-popup__column">
-													<div class="vl-popup__subtitle">Мы предлагаем</div>
-													<ul class="vl-popup__list">
-														<li class="vl-popup__list-item">
-															График работы: с 9.00 до 18.00, 5/2, суббота,
-															воскресенье - выходной
-														</li>
-														<li class="vl-popup__list-item">
-															Полное соблюдение ТК РФ
-														</li>
-														<li class="vl-popup__list-item">
-															Достойная заработная плата (оклад+премии KPI)
-														</li>
-														<li class="vl-popup__list-item">
-															Перспективы профессионального развития и
-															карьерного роста
-														</li>
-														<li class="vl-popup__list-item">
-															Работа в молодой и дружной команде профессионалов
-														</li>
-													</ul>
-													<button class="skew-button">
-														<span class="skew-button__button-text"
-															>ОТКЛИКНУТЬСЯ НА ВАКАНСИЮ</span
-														>
-													</button>
+						</div>
+						<div class="col-md-6">
+							<div class="career__vacancies">
+								<h3 class="career__title">Вакансии</h3>
+								<div class="career__row">
+									<span class="career__name">Менеджер по работе с клиентами</span>
+									<div class="career__link open-career-popup">Подробнее</div>
+									<div style="display: none;" class="career__description">
+										<div class="row">
+											<div class="col-md-4">
+												<div class="vl-popup__title">
+													Менеджер по работе с клиентами
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="career__row">
-										<span class="career__name"
-											>Менеджер по работе с клиентами</span
-										>
-										<div class="career__link open-career-popup">Подробнее</div>
-										<div style="display: none;" class="career__description">
-											<div class="row">
-												<div class="col-md-4">
-													<div class="vl-popup__title">
-														Менеджер по работе с клиентами
-													</div>
-												</div>
+										<div class="row">
+											<div class="col-md-4 vl-popup__column">
+												<div class="vl-popup__subtitle">Обязанности</div>
+												<ul class="vl-popup__list">
+													<li class="vl-popup__list-item">
+														Организация международных и внутрироссийских
+														мультимодальных перевозок всеми видами транспорта
+														(ж/д, море, авто)
+													</li>
+													<li class="vl-popup__list-item">
+														Взаимодействие с экспедиторами, агентами, портами,
+														морскими линиями, автоперевовзчиками, владельцами
+														контейнерного оборудования
+													</li>
+													<li class="vl-popup__list-item">
+														Котировка ставок и формирование предложений для
+														клиентов
+													</li>
+													<li class="vl-popup__list-item">
+														Ведение внутренней БД
+													</li>
+													<li class="vl-popup__list-item">
+														Отчетность по установленной форме
+													</li>
+												</ul>
 											</div>
-											<div class="row">
-												<div class="col-md-4 vl-popup__column">
-													<div class="vl-popup__subtitle">Обязанности</div>
-													<ul class="vl-popup__list">
-														<li class="vl-popup__list-item">
-															Организация международных и внутрироссийских
-															мультимодальных перевозок всеми видами транспорта
-															(ж/д, море, авто)
-														</li>
-														<li class="vl-popup__list-item">
-															Взаимодействие с экспедиторами, агентами, портами,
-															морскими линиями, автоперевовзчиками, владельцами
-															контейнерного оборудования
-														</li>
-														<li class="vl-popup__list-item">
-															Котировка ставок и формирование предложений для
-															клиентов
-														</li>
-														<li class="vl-popup__list-item">
-															Ведение внутренней БД
-														</li>
-														<li class="vl-popup__list-item">
-															Отчетность по установленной форме
-														</li>
-													</ul>
-												</div>
-												<div class="col-md-4 vl-popup__column">
-													<div class="vl-popup__subtitle">Требования</div>
-													<ul class="vl-popup__list">
-														<li class="vl-popup__list-item">
-															Опыт работы в транспортно-логистической компании
-															не менее 5 лет
-														</li>
-														<li class="vl-popup__list-item">
-															Понимание принципов функционирования морских,
-															авто, ж/д перевозок
-														</li>
-														<li class="vl-popup__list-item">
-															Успешный опыт организации мультимодальных
-															перевозок
-														</li>
-														<li class="vl-popup__list-item">
-															Знание базовых принципов формирования
-															бухгалтерских документов
-														</li>
-														<li class="vl-popup__list-item">
-															INCOTERMS (основные термины, правила применения)
-														</li>
-														<li class="vl-popup__list-item">
-															Опыт перевоозок через сухопутные погран переходы
-															будет являться преимуществом
-														</li>
-														<li class="vl-popup__list-item">
-															Английский язык - уровень intermediate
-														</li>
-													</ul>
-												</div>
-												<div class="col-md-4 vl-popup__column">
-													<div class="vl-popup__subtitle">Мы предлагаем</div>
-													<ul class="vl-popup__list">
-														<li class="vl-popup__list-item">
-															График работы: с 9.00 до 18.00, 5/2, суббота,
-															воскресенье - выходной
-														</li>
-														<li class="vl-popup__list-item">
-															Полное соблюдение ТК РФ
-														</li>
-														<li class="vl-popup__list-item">
-															Достойная заработная плата (оклад+премии KPI)
-														</li>
-														<li class="vl-popup__list-item">
-															Перспективы профессионального развития и
-															карьерного роста
-														</li>
-														<li class="vl-popup__list-item">
-															Работа в молодой и дружной команде профессионалов
-														</li>
-													</ul>
-													<button class="skew-button">
-														<span class="skew-button__button-text"
-															>ОТКЛИКНУТЬСЯ НА ВАКАНСИЮ</span
-														>
-													</button>
-												</div>
+											<div class="col-md-4 vl-popup__column">
+												<div class="vl-popup__subtitle">Требования</div>
+												<ul class="vl-popup__list">
+													<li class="vl-popup__list-item">
+														Опыт работы в транспортно-логистической компании
+														не менее 5 лет
+													</li>
+													<li class="vl-popup__list-item">
+														Понимание принципов функционирования морских,
+														авто, ж/д перевозок
+													</li>
+													<li class="vl-popup__list-item">
+														Успешный опыт организации мультимодальных
+														перевозок
+													</li>
+													<li class="vl-popup__list-item">
+														Знание базовых принципов формирования
+														бухгалтерских документов
+													</li>
+													<li class="vl-popup__list-item">
+														INCOTERMS (основные термины, правила применения)
+													</li>
+													<li class="vl-popup__list-item">
+														Опыт перевоозок через сухопутные погран переходы
+														будет являться преимуществом
+													</li>
+													<li class="vl-popup__list-item">
+														Английский язык - уровень intermediate
+													</li>
+												</ul>
 											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section id="contacts" class="contacts container w-100">
-					<div class="row contacts__wrapper">
-						<div class="col-12 col-md-6 contacts__address-section">
-							<h2 class="section__title page-fade-in-left">
-								КОНТАКТЫ
-							</h2>
-							<div class="row contacts__contact-information">
-								<div class="col-12 col-xl-6 contact-information__first-block">
-									<div class="contact-information__address-block">
-										Приморский край, г. Находка, <br />
-										ул. Дзержинского, 9Ж, оф. 201
-									</div>
-									<div class="contact-information__phone-block">
-										<a
-											href="tel:+74236904990"
-											class="contact-information__phone-link"
-										>
-											+7 (4236) 90-49-90
-										</a>
-									</div>
-									<div class="contact-information__mail-block">
-										<a
-											href="mailto:vostok@vlogistic.ru"
-											class="contact-information__mail-link"
-										>
-											vostok@vlogistic.ru
-										</a>
-									</div>
-									<div class="contact-information__insta-block">
-										<span>Instagram: </span>
-										<a
-											href="https://www.instagram.com/vlogistic.ru/"
-											class="contact-information__insta-link"
-											target="_blank"
-										>
-											@vlogistic.ru
-										</a>
-									</div>
-								</div>
-								<div class="col-12 col-xl-6 contact-information__second-block">
-									<div class="contact-information__address-block">
-										Приморский край, г. владивосток, <br />
-										ул. Стрельникова д7, ОФ. 603
-									</div>
-									<div class="contact-information__phone-block">
-										<a
-											href="tel:+74236904990"
-											class="contact-information__phone-block"
-										></a
-										>+7 (4232) ХХ-ХХ-ХХ
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-md-6 contacts__form-section left-border">
-							<div class="contacts__form-section-title">
-								Начать работать с нами
-							</div>
-							<div class="contacts__form-section-description">
-								Пожалуйста, заполните простую форму. В ближайшее время с вами
-								свяжутся специалисты "ТЛК ВОСТОК ЛОГИСТИК".
-							</div>
-							<div class="contacts__form-block">
-								<form action="mail.php" method="POST" class="contacts__form">
-									<label>
-										<input
-											type="text"
-											class="form__input-text input-name"
-											name="user_name"
-											placeholder="ВВЕДИТЕ ВАШЕ ИМЯ*"
-											required
-										/>
-									</label>
-									<label>
-										<input
-											type="email"
-											class="form__input-text input-email"
-											placeholder="ВВЕДИТЕ ВАШ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ*"
-											name="user_email"
-											required
-										/>
-									</label>
-									<label class="form__phone-label">
-										<input
-											type="tel"
-											class="form__input-text input-phone"
-											name="user_phone"
-											placeholder="ВВЕДИТЕ ВАШ ТЕЛЕФОН"
-										/>
-									</label>
-									<label>
-										<input
-											type="text"
-											class="form__input-text input-comment"
-											name="user_comment"
-											placeholder="НАПИШИТЕ КОММЕНТАРИЙ"
-										/>
-									</label>
-									<input
-										type="checkbox"
-										class="form__input-checkbox"
-										id="form__checkbox-contacts"
-										name="user_agreement"
-										checked
-									/>
-									<label
-										for="form__checkbox-contacts"
-										class="form__label-checkbox"
-									>
-										<span class="form__input-checkbox-text">
-											Я согласен на обработку персональных данных
-										</span>
-										<span class="form__alert-checkbox">Вы не согласны?</span>
-									</label>
-									<div class="form__message-protection">
-										Защита от автоматических сообщений
-									</div>
-									<div class="form__submit-block">
-										<!--<div class="form__not-a-robot">
-                                        <img src="img/not-a-robot.png" alt="not-a-robot" class="form__not-a-robot-img">
-                                    </div>-->
-										<div
-											class="form__submit-block g-recaptcha"
-											data-sitekey="6LeXKt8UAAAAAIjeFbwzyhhfH_4rLT3zBJ6CTwqZ"
-											id="contacts-recaptcha"
-										></div>
-										<div class="form__submit-button-container">
-											<div class="start-work__button-block">
-												<button
-													type="submit"
-													class="contacts__form-button skew-button"
-													onclick="ym(61594867,'reachGoal','otpravit_zayavku3'); return true;"
-												>
-													<span class="skew-button__button-text">
-														ОТПРАВИТЬ ЗАЯВКУ
-													</span>
+											<div class="col-md-4 vl-popup__column">
+												<div class="vl-popup__subtitle">Мы предлагаем</div>
+												<ul class="vl-popup__list">
+													<li class="vl-popup__list-item">
+														График работы: с 9.00 до 18.00, 5/2, суббота,
+														воскресенье - выходной
+													</li>
+													<li class="vl-popup__list-item">
+														Полное соблюдение ТК РФ
+													</li>
+													<li class="vl-popup__list-item">
+														Достойная заработная плата (оклад+премии KPI)
+													</li>
+													<li class="vl-popup__list-item">
+														Перспективы профессионального развития и
+														карьерного роста
+													</li>
+													<li class="vl-popup__list-item">
+														Работа в молодой и дружной команде профессионалов
+													</li>
+												</ul>
+												<button class="skew-button">
+													<span class="skew-button__button-text">ОТКЛИКНУТЬСЯ НА
+														ВАКАНСИЮ</span>
 												</button>
 											</div>
 										</div>
 									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-
-			<footer class="footer">
-				<div class="container">
-					<div class="menu">
-						<div class="menu__first-section">
-							<div class="menu__logo">
-								<a href="/" class="menu__logo-link">
-									<img src="img/logo.png" alt="logo" class="menu__logo-img" />
-								</a>
-							</div>
-						</div>
-						<div class="menu-footer">
-							<div class="menu-footer__item">
-								<div class="menu-footer__title">Услуги</div>
-								<ul class="menu-footer__list">
-									<li class="menu-footer__list-item">
-										<a href="#">Грузоперевозки</a>
-									</li>
-									<li class="menu-footer__list-item">
-										<a href="#">Таможенное оформление</a>
-									</li>
-									<li class="menu-footer__list-item">
-										<a href="#">Складские услуги</a>
-									</li>
-									<li class="menu-footer__list-item">
-										<a href="#">Поиск производителей</a>
-									</li>
-								</ul>
-							</div>
-							<div class="menu-footer__item">
-								<div class="menu-footer__title">О компании</div>
-								<ul class="menu-footer__list">
-									<li class="menu-footer__list-item">
-										<a href="#">О компании</a>
-									</li>
-									<li class="menu-footer__list-item">
-										<a href="#">Преимущества</a>
-									</li>
-									<li class="menu-footer__list-item">
-										<a href="#">Условия работы</a>
-									</li>
-									<li class="menu-footer__list-item">
-										<a href="#">Партнеры</a>
-									</li>
-									<li class="menu-footer__list-item">
-										<a href="#">Документы</a>
-									</li>
-									<li class="menu-footer__list-item">
-										<a href="#">Наша команда</a>
-									</li>
-									<li class="menu-footer__list-item"><a href="#">Отзывы</a></li>
-								</ul>
-							</div>
-							<div class="menu-footer__item">
-								<div class="menu-footer__title">Проекты</div>
-								<div class="menu-footer__title">Новости</div>
-								<div class="menu-footer__title">Карьера</div>
-								<div class="menu-footer__title">Контакты</div>
-							</div>
-						</div>
-						<div class="menu__contacts-block">
-							<div class="menu__phone-block">
-								<a href="tel:+74236904990" class="menu__phone-link">
-									+7 (4236) 90-49-90
-								</a>
-							</div>
-							<address class="menu__address">
-								Приморский край, г. Находка, ул. Дзержинского, 9Ж, оф. 201
-							</address>
-							<a
-								href="mailto:vostok@vlogistic.ru"
-								class="contact-information__mail-link"
-							>
-								vostok@vlogistic.ru
-							</a>
-							<a
-								href="https://www.instagram.com/vlogistic.ru/"
-								class="contact-information__insta-link"
-								target="_blank"
-							>
-								<img src="img/icons/instagram-white.svg" alt="" />
-							</a>
-							<div class="menu__callback btn-open-modal">
-								Заказать обратный звонок
-							</div>
-						</div>
-					</div>
-					<div class="footer__bottom">
-						<div class="footer__info">
-							<div>© 2020 ТЛК “Восток Логистик”</div>
-							<a href="#" class="footer__link">Политика конфиденциальности</a>
-						</div>
-						<a href="#" class="footer__created-by footer__link" target="_blank"
-							>Created by PIK production</a
-						>
-					</div>
-				</div>
-			</footer>
-		</div>
-		<!-- content end -->
-
-		<!-- call popup start -->
-		<div class="popup-call" id="popup-call">
-			<div class="popup-call__wrapper">
-				<div class="popup-call__block">
-					<div class="popup-call__success" style="display: none;">
-						<div class="success__title">
-							ваша заявка успешно отправлена
-						</div>
-						<div class="success__dexcription">
-							В ближайшее время с вами свяжутся
-							<br />
-							специалисты "ТЛК ВОСТОК ЛОГИСТИК".
-						</div>
-					</div>
-					<div class="close-button"></div>
-					<div class="popup-call__title">
-						ОТПРАВИТЬ ЗАЯВКУ
-					</div>
-					<div class="popup-call__description">
-						Пожалуйста, заполните простую форму. В ближайшее время с вами
-						свяжутся специалисты "ТЛК ВОСТОК ЛОГИСТИК".
-					</div>
-					<div class="popup-call__form">
-						<form method="POST" class="popup-call__form">
-							<label>
-								<input
-									type="text"
-									class="form__input-text input-name"
-									placeholder="ВВЕДИТЕ ВАШЕ ИМЯ*"
-									name="user_name"
-									required
-								/>
-							</label>
-							<label>
-								<input
-									type="email"
-									class="form__input-text input-email"
-									name="user_email"
-									placeholder="ВВЕДИТЕ ВАШ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ*"
-									required
-								/>
-							</label>
-							<label>
-								<input
-									type="tel"
-									class="form__input-text input-phone"
-									name="user_phone"
-									placeholder="ВВЕДИТЕ ВАШ ТЕЛЕФОН"
-								/>
-							</label>
-							<label>
-								<input
-									type="text"
-									class="form__input-text input-comment"
-									name="user_comment"
-									placeholder="НАПИШИТЕ КОММЕНТАРИЙ"
-								/>
-							</label>
-							<input
-								type="checkbox"
-								class="form__input-checkbox"
-								id="form__checkbox-popap-call"
-								name="user_agreement"
-								checked
-							/>
-							<label
-								for="form__checkbox-popap-call"
-								class="form__label-checkbox"
-							>
-								<span class="form__input-checkbox-text">
-									Я согласен на обработку персональных данных
-								</span>
-								<span class="form__alert-checkbox popup-call__alert"
-									>Вы не согласны?</span
-								>
-							</label>
-							<div class="popup-call__message-protection">
-								Защита от автоматических сообщений
-							</div>
-							<div class="form__submit-block">
-								<!-- <div class="form__not-a-robot">
-                                <img src="img/not-a-robot.png" alt="">
-                            </div> -->
-								<div
-									class="form__submit-block g-recaptcha"
-									data-sitekey="6LeXKt8UAAAAAIjeFbwzyhhfH_4rLT3zBJ6CTwqZ"
-									id="contacts-recaptcha"
-								></div>
-								<div class="form__submit-button-container">
-									<div class="form__button-block">
-										<button
-											type="submit"
-											class="form__button skew-button full-width"
-											id="popup-call__button"
-											onclick="ym(61594867,'reachGoal','otpravit zayavku'); return true;"
-										>
-											<span class="skew-button__button-text">
-												ОТПРАВИТЬ ЗАЯВКУ
-											</span>
-										</button>
+								</div>
+								<div class="career__row">
+									<span class="career__name">Менеджер по работе с клиентами</span>
+									<div class="career__link open-career-popup">Подробнее</div>
+									<div style="display: none;" class="career__description">
+										<div class="row">
+											<div class="col-md-4">
+												<div class="vl-popup__title">
+													Менеджер по работе с клиентами
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 vl-popup__column">
+												<div class="vl-popup__subtitle">Обязанности</div>
+												<ul class="vl-popup__list">
+													<li class="vl-popup__list-item">
+														Организация международных и внутрироссийских
+														мультимодальных перевозок всеми видами транспорта
+														(ж/д, море, авто)
+													</li>
+													<li class="vl-popup__list-item">
+														Взаимодействие с экспедиторами, агентами, портами,
+														морскими линиями, автоперевовзчиками, владельцами
+														контейнерного оборудования
+													</li>
+													<li class="vl-popup__list-item">
+														Котировка ставок и формирование предложений для
+														клиентов
+													</li>
+													<li class="vl-popup__list-item">
+														Ведение внутренней БД
+													</li>
+													<li class="vl-popup__list-item">
+														Отчетность по установленной форме
+													</li>
+												</ul>
+											</div>
+											<div class="col-md-4 vl-popup__column">
+												<div class="vl-popup__subtitle">Требования</div>
+												<ul class="vl-popup__list">
+													<li class="vl-popup__list-item">
+														Опыт работы в транспортно-логистической компании
+														не менее 5 лет
+													</li>
+													<li class="vl-popup__list-item">
+														Понимание принципов функционирования морских,
+														авто, ж/д перевозок
+													</li>
+													<li class="vl-popup__list-item">
+														Успешный опыт организации мультимодальных
+														перевозок
+													</li>
+													<li class="vl-popup__list-item">
+														Знание базовых принципов формирования
+														бухгалтерских документов
+													</li>
+													<li class="vl-popup__list-item">
+														INCOTERMS (основные термины, правила применения)
+													</li>
+													<li class="vl-popup__list-item">
+														Опыт перевоозок через сухопутные погран переходы
+														будет являться преимуществом
+													</li>
+													<li class="vl-popup__list-item">
+														Английский язык - уровень intermediate
+													</li>
+												</ul>
+											</div>
+											<div class="col-md-4 vl-popup__column">
+												<div class="vl-popup__subtitle">Мы предлагаем</div>
+												<ul class="vl-popup__list">
+													<li class="vl-popup__list-item">
+														График работы: с 9.00 до 18.00, 5/2, суббота,
+														воскресенье - выходной
+													</li>
+													<li class="vl-popup__list-item">
+														Полное соблюдение ТК РФ
+													</li>
+													<li class="vl-popup__list-item">
+														Достойная заработная плата (оклад+премии KPI)
+													</li>
+													<li class="vl-popup__list-item">
+														Перспективы профессионального развития и
+														карьерного роста
+													</li>
+													<li class="vl-popup__list-item">
+														Работа в молодой и дружной команде профессионалов
+													</li>
+												</ul>
+												<button class="skew-button">
+													<span class="skew-button__button-text">ОТКЛИКНУТЬСЯ НА
+														ВАКАНСИЮ</span>
+												</button>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-						</form>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<!-- call popup end -->
+			</section>
 
-		<!-- projects-popup start -->
-		<div class="projects-popup">
-			<div class="projects-popup__wrapper">
-				<div
-					class="projects-popup__main container"
-					style="background-image: url('img/projects-bg-1.png');"
-				>
-					<div class="row">
-						<div class="close-button"></div>
-						<div class="col-12 col-xl-7 projects-popup__title">
-							Доставка негабаритного груза. Космодром Бойконур
-						</div>
-						<div style="width: 100%;"></div>
-						<div class="col-12 col-md-3 projects-popup__column first">
-							<div class="projects-popup__column-title">
-								Задачи
+			<section id="contacts" class="contacts container w-100">
+				<div class="row contacts__wrapper">
+					<div class="col-12 col-md-6 contacts__address-section">
+						<h2 class="section__title page-fade-in-left">
+							КОНТАКТЫ
+						</h2>
+						<div class="row contacts__contact-information">
+							<div class="col-12 col-xl-6 contact-information__first-block">
+								<div class="contact-information__address-block">
+									Приморский край, г. Находка, <br />
+									ул. Дзержинского, 9Ж, оф. 201
+								</div>
+								<div class="contact-information__phone-block">
+									<a href="tel:+74236904990" class="contact-information__phone-link">
+										+7 (4236) 90-49-90
+									</a>
+								</div>
+								<div class="contact-information__mail-block">
+									<a href="mailto:vostok@vlogistic.ru" class="contact-information__mail-link">
+										vostok@vlogistic.ru
+									</a>
+								</div>
+								<div class="contact-information__insta-block">
+									<span>Instagram: </span>
+									<a href="https://www.instagram.com/vlogistic.ru/"
+										class="contact-information__insta-link" target="_blank">
+										@vlogistic.ru
+									</a>
+								</div>
 							</div>
-							<div class="projects-popup__column-text">
-								Транспортировать комплектующие для строительства платформы для
-								запуска орбитального корабля-ракетоплана “Буран 1”.
-							</div>
-						</div>
-						<div class="col-12 col-md-3 projects-popup__column">
-							<div class="projects-popup__column-title">
-								сложности
-							</div>
-							<div class="projects-popup__column-text">
-								<ul class="projects-popup__column-text-list">
-									<li>- Короткие сроки</li>
-									<li>- Непростая логистика</li>
-									<li>- Негабаритный груз</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-12 col-md-3 projects-popup__column">
-							<div class="projects-popup__column-title">
-								результат
-							</div>
-							<div class="projects-popup__column-text">
-								Подобрали все необходимые коды ТН ВЭД, подготовили сертификаты и
-								разрешительные документы. Провели все подготовительные
-								мероприятия, исключающие риск возникновения проблем при
-								прохождении процедуры
-							</div>
-						</div>
-						<div
-							id="projects-popup__photo-column"
-							class="col-12 col-md-3 projects-popup__column"
-						>
-							<div id="lightgallery">
-								<a
-									class="projects-popup__image-link"
-									href="img/projects-popup-1.png"
-								>
-									<img
-										class="projects-popup__image lazy"
-										src=""
-										data-src="img/projects-popup-1.png"
-										alt="ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ"
-									/>
-									<span class="projects-popup__image-title">
-										ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ
-									</span>
-								</a>
-								<a
-									class="projects-popup__image-link"
-									href="img/projects-popup-2.png"
-								>
-									<img
-										class="projects-popup__image lazy"
-										src=""
-										data-src="img/projects-popup-2.png"
-										alt="ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ"
-									/>
-									<span class="projects-popup__image-title">
-										ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ
-									</span>
-								</a>
-								<a
-									class="projects-popup__image-link"
-									href="img/projects-popup-1.png"
-								>
-									<img
-										class="projects-popup__image lazy"
-										src=""
-										data-src="img/projects-popup-1.png"
-										alt="ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ"
-									/>
-									<span class="projects-popup__image-title">
-										ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ
-									</span>
-								</a>
-								<a
-									class="projects-popup__image-link"
-									href="img/projects-popup-2.png"
-								>
-									<img
-										class="projects-popup__image lazy"
-										src=""
-										data-src="img/projects-popup-2.png"
-										alt="ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ"
-									/>
-									<span class="projects-popup__image-title">
-										ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ
-									</span>
-								</a>
+							<div class="col-12 col-xl-6 contact-information__second-block">
+								<div class="contact-information__address-block">
+									Приморский край, г. владивосток, <br />
+									ул. Стрельникова д7, ОФ. 603
+								</div>
+								<div class="contact-information__phone-block">
+									<a href="tel:+74236904990" class="contact-information__phone-block"></a>+7 (4232)
+									ХХ-ХХ-ХХ
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row container projects-popup__mobile-form-wrapper">
 					<div class="col-12 col-md-6 contacts__form-section left-border">
 						<div class="contacts__form-section-title">
 							Начать работать с нами
@@ -2514,52 +1682,26 @@
 							свяжутся специалисты "ТЛК ВОСТОК ЛОГИСТИК".
 						</div>
 						<div class="contacts__form-block">
-							<form method="POST" class="contacts__form">
+							<form action="mail.php" method="POST" class="contacts__form">
 								<label>
-									<input
-										type="text"
-										class="form__input-text input-name"
-										name="user_name"
-										placeholder="ВВЕДИТЕ ВАШЕ ИМЯ*"
-										required
-									/>
+									<input type="text" class="form__input-text input-name" name="user_name"
+										placeholder="ВВЕДИТЕ ВАШЕ ИМЯ*" required />
 								</label>
 								<label>
-									<input
-										type="email"
-										class="form__input-text input-email"
-										name="user_email"
-										placeholder="ВВЕДИТЕ ВАШ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ*"
-										required
-									/>
+									<input type="email" class="form__input-text input-email"
+										placeholder="ВВЕДИТЕ ВАШ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ*" name="user_email" required />
+								</label>
+								<label class="form__phone-label">
+									<input type="tel" class="form__input-text input-phone" name="user_phone"
+										placeholder="ВВЕДИТЕ ВАШ ТЕЛЕФОН" />
 								</label>
 								<label>
-									<input
-										type="text"
-										class="form__input-text input-phone"
-										name="user_phone"
-										placeholder="ВВЕДИТЕ ВАШ ТЕЛЕФОН"
-									/>
+									<input type="text" class="form__input-text input-comment" name="user_comment"
+										placeholder="НАПИШИТЕ КОММЕНТАРИЙ" />
 								</label>
-								<label>
-									<input
-										type="text"
-										class="form__input-text input-comment"
-										name="user_comment"
-										placeholder="НАПИШИТЕ КОММЕНТАРИЙ"
-									/>
-								</label>
-								<input
-									type="checkbox"
-									class="form__input-checkbox"
-									id="form__checkbox-popup-projects-mobile"
-									name="user_agreement"
-									checked
-								/>
-								<label
-									for="form__checkbox-popup-projects-mobile"
-									class="form__label-checkbox"
-								>
+								<input type="checkbox" class="form__input-checkbox" id="form__checkbox-contacts"
+									name="user_agreement" checked />
+								<label for="form__checkbox-contacts" class="form__label-checkbox">
 									<span class="form__input-checkbox-text">
 										Я согласен на обработку персональных данных
 									</span>
@@ -2569,21 +1711,16 @@
 									Защита от автоматических сообщений
 								</div>
 								<div class="form__submit-block">
-									<!-- <div class="form__not-a-robot">
-                                    <img src="img/not-a-robot.png" alt="">
-                                </div> -->
-									<div
-										class="form__submit-block g-recaptcha"
-										data-sitekey="6LeXKt8UAAAAAIjeFbwzyhhfH_4rLT3zBJ6CTwqZ"
-										id="contacts-recaptcha"
-									></div>
+									<!--<div class="form__not-a-robot">
+                                        <img src="img/not-a-robot.png" alt="not-a-robot" class="form__not-a-robot-img">
+                                    </div>-->
+									<div class="form__submit-block g-recaptcha"
+										data-sitekey="6LeXKt8UAAAAAIjeFbwzyhhfH_4rLT3zBJ6CTwqZ" id="contacts-recaptcha">
+									</div>
 									<div class="form__submit-button-container">
 										<div class="start-work__button-block">
-											<button
-												type="submit"
-												class="contacts__form-button skew-button"
-												onclick="ym(61594867,'reachGoal','otpravit_zayavku4'); return true;"
-											>
+											<button type="submit" class="contacts__form-button skew-button"
+												onclick="ym(61594867,'reachGoal','otpravit_zayavku3'); return true;">
 												<span class="skew-button__button-text">
 													ОТПРАВИТЬ ЗАЯВКУ
 												</span>
@@ -2595,167 +1732,468 @@
 						</div>
 					</div>
 				</div>
-				<div class="menu__contacts-block">
-					<div class="menu__phone-block">
-						<a
-							href="tel:+74236904990"
-							class="menu__phone-link"
-							onclick="ym(61594867,'reachGoal','zvonok'); return true;"
-						>
-							+7 (4236) 90-49-90
-						</a>
-					</div>
-					<div class="menu__back-call-block">
-						<a
-							href="#"
-							class="menu__back-call-link btn-open-modal"
-							onclick="ym(61594867,'reachGoal','obratnyi'); return true;"
-						>
-							ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- projects-popup end -->
-		<div class="news-popup">
-			<div class="news-popup__wrapper">
-				<div class="news-popup__main container" style="background: #e8e8e8;">
-					<div class="row">
-						<div class="close-button"></div>
-						<div class="col-12 col-md-4 news-popup__column first">
-							<div class="news-popup__image-block">
-								<img class="news-popup__image" src="" alt="news-2" />
-							</div>
-						</div>
-						<div class="col-12 col-md-6 news-popup__column">
-							<div class="news-popup__column-title"></div>
-							<div class="news-popup__column-line"></div>
-							<div class="news-popup__column-text"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="up-button__wrapper container">
-			<div class="up-button">
-				<div class="up-button__inner">
-					<img src="img/icons/up.svg" alt="" />
-					<span>ВВЕРХ</span>
-				</div>
-			</div>
+			</section>
 		</div>
 
-		<div class="vl-popup">
-			<div class="vl-popup__inner">
-				<div class="vl-popup__content container">
-					<div class="vl-popup__container">
-						<div class="close-button"></div>
-						<div class="vl-popup__data">
-							<div class="row">
-								<div class="col-md-4">
-									<div class="vl-popup__title">
-										Менеджер по работе с клиентами
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-4 vl-popup__column">
-									<div class="vl-popup__subtitle">Обязанности</div>
-									<ul class="vl-popup__list">
-										<li class="vl-popup__list-item">
-											Организация международных и внутрироссийских
-											мультимодальных перевозок всеми видами транспорта (ж/д,
-											море, авто)
-										</li>
-										<li class="vl-popup__list-item">
-											Взаимодействие с экспедиторами, агентами, портами,
-											морскими линиями, автоперевовзчиками, владельцами
-											контейнерного оборудования
-										</li>
-										<li class="vl-popup__list-item">
-											Котировка ставок и формирование предложений для клиентов
-										</li>
-										<li class="vl-popup__list-item">
-											Ведение внутренней БД
-										</li>
-										<li class="vl-popup__list-item">
-											Отчетность по установленной форме
-										</li>
-									</ul>
-								</div>
-								<div class="col-md-4 vl-popup__column">
-									<div class="vl-popup__subtitle">Требования</div>
-									<ul class="vl-popup__list">
-										<li class="vl-popup__list-item">
-											Опыт работы в транспортно-логистической компании не менее
-											5 лет
-										</li>
-										<li class="vl-popup__list-item">
-											Понимание принципов функционирования морских, авто, ж/д
-											перевозок
-										</li>
-										<li class="vl-popup__list-item">
-											Успешный опыт организации мультимодальных перевозок
-										</li>
-										<li class="vl-popup__list-item">
-											Знание базовых принципов формирования бухгалтерских
-											документов
-										</li>
-										<li class="vl-popup__list-item">
-											INCOTERMS (основные термины, правила применения)
-										</li>
-										<li class="vl-popup__list-item">
-											Опыт перевоозок через сухопутные погран переходы будет
-											являться преимуществом
-										</li>
-										<li class="vl-popup__list-item">
-											Английский язык - уровень intermediate
-										</li>
-									</ul>
-								</div>
-								<div class="col-md-4 vl-popup__column">
-									<div class="vl-popup__subtitle">Мы предлагаем</div>
-									<ul class="vl-popup__list">
-										<li class="vl-popup__list-item">
-											График работы: с 9.00 до 18.00, 5/2, суббота, воскресенье
-											- выходной
-										</li>
-										<li class="vl-popup__list-item">
-											Полное соблюдение ТК РФ
-										</li>
-										<li class="vl-popup__list-item">
-											Достойная заработная плата (оклад+премии KPI)
-										</li>
-										<li class="vl-popup__list-item">
-											Перспективы профессионального развития и карьерного роста
-										</li>
-										<li class="vl-popup__list-item">
-											Работа в молодой и дружной команде профессионалов
-										</li>
-									</ul>
-									<button class="skew-button">
-										<span class="skew-button__button-text"
-											>ОТКЛИКНУТЬСЯ НА ВАКАНСИЮ</span
-										>
+		<footer class="footer">
+			<div class="container">
+				<div class="menu">
+					<div class="menu__first-section">
+						<div class="menu__logo">
+							<a href="/" class="menu__logo-link">
+								<img src="img/logo.png" alt="logo" class="menu__logo-img" />
+							</a>
+						</div>
+					</div>
+					<div class="menu-footer">
+						<div class="menu-footer__item">
+							<div class="menu-footer__title">Услуги</div>
+							<ul class="menu-footer__list">
+								<li class="menu-footer__list-item">
+									<a href="#">Грузоперевозки</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Таможенное оформление</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Складские услуги</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Поиск производителей</a>
+								</li>
+							</ul>
+						</div>
+						<div class="menu-footer__item">
+							<div class="menu-footer__title">О компании</div>
+							<ul class="menu-footer__list">
+								<li class="menu-footer__list-item">
+									<a href="#">О компании</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Преимущества</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Условия работы</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Партнеры</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Документы</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Наша команда</a>
+								</li>
+								<li class="menu-footer__list-item"><a href="#">Отзывы</a></li>
+							</ul>
+						</div>
+						<div class="menu-footer__item">
+							<div class="menu-footer__title">Проекты</div>
+							<div class="menu-footer__title">Новости</div>
+							<div class="menu-footer__title">Карьера</div>
+							<div class="menu-footer__title">Контакты</div>
+						</div>
+					</div>
+					<div class="menu__contacts-block">
+						<div class="menu__phone-block">
+							<a href="tel:+74236904990" class="menu__phone-link">
+								+7 (4236) 90-49-90
+							</a>
+						</div>
+						<address class="menu__address">
+							Приморский край, г. Находка, ул. Дзержинского, 9Ж, оф. 201
+						</address>
+						<a href="mailto:vostok@vlogistic.ru" class="contact-information__mail-link">
+							vostok@vlogistic.ru
+						</a>
+						<a href="https://www.instagram.com/vlogistic.ru/" class="contact-information__insta-link"
+							target="_blank">
+							<img src="img/icons/instagram-white.svg" alt="" />
+						</a>
+						<div class="menu__callback btn-open-modal">
+							Заказать обратный звонок
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__info">
+						<div>© 2020 ТЛК “Восток Логистик”</div>
+						<a href="#" class="footer__link">Политика конфиденциальности</a>
+					</div>
+					<a href="#" class="footer__created-by footer__link" target="_blank">Created by PIK production</a>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- content end -->
+
+	<!-- call popup start -->
+	<div class="popup-call" id="popup-call">
+		<div class="popup-call__wrapper">
+			<div class="popup-call__block">
+				<div class="popup-call__success" style="display: none;">
+					<div class="success__title">
+						ваша заявка успешно отправлена
+					</div>
+					<div class="success__dexcription">
+						В ближайшее время с вами свяжутся
+						<br />
+						специалисты "ТЛК ВОСТОК ЛОГИСТИК".
+					</div>
+				</div>
+				<div class="close-button"></div>
+				<div class="popup-call__title">
+					ОТПРАВИТЬ ЗАЯВКУ
+				</div>
+				<div class="popup-call__description">
+					Пожалуйста, заполните простую форму. В ближайшее время с вами
+					свяжутся специалисты "ТЛК ВОСТОК ЛОГИСТИК".
+				</div>
+				<div class="popup-call__form">
+					<form method="POST" class="popup-call__form">
+						<label>
+							<input type="text" class="form__input-text input-name" placeholder="ВВЕДИТЕ ВАШЕ ИМЯ*"
+								name="user_name" required />
+						</label>
+						<label>
+							<input type="email" class="form__input-text input-email" name="user_email"
+								placeholder="ВВЕДИТЕ ВАШ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ*" required />
+						</label>
+						<label>
+							<input type="tel" class="form__input-text input-phone" name="user_phone"
+								placeholder="ВВЕДИТЕ ВАШ ТЕЛЕФОН" />
+						</label>
+						<label>
+							<input type="text" class="form__input-text input-comment" name="user_comment"
+								placeholder="НАПИШИТЕ КОММЕНТАРИЙ" />
+						</label>
+						<input type="checkbox" class="form__input-checkbox" id="form__checkbox-popap-call"
+							name="user_agreement" checked />
+						<label for="form__checkbox-popap-call" class="form__label-checkbox">
+							<span class="form__input-checkbox-text">
+								Я согласен на обработку персональных данных
+							</span>
+							<span class="form__alert-checkbox popup-call__alert">Вы не согласны?</span>
+						</label>
+						<div class="popup-call__message-protection">
+							Защита от автоматических сообщений
+						</div>
+						<div class="form__submit-block">
+							<!-- <div class="form__not-a-robot">
+                                <img src="img/not-a-robot.png" alt="">
+                            </div> -->
+							<div class="form__submit-block g-recaptcha"
+								data-sitekey="6LeXKt8UAAAAAIjeFbwzyhhfH_4rLT3zBJ6CTwqZ" id="contacts-recaptcha"></div>
+							<div class="form__submit-button-container">
+								<div class="form__button-block">
+									<button type="submit" class="form__button skew-button full-width"
+										id="popup-call__button"
+										onclick="ym(61594867,'reachGoal','otpravit zayavku'); return true;">
+										<span class="skew-button__button-text">
+											ОТПРАВИТЬ ЗАЯВКУ
+										</span>
 									</button>
 								</div>
 							</div>
 						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- call popup end -->
+
+	<!-- projects-popup start -->
+	<div class="projects-popup">
+		<div class="projects-popup__wrapper">
+			<div class="projects-popup__main container" style="background-image: url('img/projects-bg-1.png');">
+				<div class="row">
+					<div class="close-button"></div>
+					<div class="col-12 col-xl-7 projects-popup__title">
+						Доставка негабаритного груза. Космодром Бойконур
+					</div>
+					<div style="width: 100%;"></div>
+					<div class="col-12 col-md-3 projects-popup__column first">
+						<div class="projects-popup__column-title">
+							Задачи
+						</div>
+						<div class="projects-popup__column-text">
+							Транспортировать комплектующие для строительства платформы для
+							запуска орбитального корабля-ракетоплана “Буран 1”.
+						</div>
+					</div>
+					<div class="col-12 col-md-3 projects-popup__column">
+						<div class="projects-popup__column-title">
+							сложности
+						</div>
+						<div class="projects-popup__column-text">
+							<ul class="projects-popup__column-text-list">
+								<li>- Короткие сроки</li>
+								<li>- Непростая логистика</li>
+								<li>- Негабаритный груз</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-12 col-md-3 projects-popup__column">
+						<div class="projects-popup__column-title">
+							результат
+						</div>
+						<div class="projects-popup__column-text">
+							Подобрали все необходимые коды ТН ВЭД, подготовили сертификаты и
+							разрешительные документы. Провели все подготовительные
+							мероприятия, исключающие риск возникновения проблем при
+							прохождении процедуры
+						</div>
+					</div>
+					<div id="projects-popup__photo-column" class="col-12 col-md-3 projects-popup__column">
+						<div id="lightgallery">
+							<a class="projects-popup__image-link" href="img/projects-popup-1.png">
+								<img class="projects-popup__image lazy" src="" data-src="img/projects-popup-1.png"
+									alt="ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ" />
+								<span class="projects-popup__image-title">
+									ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ
+								</span>
+							</a>
+							<a class="projects-popup__image-link" href="img/projects-popup-2.png">
+								<img class="projects-popup__image lazy" src="" data-src="img/projects-popup-2.png"
+									alt="ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ" />
+								<span class="projects-popup__image-title">
+									ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ
+								</span>
+							</a>
+							<a class="projects-popup__image-link" href="img/projects-popup-1.png">
+								<img class="projects-popup__image lazy" src="" data-src="img/projects-popup-1.png"
+									alt="ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ" />
+								<span class="projects-popup__image-title">
+									ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ
+								</span>
+							</a>
+							<a class="projects-popup__image-link" href="img/projects-popup-2.png">
+								<img class="projects-popup__image lazy" src="" data-src="img/projects-popup-2.png"
+									alt="ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ" />
+								<span class="projects-popup__image-title">
+									ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row container projects-popup__mobile-form-wrapper">
+				<div class="col-12 col-md-6 contacts__form-section left-border">
+					<div class="contacts__form-section-title">
+						Начать работать с нами
+					</div>
+					<div class="contacts__form-section-description">
+						Пожалуйста, заполните простую форму. В ближайшее время с вами
+						свяжутся специалисты "ТЛК ВОСТОК ЛОГИСТИК".
+					</div>
+					<div class="contacts__form-block">
+						<form method="POST" class="contacts__form">
+							<label>
+								<input type="text" class="form__input-text input-name" name="user_name"
+									placeholder="ВВЕДИТЕ ВАШЕ ИМЯ*" required />
+							</label>
+							<label>
+								<input type="email" class="form__input-text input-email" name="user_email"
+									placeholder="ВВЕДИТЕ ВАШ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ*" required />
+							</label>
+							<label>
+								<input type="text" class="form__input-text input-phone" name="user_phone"
+									placeholder="ВВЕДИТЕ ВАШ ТЕЛЕФОН" />
+							</label>
+							<label>
+								<input type="text" class="form__input-text input-comment" name="user_comment"
+									placeholder="НАПИШИТЕ КОММЕНТАРИЙ" />
+							</label>
+							<input type="checkbox" class="form__input-checkbox"
+								id="form__checkbox-popup-projects-mobile" name="user_agreement" checked />
+							<label for="form__checkbox-popup-projects-mobile" class="form__label-checkbox">
+								<span class="form__input-checkbox-text">
+									Я согласен на обработку персональных данных
+								</span>
+								<span class="form__alert-checkbox">Вы не согласны?</span>
+							</label>
+							<div class="form__message-protection">
+								Защита от автоматических сообщений
+							</div>
+							<div class="form__submit-block">
+								<!-- <div class="form__not-a-robot">
+                                    <img src="img/not-a-robot.png" alt="">
+                                </div> -->
+								<div class="form__submit-block g-recaptcha"
+									data-sitekey="6LeXKt8UAAAAAIjeFbwzyhhfH_4rLT3zBJ6CTwqZ" id="contacts-recaptcha">
+								</div>
+								<div class="form__submit-button-container">
+									<div class="start-work__button-block">
+										<button type="submit" class="contacts__form-button skew-button"
+											onclick="ym(61594867,'reachGoal','otpravit_zayavku4'); return true;">
+											<span class="skew-button__button-text">
+												ОТПРАВИТЬ ЗАЯВКУ
+											</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="menu__contacts-block">
+				<div class="menu__phone-block">
+					<a href="tel:+74236904990" class="menu__phone-link"
+						onclick="ym(61594867,'reachGoal','zvonok'); return true;">
+						+7 (4236) 90-49-90
+					</a>
+				</div>
+				<div class="menu__back-call-block">
+					<a href="#" class="menu__back-call-link btn-open-modal"
+						onclick="ym(61594867,'reachGoal','obratnyi'); return true;">
+						ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- projects-popup end -->
+	<div class="news-popup">
+		<div class="news-popup__wrapper">
+			<div class="news-popup__main container" style="background: #e8e8e8;">
+				<div class="row">
+					<div class="close-button"></div>
+					<div class="col-12 col-md-4 news-popup__column first">
+						<div class="news-popup__image-block">
+							<img class="news-popup__image" src="" alt="news-2" />
+						</div>
+					</div>
+					<div class="col-12 col-md-6 news-popup__column">
+						<div class="news-popup__column-title"></div>
+						<div class="news-popup__column-line"></div>
+						<div class="news-popup__column-text"></div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="up-button__wrapper container">
+		<div class="up-button">
+			<div class="up-button__inner">
+				<img src="img/icons/up.svg" alt="" />
+				<span>ВВЕРХ</span>
+			</div>
+		</div>
+	</div>
 
-		<script src="libs/jquery/jquery.min.js"></script>
-		<script src="libs/slick/slick.min.js"></script>
-		<script src="libs/masked-input/jquery.maskedinput.js"></script>
-		<script src="libs/simplebar/simplebar-min.js"></script>
-		<script src="libs/light-gallery/js/lightgallery-all.min.js"></script>
-		<script src="libs/light-gallery/js/lg-fullscreen.min.js"></script>
-		<!-- <script src="libs/light-gallery/js/lg-thumbnail.min.js"></script> -->
-		<script src="libs/light-gallery/js/lg-pager.min.js"></script>
-		<!-- <script src="libs/videojs/video.js"></script> -->
-		<script src="js/script.js"></script>
-	</body>
+	<div class="vl-popup">
+		<div class="vl-popup__inner">
+			<div class="vl-popup__content container">
+				<div class="vl-popup__container">
+					<div class="close-button"></div>
+					<div class="vl-popup__data">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="vl-popup__title">
+									Менеджер по работе с клиентами
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 vl-popup__column">
+								<div class="vl-popup__subtitle">Обязанности</div>
+								<ul class="vl-popup__list">
+									<li class="vl-popup__list-item">
+										Организация международных и внутрироссийских
+										мультимодальных перевозок всеми видами транспорта (ж/д,
+										море, авто)
+									</li>
+									<li class="vl-popup__list-item">
+										Взаимодействие с экспедиторами, агентами, портами,
+										морскими линиями, автоперевовзчиками, владельцами
+										контейнерного оборудования
+									</li>
+									<li class="vl-popup__list-item">
+										Котировка ставок и формирование предложений для клиентов
+									</li>
+									<li class="vl-popup__list-item">
+										Ведение внутренней БД
+									</li>
+									<li class="vl-popup__list-item">
+										Отчетность по установленной форме
+									</li>
+								</ul>
+							</div>
+							<div class="col-md-4 vl-popup__column">
+								<div class="vl-popup__subtitle">Требования</div>
+								<ul class="vl-popup__list">
+									<li class="vl-popup__list-item">
+										Опыт работы в транспортно-логистической компании не менее
+										5 лет
+									</li>
+									<li class="vl-popup__list-item">
+										Понимание принципов функционирования морских, авто, ж/д
+										перевозок
+									</li>
+									<li class="vl-popup__list-item">
+										Успешный опыт организации мультимодальных перевозок
+									</li>
+									<li class="vl-popup__list-item">
+										Знание базовых принципов формирования бухгалтерских
+										документов
+									</li>
+									<li class="vl-popup__list-item">
+										INCOTERMS (основные термины, правила применения)
+									</li>
+									<li class="vl-popup__list-item">
+										Опыт перевоозок через сухопутные погран переходы будет
+										являться преимуществом
+									</li>
+									<li class="vl-popup__list-item">
+										Английский язык - уровень intermediate
+									</li>
+								</ul>
+							</div>
+							<div class="col-md-4 vl-popup__column">
+								<div class="vl-popup__subtitle">Мы предлагаем</div>
+								<ul class="vl-popup__list">
+									<li class="vl-popup__list-item">
+										График работы: с 9.00 до 18.00, 5/2, суббота, воскресенье
+										- выходной
+									</li>
+									<li class="vl-popup__list-item">
+										Полное соблюдение ТК РФ
+									</li>
+									<li class="vl-popup__list-item">
+										Достойная заработная плата (оклад+премии KPI)
+									</li>
+									<li class="vl-popup__list-item">
+										Перспективы профессионального развития и карьерного роста
+									</li>
+									<li class="vl-popup__list-item">
+										Работа в молодой и дружной команде профессионалов
+									</li>
+								</ul>
+								<button class="skew-button">
+									<span class="skew-button__button-text">ОТКЛИКНУТЬСЯ НА ВАКАНСИЮ</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="libs/jquery/jquery.min.js"></script>
+	<script src="libs/slick/slick.min.js"></script>
+	<script src="libs/masked-input/jquery.maskedinput.js"></script>
+	<script src="libs/simplebar/simplebar-min.js"></script>
+	<script src="libs/light-gallery/js/lightgallery-all.min.js"></script>
+	<script src="libs/light-gallery/js/lg-fullscreen.min.js"></script>
+	<!-- <script src="libs/light-gallery/js/lg-thumbnail.min.js"></script> -->
+	<script src="libs/light-gallery/js/lg-pager.min.js"></script>
+	<!-- <script src="libs/videojs/video.js"></script> -->
+	<script src="libs/air-datepicker/js/datepicker.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
 </html>
