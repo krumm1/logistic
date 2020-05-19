@@ -185,8 +185,6 @@ $(document).ready(() => {
 		],
 	});
 
-
-
 	$("input[type='tel']").mask("+7  9 9 9  9 9 9 9 9 9 9");
 
 	$(".contacts__form-button").click(function (event) {
@@ -991,7 +989,6 @@ function initMainSlider() {
 		$('.contacts-page__city-map-wrapper').append('<div id="map" style="width: 100%; height: 100%;"></div>');
 	};
 
-
 	function initMapNakhodka() {
 		var map;
 
@@ -1033,16 +1030,20 @@ function initMainSlider() {
 	initMapNakhodka();
 
 	function changeCityMap() {
-		let $city = $('.contacts-page__city-map--city');
-		$city.on('click', function () {
-			if ($(this).hasClass('active')) {
-				return
+		let $city = $(".contacts-page__city-map--city");
+		$city.on("click", function () {
+			if ($(this).hasClass("active")) {
+				return;
 			}
-			$city.removeClass('active');
-			$(this).addClass('active');
-			if ($(this).hasClass('nakhodka')) {
-				if ($('.contacts-page__city-map-information-content.nakhodka').hasClass('active')) {
-					return
+			$city.removeClass("active");
+			$(this).addClass("active");
+			if ($(this).hasClass("nakhodka")) {
+				if (
+					$(".contacts-page__city-map-information-content.nakhodka").hasClass(
+						"active"
+					)
+				) {
+					return;
 				} else {
 					$('.contacts-page__city-map-information-content').removeClass('active');
 					$('.contacts-page__city-map-information-content.nakhodka').addClass('active');
@@ -1065,4 +1066,4 @@ function initMainSlider() {
 	};
 
 	changeCityMap();
-}
+};
