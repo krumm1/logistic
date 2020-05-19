@@ -208,6 +208,7 @@ $(document).ready(() => {
 	});
 
 	$(".form__label-checkbox").click(() => {
+		// Чекбоксы можно стилизовать, JS тут лишний. Если не будет лень - переделать, а код ниже убрать
 		let checkboxChecked = $("#form__checkbox-contacts").prop("checked");
 		if (!checkboxChecked) {
 			$(".form__alert-checkbox").removeClass("active");
@@ -265,6 +266,7 @@ $(document).ready(() => {
 
 	$(".open-career-popup").on("click", function () {
 		let popupContent = $(this).siblings(".career__description").html();
+		$("body").addClass("overflow");
 		$(".vl-popup__data").html(popupContent);
 		$(".vl-popup").addClass("vl-popup--active");
 	});
@@ -512,6 +514,7 @@ $(document).ready(() => {
 			let $thisSlider = $(item);
 			$parent = $thisSlider.closest(".slider-container");
 			$pagination = $parent.find(".slider-pagination");
+			if ($parent.hasClass("detail")) return;
 
 			$parent.on("click", ".slider-tab-item", function () {
 				if ($(this).hasClass("active")) return;
