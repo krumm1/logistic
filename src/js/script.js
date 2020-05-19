@@ -264,8 +264,8 @@ $(document).ready(() => {
 		event.preventDefault();
 	});
 
-	$(".open-career-popup").on("click", function () {
-		let popupContent = $(this).siblings(".career__description").html();
+	$(".open-vl-popup").on("click", function () {
+		let popupContent = $(this).siblings(".vl-popup-description").html();
 		$("body").addClass("overflow");
 		$(".vl-popup__data").html(popupContent);
 		$(".vl-popup").addClass("vl-popup--active");
@@ -487,11 +487,11 @@ $(document).ready(() => {
 		});
 
 		const flashlightCoords = [
-			"transform: translate(-3%, 3%)",
-			"transform: translate(-15%, -6%)",
-			"transform: translate(4%, -5%)",
-			"transform: translate(-6%, 10%)",
-		],
+				"transform: translate(-3%, 3%)",
+				"transform: translate(-15%, -6%)",
+				"transform: translate(4%, -5%)",
+				"transform: translate(-6%, 10%)",
+			],
 			flashlight = $(".flashlight");
 
 		$("#services .slider").on("afterChange", function (e, slick, currentSlide) {
@@ -767,7 +767,7 @@ $(document).ready(() => {
 						lazyBackgrounds.forEach((lazyBackground) => {
 							if (
 								lazyBackground.getBoundingClientRect().top <=
-								window.innerHeight &&
+									window.innerHeight &&
 								lazyBackground.getBoundingClientRect().bottom >= 0 &&
 								getComputedStyle(lazyBackground).display !== "none"
 							) {
@@ -984,51 +984,56 @@ function initMainSlider() {
             }
         }, 0)
 	})*/
+
+	// костыли, можно сделать лучше и короче. Пофиксить если будет настроение
+
 	function deleteMap() {
 		map.remove();
-	};
+	}
 
 	function createMapContainer() {
-		$('.contacts-page__city-map-wrapper').append('<div id="map" style="width: 100%; height: 100%;"></div>');
-	};
+		$(".contacts-page__city-map-wrapper").append(
+			'<div id="map" style="width: 100%; height: 100%;"></div>'
+		);
+	}
 
 	function initMapNakhodka() {
 		var map;
 
-		if ($('#map').length) {
+		if ($("#map").length) {
 			DG.then(function () {
-				map = DG.map('map', {
+				map = DG.map("map", {
 					center: [42.841316, 132.891993],
 					zoom: 17,
-					scrollWheelZoom: false
+					scrollWheelZoom: false,
 				});
 
 				DG.marker([42.841316, 132.891993]).addTo(map);
 				// DG.control.location({ position: 'bottomright' }).addTo(map);
 				DG.control.scale().addTo(map);
-				DG.control.ruler({ position: 'bottomleft' }).addTo(map);
+				DG.control.ruler({ position: "bottomleft" }).addTo(map);
 				DG.control.traffic().addTo(map);
 			});
 		}
-	};
+	}
 
 	function initMapVladivostok() {
 		var map;
 
 		DG.then(function () {
-			map = DG.map('map', {
+			map = DG.map("map", {
 				center: [43.097315, 131.864826],
 				zoom: 17,
-				scrollWheelZoom: false
+				scrollWheelZoom: false,
 			});
 
 			DG.marker([43.097315, 131.864826]).addTo(map);
 			// DG.control.location({ position: 'bottomright' }).addTo(map);
 			DG.control.scale().addTo(map);
-			DG.control.ruler({ position: 'bottomleft' }).addTo(map);
+			DG.control.ruler({ position: "bottomleft" }).addTo(map);
 			DG.control.traffic().addTo(map);
 		});
-	};
+	}
 
 	initMapNakhodka();
 
@@ -1048,25 +1053,37 @@ function initMainSlider() {
 				) {
 					return;
 				} else {
-					$('.contacts-page__city-map-information-content').removeClass('active');
-					$('.contacts-page__city-map-information-content.nakhodka').addClass('active');
+					$(".contacts-page__city-map-information-content").removeClass(
+						"active"
+					);
+					$(".contacts-page__city-map-information-content.nakhodka").addClass(
+						"active"
+					);
 					deleteMap();
 					createMapContainer();
 					initMapNakhodka();
-				};
-			} else if ($(this).hasClass('vladivostok')) {
-				if ($('.contacts-page__city-map-information-content.vladivostok').hasClass('active')) {
-					return
+				}
+			} else if ($(this).hasClass("vladivostok")) {
+				if (
+					$(
+						".contacts-page__city-map-information-content.vladivostok"
+					).hasClass("active")
+				) {
+					return;
 				} else {
-					$('.contacts-page__city-map-information-content').removeClass('active');
-					$('.contacts-page__city-map-information-content.vladivostok').addClass('active');
+					$(".contacts-page__city-map-information-content").removeClass(
+						"active"
+					);
+					$(
+						".contacts-page__city-map-information-content.vladivostok"
+					).addClass("active");
 					deleteMap();
 					createMapContainer();
 					initMapVladivostok();
-				};
-			};
-		})
-	};
+				}
+			}
+		});
+	}
 
 	changeCityMap();
-};
+}
