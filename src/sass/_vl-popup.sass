@@ -76,7 +76,31 @@
     &__table
         width: 100%
     &__text
-        margin: 0 0 100px       
+        margin: 0 0 100px
+    &__tab
+        display: flex
+        margin-bottom: 35px
+        &-item
+            border-bottom: 1px solid
+            border-color: $orange-color
+            color: $orange-color
+            margin-right: 30px
+            text-transform: uppercase
+            cursor: pointer
+            &.active
+                color: $gray-color
+                border-color: $gray-color
+            &:last-child
+                margin-right: 0  
+        &-content
+            display: none
+            height: 330px
+            .simplebar-scrollbar::before
+                background-color: $accent-color
+                width: 3px
+                transform: translateX(3px)
+            &.active
+                display: block                 
     .skew-button
         display: block
         margin: 48px auto 0

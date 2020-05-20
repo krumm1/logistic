@@ -269,6 +269,19 @@ $(document).ready(() => {
 		$(".vl-popup").addClass("vl-popup--active");
 	});
 
+	$(".vl-popup").on("click", ".vl-popup__tab-item", function () {
+		let $this = $(this),
+			tabContent = $(".vl-popup .vl-popup__tab-content");
+		$this.siblings().removeClass("active");
+		$this.addClass("active");
+		tabContent.removeClass("active");
+		tabContent.eq($this.index()).addClass("active");
+	});
+
+	document.querySelectorAll(".vl-popup__tab-content").forEach((el) => {
+		new SimpleBar(el);
+	});
+
 	$(".close-button").click(() => {
 		$(".popup-call").removeClass("popup-call__open");
 		$(".content").removeClass("active");
