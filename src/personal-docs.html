@@ -1,533 +1,665 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Транспортная логистическая компания Восток логистик</title>
-		<link rel="preload" href="css/fonts.min.css" as="style" />
-		<link rel="shortcut icon" href="img/icons/favicon.png" type="image/png" />
-		<link rel="stylesheet" href="css/fonts.min.css" />
-		<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css" />
-		<link rel="stylesheet" href="libs/slick/slick.css" />
-		<link rel="stylesheet" href="libs/slick/slick-theme.css" />
-		<link rel="stylesheet" href="libs/simplebar/simplebar.css" />
-		<link rel="stylesheet" href="libs/light-gallery/css/lightgallery.min.css" />
-		<link rel="stylesheet" href="libs/videojs/video-js.css" />
-		<link rel="stylesheet" href="css/style.min.css" />
-		<style>
-			@keyframes preloader-animation {
-				0% {
-					opacity: 0;
-				}
 
-				50% {
-					opacity: 1;
-				}
-
-				100% {
-					opacity: 0;
-				}
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Транспортная логистическая компания Восток логистик</title>
+	<link rel="preload" href="css/fonts.min.css" as="style" />
+	<link rel="shortcut icon" href="img/icons/favicon.png" type="image/png" />
+	<link rel="stylesheet" href="css/fonts.min.css" />
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css" />
+	<link rel="stylesheet" href="libs/slick/slick.css" />
+	<link rel="stylesheet" href="libs/slick/slick-theme.css" />
+	<link rel="stylesheet" href="libs/simplebar/simplebar.css" />
+	<link rel="stylesheet" href="libs/light-gallery/css/lightgallery.min.css" />
+	<link rel="stylesheet" href="libs/videojs/video-js.css" />
+	<link rel="stylesheet" href="css/style.min.css" />
+	<style>
+		@keyframes preloader-animation {
+			0% {
+				opacity: 0;
 			}
-		</style>
-		<script
-			type="text/javascript"
-			src="https://www.google.com/recaptcha/api.js"
-			async
-			defer
-		></script>
-		<script type="text/javascript">
-			function work() {
-				document.onreadystatechange = function () {
-					console.log(document.readyState);
-					if (document.readyState == "complete") {
-						document.querySelector(".svg_anm").classList.add("closed");
-						document.querySelector("#p_prldr").classList.add("closed");
-						initMainSlider();
-					}
+
+			50% {
+				opacity: 1;
+			}
+
+			100% {
+				opacity: 0;
+			}
+		}
+	</style>
+	<script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script type="text/javascript">
+		function work() {
+			document.onreadystatechange = function () {
+				console.log(document.readyState);
+				if (document.readyState == "complete") {
+					document.querySelector(".svg_anm").classList.add("closed");
+					document.querySelector("#p_prldr").classList.add("closed");
+					initMainSlider();
+				}
+			};
+		}
+
+		work();
+	</script>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function (m, e, t, r, i, k, a) {
+			m[i] =
+				m[i] ||
+				function () {
+					(m[i].a = m[i].a || []).push(arguments);
 				};
-			}
+			m[i].l = 1 * new Date();
+			(k = e.createElement(t)),
+				(a = e.getElementsByTagName(t)[0]),
+				(k.async = 1),
+				(k.src = r),
+				a.parentNode.insertBefore(k, a);
+		})(
+			window,
+			document,
+			"script",
+			"https://mc.yandex.ru/metrika/tag.js",
+			"ym"
+		);
 
-			work();
-		</script>
-		<!-- Yandex.Metrika counter -->
-		<script type="text/javascript">
-			(function (m, e, t, r, i, k, a) {
-				m[i] =
-					m[i] ||
-					function () {
-						(m[i].a = m[i].a || []).push(arguments);
-					};
-				m[i].l = 1 * new Date();
-				(k = e.createElement(t)),
-					(a = e.getElementsByTagName(t)[0]),
-					(k.async = 1),
-					(k.src = r),
-					a.parentNode.insertBefore(k, a);
-			})(
-				window,
-				document,
-				"script",
-				"https://mc.yandex.ru/metrika/tag.js",
-				"ym"
-			);
+		ym(61594867, "init", {
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true,
+			webvisor: true,
+		});
+	</script>
+	<noscript>
+		<div>
+			<img src="https://mc.yandex.ru/watch/61594867" style="position: absolute; left: -9999px;" alt="" />
+		</div>
+	</noscript>
+	<!-- /Yandex.Metrika counter -->
+</head>
 
-			ym(61594867, "init", {
-				clickmap: true,
-				trackLinks: true,
-				accurateTrackBounce: true,
-				webvisor: true,
-			});
-		</script>
-		<noscript>
-			<div>
-				<img
-					src="https://mc.yandex.ru/watch/61594867"
-					style="position: absolute; left: -9999px;"
-					alt=""
-				/>
-			</div>
-		</noscript>
-		<!-- /Yandex.Metrika counter -->
-	</head>
+<body>
+	<svg width="0" height="0" viewbox="0 0 0 0">
+		<defs>
+			<filter id="filter">
+				<fecomponenttransfer>
+					<fefuncr type="discrete" tablevalues="1 0" />
+					<fefuncg type="discrete" tablevalues="0.25 0" />
+					<fefuncb type="discrete" tablevalues="0.1 0" />
+				</fecomponenttransfer>
+			</filter>
+		</defs>
+	</svg>
 
-	<body>
-		<svg width="0" height="0" viewbox="0 0 0 0">
-			<defs>
-				<filter id="filter">
-					<fecomponenttransfer>
-						<fefuncr type="discrete" tablevalues="1 0" />
-						<fefuncg type="discrete" tablevalues="0.25 0" />
-						<fefuncb type="discrete" tablevalues="0.1 0" />
-					</fecomponenttransfer>
-				</filter>
-			</defs>
-		</svg>
-
-		<div id="p_prldr">
-			<div class="contpre">
-				<span class="svg_anm">
-					<img src="img/logo_preload.svg" alt="" />
-				</span>
-				<!-- <div class="contpre_big">
+	<div id="p_prldr">
+		<div class="contpre">
+			<span class="svg_anm">
+				<img src="img/logo_preload.svg" alt="" />
+			</span>
+			<!-- <div class="contpre_big">
                 Подождите
             </div>
             <div class="contpre_small">
                 Идет загрузка
             </div> -->
-			</div>
 		</div>
+	</div>
 
-		<div class="content">
-			<div class="content__inner">
-				<div class="fixed-contacts-btns">
-					<div class="fixed-contacts-btns__inner">
-						<a
-							href="#"
-							class="fixed-contacts-btns__btn-item btn-open-modal"
-							onclick="ym(61594867,'reachGoal','zapros'); return true;"
-						>
-							ОТПРАВЬТЕ&nbsp;&nbsp;ЗАПРОС
-						</a>
-						<a
-							href="mailto:vostok@vlogistic.ru"
-							class="fixed-contacts-btns__btn-item email"
-							onclick="ym(61594867,'reachGoal','email'); return true;"
-						>
-							<span></span>
-							VOSTOK@VLOGISTIC.RU
-						</a>
-					</div>
-				</div>
-				<header class="header header--static">
-					<div class="menu-wrapper container">
-						<div class="menu container">
-							<div class="menu__first-section">
-								<div class="menu__logo">
-									<a href="/" class="menu__logo-link">
-										<img
-											src="img/logo-header.svg"
-											alt="logo"
-											class="menu__logo-img"
-										/>
-									</a>
-								</div>
-								<div class="menu__nav-section">
-									<div class="menu__tablet-logo-block">
-										<img
-											class="menu__tablet-logo-img"
-											src="img/logo-tablet-menu.png"
-											alt="logo"
-										/>
-									</div>
-									<div class="menu__tablet-close-button close-button"></div>
-									<ul class="menu__nav-list">
-										<li class="menu__nav-item">
-											<a href="#services" class="menu__nav-link">УСЛУГИ</a>
-										</li>
-										<li class="menu__nav-item">
-											<a href="#about" class="menu__nav-link">О КОМПАНИИ</a>
-										</li>
-										<li class="menu__nav-item">
-											<a href="#team" class="menu__nav-link">НАША КОМАНДА</a>
-										</li>
-										<li class="menu__nav-item">
-											<a href="#projects" class="menu__nav-link">ПРОЕКТЫ</a>
-										</li>
-										<li class="menu__nav-item">
-											<a href="#news" class="menu__nav-link">НОВОСТИ</a>
-										</li>
-										<li class="menu__nav-item">
-											<a href="#contacts" class="menu__nav-link">КОНТАКТЫ</a>
-										</li>
-									</ul>
-									<div class="menu__tablet-footer">
-										<a href="tel:+74236904990" class="menu__phone-link">
-											+7 (4236) 90-49-90
-										</a>
-										<a
-											href="mailto:vostok@vlogistic.ru"
-											class="menu__email-link"
-											onclick="ym(61594867,'reachGoal','email'); return true;"
-										>
-											vostok@vlogistic.ru
-										</a>
-										<span
-											class="menu__tablet-call-back btn-open-modal"
-											onclick="ym(61594867,'reachGoal','obratnyi'); return true;"
-										>
-											заказать обратный звонок
-										</span>
-										<button
-											class="menu__tablet-button skew-button btn-open-modal"
-											onclick="ym(61594867,'reachGoal','luchshie_ceny'); return true;"
-										>
-											получить лучшие цены
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="menu__date-currency">
-								<div>
-									<span>30/04</span> <span id="header-time">14:30</span>
-								</div>
-								<div id="header-currency" class="header__currency-container">
-									<div>
-										<span class="header__currency-name">USD</span>
-										<span class="header__currency-value">73,68</span>
-									</div>
-									<div>
-										<span class="header__currency-name">CNY</span>
-										<span class="header__currency-value">10,41</span>
-									</div>
-								</div>
-							</div>
-							<div class="menu__second-section">
-								<div class="menu__languages-block">
-									<ul class="menu__languages-list">
-										<li class="menu__language-item active">
-											<a href="#" class="menu__language-link">
-												RU
-											</a>
-										</li>
-										<li class="menu__language-item">
-											<a href="#" class="menu__language-link">
-												EN
-											</a>
-										</li>
-										<li class="menu__language-item">
-											<a href="#" class="menu__language-link">
-												CH
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="menu__contacts-block">
-									<div class="menu__phone-block">
-										<a href="tel:+74236904990" class="menu__phone-link">
-											+7 (4236) 90-49-90
-										</a>
-									</div>
-									<div class="menu__back-call-block">
-										<a
-											href="#"
-											class="menu__back-call-link btn-open-modal"
-											onclick="ym(61594867,'reachGoal','obratnyi'); return true;"
-										>
-											ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
-										</a>
-									</div>
-								</div>
-								<div class="menu__burger-block">
-									<div class="hamburger">
-										<div class="hamburger-inner">
-											<span></span>
-											<span></span>
-											<span></span>
-										</div>
-										<div class="hamburger-cross">
-											<span></span>
-											<span></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<a href="#" class="header__login open-auth-popup">Войти</a>
-						</div>
-					</div>
-				</header>
-				<div class="container">
-					<div class="breadcrumbs">
-						<a href="/" class="breadcrumbs__item">Главная</a>
-						<span class="breadcrumbs__item breadcrumbs__item--last"
-							>Личный кабинет</span
-						>
-					</div>
-				</div>
-
-				<div class="personal-page container">
-					<div class="row">
-						<div class="col-lg-2">
-							<ul class="personal-page__nav">
-								<li class="personal-page__nav-item">
-									<a href="#">Личные данные</a>
-								</li>
-								<li class="personal-page__nav-item selected">
-									<a href="#">Статус груза</a>
-								</li>
-								<li class="personal-page__nav-item">
-									<a href="#">Документы</a>
-								</li>
-								<li class="personal-page__nav-item">
-									<a href="#">Выйти</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-lg-10">
-							<div class="personal-page__docs">
-								<a href="#" class="personal-page__doc">
-									<span class="personal-page__doc-name">Договор № 071</span>
-									<span class="personal-page__download">Скачать</span>
-								</a>
-								<a href="#" class="personal-page__doc">
-									<span class="personal-page__doc-name">Договор № 071</span>
-									<span class="personal-page__download">Скачать</span>
-								</a>
-								<a href="#" class="personal-page__doc personal-page__doc-img">
-									<img src="img/doc-img.jpg" alt="" />
-									<span class="personal-page__doc-name">Договор № 071</span>
-									<span class="personal-page__download">Скачать</span>
-								</a>
-								<a href="#" class="personal-page__doc">
-									<span class="personal-page__doc-name">Договор № 071</span>
-									<span class="personal-page__download">Скачать</span>
-								</a>
-								<a href="#" class="personal-page__doc">
-									<span class="personal-page__doc-name">Договор № 071</span>
-									<span class="personal-page__download">Скачать</span>
-								</a>
-							</div>
-						</div>
-					</div>
+	<div class="content">
+		<div class="content__inner">
+			<div class="fixed-contacts-btns">
+				<div class="fixed-contacts-btns__inner">
+					<a href="#" class="fixed-contacts-btns__btn-item btn-open-modal"
+						onclick="ym(61594867,'reachGoal','zapros'); return true;">
+						ОТПРАВЬТЕ&nbsp;&nbsp;ЗАПРОС
+					</a>
+					<a href="mailto:vostok@vlogistic.ru" class="fixed-contacts-btns__btn-item email"
+						onclick="ym(61594867,'reachGoal','email'); return true;">
+						<span></span>
+						VOSTOK@VLOGISTIC.RU
+					</a>
 				</div>
 			</div>
-
-			<footer class="footer">
-				<div class="container">
-					<div class="menu">
+			<header class="header header--static">
+				<div class="menu-wrapper container">
+					<div class="menu container">
 						<div class="menu__first-section">
 							<div class="menu__logo">
 								<a href="/" class="menu__logo-link">
-									<img src="img/logo.png" alt="logo" class="menu__logo-img" />
+									<img src="img/logo-header.svg" alt="logo" class="menu__logo-img" />
 								</a>
 							</div>
+							<div class="menu__nav-section">
+								<div class="menu__tablet-logo-block">
+									<img class="menu__tablet-logo-img" src="img/logo-tablet-menu.png" alt="logo" />
+								</div>
+								<div class="menu__tablet-close-button close-button"></div>
+								<ul class="menu__nav-list">
+									<li class="menu__nav-item">
+										<a href="#services" class="menu__nav-link">УСЛУГИ</a>
+									</li>
+									<li class="menu__nav-item">
+										<a href="#about" class="menu__nav-link">О КОМПАНИИ</a>
+									</li>
+									<li class="menu__nav-item">
+										<a href="#team" class="menu__nav-link">НАША КОМАНДА</a>
+									</li>
+									<li class="menu__nav-item">
+										<a href="#projects" class="menu__nav-link">ПРОЕКТЫ</a>
+									</li>
+									<li class="menu__nav-item">
+										<a href="#news" class="menu__nav-link">НОВОСТИ</a>
+									</li>
+									<li class="menu__nav-item">
+										<a href="#contacts" class="menu__nav-link">КОНТАКТЫ</a>
+									</li>
+								</ul>
+								<div class="menu__tablet-footer">
+									<a href="tel:+74236904990" class="menu__phone-link">
+										+7 (4236) 90-49-90
+									</a>
+									<a href="mailto:vostok@vlogistic.ru" class="menu__email-link"
+										onclick="ym(61594867,'reachGoal','email'); return true;">
+										vostok@vlogistic.ru
+									</a>
+									<span class="menu__tablet-call-back btn-open-modal"
+										onclick="ym(61594867,'reachGoal','obratnyi'); return true;">
+										заказать обратный звонок
+									</span>
+									<button class="menu__tablet-button skew-button btn-open-modal"
+										onclick="ym(61594867,'reachGoal','luchshie_ceny'); return true;">
+										получить лучшие цены
+									</button>
+								</div>
+							</div>
 						</div>
-						<div class="menu-footer">
-							<div class="menu-footer__item">
-								<div class="menu-footer__title">Услуги</div>
-								<ul class="menu-footer__list">
-									<li class="menu-footer__list-item">
-										<a href="#">Грузоперевозки</a>
+						<div class="menu__date-currency">
+							<div>
+								<span>30/04</span> <span id="header-time">14:30</span>
+							</div>
+							<div id="header-currency" class="header__currency-container">
+								<div>
+									<span class="header__currency-name">USD</span>
+									<span class="header__currency-value">73,68</span>
+								</div>
+								<div>
+									<span class="header__currency-name">CNY</span>
+									<span class="header__currency-value">10,41</span>
+								</div>
+							</div>
+						</div>
+						<div class="menu__second-section">
+							<div class="menu__languages-block">
+								<ul class="menu__languages-list">
+									<li class="menu__language-item active">
+										<a href="#" class="menu__language-link">
+											RU
+										</a>
 									</li>
-									<li class="menu-footer__list-item">
-										<a href="#">Таможенное оформление</a>
+									<li class="menu__language-item">
+										<a href="#" class="menu__language-link">
+											EN
+										</a>
 									</li>
-									<li class="menu-footer__list-item">
-										<a href="#">Складские услуги</a>
-									</li>
-									<li class="menu-footer__list-item">
-										<a href="#">Поиск производителей</a>
+									<li class="menu__language-item">
+										<a href="#" class="menu__language-link">
+											CH
+										</a>
 									</li>
 								</ul>
 							</div>
-							<div class="menu-footer__item">
-								<div class="menu-footer__title">О компании</div>
-								<ul class="menu-footer__list">
-									<li class="menu-footer__list-item">
-										<a href="#">О компании</a>
-									</li>
-									<li class="menu-footer__list-item">
-										<a href="#">Преимущества</a>
-									</li>
-									<li class="menu-footer__list-item">
-										<a href="#">Условия работы</a>
-									</li>
-									<li class="menu-footer__list-item">
-										<a href="#">Партнеры</a>
-									</li>
-									<li class="menu-footer__list-item">
-										<a href="#">Документы</a>
-									</li>
-									<li class="menu-footer__list-item">
-										<a href="#">Наша команда</a>
-									</li>
-									<li class="menu-footer__list-item"><a href="#">Отзывы</a></li>
-								</ul>
+							<div class="menu__contacts-block">
+								<div class="menu__phone-block">
+									<a href="tel:+74236904990" class="menu__phone-link">
+										+7 (4236) 90-49-90
+									</a>
+								</div>
+								<div class="menu__back-call-block">
+									<a href="#" class="menu__back-call-link btn-open-modal"
+										onclick="ym(61594867,'reachGoal','obratnyi'); return true;">
+										ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
+									</a>
+								</div>
 							</div>
-							<div class="menu-footer__item">
-								<div class="menu-footer__title">Проекты</div>
-								<div class="menu-footer__title">Новости</div>
-								<div class="menu-footer__title">Карьера</div>
-								<div class="menu-footer__title">Контакты</div>
+							<div class="menu__burger-block">
+								<div class="hamburger">
+									<div class="hamburger-inner">
+										<span></span>
+										<span></span>
+										<span></span>
+									</div>
+									<div class="hamburger-cross">
+										<span></span>
+										<span></span>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="menu__contacts-block">
-							<div class="menu__phone-block">
-								<a href="tel:+74236904990" class="menu__phone-link">
-									+7 (4236) 90-49-90
-								</a>
-							</div>
-							<address class="menu__address">
-								Приморский край, г. Находка, ул. Дзержинского, 9Ж, оф. 201
-							</address>
-							<a
-								href="mailto:vostok@vlogistic.ru"
-								class="contact-information__mail-link"
-							>
-								vostok@vlogistic.ru
-							</a>
-							<a
-								href="https://www.instagram.com/vlogistic.ru/"
-								class="contact-information__insta-link"
-								target="_blank"
-							>
-								<img src="img/icons/instagram-white.svg" alt="" />
-							</a>
-							<div class="menu__callback btn-open-modal">
-								Заказать обратный звонок
-							</div>
-						</div>
-					</div>
-					<div class="footer__bottom">
-						<div class="footer__info">
-							<div>© 2020 ТЛК “Восток Логистик”</div>
-							<a href="#" class="footer__link">Политика конфиденциальности</a>
-						</div>
-						<a href="#" class="footer__created-by footer__link" target="_blank"
-							>Created by PIK production</a
-						>
+						<a href="#" class="header__login open-auth-popup">Войти</a>
 					</div>
 				</div>
-			</footer>
-		</div>
-		<!-- content end -->
+			</header>
+			<div class="container">
+				<div class="breadcrumbs">
+					<a href="/" class="breadcrumbs__item">Главная</a>
+					<span class="breadcrumbs__item breadcrumbs__item--last">Личный кабинет</span>
+				</div>
+			</div>
 
-		<!-- call popup start -->
-		<div class="popup-call" id="popup-call">
-			<div class="popup-call__wrapper">
-				<div class="popup-call__block">
-					<div class="popup-call__success" style="display: none;">
-						<div class="success__title">
-							ваша заявка успешно отправлена
-						</div>
-						<div class="success__dexcription">
-							В ближайшее время с вами свяжутся
-							<br />
-							специалисты "ТЛК ВОСТОК ЛОГИСТИК".
+			<div class="personal-page container">
+				<div class="row">
+					<div class="col-lg-2">
+						<ul class="personal-page__nav">
+							<li class="personal-page__nav-item">
+								<a href="#">Личные данные</a>
+							</li>
+							<li class="personal-page__nav-item selected">
+								<a href="#">Статус груза</a>
+							</li>
+							<li class="personal-page__nav-item">
+								<a href="#">Документы</a>
+							</li>
+							<li class="personal-page__nav-item">
+								<a href="#">Выйти</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-10">
+						<div class="personal-page__docs">
+							<a href="#" class="personal-page__doc">
+								<span class="personal-page__doc-name">Договор № 071</span>
+								<span class="personal-page__download">Скачать</span>
+							</a>
+							<a href="#" class="personal-page__doc">
+								<span class="personal-page__doc-name">Договор № 071</span>
+								<span class="personal-page__download">Скачать</span>
+							</a>
+							<a href="#" class="personal-page__doc personal-page__doc-img">
+								<img src="img/doc-img.jpg" alt="" />
+								<span class="personal-page__doc-name">Договор № 071</span>
+								<span class="personal-page__download">Скачать</span>
+							</a>
+							<a href="#" class="personal-page__doc">
+								<span class="personal-page__doc-name">Договор № 071</span>
+								<span class="personal-page__download">Скачать</span>
+							</a>
+							<a href="#" class="personal-page__doc">
+								<span class="personal-page__doc-name">Договор № 071</span>
+								<span class="personal-page__download">Скачать</span>
+							</a>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="menu">
+					<div class="menu__first-section">
+						<div class="menu__logo">
+							<a href="/" class="menu__logo-link">
+								<img src="img/logo.png" alt="logo" class="menu__logo-img" />
+							</a>
+						</div>
+					</div>
+					<div class="menu-footer">
+						<div class="menu-footer__item">
+							<div class="menu-footer__title">Услуги</div>
+							<ul class="menu-footer__list">
+								<li class="menu-footer__list-item">
+									<a href="#">Грузоперевозки</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Таможенное оформление</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Складские услуги</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Поиск производителей</a>
+								</li>
+							</ul>
+						</div>
+						<div class="menu-footer__item">
+							<div class="menu-footer__title">О компании</div>
+							<ul class="menu-footer__list">
+								<li class="menu-footer__list-item">
+									<a href="#">О компании</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Преимущества</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Условия работы</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Партнеры</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Документы</a>
+								</li>
+								<li class="menu-footer__list-item">
+									<a href="#">Наша команда</a>
+								</li>
+								<li class="menu-footer__list-item"><a href="#">Отзывы</a></li>
+							</ul>
+						</div>
+						<div class="menu-footer__item">
+							<div class="menu-footer__title">Проекты</div>
+							<div class="menu-footer__title">Новости</div>
+							<div class="menu-footer__title">Карьера</div>
+							<div class="menu-footer__title">Контакты</div>
+						</div>
+					</div>
+					<div class="menu__contacts-block">
+						<div class="menu__phone-block">
+							<a href="tel:+74236904990" class="menu__phone-link">
+								+7 (4236) 90-49-90
+							</a>
+						</div>
+						<address class="menu__address">
+							Приморский край, г. Находка, ул. Дзержинского, 9Ж, оф. 201
+						</address>
+						<a href="mailto:vostok@vlogistic.ru" class="contact-information__mail-link">
+							vostok@vlogistic.ru
+						</a>
+						<a href="https://www.instagram.com/vlogistic.ru/" class="contact-information__insta-link"
+							target="_blank">
+							<img src="img/icons/instagram-white.svg" alt="" />
+						</a>
+						<div class="menu__callback btn-open-modal">
+							Заказать обратный звонок
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__info">
+						<div>© 2020 ТЛК “Восток Логистик”</div>
+						<a href="#" class="footer__link">Политика конфиденциальности</a>
+					</div>
+					<a href="#" class="footer__created-by footer__link" target="_blank">Created by PIK production</a>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- content end -->
+
+	<!-- call popup start -->
+	<div class="popup-call" id="popup-call">
+		<div class="popup-call__wrapper">
+			<div class="popup-call__block">
+				<div class="popup-call__success" style="display: none;">
+					<div class="success__title">
+						ваша заявка успешно отправлена
+					</div>
+					<div class="success__dexcription">
+						В ближайшее время с вами свяжутся
+						<br />
+						специалисты "ТЛК ВОСТОК ЛОГИСТИК".
+					</div>
+				</div>
+				<div class="close-button"></div>
+				<div class="popup-call__title">
+					ОТПРАВИТЬ ЗАЯВКУ
+				</div>
+				<div class="popup-call__description">
+					Пожалуйста, заполните простую форму. В ближайшее время с вами
+					свяжутся специалисты "ТЛК ВОСТОК ЛОГИСТИК".
+				</div>
+				<div class="popup-call__form">
+					<form method="POST" class="popup-call__form feedback-form">
+						<label>
+							<input type="text" class="form__input-text input-name" placeholder="ВВЕДИТЕ ВАШЕ ИМЯ*"
+								name="user_name" required />
+						</label>
+						<label>
+							<input type="email" class="form__input-text input-email" name="user_email"
+								placeholder="ВВЕДИТЕ ВАШ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ*" required />
+						</label>
+						<label>
+							<input type="tel" class="form__input-text input-phone" name="user_phone"
+								placeholder="ВВЕДИТЕ ВАШ ТЕЛЕФОН" />
+						</label>
+						<label>
+							<input type="text" class="form__input-text input-comment" name="user_comment"
+								placeholder="НАПИШИТЕ КОММЕНТАРИЙ" />
+						</label>
+						<input type="checkbox" class="form__input-checkbox" id="form__checkbox-popap-call"
+							name="user_agreement" checked />
+						<label for="form__checkbox-popap-call" class="form__label-checkbox">
+							<span class="form__input-checkbox-text">
+								Я согласен на обработку персональных данных
+							</span>
+							<span class="form__alert-checkbox popup-call__alert">Вы не согласны?</span>
+						</label>
+						<div class="popup-call__message-protection">
+							Защита от автоматических сообщений
+						</div>
+						<div class="form__submit-block">
+							<!-- <div class="form__not-a-robot">
+                                <img src="img/not-a-robot.png" alt="">
+                            </div> -->
+							<div class="form__submit-block g-recaptcha"
+								data-sitekey="6LeXKt8UAAAAAIjeFbwzyhhfH_4rLT3zBJ6CTwqZ" id="contacts-recaptcha"></div>
+							<div class="form__submit-button-container">
+								<div class="form__button-block">
+									<button type="submit" class="form__button skew-button full-width"
+										id="popup-call__button"
+										onclick="ym(61594867,'reachGoal','otpravit zayavku'); return true;">
+										<span class="skew-button__button-text">
+											ОТПРАВИТЬ ЗАЯВКУ
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- call popup end -->
+
+	<div class="personal-popup">
+		<div class="popup-call__wrapper">
+			<div class="popup-call__block" id="auth">
+				<div class="close-button"></div>
+				<div class="popup-call__title">ВХОД В ЛИЧНЫЙ КАБИНЕТ</div>
+				<form action="#" class="popup-call__form" method="POST">
+					<label for="personal-user-login" class="personal-popup__label">Логин*</label>
+					<input type="text" class="personal-popup__input" id="personal-user-login" />
+					<label for="personal-user-pass" class="personal-popup__label">Пароль*</label>
+					<input type="password" class="personal-popup__input" id="personal-user-pass" />
+					<div class="personal-popup__check">
+						<label class="checkbox-wrap">
+							<input type="checkbox" />
+							<span>ЗАПОМНИТЬ МЕНЯ</span>
+						</label>
+						<a href="#" class="personal-popup__forgot-pass">Забыли пароль?</a>
+					</div>
+
+					<button class="skew-button skew-button--orange">
+						<span class="skew-button__button-text">Войти</span>
+					</button>
+				</form>
+				<div class="personal-popup__social">
+					<div class="personal-popup__social-header">
+						Войти как пользователь
+					</div>
+					<a href="#" class="personal-popup__social-item google"></a>
+					<a href="#" class="personal-popup__social-item mail"></a>
+					<a href="#" class="personal-popup__social-item facebook"></a>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="personal-popup__footer">
+					<button class="personal-popup__button">Регистрация</button>
+					<span class="personal-popup__reg-text">Вам будет доступно управление рассылками, использование
+						персональных данных, связь профиля с аккаунтом соцсети и
+						т.д.</span>
+				</div>
+			</div>
+			<div class="popup-call__block" id="registration" style="display: none;">
+				<div class="close-button"></div>
+				<div class="popup-call__title">РЕГИСТРАЦИЯ</div>
+				<form action="#" class="popup-call__form" method="POST">
+					<label for="personal-user-email" class="personal-popup__label">E-mail*</label>
+					<input type="email" class="personal-popup__input" id="personal-user-email" />
+					<label for="personal-user-reg-pass" class="personal-popup__label">Пароль*</label>
+					<input type="password" class="personal-popup__input" id="personal-user-reg-pass" />
+					<label for="personal-user-phone" class="personal-popup__label">Телефон*</label>
+					<input type="tel" class="personal-popup__input" id="personal-user-phone" />
+
+					<label class="checkbox-wrap personal-popup__checkbox">
+						<input type="checkbox" />
+						<span>Нажимая на кнопку «Зарегистрироваться» Вы даёте согласие на
+							обработку персональных данных в соответствии со статьей 9 ФЗ от
+							27 июля 2006 г. № 152 ФЗ «О персональных данных».</span>
+					</label>
+
+					<button class="skew-button skew-button--orange">
+						<span class="skew-button__button-text">Зарегистрироваться</span>
+					</button>
+				</form>
+				<div class="personal-popup__footer">
+					<button class="personal-popup__button">
+						Вход в личный кабинет
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- projects-popup start -->
+	<div class="projects-popup">
+		<div class="projects-popup__wrapper">
+			<div class="projects-popup__main container" style="background-image: url('img/projects-bg-1.png');">
+				<div class="row">
 					<div class="close-button"></div>
-					<div class="popup-call__title">
-						ОТПРАВИТЬ ЗАЯВКУ
+					<div class="col-12 col-xl-7 projects-popup__title">
+						Доставка негабаритного груза. Космодром Бойконур
 					</div>
-					<div class="popup-call__description">
+					<div style="width: 100%;"></div>
+					<div class="col-12 col-md-3 projects-popup__column first">
+						<div class="projects-popup__column-title">
+							Задачи
+						</div>
+						<div class="projects-popup__column-text">
+							Транспортировать комплектующие для строительства платформы для
+							запуска орбитального корабля-ракетоплана “Буран 1”.
+						</div>
+					</div>
+					<div class="col-12 col-md-3 projects-popup__column">
+						<div class="projects-popup__column-title">
+							сложности
+						</div>
+						<div class="projects-popup__column-text">
+							<ul class="projects-popup__column-text-list">
+								<li>- Короткие сроки</li>
+								<li>- Непростая логистика</li>
+								<li>- Негабаритный груз</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-12 col-md-3 projects-popup__column">
+						<div class="projects-popup__column-title">
+							результат
+						</div>
+						<div class="projects-popup__column-text">
+							Подобрали все необходимые коды ТН ВЭД, подготовили сертификаты и
+							разрешительные документы. Провели все подготовительные
+							мероприятия, исключающие риск возникновения проблем при
+							прохождении процедуры
+						</div>
+					</div>
+					<div id="projects-popup__photo-column" class="col-12 col-md-3 projects-popup__column">
+						<div id="lightgallery">
+							<a class="projects-popup__image-link" href="img/projects-popup-1.png">
+								<img class="projects-popup__image lazy" src="" data-src="img/projects-popup-1.png"
+									alt="ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ" />
+								<span class="projects-popup__image-title">
+									ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ
+								</span>
+							</a>
+							<a class="projects-popup__image-link" href="img/projects-popup-2.png">
+								<img class="projects-popup__image lazy" src="" data-src="img/projects-popup-2.png"
+									alt="ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ" />
+								<span class="projects-popup__image-title">
+									ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ
+								</span>
+							</a>
+							<a class="projects-popup__image-link" href="img/projects-popup-1.png">
+								<img class="projects-popup__image lazy" src="" data-src="img/projects-popup-1.png"
+									alt="ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ" />
+								<span class="projects-popup__image-title">
+									ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ
+								</span>
+							</a>
+							<a class="projects-popup__image-link" href="img/projects-popup-2.png">
+								<img class="projects-popup__image lazy" src="" data-src="img/projects-popup-2.png"
+									alt="ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ" />
+								<span class="projects-popup__image-title">
+									ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row container projects-popup__mobile-form-wrapper">
+				<div class="col-12 col-md-6 contacts__form-section left-border">
+					<div class="contacts__form-section-title">
+						Начать работать с нами
+					</div>
+					<div class="contacts__form-section-description">
 						Пожалуйста, заполните простую форму. В ближайшее время с вами
 						свяжутся специалисты "ТЛК ВОСТОК ЛОГИСТИК".
 					</div>
-					<div class="popup-call__form">
-						<form method="POST" class="popup-call__form">
+					<div class="contacts__form-block">
+						<form method="POST" class="contacts__form feedback-form">
 							<label>
-								<input
-									type="text"
-									class="form__input-text input-name"
-									placeholder="ВВЕДИТЕ ВАШЕ ИМЯ*"
-									name="user_name"
-									required
-								/>
+								<input type="text" class="form__input-text input-name" name="user_name"
+									placeholder="ВВЕДИТЕ ВАШЕ ИМЯ*" required />
 							</label>
 							<label>
-								<input
-									type="email"
-									class="form__input-text input-email"
-									name="user_email"
-									placeholder="ВВЕДИТЕ ВАШ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ*"
-									required
-								/>
+								<input type="email" class="form__input-text input-email" name="user_email"
+									placeholder="ВВЕДИТЕ ВАШ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ*" required />
 							</label>
 							<label>
-								<input
-									type="tel"
-									class="form__input-text input-phone"
-									name="user_phone"
-									placeholder="ВВЕДИТЕ ВАШ ТЕЛЕФОН"
-								/>
+								<input type="text" class="form__input-text input-phone" name="user_phone"
+									placeholder="ВВЕДИТЕ ВАШ ТЕЛЕФОН" />
 							</label>
 							<label>
-								<input
-									type="text"
-									class="form__input-text input-comment"
-									name="user_comment"
-									placeholder="НАПИШИТЕ КОММЕНТАРИЙ"
-								/>
+								<input type="text" class="form__input-text input-comment" name="user_comment"
+									placeholder="НАПИШИТЕ КОММЕНТАРИЙ" />
 							</label>
-							<input
-								type="checkbox"
-								class="form__input-checkbox"
-								id="form__checkbox-popap-call"
-								name="user_agreement"
-								checked
-							/>
-							<label
-								for="form__checkbox-popap-call"
-								class="form__label-checkbox"
-							>
+							<input type="checkbox" class="form__input-checkbox"
+								id="form__checkbox-popup-projects-mobile" name="user_agreement" checked />
+							<label for="form__checkbox-popup-projects-mobile" class="form__label-checkbox">
 								<span class="form__input-checkbox-text">
 									Я согласен на обработку персональных данных
 								</span>
-								<span class="form__alert-checkbox popup-call__alert"
-									>Вы не согласны?</span
-								>
+								<span class="form__alert-checkbox">Вы не согласны?</span>
 							</label>
-							<div class="popup-call__message-protection">
+							<div class="form__message-protection">
 								Защита от автоматических сообщений
 							</div>
 							<div class="form__submit-block">
 								<!-- <div class="form__not-a-robot">
-                                <img src="img/not-a-robot.png" alt="">
-                            </div> -->
-								<div
-									class="form__submit-block g-recaptcha"
-									data-sitekey="6LeXKt8UAAAAAIjeFbwzyhhfH_4rLT3zBJ6CTwqZ"
-									id="contacts-recaptcha"
-								></div>
+                                    <img src="img/not-a-robot.png" alt="">
+                                </div> -->
+								<div class="form__submit-block g-recaptcha"
+									data-sitekey="6LeXKt8UAAAAAIjeFbwzyhhfH_4rLT3zBJ6CTwqZ" id="contacts-recaptcha">
+								</div>
 								<div class="form__submit-button-container">
-									<div class="form__button-block">
-										<button
-											type="submit"
-											class="form__button skew-button full-width"
-											id="popup-call__button"
-											onclick="ym(61594867,'reachGoal','otpravit zayavku'); return true;"
-										>
+									<div class="start-work__button-block">
+										<button type="submit" class="contacts__form-button skew-button"
+											onclick="ym(61594867,'reachGoal','otpravit_zayavku4'); return true;">
 											<span class="skew-button__button-text">
 												ОТПРАВИТЬ ЗАЯВКУ
 											</span>
@@ -539,373 +671,61 @@
 					</div>
 				</div>
 			</div>
+			<div class="menu__contacts-block">
+				<div class="menu__phone-block">
+					<a href="tel:+74236904990" class="menu__phone-link"
+						onclick="ym(61594867,'reachGoal','zvonok'); return true;">
+						+7 (4236) 90-49-90
+					</a>
+				</div>
+				<div class="menu__back-call-block">
+					<a href="#" class="menu__back-call-link btn-open-modal"
+						onclick="ym(61594867,'reachGoal','obratnyi'); return true;">
+						ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
+					</a>
+				</div>
+			</div>
 		</div>
-		<!-- call popup end -->
-
-		<div class="personal-popup">
-			<div class="popup-call__wrapper">
-				<div class="popup-call__block" id="auth">
+	</div>
+	<!-- projects-popup end -->
+	<div class="news-popup">
+		<div class="news-popup__wrapper">
+			<div class="news-popup__main container" style="background: #e8e8e8;">
+				<div class="row">
 					<div class="close-button"></div>
-					<div class="popup-call__title">ВХОД В ЛИЧНЫЙ КАБИНЕТ</div>
-					<form action="#" class="popup-call__form" method="POST">
-						<label for="personal-user-login" class="personal-popup__label"
-							>Логин*</label
-						>
-						<input
-							type="text"
-							class="personal-popup__input"
-							id="personal-user-login"
-						/>
-						<label for="personal-user-pass" class="personal-popup__label"
-							>Пароль*</label
-						>
-						<input
-							type="password"
-							class="personal-popup__input"
-							id="personal-user-pass"
-						/>
-						<div class="personal-popup__check">
-							<label class="checkbox-wrap">
-								<input type="checkbox" />
-								<span>ЗАПОМНИТЬ МЕНЯ</span>
-							</label>
-							<a href="#" class="personal-popup__forgot-pass">Забыли пароль?</a>
+					<div class="col-12 col-md-4 news-popup__column first">
+						<div class="news-popup__image-block">
+							<img class="news-popup__image" src="" alt="news-2" />
 						</div>
-
-						<button class="skew-button skew-button--orange">
-							<span class="skew-button__button-text">Войти</span>
-						</button>
-					</form>
-					<div class="personal-popup__social">
-						<div class="personal-popup__social-header">
-							Войти как пользователь
-						</div>
-						<a href="#" class="personal-popup__social-item google"></a>
-						<a href="#" class="personal-popup__social-item mail"></a>
-						<a href="#" class="personal-popup__social-item facebook"></a>
-						<div style="clear: both;"></div>
 					</div>
-					<div class="personal-popup__footer">
-						<button class="personal-popup__button">Регистрация</button>
-						<span class="personal-popup__reg-text"
-							>Вам будет доступно управление рассылками, использование
-							персональных данных, связь профиля с аккаунтом соцсети и
-							т.д.</span
-						>
-					</div>
-				</div>
-				<div class="popup-call__block" id="registration" style="display: none;">
-					<div class="close-button"></div>
-					<div class="popup-call__title">РЕГИСТРАЦИЯ</div>
-					<form action="#" class="popup-call__form" method="POST">
-						<label for="personal-user-email" class="personal-popup__label"
-							>E-mail*</label
-						>
-						<input
-							type="email"
-							class="personal-popup__input"
-							id="personal-user-email"
-						/>
-						<label for="personal-user-reg-pass" class="personal-popup__label"
-							>Пароль*</label
-						>
-						<input
-							type="password"
-							class="personal-popup__input"
-							id="personal-user-reg-pass"
-						/>
-						<label for="personal-user-phone" class="personal-popup__label"
-							>Телефон*</label
-						>
-						<input
-							type="tel"
-							class="personal-popup__input"
-							id="personal-user-phone"
-						/>
-
-						<label class="checkbox-wrap personal-popup__checkbox">
-							<input type="checkbox" />
-							<span
-								>Нажимая на кнопку «Зарегистрироваться» Вы даёте согласие на
-								обработку персональных данных в соответствии со статьей 9 ФЗ от
-								27 июля 2006 г. № 152 ФЗ «О персональных данных».</span
-							>
-						</label>
-
-						<button class="skew-button skew-button--orange">
-							<span class="skew-button__button-text">Зарегистрироваться</span>
-						</button>
-					</form>
-					<div class="personal-popup__footer">
-						<button class="personal-popup__button">
-							Вход в личный кабинет
-						</button>
+					<div class="col-12 col-md-6 news-popup__column">
+						<div class="news-popup__column-title"></div>
+						<div class="news-popup__column-line"></div>
+						<div class="news-popup__column-text"></div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="up-button__wrapper container">
+		<div class="up-button">
+			<div class="up-button__inner">
+				<img src="img/icons/up.svg" alt="" />
+				<span>ВВЕРХ</span>
+			</div>
+		</div>
+	</div>
 
-		<!-- projects-popup start -->
-		<div class="projects-popup">
-			<div class="projects-popup__wrapper">
-				<div
-					class="projects-popup__main container"
-					style="background-image: url('img/projects-bg-1.png');"
-				>
-					<div class="row">
-						<div class="close-button"></div>
-						<div class="col-12 col-xl-7 projects-popup__title">
-							Доставка негабаритного груза. Космодром Бойконур
-						</div>
-						<div style="width: 100%;"></div>
-						<div class="col-12 col-md-3 projects-popup__column first">
-							<div class="projects-popup__column-title">
-								Задачи
-							</div>
-							<div class="projects-popup__column-text">
-								Транспортировать комплектующие для строительства платформы для
-								запуска орбитального корабля-ракетоплана “Буран 1”.
-							</div>
-						</div>
-						<div class="col-12 col-md-3 projects-popup__column">
-							<div class="projects-popup__column-title">
-								сложности
-							</div>
-							<div class="projects-popup__column-text">
-								<ul class="projects-popup__column-text-list">
-									<li>- Короткие сроки</li>
-									<li>- Непростая логистика</li>
-									<li>- Негабаритный груз</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-12 col-md-3 projects-popup__column">
-							<div class="projects-popup__column-title">
-								результат
-							</div>
-							<div class="projects-popup__column-text">
-								Подобрали все необходимые коды ТН ВЭД, подготовили сертификаты и
-								разрешительные документы. Провели все подготовительные
-								мероприятия, исключающие риск возникновения проблем при
-								прохождении процедуры
-							</div>
-						</div>
-						<div
-							id="projects-popup__photo-column"
-							class="col-12 col-md-3 projects-popup__column"
-						>
-							<div id="lightgallery">
-								<a
-									class="projects-popup__image-link"
-									href="img/projects-popup-1.png"
-								>
-									<img
-										class="projects-popup__image lazy"
-										src=""
-										data-src="img/projects-popup-1.png"
-										alt="ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ"
-									/>
-									<span class="projects-popup__image-title">
-										ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ
-									</span>
-								</a>
-								<a
-									class="projects-popup__image-link"
-									href="img/projects-popup-2.png"
-								>
-									<img
-										class="projects-popup__image lazy"
-										src=""
-										data-src="img/projects-popup-2.png"
-										alt="ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ"
-									/>
-									<span class="projects-popup__image-title">
-										ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ
-									</span>
-								</a>
-								<a
-									class="projects-popup__image-link"
-									href="img/projects-popup-1.png"
-								>
-									<img
-										class="projects-popup__image lazy"
-										src=""
-										data-src="img/projects-popup-1.png"
-										alt="ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ"
-									/>
-									<span class="projects-popup__image-title">
-										ТРАНСПОРТИРОВКА КОМПЛЕКТУЮЩИХ
-									</span>
-								</a>
-								<a
-									class="projects-popup__image-link"
-									href="img/projects-popup-2.png"
-								>
-									<img
-										class="projects-popup__image lazy"
-										src=""
-										data-src="img/projects-popup-2.png"
-										alt="ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ"
-									/>
-									<span class="projects-popup__image-title">
-										ОФОРМЛЕНИЕ НЕОБХОДИМОЙ ДОКУМЕНТАЦИИ
-									</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row container projects-popup__mobile-form-wrapper">
-					<div class="col-12 col-md-6 contacts__form-section left-border">
-						<div class="contacts__form-section-title">
-							Начать работать с нами
-						</div>
-						<div class="contacts__form-section-description">
-							Пожалуйста, заполните простую форму. В ближайшее время с вами
-							свяжутся специалисты "ТЛК ВОСТОК ЛОГИСТИК".
-						</div>
-						<div class="contacts__form-block">
-							<form method="POST" class="contacts__form">
-								<label>
-									<input
-										type="text"
-										class="form__input-text input-name"
-										name="user_name"
-										placeholder="ВВЕДИТЕ ВАШЕ ИМЯ*"
-										required
-									/>
-								</label>
-								<label>
-									<input
-										type="email"
-										class="form__input-text input-email"
-										name="user_email"
-										placeholder="ВВЕДИТЕ ВАШ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ*"
-										required
-									/>
-								</label>
-								<label>
-									<input
-										type="text"
-										class="form__input-text input-phone"
-										name="user_phone"
-										placeholder="ВВЕДИТЕ ВАШ ТЕЛЕФОН"
-									/>
-								</label>
-								<label>
-									<input
-										type="text"
-										class="form__input-text input-comment"
-										name="user_comment"
-										placeholder="НАПИШИТЕ КОММЕНТАРИЙ"
-									/>
-								</label>
-								<input
-									type="checkbox"
-									class="form__input-checkbox"
-									id="form__checkbox-popup-projects-mobile"
-									name="user_agreement"
-									checked
-								/>
-								<label
-									for="form__checkbox-popup-projects-mobile"
-									class="form__label-checkbox"
-								>
-									<span class="form__input-checkbox-text">
-										Я согласен на обработку персональных данных
-									</span>
-									<span class="form__alert-checkbox">Вы не согласны?</span>
-								</label>
-								<div class="form__message-protection">
-									Защита от автоматических сообщений
-								</div>
-								<div class="form__submit-block">
-									<!-- <div class="form__not-a-robot">
-                                    <img src="img/not-a-robot.png" alt="">
-                                </div> -->
-									<div
-										class="form__submit-block g-recaptcha"
-										data-sitekey="6LeXKt8UAAAAAIjeFbwzyhhfH_4rLT3zBJ6CTwqZ"
-										id="contacts-recaptcha"
-									></div>
-									<div class="form__submit-button-container">
-										<div class="start-work__button-block">
-											<button
-												type="submit"
-												class="contacts__form-button skew-button"
-												onclick="ym(61594867,'reachGoal','otpravit_zayavku4'); return true;"
-											>
-												<span class="skew-button__button-text">
-													ОТПРАВИТЬ ЗАЯВКУ
-												</span>
-											</button>
-										</div>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="menu__contacts-block">
-					<div class="menu__phone-block">
-						<a
-							href="tel:+74236904990"
-							class="menu__phone-link"
-							onclick="ym(61594867,'reachGoal','zvonok'); return true;"
-						>
-							+7 (4236) 90-49-90
-						</a>
-					</div>
-					<div class="menu__back-call-block">
-						<a
-							href="#"
-							class="menu__back-call-link btn-open-modal"
-							onclick="ym(61594867,'reachGoal','obratnyi'); return true;"
-						>
-							ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- projects-popup end -->
-		<div class="news-popup">
-			<div class="news-popup__wrapper">
-				<div class="news-popup__main container" style="background: #e8e8e8;">
-					<div class="row">
-						<div class="close-button"></div>
-						<div class="col-12 col-md-4 news-popup__column first">
-							<div class="news-popup__image-block">
-								<img class="news-popup__image" src="" alt="news-2" />
-							</div>
-						</div>
-						<div class="col-12 col-md-6 news-popup__column">
-							<div class="news-popup__column-title"></div>
-							<div class="news-popup__column-line"></div>
-							<div class="news-popup__column-text"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="up-button__wrapper container">
-			<div class="up-button">
-				<div class="up-button__inner">
-					<img src="img/icons/up.svg" alt="" />
-					<span>ВВЕРХ</span>
-				</div>
-			</div>
-		</div>
+	<script src="libs/jquery/jquery.min.js"></script>
+	<script src="libs/slick/slick.min.js"></script>
+	<script src="libs/masked-input/jquery.maskedinput.js"></script>
+	<script src="libs/simplebar/simplebar-min.js"></script>
+	<script src="libs/light-gallery/js/lightgallery-all.min.js"></script>
+	<script src="libs/light-gallery/js/lg-fullscreen.min.js"></script>
+	<!-- <script src="libs/light-gallery/js/lg-thumbnail.min.js"></script> -->
+	<script src="libs/light-gallery/js/lg-pager.min.js"></script>
+	<!-- <script src="libs/videojs/video.js"></script> -->
+	<script src="js/script.js"></script>
+</body>
 
-		<script src="libs/jquery/jquery.min.js"></script>
-		<script src="libs/slick/slick.min.js"></script>
-		<script src="libs/masked-input/jquery.maskedinput.js"></script>
-		<script src="libs/simplebar/simplebar-min.js"></script>
-		<script src="libs/light-gallery/js/lightgallery-all.min.js"></script>
-		<script src="libs/light-gallery/js/lg-fullscreen.min.js"></script>
-		<!-- <script src="libs/light-gallery/js/lg-thumbnail.min.js"></script> -->
-		<script src="libs/light-gallery/js/lg-pager.min.js"></script>
-		<!-- <script src="libs/videojs/video.js"></script> -->
-		<script src="js/script.js"></script>
-	</body>
 </html>

@@ -100,7 +100,7 @@ $(document).ready(() => {
 		$(".personal-popup .popup-call__block").toggle();
 	});
 
-	$("form").submit(function (event) {
+	$(".feedback-form").submit(function (event) {
 		event.preventDefault();
 		let $this = $(this);
 		$.ajax({
