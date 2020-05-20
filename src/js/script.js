@@ -262,8 +262,9 @@ $(document).ready(() => {
 		event.preventDefault();
 	});
 
-	$(".open-career-popup").on("click", function () {
-		let popupContent = $(this).siblings(".career__description").html();
+	$(".open-vl-popup").on("click", function () {
+		let popupContent = $(this).siblings(".vl-popup-description").html();
+		$("body").addClass("overflow");
 		$(".vl-popup__data").html(popupContent);
 		$(".vl-popup").addClass("vl-popup--active");
 	});
