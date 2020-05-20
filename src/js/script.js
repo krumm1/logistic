@@ -255,7 +255,6 @@ $(document).ready(() => {
 	});
 
 	$(".btn-open-modal").click((event) => {
-		// у нас дохера попапов, и на каждый вид попапа писать своё действие... Эх. Про стили и разметку вообще молчу
 		$(".popup-call").addClass("popup-call__open");
 		$(".popup-call__wrapper").addClass("active");
 		$(".content").addClass("active");
@@ -270,7 +269,6 @@ $(document).ready(() => {
 	});
 
 	$(".close-button").click(() => {
-		// эта кнопка убирает активный класс (кроме fadeOut) у родителя, зачем стока строк? Эх...
 		$(".popup-call").removeClass("popup-call__open");
 		$(".content").removeClass("active");
 		$(".popup-call__wrapper").removeClass("active");
@@ -306,72 +304,100 @@ $(document).ready(() => {
 		$(".projects-popup__wrapper").addClass("active");
 		$("body").addClass("overflow");
 		let $this = $(this);
-		let $parent = $this.parents('.projects__main-description');
-		let $title = $parent.find('.projects__block-title').html();
-		let $imgLink1 = $($parent.find('.project__popup-content--image-column-img')[0]).attr('data-src');
-		let $imgTitle1 = $($parent.find('.project__popup-content--image-column-img')[0]).attr('alt');
-		let $imgLink2 = $($parent.find('.project__popup-content--image-column-img')[1]).attr('data-src');
-		let $imgTitle2 = $($parent.find('.project__popup-content--image-column-img')[1]).attr('alt');
-		let $imgLink3 = $($parent.find('.project__popup-content--image-column-img')[2]).attr('data-src');
-		let $imgTitle3 = $($parent.find('.project__popup-content--image-column-img')[2]).attr('alt');
-		let $imgLink4 = $($parent.find('.project__popup-content--image-column-img')[3]).attr('data-src');
-		let $imgTitle4 = $($parent.find('.project__popup-content--image-column-img')[3]).attr('alt');
-		let $columnTitle1 = $parent.find('.project__popup-content--first-column-title').html();
-		let $columnText1 = $parent.find('.project__popup-content--first-column-text').html();
-		let $columnTitle2 = $parent.find('.project__popup-content--second-column-title').html();
-		let $columnText2 = $parent.find('.project__popup-content--second-column-text').html();
-		let $columnTitle3 = $parent.find('.project__popup-content--third-column-title').html();
-		let $columnText3 = $parent.find('.project__popup-content--third-column-text').html();
+		let $parent = $this.parents(".projects__main-description");
+		let $title = $parent.find(".projects__block-title").html();
+		let $imgLink1 = $(
+			$parent.find(".project__popup-content--image-column-img")[0]
+		).attr("data-src");
+		let $imgTitle1 = $(
+			$parent.find(".project__popup-content--image-column-img")[0]
+		).attr("alt");
+		let $imgLink2 = $(
+			$parent.find(".project__popup-content--image-column-img")[1]
+		).attr("data-src");
+		let $imgTitle2 = $(
+			$parent.find(".project__popup-content--image-column-img")[1]
+		).attr("alt");
+		let $imgLink3 = $(
+			$parent.find(".project__popup-content--image-column-img")[2]
+		).attr("data-src");
+		let $imgTitle3 = $(
+			$parent.find(".project__popup-content--image-column-img")[2]
+		).attr("alt");
+		let $imgLink4 = $(
+			$parent.find(".project__popup-content--image-column-img")[3]
+		).attr("data-src");
+		let $imgTitle4 = $(
+			$parent.find(".project__popup-content--image-column-img")[3]
+		).attr("alt");
+		let $columnTitle1 = $parent
+			.find(".project__popup-content--first-column-title")
+			.html();
+		let $columnText1 = $parent
+			.find(".project__popup-content--first-column-text")
+			.html();
+		let $columnTitle2 = $parent
+			.find(".project__popup-content--second-column-title")
+			.html();
+		let $columnText2 = $parent
+			.find(".project__popup-content--second-column-text")
+			.html();
+		let $columnTitle3 = $parent
+			.find(".project__popup-content--third-column-title")
+			.html();
+		let $columnText3 = $parent
+			.find(".project__popup-content--third-column-text")
+			.html();
 		console.log($columnTitle1);
 		console.log($columnText1);
 		console.log($columnTitle2);
 		console.log($columnText2);
 
-		$('.projects-popup__title').html($title);
-		$($('.projects-popup__column-title')[0]).html('');
-		$($('.projects-popup__column-title')[0]).html($columnTitle1);
-		$($('.projects-popup__column-text')[0]).html('');
-		$($('.projects-popup__column-text')[0]).html($columnText1);
-		$($('.projects-popup__column-title')[1]).html('');
-		$($('.projects-popup__column-title')[1]).html($columnTitle2);
-		$($('.projects-popup__column-text')[1]).html('');
-		$($('.projects-popup__column-text')[1]).html($columnText2);
-		$($('.projects-popup__column-title')[2]).html('');
-		$($('.projects-popup__column-title')[2]).html($columnTitle3);
-		$($('.projects-popup__column-text')[2]).html('');
-		$($('.projects-popup__column-text')[2]).html($columnText3);
-		$($('.projects-popup__image-link')[0]).attr('src', '');
-		$($('.projects-popup__image-link')[0]).attr('src', $imgLink1);
-		$($('.projects-popup__image')[0]).attr('data-src', '');
-		$($('.projects-popup__image')[0]).attr('data-src', $imgLink1);
-		$($('.projects-popup__image')[0]).attr('alt', '');
-		$($('.projects-popup__image')[0]).attr('alt', $imgTitle1);
-		$($('.projects-popup__image-title')[0]).text('');
-		$($('.projects-popup__image-title')[0]).text($imgTitle1);
-		$($('.projects-popup__image-link')[1]).attr('src', '');
-		$($('.projects-popup__image-link')[1]).attr('src', $imgLink2);
-		$($('.projects-popup__image')[1]).attr('data-src', '');
-		$($('.projects-popup__image')[1]).attr('data-src', $imgLink2);
-		$($('.projects-popup__image')[1]).attr('alt', '');
-		$($('.projects-popup__image')[1]).attr('alt', $imgTitle2);
-		$($('.projects-popup__image-title')[1]).text('');
-		$($('.projects-popup__image-title')[1]).text($imgTitle2);
-		$($('.projects-popup__image-link')[2]).attr('src', '');
-		$($('.projects-popup__image-link')[2]).attr('src', $imgLink3);
-		$($('.projects-popup__image')[2]).attr('data-src', '');
-		$($('.projects-popup__image')[2]).attr('data-src', $imgLink3);
-		$($('.projects-popup__image')[2]).attr('alt', '');
-		$($('.projects-popup__image')[2]).attr('alt', $imgTitle3);
-		$($('.projects-popup__image-title')[2]).text('');
-		$($('.projects-popup__image-title')[2]).text($imgTitle3);
-		$($('.projects-popup__image-link')[3]).attr('src', '');
-		$($('.projects-popup__image-link')[3]).attr('src', $imgLink4);
-		$($('.projects-popup__image')[3]).attr('data-src', '');
-		$($('.projects-popup__image')[3]).attr('data-src', $imgLink4);
-		$($('.projects-popup__image')[3]).attr('alt', '');
-		$($('.projects-popup__image')[3]).attr('alt', $imgTitle4);
-		$($('.projects-popup__image-title')[3]).text('');
-		$($('.projects-popup__image-title')[3]).text($imgTitle4);
+		$(".projects-popup__title").html($title);
+		$($(".projects-popup__column-title")[0]).html("");
+		$($(".projects-popup__column-title")[0]).html($columnTitle1);
+		$($(".projects-popup__column-text")[0]).html("");
+		$($(".projects-popup__column-text")[0]).html($columnText1);
+		$($(".projects-popup__column-title")[1]).html("");
+		$($(".projects-popup__column-title")[1]).html($columnTitle2);
+		$($(".projects-popup__column-text")[1]).html("");
+		$($(".projects-popup__column-text")[1]).html($columnText2);
+		$($(".projects-popup__column-title")[2]).html("");
+		$($(".projects-popup__column-title")[2]).html($columnTitle3);
+		$($(".projects-popup__column-text")[2]).html("");
+		$($(".projects-popup__column-text")[2]).html($columnText3);
+		$($(".projects-popup__image-link")[0]).attr("src", "");
+		$($(".projects-popup__image-link")[0]).attr("src", $imgLink1);
+		$($(".projects-popup__image")[0]).attr("data-src", "");
+		$($(".projects-popup__image")[0]).attr("data-src", $imgLink1);
+		$($(".projects-popup__image")[0]).attr("alt", "");
+		$($(".projects-popup__image")[0]).attr("alt", $imgTitle1);
+		$($(".projects-popup__image-title")[0]).text("");
+		$($(".projects-popup__image-title")[0]).text($imgTitle1);
+		$($(".projects-popup__image-link")[1]).attr("src", "");
+		$($(".projects-popup__image-link")[1]).attr("src", $imgLink2);
+		$($(".projects-popup__image")[1]).attr("data-src", "");
+		$($(".projects-popup__image")[1]).attr("data-src", $imgLink2);
+		$($(".projects-popup__image")[1]).attr("alt", "");
+		$($(".projects-popup__image")[1]).attr("alt", $imgTitle2);
+		$($(".projects-popup__image-title")[1]).text("");
+		$($(".projects-popup__image-title")[1]).text($imgTitle2);
+		$($(".projects-popup__image-link")[2]).attr("src", "");
+		$($(".projects-popup__image-link")[2]).attr("src", $imgLink3);
+		$($(".projects-popup__image")[2]).attr("data-src", "");
+		$($(".projects-popup__image")[2]).attr("data-src", $imgLink3);
+		$($(".projects-popup__image")[2]).attr("alt", "");
+		$($(".projects-popup__image")[2]).attr("alt", $imgTitle3);
+		$($(".projects-popup__image-title")[2]).text("");
+		$($(".projects-popup__image-title")[2]).text($imgTitle3);
+		$($(".projects-popup__image-link")[3]).attr("src", "");
+		$($(".projects-popup__image-link")[3]).attr("src", $imgLink4);
+		$($(".projects-popup__image")[3]).attr("data-src", "");
+		$($(".projects-popup__image")[3]).attr("data-src", $imgLink4);
+		$($(".projects-popup__image")[3]).attr("alt", "");
+		$($(".projects-popup__image")[3]).attr("alt", $imgTitle4);
+		$($(".projects-popup__image-title")[3]).text("");
+		$($(".projects-popup__image-title")[3]).text($imgTitle4);
 		// let $titleText = $this.find(".news__title-one-news").text();
 		// let $descriptionText = $this.find(".news__description-one-news").html();
 		// $(".news-popup__image").removeAttr("src");
@@ -558,11 +584,11 @@ $(document).ready(() => {
 		});
 
 		const flashlightCoords = [
-			"transform: translate(-3%, 3%)",
-			"transform: translate(-15%, -6%)",
-			"transform: translate(4%, -5%)",
-			"transform: translate(-6%, 10%)",
-		],
+				"transform: translate(-3%, 3%)",
+				"transform: translate(-15%, -6%)",
+				"transform: translate(4%, -5%)",
+				"transform: translate(-6%, 10%)",
+			],
 			flashlight = $(".flashlight");
 
 		$("#services .slider").on("afterChange", function (e, slick, currentSlide) {
@@ -837,7 +863,7 @@ $(document).ready(() => {
 						lazyBackgrounds.forEach((lazyBackground) => {
 							if (
 								lazyBackground.getBoundingClientRect().top <=
-								window.innerHeight &&
+									window.innerHeight &&
 								lazyBackground.getBoundingClientRect().bottom >= 0 &&
 								getComputedStyle(lazyBackground).display !== "none"
 							) {
@@ -1056,49 +1082,51 @@ function initMainSlider() {
 	})*/
 	function deleteMap() {
 		map.remove();
-	};
+	}
 
 	function createMapContainer() {
-		$('.contacts-page__city-map-wrapper').append('<div id="map" style="width: 100%; height: 100%;"></div>');
-	};
+		$(".contacts-page__city-map-wrapper").append(
+			'<div id="map" style="width: 100%; height: 100%;"></div>'
+		);
+	}
 
 	function initMapNakhodka() {
 		var map;
 
-		if ($('#map').length) {
+		if ($("#map").length) {
 			DG.then(function () {
-				map = DG.map('map', {
+				map = DG.map("map", {
 					center: [42.841316, 132.891993],
 					zoom: 17,
-					scrollWheelZoom: false
+					scrollWheelZoom: false,
 				});
 
 				DG.marker([42.841316, 132.891993]).addTo(map);
 				// DG.control.location({ position: 'bottomright' }).addTo(map);
 				DG.control.scale().addTo(map);
-				DG.control.ruler({ position: 'bottomleft' }).addTo(map);
+				DG.control.ruler({ position: "bottomleft" }).addTo(map);
 				DG.control.traffic().addTo(map);
 			});
 		}
-	};
+	}
 
 	function initMapVladivostok() {
 		var map;
 
 		DG.then(function () {
-			map = DG.map('map', {
+			map = DG.map("map", {
 				center: [43.097315, 131.864826],
 				zoom: 17,
-				scrollWheelZoom: false
+				scrollWheelZoom: false,
 			});
 
 			DG.marker([43.097315, 131.864826]).addTo(map);
 			// DG.control.location({ position: 'bottomright' }).addTo(map);
 			DG.control.scale().addTo(map);
-			DG.control.ruler({ position: 'bottomleft' }).addTo(map);
+			DG.control.ruler({ position: "bottomleft" }).addTo(map);
 			DG.control.traffic().addTo(map);
 		});
-	};
+	}
 
 	initMapNakhodka();
 
@@ -1118,25 +1146,37 @@ function initMainSlider() {
 				) {
 					return;
 				} else {
-					$('.contacts-page__city-map-information-content').removeClass('active');
-					$('.contacts-page__city-map-information-content.nakhodka').addClass('active');
+					$(".contacts-page__city-map-information-content").removeClass(
+						"active"
+					);
+					$(".contacts-page__city-map-information-content.nakhodka").addClass(
+						"active"
+					);
 					deleteMap();
 					createMapContainer();
 					initMapNakhodka();
-				};
-			} else if ($(this).hasClass('vladivostok')) {
-				if ($('.contacts-page__city-map-information-content.vladivostok').hasClass('active')) {
-					return
+				}
+			} else if ($(this).hasClass("vladivostok")) {
+				if (
+					$(
+						".contacts-page__city-map-information-content.vladivostok"
+					).hasClass("active")
+				) {
+					return;
 				} else {
-					$('.contacts-page__city-map-information-content').removeClass('active');
-					$('.contacts-page__city-map-information-content.vladivostok').addClass('active');
+					$(".contacts-page__city-map-information-content").removeClass(
+						"active"
+					);
+					$(
+						".contacts-page__city-map-information-content.vladivostok"
+					).addClass("active");
 					deleteMap();
 					createMapContainer();
 					initMapVladivostok();
-				};
-			};
-		})
-	};
+				}
+			}
+		});
+	}
 
 	changeCityMap();
-};
+}

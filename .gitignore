@@ -3,4 +3,4 @@ dist
 .idea
 video
 .vscode
-style.min.css
+src/css/tyle.min.css
