@@ -255,7 +255,6 @@ $(document).ready(() => {
 	});
 
 	$(".btn-open-modal").click((event) => {
-		// у нас дохера попапов, и на каждый вид попапа писать своё действие... Эх. Про стили и разметку вообще молчу
 		$(".popup-call").addClass("popup-call__open");
 		$(".popup-call__wrapper").addClass("active");
 		$(".content").addClass("active");
@@ -263,14 +262,27 @@ $(document).ready(() => {
 		event.preventDefault();
 	});
 
-	$(".open-career-popup").on("click", function () {
-		let popupContent = $(this).siblings(".career__description").html();
+	$(".open-vl-popup").on("click", function () {
+		let popupContent = $(this).siblings(".vl-popup-description").html();
+		$("body").addClass("overflow");
 		$(".vl-popup__data").html(popupContent);
 		$(".vl-popup").addClass("vl-popup--active");
 	});
 
+	$(".vl-popup").on("click", ".vl-popup__tab-item", function () {
+		let $this = $(this),
+			tabContent = $(".vl-popup .vl-popup__tab-content");
+		$this.siblings().removeClass("active");
+		$this.addClass("active");
+		tabContent.removeClass("active");
+		tabContent.eq($this.index()).addClass("active");
+	});
+
+	document.querySelectorAll(".vl-popup__tab-content").forEach((el) => {
+		new SimpleBar(el);
+	});
+
 	$(".close-button").click(() => {
-		// эта кнопка убирает активный класс (кроме fadeOut) у родителя, зачем стока строк? Эх...
 		$(".popup-call").removeClass("popup-call__open");
 		$(".content").removeClass("active");
 		$(".popup-call__wrapper").removeClass("active");
@@ -336,12 +348,6 @@ $(document).ready(() => {
 			}
 		};
 		simpleBar();
-		// let $titleText = $this.find(".news__title-one-news").text();
-		// let $descriptionText = $this.find(".news__description-one-news").html();
-		// $(".news-popup__image").removeAttr("src");
-		// $(".news-popup__image").attr("src", $imgLink);
-		// $(".news-popup__column-title").text($titleText);
-		// $(".news-popup__column-text").html($descriptionText);
 		event.preventDefault();
 	});
 
@@ -1011,49 +1017,51 @@ function initMainSlider() {
 	})*/
 	function deleteMap() {
 		map.remove();
-	};
+	}
 
 	function createMapContainer() {
-		$('.contacts-page__city-map-wrapper').append('<div id="map" style="width: 100%; height: 100%;"></div>');
-	};
+		$(".contacts-page__city-map-wrapper").append(
+			'<div id="map" style="width: 100%; height: 100%;"></div>'
+		);
+	}
 
 	function initMapNakhodka() {
 		var map;
 
-		if ($('#map').length) {
+		if ($("#map").length) {
 			DG.then(function () {
-				map = DG.map('map', {
+				map = DG.map("map", {
 					center: [42.841316, 132.891993],
 					zoom: 17,
-					scrollWheelZoom: false
+					scrollWheelZoom: false,
 				});
 
 				DG.marker([42.841316, 132.891993]).addTo(map);
 				// DG.control.location({ position: 'bottomright' }).addTo(map);
 				DG.control.scale().addTo(map);
-				DG.control.ruler({ position: 'bottomleft' }).addTo(map);
+				DG.control.ruler({ position: "bottomleft" }).addTo(map);
 				DG.control.traffic().addTo(map);
 			});
 		}
-	};
+	}
 
 	function initMapVladivostok() {
 		var map;
 
 		DG.then(function () {
-			map = DG.map('map', {
+			map = DG.map("map", {
 				center: [43.097315, 131.864826],
 				zoom: 17,
-				scrollWheelZoom: false
+				scrollWheelZoom: false,
 			});
 
 			DG.marker([43.097315, 131.864826]).addTo(map);
 			// DG.control.location({ position: 'bottomright' }).addTo(map);
 			DG.control.scale().addTo(map);
-			DG.control.ruler({ position: 'bottomleft' }).addTo(map);
+			DG.control.ruler({ position: "bottomleft" }).addTo(map);
 			DG.control.traffic().addTo(map);
 		});
-	};
+	}
 
 	initMapNakhodka();
 
@@ -1073,25 +1081,37 @@ function initMainSlider() {
 				) {
 					return;
 				} else {
-					$('.contacts-page__city-map-information-content').removeClass('active');
-					$('.contacts-page__city-map-information-content.nakhodka').addClass('active');
+					$(".contacts-page__city-map-information-content").removeClass(
+						"active"
+					);
+					$(".contacts-page__city-map-information-content.nakhodka").addClass(
+						"active"
+					);
 					deleteMap();
 					createMapContainer();
 					initMapNakhodka();
-				};
-			} else if ($(this).hasClass('vladivostok')) {
-				if ($('.contacts-page__city-map-information-content.vladivostok').hasClass('active')) {
-					return
+				}
+			} else if ($(this).hasClass("vladivostok")) {
+				if (
+					$(
+						".contacts-page__city-map-information-content.vladivostok"
+					).hasClass("active")
+				) {
+					return;
 				} else {
-					$('.contacts-page__city-map-information-content').removeClass('active');
-					$('.contacts-page__city-map-information-content.vladivostok').addClass('active');
+					$(".contacts-page__city-map-information-content").removeClass(
+						"active"
+					);
+					$(
+						".contacts-page__city-map-information-content.vladivostok"
+					).addClass("active");
 					deleteMap();
 					createMapContainer();
 					initMapVladivostok();
-				};
-			};
-		})
-	};
+				}
+			}
+		});
+	}
 
 	changeCityMap();
-};
+}
