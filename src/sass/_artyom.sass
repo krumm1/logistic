@@ -442,6 +442,10 @@ form label
         text-transform: uppercase
         color: #FFFFFF
 
+.project
+    &__popup-content
+        display: none
+
 
 .start-work
     padding: 0 15px
@@ -641,8 +645,8 @@ form label
     height: 100%
     object-fit: cover
 
-.news__open-popup 
-    cursor: pointer
+// .news__open-popup 
+//     cursor: pointer
 
 .news__title-one-news
     font-family: $text-font
@@ -682,6 +686,29 @@ form label
         background: white
         top: 50%
         right: -74px
+
+.news__all-news-page
+    display: flex
+    justify-content: flex-end
+    &--link
+        position: relative
+        width: 138px
+        color: white
+        font-family: $title-font
+        font-size: 16px
+        text-decoration: none
+        text-transform: uppercase
+        transition: 0.3s linear
+        &::before
+            content: ""
+            position: absolute
+            width: 64px
+            height: 1px
+            background: #fff
+            top: 50%
+            right: 0
+        &:hover
+            opacity: 0.5
 
 .contacts
     padding-bottom: 200px
