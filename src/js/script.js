@@ -131,10 +131,10 @@ $(document).ready(() => {
 		prevArrow: $(".projects__back-btn"),
 	});
 
-	for (let i = 0; i < $(".projects__main_wrapper").length; i++) {
-		$($(".projects__main_wrapper")[i]).attr("data-index", i + 1);
-		$($(".projects__navigation-item-link")[i]).attr("data-index", i + 1);
-	}
+	// for (let i = 0; i < $(".projects__main_wrapper").length; i++) {
+	// 	$($(".projects__main_wrapper")[i]).attr("data-index", i + 1);
+	// 	$($(".projects__navigation-item-link")[i]).attr("data-index", i + 1);
+	// }
 
 	$(".projects__navigation-item-link").click(function (event) {
 		let $dataIndex = $(this).attr("data-index");
@@ -318,45 +318,49 @@ $(document).ready(() => {
 		}
 	});
 
-	$(".projects__more-details-link").click(function (event) {
-		$(".projects-popup").addClass("open");
-		$(".projects-popup__wrapper").addClass("active");
-		$("body").addClass("overflow");
-		let $this = $(this);
-		let $parent = $this.parents(".projects__main-description");
-		let $content = $parent.find(".project__popup-content").html();
-		let $projectsPopup = $(".projects-popup__wrapper");
-		$projectsPopup.find(".projects-popup__main").remove();
-		$projectsPopup.prepend($content);
-		$projectsPopup.find(".close-button").on("click", function () {
-			$(".projects-popup").removeClass("open");
-			$(".projects-popup__wrapper").removeClass("active");
-			$("body").removeClass("overflow");
-		});
-		$projectsPopup.find(".lightgallery").attr("id", "lightgallery");
-		$projectsPopup
-			.find(".projects-popup__photo-column")
-			.attr("id", "projects-popup__photo-column");
-		$("#lightgallery").lightGallery({
-			hideBarsDelay: 600000,
-			thumbnail: false,
-			pager: true,
-			download: false,
-			nextHtml: '<span class="projects-popup__next-button">ВПЕРЕД</span>',
-			prevHtml: '<span class="projects-popup__prev-button">НАЗАД</span>',
-		});
-		function simpleBar() {
-			let simpleBarElement = $("#projects-popup__photo-column");
-			if (simpleBarElement.length) {
-				new SimpleBar(simpleBarElement[0], {
-					autoHide: false,
-					scrollbarMaxSize: 50,
-				});
-			}
-		}
-		simpleBar();
-		event.preventDefault();
-	});
+	// project__popup start
+
+	// $(".projects__more-details-link").click(function (event) {
+	// 	$(".projects-popup").addClass("open");
+	// 	$(".projects-popup__wrapper").addClass("active");
+	// 	$("body").addClass("overflow");
+	// 	let $this = $(this);
+	// 	let $parent = $this.parents(".projects__main-description");
+	// 	let $content = $parent.find(".project__popup-content").html();
+	// 	let $projectsPopup = $(".projects-popup__wrapper");
+	// 	$projectsPopup.find(".projects-popup__main").remove();
+	// 	$projectsPopup.prepend($content);
+	// 	$projectsPopup.find(".close-button").on("click", function () {
+	// 		$(".projects-popup").removeClass("open");
+	// 		$(".projects-popup__wrapper").removeClass("active");
+	// 		$("body").removeClass("overflow");
+	// 	});
+	// 	$projectsPopup.find(".lightgallery").attr("id", "lightgallery");
+	// 	$projectsPopup
+	// 		.find(".projects-popup__photo-column")
+	// 		.attr("id", "projects-popup__photo-column");
+	// 	$("#lightgallery").lightGallery({
+	// 		hideBarsDelay: 600000,
+	// 		thumbnail: false,
+	// 		pager: true,
+	// 		download: false,
+	// 		nextHtml: '<span class="projects-popup__next-button">ВПЕРЕД</span>',
+	// 		prevHtml: '<span class="projects-popup__prev-button">НАЗАД</span>',
+	// 	});
+	// 	function simpleBar() {
+	// 		let simpleBarElement = $("#projects-popup__photo-column");
+	// 		if (simpleBarElement.length) {
+	// 			new SimpleBar(simpleBarElement[0], {
+	// 				autoHide: false,
+	// 				scrollbarMaxSize: 50,
+	// 			});
+	// 		}
+	// 	}
+	// 	simpleBar();
+	// 	event.preventDefault();
+	// });
+
+	// project__popup end
 
 	// news-popup start
 
@@ -528,11 +532,11 @@ $(document).ready(() => {
 		});
 
 		const flashlightCoords = [
-				"transform: translate(-3%, 3%)",
-				"transform: translate(-15%, -6%)",
-				"transform: translate(4%, -5%)",
-				"transform: translate(-6%, 10%)",
-			],
+			"transform: translate(-3%, 3%)",
+			"transform: translate(-15%, -6%)",
+			"transform: translate(4%, -5%)",
+			"transform: translate(-6%, 10%)",
+		],
 			flashlight = $(".flashlight");
 
 		$("#services .slider").on("afterChange", function (e, slick, currentSlide) {
@@ -808,7 +812,7 @@ $(document).ready(() => {
 						lazyBackgrounds.forEach((lazyBackground) => {
 							if (
 								lazyBackground.getBoundingClientRect().top <=
-									window.innerHeight &&
+								window.innerHeight &&
 								lazyBackground.getBoundingClientRect().bottom >= 0 &&
 								getComputedStyle(lazyBackground).display !== "none"
 							) {
