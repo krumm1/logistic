@@ -166,7 +166,7 @@ $(document).ready(() => {
 		).addClass("active");
 	});
 
-	$(".news__all-news").slick({
+	$(".start-work .news__all-news").slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		infinite: true,
