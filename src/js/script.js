@@ -339,6 +339,21 @@ $(document).ready(() => {
 		}
 	});
 
+	function initProjectsLightgallery() {
+		if ($('#projects__lightgallery').length) {
+			$("#projects__lightgallery").lightGallery({
+				hideBarsDelay: 600000,
+				thumbnail: false,
+				pager: true,
+				download: false,
+				nextHtml: '<span class="projects-popup__next-button">ВПЕРЕД</span>',
+				prevHtml: '<span class="projects-popup__prev-button">НАЗАД</span>',
+			});
+		};
+	};
+
+	initProjectsLightgallery();
+
 	// project__popup start
 
 	// $(".projects__more-details-link").click(function (event) {
