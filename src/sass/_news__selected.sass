@@ -66,28 +66,34 @@
             font-size: 16px
             line-height: 35px
             text-transform: uppercase
-        &__all-news-btn
+        &__all-news
             display: flex
-            justify-content: flex-end
-            color: white
-            font-family: $title-font
-            font-size: 16px
-            line-height: 85px
-            a
-                display: inline-block
-                position: relative
-                padding-right: 75px
+            justify-content: space-between
+            flex-wrap: wrap
+            margin-left: 0
+            &-btn
+                display: flex
+                justify-content: flex-end
                 color: white
-                text-decoration: none
-                transition: 0.3s linear
-                &:before
-                    content: ""
-                    position: absolute
-                    top: 50%
-                    right: 0
-                    width: 65px
-                    height: 1px
-                    background: white
-                &:hover
-                    opacity: 0.5
+                font-family: $title-font
+                font-size: 16px
+                line-height: 85px
+                width: 100%
+                a
+                    display: inline-block
+                    position: relative
+                    padding-right: 75px
+                    color: white
+                    text-decoration: none
+                    transition: 0.3s linear
+                    &:before
+                        content: ""
+                        position: absolute
+                        top: 50%
+                        right: 0
+                        width: 65px
+                        height: 1px
+                        background: white
+                    &:hover
+                        opacity: 0.5
             
