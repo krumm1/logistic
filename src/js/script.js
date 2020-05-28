@@ -85,16 +85,13 @@ $(document).ready(() => {
 		let hours = now.getHours();
 		let minutes = now.getMinutes();
 
-		if (hours < 10)
-			hours = "0" + hours;
-		if (minutes < 10)
-			minutes = "0" + minutes;
-		time.innerHTML = hours + ':' + minutes;
+		if (hours < 10) hours = "0" + hours;
+		if (minutes < 10) minutes = "0" + minutes;
+		time.innerHTML = hours + ":" + minutes;
 		setTimeout(clockInit, 20000);
-	};
+	}
 
 	clockInit();
-
 
 	// clock init end
 
@@ -115,6 +112,7 @@ $(document).ready(() => {
 		personalPopup.addClass("personal-popup--active");
 		personalPopup.find(".popup-call__wrapper").addClass("active");
 		$(".content").addClass("active");
+		$("body").addClass("overflow");
 	});
 
 	$(".personal-popup__button").on("click", function () {
@@ -340,7 +338,7 @@ $(document).ready(() => {
 	});
 
 	function initProjectsLightgallery() {
-		if ($('#projects__lightgallery').length) {
+		if ($("#projects__lightgallery").length) {
 			$("#projects__lightgallery").lightGallery({
 				hideBarsDelay: 600000,
 				thumbnail: false,
@@ -349,8 +347,8 @@ $(document).ready(() => {
 				nextHtml: '<span class="projects-popup__next-button">ВПЕРЕД</span>',
 				prevHtml: '<span class="projects-popup__prev-button">НАЗАД</span>',
 			});
-		};
-	};
+		}
+	}
 
 	initProjectsLightgallery();
 
@@ -568,11 +566,11 @@ $(document).ready(() => {
 		});
 
 		const flashlightCoords = [
-			"transform: translate(-3%, 3%)",
-			"transform: translate(-15%, -6%)",
-			"transform: translate(4%, -5%)",
-			"transform: translate(-6%, 10%)",
-		],
+				"transform: translate(-3%, 3%)",
+				"transform: translate(-15%, -6%)",
+				"transform: translate(4%, -5%)",
+				"transform: translate(-6%, 10%)",
+			],
 			flashlight = $(".flashlight");
 
 		$("#services .slider").on("afterChange", function (e, slick, currentSlide) {
@@ -848,7 +846,7 @@ $(document).ready(() => {
 						lazyBackgrounds.forEach((lazyBackground) => {
 							if (
 								lazyBackground.getBoundingClientRect().top <=
-								window.innerHeight &&
+									window.innerHeight &&
 								lazyBackground.getBoundingClientRect().bottom >= 0 &&
 								getComputedStyle(lazyBackground).display !== "none"
 							) {
