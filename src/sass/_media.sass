@@ -20,6 +20,14 @@
 @media screen and (max-width: 1499px)
     .lg-actions
         left: 65%
+    .header
+        &__login
+            span
+                display: none
+    .menu
+        &__nav
+            &-item
+                padding: 0 15px  
 
 @media screen and (max-width: 1399px)
     .menu__logo
@@ -45,8 +53,14 @@
 @media screen and (max-width: 1299px)
     .menu__nav-list
     .menu__nav-item
-        padding: 0 15px
-
+        padding: 0 10px
+    
+    .menu__email-link, .menu__phone-link
+        font-size: 16px
+    .menu__phone-block
+        margin-bottom: 10px
+    .menu__back-call-link
+        font-size: 14px
     .news-popup
         &__wrapper
             align-items: flex-start
@@ -61,6 +75,7 @@
 @media screen and (max-width: 1199px)    
     .menu__burger-block
         display: block
+        align-self: center
     .menu__nav-section
         opacity: 0
         position: fixed
@@ -76,8 +91,21 @@
             left: 0
             opacity: 1
             z-index: 2
-    .menu__tablet-logo-block, .menu__tablet-close-button
+    .menu__tablet-logo-block, .menu__tablet-close-button, .menu__tablet-lang
         display: block
+    .menu__tablet-lang
+        text-align: center
+        font-size: 16px
+        text-transform: uppercase
+        margin-top: 50px
+        *
+            display: inline-block
+            margin: 0 10px
+        span
+            color: rgba($gray-color, .5)
+        a
+            text-decoration: none
+            color: $gray-color
     .menu__tablet-footer
         display: flex
         flex-direction: column
@@ -101,7 +129,7 @@
         right: 25px
     .menu__nav-list
         flex-direction: column
-        margin-top: 85px
+        margin-top: 20px
     .menu__nav-item
         margin: 15px 0
     .menu__nav-link
@@ -144,6 +172,17 @@
             display: none
     
 @media screen and (max-width: 991px)
+    .header
+        &__login
+            margin-right: 10px
+    .menu
+        &__contacts-block
+            display: none
+        &__date-currency
+            justify-content: space-around
+            > div:first-child
+                position: static
+
     .start-work__title
         font-size: 84px
 
@@ -379,9 +418,21 @@
         padding-right: 30px
 
 @media screen and (max-width: 575px)
-    header .menu-wrapper
-        padding-right: 15px
-        padding-left: 15px
+    header 
+        &__login
+            &::before
+                width: 21px
+                margin: 0
+        .menu-wrapper
+            padding-right: 15px
+            padding-left: 15px
+
+    .menu
+        &__logo
+            width: 100px
+            padding-right: 10px
+        &__date-currency
+            font-size: 14px
 
     .section__title
         font-size: 50px

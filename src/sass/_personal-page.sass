@@ -169,3 +169,37 @@
             background: url('../img/icons/download.svg') center no-repeat
             background-size: cover
 
+@media (max-width: 1199px)
+    .personal-page
+        &__input
+            flex-basis: 425px
+            flex-shrink: 0
+
+@media (max-width: 991px)
+    .personal-page
+        &__table 
+            margin-bottom: 20px
+        &__form
+            margin-top: 20px
+        &__box
+            display: none
+@media (max-width: 767px)
+    .personal-page
+        &-cargo
+            &__tooltip
+                left: 50%
+                top: 100%
+                transform: translate(-50%, 0)
+        &__descr
+            display: none
+        &__input
+            flex-basis: 100%
+@media (max-width: 575px)
+    .personal-page
+        &-cargo
+            &__footer
+                flex-direction: column
+                align-items: center
+            &__tooltip
+                &-wrapper
+                    margin-top: 20px
