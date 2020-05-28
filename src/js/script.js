@@ -566,11 +566,11 @@ $(document).ready(() => {
 		});
 
 		const flashlightCoords = [
-				"transform: translate(-3%, 3%)",
-				"transform: translate(-15%, -6%)",
-				"transform: translate(4%, -5%)",
-				"transform: translate(-6%, 10%)",
-			],
+			"transform: translate(-3%, 3%)",
+			"transform: translate(-15%, -6%)",
+			"transform: translate(4%, -5%)",
+			"transform: translate(-6%, 10%)",
+		],
 			flashlight = $(".flashlight");
 
 		$("#services .slider").on("afterChange", function (e, slick, currentSlide) {
@@ -846,7 +846,7 @@ $(document).ready(() => {
 						lazyBackgrounds.forEach((lazyBackground) => {
 							if (
 								lazyBackground.getBoundingClientRect().top <=
-									window.innerHeight &&
+								window.innerHeight &&
 								lazyBackground.getBoundingClientRect().bottom >= 0 &&
 								getComputedStyle(lazyBackground).display !== "none"
 							) {
@@ -921,7 +921,7 @@ function initMainSlider() {
 	if ($video.length > 0) {
 		$slides[i].classList.add("active");
 		playVideoAndSetPaginationWidth();
-		// playVideo();
+		playVideo();
 	}
 
 	appendNumberstoSliderPagination($pagination, $video.length);
