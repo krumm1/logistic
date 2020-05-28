@@ -99,4 +99,28 @@
                         background: white
                     &:hover
                         opacity: 0.5
+
+@media screen and ( max-width: 991px)
+    .news.selected  
+        .news
+            &__selected-image
+                height: 250px
+            &__one-news-block
+                width: 279px
+
+@media screen and ( max-width: 767px)
+    .news.selected  
+        .news
+            &__selected
+                flex-direction: column
+                &-image
+                    width: 400px
+                    height: 400px
+                    margin-bottom: 30px
+                &-content
+                    width: auto
+            &__one-news-block
+                width: 400px
+            &__news-image-block
+                height: 400px
             
