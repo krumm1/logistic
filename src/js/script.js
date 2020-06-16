@@ -1176,5 +1176,15 @@ function initMainSlider() {
 
 	changeClassActive();
 
-	$('.menu-footer__list-item a').on('click', changeClassActive());
+	$('.menu-footer__list-item a').on('click', function () {
+		setTimeout(function () {
+			let hash = document.location.hash;
+			let page = document.location.pathname;
+			console.log(page);
+			if (page === "/about-us/" && (hash === "#advantages" || hash === "#working-conditions" || hash === "#partners" || hash === "#documents")) {
+				$(hash).trigger('click');
+				$(window).trigger('scroll');
+			}
+		}, 10)
+	});
 }
