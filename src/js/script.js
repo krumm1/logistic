@@ -1168,8 +1168,9 @@ function initMainSlider() {
 		let hash = document.location.hash;
 		let page = document.location.pathname;
 		console.log(page);
-		if (page === "/about-us/" && (hash === "#advantages" || hash === "#working-conditions" || hash === "#partnerss" || hash === "#documents")) {
+		if (page === "/about-us/" && (hash === "#advantages" || hash === "#working-conditions" || hash === "#partners" || hash === "#documents")) {
 			$(hash).trigger('click');
+			$(window).trigger('scroll');
 		}
 	}
 
