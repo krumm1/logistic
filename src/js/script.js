@@ -1176,5 +1176,5 @@ function initMainSlider() {
 
 	changeClassActive();
 
-	$('.menu-footer__list-item a').cick(changeClassActive());
+	$('.menu-footer__list-item a').on('click', changeClassActive());
 }
