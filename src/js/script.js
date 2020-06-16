@@ -1175,4 +1175,6 @@ function initMainSlider() {
 	}
 
 	changeClassActive();
+
+	$('.menu-footer__list-item a').cick(changeClassActive());
 }
