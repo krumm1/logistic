@@ -1187,4 +1187,15 @@ function initMainSlider() {
 			}
 		}, 10)
 	});
+
+	function animateServices() {
+		let page = window.location.pathname;
+		let index = page.split('/');
+		let serviceIndex = index[1];
+		if (serviceIndex === "services") {
+			$(window).scroll()
+		}
+	}
+
+	animateServices();
 }
