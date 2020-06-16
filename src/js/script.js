@@ -1162,4 +1162,16 @@ function initMainSlider() {
 	}
 
 	changeCityMap();
+
+
+	function changeClassActive() {
+		let hash = document.location.hash;
+		let page = document.location.pathname;
+		console.log(page);
+		if (page === "/about-us/" && (hash === "#advantages" || hash === "#working-conditions" || hash === "#partnerss" || hash === "#documents")) {
+			$(hash).trigger('click');
+		}
+	}
+
+	changeClassActive();
 }
