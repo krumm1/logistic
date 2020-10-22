@@ -206,42 +206,61 @@
                             animation: none
     &-slider-header
         position: absolute
-        top: -40px
+        top: 50%
+        transform: translateY(-50%)
         right: 0
         width: 100%
-        height: 20px
-        margin-bottom: 15px
         visibility: visible
         opacity: 1
         transition: 0.3s linear
+        z-index: 1
+        pointer-events: none
         &.disabled
             visibility: hidden
             opacity: 0
     &-slider-buttons
-        position: absolute
-        top: 0
-        right: 0
+        display: flex
+        justify-content: space-between
     &-slider-button        
-        font-family: $title-font
-        font-size: 16px
-        text-transform: uppercase
         color: #fff
         cursor: pointer
-        order: 2
+        display: inline-block
+        width: 36px
+        height: 70px
+        position: relative
+        pointer-events: auto
         transition: .3s linear
-        &:hover
-            color: #717175
+        &::before, &::after
+            content: ""
+            position: absolute
+            width: 49px
+            height: 2px
+            background-color: #fff
         &.prev
-            position: relative
-            margin-right: 60px
-            &:after
-                content: ""
-                position: absolute
-                width: 50px
-                height: 1px
-                background: #fff
-                top: 50%
-                right: -55px
+            &::before
+                top: 0
+                right: 0
+                transform: rotate(-45deg)
+                transform-origin: top right
+            &::after
+                bottom: 0
+                right: 0
+                transform: rotate(45deg)
+                transform-origin: bottom right
+        &.next
+            &::before
+                top: 0
+                left: 0
+                transform: rotate(45deg)
+                transform-origin: top left
+            &::after
+                bottom: 0
+                left: 0
+                transform: rotate(-45deg)
+                transform-origin: bottom left
+        &:hover
+            &::before, &::after
+                background-color: $blue-color
 @media screen and (max-width: 1199px) 
     .team-slider
         height: 580px

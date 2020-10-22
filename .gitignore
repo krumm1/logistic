@@ -4,3 +4,4 @@ dist
 video
 .vscode
 src/css/tyle.min.css
+debug.log

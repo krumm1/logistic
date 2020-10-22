@@ -44,7 +44,27 @@
             line-height: 25px
             font-style: normal      
         &__callback
-            display: none      
+            display: none    
+        &__download
+            color: #ffffff
+            text-decoration: none
+            white-space: nowrap
+            align-self: flex-end
+            margin-top: 48px
+            span
+                &:first-of-type
+                    font-family: $title-font
+                    font-size: 16px
+                    line-height: 19px
+                    text-transform: uppercase
+                    margin-right: 15px
+                &:last-of-type
+                    font-size: 20px
+                    line-height: 30px
+            img
+                width: 33px
+                height: 25px
+                margin-right: 10px  
     &__bottom
         display: flex
         align-items: flex-end
