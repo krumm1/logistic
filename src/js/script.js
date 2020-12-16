@@ -876,6 +876,59 @@ $(document).ready(() => {
 			document.addEventListener("orientationchange", lazyLoadPolyfill);
 		}
 	}
+
+	// instagram
+	$.instagramFeed({
+		'username': 'vlogistic.ru',
+		'callback': function (data) {
+			const instaData = data.edge_owner_to_timeline_media.edges;
+			const container = $('#inst-container');
+			let html = '';
+
+			instaData.forEach(post => {
+				const postData = {
+					img: post.node.thumbnail_src,
+					likesCount: post.node.edge_liked_by.count,
+					commentsCount: post.node.edge_media_to_comment.count,
+					text: post.node.edge_media_to_caption.edges[0].node.text,
+					url: `https://instagram.com/p/${post.node.shortcode}/`
+				};
+
+				html += `<a href="${postData.url}" class="inst__item" target="_blank">
+					<img class="inst__img" src="${postData.img}" alt="">
+					<div class="inst__content">
+						<div class="top">
+							<span>${postData.likesCount}</span>
+							<span>${postData.commentsCount}</span>
+						</div>
+						<div class="bottom">${postData.text}</div>
+					</div>
+				</a>`;
+			});
+			container.html(html);
+			container.slick({
+				slidesToShow: 3,
+				arrows: false,
+				infinite: false,
+				swipeToSlide: true,
+				responsive: [
+					{
+						breakpoint: 992,
+						settings: {
+							slidesToShow: 2
+						}
+					},
+					{
+						breakpoint: 475,
+						settings: {
+							slidesToShow: 1
+						}
+					}
+				]
+			});
+			// console.log(JSON.stringify(data, null, 2))
+		}
+	});
 });
 
 function addZeroToNumber(number) {
