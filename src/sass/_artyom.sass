@@ -19,7 +19,7 @@ body
 .lazy-inline-bg
     background: none !important
 
-form label 
+form label
     position: relative
 
 @import 'popups'
@@ -35,12 +35,11 @@ form label
     transition: 0.3s ease
     animation-delay: 0.5s
     font-family: $title-font
-	
+
     &.closed
         opacity: 0
         visibility: hidden
- 
- 
+
 .contpre
     display: flex
     flex-direction: column
@@ -65,8 +64,8 @@ form label
     &_big
         animation: preloader-animation 2.5s ease infinite
         animation-delay: 1.75s
- 
-#p_prldr .svg_anm 
+
+#p_prldr .svg_anm
     width: 139px
     transition: 0.3s ease
     margin-bottom: 30px
@@ -74,7 +73,7 @@ form label
     &.closed
         opacity: 0
         visibility: hidden
-    img 
+    img
         width: 100%
 
 .content
@@ -138,7 +137,7 @@ form label
         > div:first-child
             position: absolute
             top: 0
-.menu__first-section    
+.menu__first-section
     display: flex
     justify-content: space-between
     align-items: center
@@ -265,7 +264,7 @@ form label
             background: white
             opacity: 0.5
     &__navigation-item
-        position: 
+        position:
         z-index: 1
         max-width: 250px
         font-family: $text-font
@@ -274,7 +273,7 @@ form label
         line-height: 30px
         text-transform: uppercase
         color: #FFFFFF
-        &.active .projects__navigation-btn            
+        &.active .projects__navigation-btn
             background: white
         &.active .projects__navigation-text-block
             opacity: 1
@@ -390,7 +389,7 @@ form label
         display: none
         justify-content: center
         align-items: center
-		
+
         &-wrapper
             display: flex
             justify-content: center
@@ -439,7 +438,7 @@ form label
         border-radius: 50%
         border: 1px solid white
         transition: 0.3s linear
-        &:hover            
+        &:hover
             background: white
     &__slider-title
         font-family: $text-font
@@ -451,7 +450,6 @@ form label
 .project
     &__popup-content
         display: none
-
 
 .start-work
     padding: 0 15px
@@ -492,7 +490,7 @@ form label
         &:hover
             color: $orange-color
             &::before
-                background-color: transparent    
+                background-color: transparent
     &__button-text
         transform: translate3d(0, 0, 0)
         backface-visibility: hidden
@@ -749,6 +747,10 @@ form label
     text-decoration: none
     color: white
     text-transform: uppercase
+    a
+        text-decoration: inherit
+        color: inherit
+        text-transform: inherit
 
 .contacts__form-section
     position: relative
@@ -821,14 +823,12 @@ form label
     color: transparent
     transition: 0.3s linear
 
-
 .form__input-text:-moz-placeholder
     color: #FFFFFF
     transition: 0.3s linear
 .form__input-text:focus:-moz-placeholder
     color: transparent
     transition: 0.3s linear
-
 
 .form__input-text:-ms-input-placeholder
     color: #FFFFFF
