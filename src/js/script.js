@@ -638,6 +638,16 @@ $(document).ready(() => {
 
 	function initReviewsSlider() {
 		let $slider = $(".reviews-slider");
+		let isOpened = false;
+		$slider.on('click', '.reviews-slider-item__more', function () {
+			$(this).closest('.reviews-slider-item').toggleClass('expanded');
+			isOpened = !isOpened;
+			if (isOpened) {
+				$(this).find('.projects__more-details-link').text('Свернуть');
+			} else {
+				$(this).find('.projects__more-details-link').text('Подробнее');
+			}
+		})
 		$slider.slick({
 			arrows: true,
 			prevArrow: $slider.closest(".reviews-slider-container").find(".prev"),
@@ -647,6 +657,15 @@ $(document).ready(() => {
 			slidesToScroll: 1,
 			variableWidth: true,
 			focusOnSelect: true,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						variableWidth: false,
+						centerMode: false,
+					}
+				}
+			]
 		});
 	}
 
@@ -1030,91 +1049,91 @@ function initMainSlider() {
 	});
 
 	/*document.querySelectorAll('.video-js').forEach( (item) => {
-        videojs(item, {
-            controls: false,
-            autoplay: false,
-            preload: 'auto',
-            readyState: 4,
-            muted: true,
-            // videoWidth: 1920,
-            // videoHeight: 1080
-        });
-    });
+		videojs(item, {
+			controls: false,
+			autoplay: false,
+			preload: 'auto',
+			readyState: 4,
+			muted: true,
+			// videoWidth: 1920,
+			// videoHeight: 1080
+		});
+	});
 
-    let $slider = $('.main-slider'),
-        $parent = $slider.closest('.main-slider-container'),
-        $pagination = $parent.find('.main-slider-footer');
+	let $slider = $('.main-slider'),
+		$parent = $slider.closest('.main-slider-container'),
+		$pagination = $parent.find('.main-slider-footer');
 
-    $slider.on('init', function (e, slick) {
-        appendNumberstoSliderPagination($pagination, slick);
-    })
+	$slider.on('init', function (e, slick) {
+		appendNumberstoSliderPagination($pagination, slick);
+	})
 
-    $slider.on('init reinit afterChange', function (event, slick, currentSlide = 0) {
-        let $slide = $slider.find('.slick-current'),
-            $video = $slide.find('video').get(0),
-            duration = 0;
-        if ($video) {
-            duration = $video.duration;
-            // $($video).on('canplaythrough', function () {
-            //     $video.play();
-            // });
-            if ($video.readyState > 3) {
-                $video.play();
-              };
+	$slider.on('init reinit afterChange', function (event, slick, currentSlide = 0) {
+		let $slide = $slider.find('.slick-current'),
+			$video = $slide.find('video').get(0),
+			duration = 0;
+		if ($video) {
+			duration = $video.duration;
+			// $($video).on('canplaythrough', function () {
+			//     $video.play();
+			// });
+			if ($video.readyState > 3) {
+				$video.play();
+			  };
 
-            $($video).on('timeupdate', function () {
-                let currentPagination = $('.main-slider-pagination-item div').get(currentSlide);
-                $(currentPagination).css('width', $video.currentTime / duration * 100 + '%');
-            });
-        }
-    });
-    $slider.on('beforeChange', function (event, slick) {
-        let $slide = $slider.find('.slick-current'),
-            $video = $slide.find('video').get(0);
+			$($video).on('timeupdate', function () {
+				let currentPagination = $('.main-slider-pagination-item div').get(currentSlide);
+				$(currentPagination).css('width', $video.currentTime / duration * 100 + '%');
+			});
+		}
+	});
+	$slider.on('beforeChange', function (event, slick) {
+		let $slide = $slider.find('.slick-current'),
+			$video = $slide.find('video').get(0);
 
-        if ($video) {
-            $video.pause();
-            $video.currentTime = 0;
-        }
-    })
+		if ($video) {
+			$video.pause();
+			$video.currentTime = 0;
+		}
+	})
 
-    $slider.slick({
-        speed: 850,
-        dots: true,
-        fade: true,
-        lazyLoad: "progressive",
-        swipe: false,
-        dotsClass: 'slider-pagination-list',
-        appendDots: $pagination.find('.main-slider-pagination'),
-        customPaging: function (slick, index) {
-            return '<div class="main-slider-pagination-item"><div></div></div>'
-        },
-        arrows: false,
-        responsive: [
-            {
-                breakpoint: 1199,
-                settings: {
-                    swipe: true
-                }
-            }
-        ]
-    });
-    $slider.find('video').each(function (index, item) {
-        $(item).on('ended', function () {
-            // $slider.slick('slickNext');
-            $pagination.find('.next').trigger('click');
-        })
-    })
-    $pagination.on('click', '.main-slider-button', function () {
-        let $this = $(this);
-        setTimeout(function () {
-            if ($this.hasClass('prev')) {
-                $slider.slick('slickPrev');
-            }
-            if ($this.hasClass('next')) {
-                $slider.slick('slickNext');
-            }
-        }, 0)
+	$slider.slick({
+		speed: 850,
+		dots: true,
+		fade: true,
+		lazyLoad: "progressive",
+		swipe: false,
+		dotsClass: 'slider-pagination-list',
+		appendDots: $pagination.find('.main-slider-pagination'),
+		customPaging: function (slick, index) {
+			return '<div class="main-slider-pagination-item"><div></div></div>'
+		},
+		arrows: false,
+		responsive: [
+			{
+				breakpoint: 1199,
+				settings: {
+					swipe: true
+				}
+			}
+		]
+	});
+	$slider.find('video').each(function (index, item) {
+		$(item).on('ended', function () {
+			// $slider.slick('slickNext');
+			$pagination.find('.next').trigger('click');
+		})
+	})
+	$pagination.on('click', '.main-slider-button', function () {
+		let $this = $(this);
+		setTimeout(function () {
+			if ($this.hasClass('prev')) {
+				$slider.slick('slickPrev');
+			}
+			if ($this.hasClass('next')) {
+				$slider.slick('slickNext');
+			}
+		}, 0)
 	})*/
 	function deleteMap() {
 		map.remove();

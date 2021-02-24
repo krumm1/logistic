@@ -58,6 +58,8 @@
                 &-description-bottom
                     line-height: 30px
                     text-transform: uppercase
+            &__more
+                display: none
             &__photo-block
                 margin: 0 30px 0 0
                 width: 160px
@@ -77,17 +79,17 @@
                 line-height: 30px
                 opacity: 0.5
         .slick-track, .slick-list
-            min-height: auto    
+            min-height: auto
         .slick-track
-            display: flex 
+            display: flex
         &-buttons
             color: #fff
             font-size: 16px
             font-family: $title-font
-            text-transform: uppercase  
+            text-transform: uppercase
             display: flex
             justify-content: flex-end
-            align-items: center 
+            align-items: center
             position: absolute
             top: -40px
             right: 0
@@ -98,7 +100,7 @@
                 width: 50px
                 height: 1px
                 background-color: #fff
-                display: block 
+                display: block
                 order: 1
                 margin: 0 4px
         &-button
@@ -108,7 +110,7 @@
             &.prev
                 order: 0
             &.next
-                order: 2          
+                order: 2
     &-content
         font-size: 20px
         line-height: 30px
@@ -121,8 +123,8 @@
         &-slider
             &-item
                 width: 600px
-                padding: 80px 30px  
-                margin: 0 10px     
+                padding: 80px 30px
+                margin: 0 10px
                 &__header
                     flex-direction: column
                     &-description-top
@@ -149,15 +151,38 @@
         &-slider
             &-item
                 width: 220px
-                padding: 100px 20px 15px
+                padding: 105px 60px 80px
+                max-height: 300px
+                overflow: hidden
+                &::after
+                    content: ""
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    width: 100%
+                    height: 105px
+                    background: linear-gradient(0deg, #161850 50%, rgba(22, 24, 80, 0) 90.57%)
+                &.expanded
+                    max-height: none
+                    overflow: auto
+                &__more
+                    display: inline-block
+                    font-size: 14px
+                    position: absolute
+                    bottom: 20px
+                    left: 10px
+                    z-index: 1
+                    &:hover *
+                        opacity: 1
                 &__quotes-image
-                    width: 90px         
-                    left: 25px
+                    width: 90px
+                    left: 60px
                 &__header
+                    display: none
                     &-description-category
                         font-size: 16px
                         flex-direction: column
-                    &-description-route   
+                    &-description-route
                         font-size: 16px
                         flex-direction: column
                 &__photo-block
@@ -171,14 +196,17 @@
                     left: 20px
                     bottom: 20px
                     font-size: 14px
+                    display: none
             &-container
                 position: relative
                 padding-bottom: 50px
             &-buttons
-                position: absolute  
+                position: absolute
                 bottom: 0
                 left: 50%
-                transform: translateX(-50%)       
+                transform: translateX(-50%)
         &-content
-            margin-bottom: 40px
+            margin-bottom: 0
             font-size: 16px
+            p:first-child
+                margin-top: 0
