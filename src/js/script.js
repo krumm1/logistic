@@ -1270,4 +1270,8 @@ function initMainSlider() {
 	}
 
 	animateServices();
+
+	$('.close-infobanner').on('click', function () {
+		$('.infobanner').fadeOut();
+	})
 }
