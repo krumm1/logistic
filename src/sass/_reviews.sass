@@ -6,18 +6,33 @@
             font-family: $text-font
             font-weight: 300
             color: #fff
-            min-height: 477px
-            height: auto
-            width: 690px
-            padding: 65px 30px 30px 30px
+            overflow: hidden
+            max-height: 450px
+            width: 450px
+            padding: 50px 20px 40px 35px
             background-color: rgba($dark-blue-color, .4)
             margin: 0 15px
             position: relative
             opacity: .4
+            &::after
+                content: ""
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 105px
+                background: linear-gradient(0deg, #161850 50%, rgba(22, 24, 80, 0) 90.57%)
+            &.expanded
+                max-height: none
+                overflow: auto
+                &::after
+                    display: none
             &__quotes-image
                 position: absolute
-                top: 18px
-                left: 30px
+                top: 16px
+                left: 16px
+                width: 100px
+                height: 70px
                 z-index: 0
             &.slick-current
                 color: #fff
@@ -26,7 +41,6 @@
                 position: relative
                 display: flex
                 justify-content: flex-start
-                padding-left: 30px
                 &-description
                     display: flex
                     flex-direction: column
@@ -59,11 +73,18 @@
                     line-height: 30px
                     text-transform: uppercase
             &__more
-                display: none
+                display: inline-block
+                font-size: 14px
+                position: absolute
+                bottom: 20px
+                left: 10px
+                z-index: 1
+                &:hover *
+                    opacity: 1
             &__photo-block
-                margin: 0 30px 0 0
-                width: 160px
-                height: 160px
+                margin: 0 45px 0 0
+                width: 94px
+                height: 94px
             &__photo
                 height: 100%
                 object-fit: cover
@@ -72,9 +93,6 @@
             &__position
                 font-size: 16px
             &__date
-                position: absolute
-                bottom: 30px
-                left: 30px
                 font-size: 16px
                 line-height: 30px
                 opacity: 0.5
@@ -114,38 +132,30 @@
     &-content
         font-size: 20px
         line-height: 30px
-        margin-bottom: 70px
     &-name
         font-size: 20px
         text-transform: uppercase
-@media screen and (max-width: 1199px)
-    .reviews
-        &-slider
-            &-item
-                width: 600px
-                padding: 80px 30px
-                margin: 0 10px
-                &__header
-                    flex-direction: column
-                    &-description-top
-                        margin-bottom: 20px
-                &__photo-block
-                    margin-bottom: 10px
 
 @media screen and (max-width: 991px)
     .reviews
         &-slider
             &-item
-                width: 450px
-                padding: 18px 20px
-                min-height: 380px
-                margin: 0 4px
+                width: 360px
+                max-height: 320px
+                padding: 80px 20px
                 &__quotes-image
-                    left: auto
-                    right: 30px
+                    width: 90px
+                    left: 60px
                 &__header
-                    padding: 0
-
+                    display: none
+                    &-description-top
+                        display: none
+                    &-description-category
+                        font-size: 16px
+                        flex-direction: column
+                    &-description-route
+                        font-size: 16px
+                        flex-direction: column
 @media screen and (max-width: 767px)
     .reviews
         &-slider
@@ -153,38 +163,6 @@
                 width: 220px
                 padding: 105px 60px 80px
                 max-height: 300px
-                overflow: hidden
-                &::after
-                    content: ""
-                    position: absolute
-                    bottom: 0
-                    left: 0
-                    width: 100%
-                    height: 105px
-                    background: linear-gradient(0deg, #161850 50%, rgba(22, 24, 80, 0) 90.57%)
-                &.expanded
-                    max-height: none
-                    overflow: auto
-                &__more
-                    display: inline-block
-                    font-size: 14px
-                    position: absolute
-                    bottom: 20px
-                    left: 10px
-                    z-index: 1
-                    &:hover *
-                        opacity: 1
-                &__quotes-image
-                    width: 90px
-                    left: 60px
-                &__header
-                    display: none
-                    &-description-category
-                        font-size: 16px
-                        flex-direction: column
-                    &-description-route
-                        font-size: 16px
-                        flex-direction: column
                 &__photo-block
                     width: 100px
                     height: 100px
