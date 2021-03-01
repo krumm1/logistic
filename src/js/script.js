@@ -523,12 +523,13 @@ $(document).ready(() => {
 		let $slider = $(".reviews-slider");
 		let isOpened = false;
 		$slider.on('click', '.reviews-slider-item__more', function () {
-			$(this).closest('.reviews-slider-item').toggleClass('expanded');
+			let $this = $(this);
+			$this.closest('.reviews-slider-item').toggleClass('expanded');
 			isOpened = !isOpened;
 			if (isOpened) {
-				$(this).find('.projects__more-details-link').text('Свернуть');
+				$this.find('.projects__more-details-link').text($this.data('hide'));
 			} else {
-				$(this).find('.projects__more-details-link').text('Подробнее');
+				$this.find('.projects__more-details-link').text($this.data('show'));
 			}
 		})
 		$slider.slick({
