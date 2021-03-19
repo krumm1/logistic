@@ -124,7 +124,7 @@ $(document).ready(() => {
 		let $this = $(this);
 		$.ajax({
 			type: "post",
-			url: "mail.php",
+			url: "/mail.php",
 			data: $this.serialize(),
 			success: () => {
 				$(".content").addClass("active");
@@ -783,6 +783,7 @@ $(document).ready(() => {
 	// instagram
 	$.instagramFeed({
 		'username': 'vlogistic.ru',
+		'host': 'https://images' + ~~(Math.random() * 3333) + '-focus-opensocial.googleusercontent.com/gadgets/proxy?container=none&url=https://www.instagram.com/',
 		'callback': function (data) {
 			const instaData = data.edge_owner_to_timeline_media.edges;
 			const container = $('#inst-container');
