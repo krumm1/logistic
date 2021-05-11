@@ -1,0 +1,231 @@
+// Это стили для белого фона личного кабинета
+.personal-vl
+    &-menu
+        color: $gray-color
+        font-size: 14px
+        line-height: 30px
+        margin: 0 0 70px
+        padding: 0
+        list-style: none
+        a
+            color: inherit
+        span.active
+            color: $orange-color
+        li
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
+    &-text
+        color: $gray-color
+        font-size: 16px
+        font-family: $title-font
+        text-transform: uppercase
+    &-form
+        padding-bottom: 43px
+        &__content
+            display: flex
+            flex-wrap: wrap
+            padding: 36px 0
+            > div
+                position: relative
+                &:not(:last-child)
+                    margin-right: 30px
+        &__label
+            position: absolute
+            top: -26px
+            left: 0
+        &__input
+            height: 40px
+            font-family: $text-font
+            font-size: 14px
+            line-height: 30px
+            padding: 5px 10px
+            width: 330px
+            max-width: 100%
+            border: 1px solid #c4c4c4
+    &-box
+        padding: 30px 10px 10px
+        box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.07)
+        margin-bottom: 50px
+        position: relative
+        color: $gray-color
+        font-size: 16px
+        min-height: 379px
+    &-table
+        thead::after
+            content: ""
+            width: calc(100% - 20px)
+            height: 1px
+            background: #EEF2F7
+            position: absolute
+        th
+            font-weight: 300
+            font-size: 14px
+            text-align: left
+            padding: 7px 10px 7px 0
+        td
+            font-size: 16px
+            color: $dark-blue-color
+            padding: 20px 10px 20px 0
+            border-right: 30px solid transparent
+            a
+                color: inherit
+                text-decoration: none
+                img
+                    margin-left: 15px
+        &-title
+            font-size: 16px
+            color: $gray-color
+            line-height: 19px
+            text-transform: uppercase
+            margin-bottom: 40px
+    &-info
+        color: $gray-color
+        margin-bottom: 60px
+        font-size: 16px
+        line-height: 30px
+        display: flex
+        h1
+            font-size: 35px
+            text-transform: uppercase
+            font-weight: 400
+            margin: 0 0 12px
+        &-right
+            flex-shrink: 0
+            padding: 50px 0 0 30px
+    &-popup
+        position: fixed
+        top: 0
+        right: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0,0,0,.5)
+        display: flex
+        justify-content: center
+        align-items: center
+        visibility: hidden
+        opacity: 0
+        overflow: hidden
+        transition: .3s linear
+        z-index: 11
+        &--active
+            visibility: visible
+            opacity: 1
+        &__content
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-content: stretch
+            margin-bottom: 40px
+            input
+                width: 100%
+                margin-bottom: 28px
+            label
+                margin-bottom: 13px
+        &__checkboxes
+            margin-bottom: 40px
+        .popup-call__title
+            text-transform: uppercase
+            margin: 60px 0 10px
+    &-partner-link
+        text-transform: uppercase
+    &-control
+        border: none
+        background: none
+        font-size: 16px
+        line-height: 30px
+        color: $dark-blue-color
+        cursor: pointer
+        outline: none
+        span
+            text-decoration: underline
+        &:hover
+            color: $orange-color
+            span
+                text-decoration: none
+.dates
+    display: flex
+    align-items: center
+    &__label
+        margin-right: 10px
+        display: inline-block
+    &__input
+        width: 100%
+    &__box
+        width: 100px
+        max-width: 100px
+        display: block
+        padding: 0
+        padding-right: 26px
+        position: relative
+        &:not(:last-child)
+            margin-right: 30px
+            &::before
+                content: ""
+                width: 20px
+                height: 1px
+                background: #c4c4c4
+                position: absolute
+                top: 19px
+                right: -25px
+        &::after
+            content: ""
+            width: 15px
+            height: 15px
+            background: url('../img/icons/calendar.svg') center / cover no-repeat
+            position: absolute
+            right: 8px
+            top: 12px
+    .vl-datepicker
+        color: $gray-color
+        width: 100%
+        height: 100%
+        border: none
+        outline: none
+        font-family: $text-font
+        font-size: 14px
+        line-height: 30px
+        text-align: center
+
+@media (max-width: 1500px)
+    .dates
+        margin-top: 30px
+@media (max-width: 1200px)
+    .personal-vl
+        &-form
+            &__input
+                width: 300px
+        &-table
+            td
+                border: none
+        &-info
+            display: block
+        &-box
+            min-height: 200px
+@media (max-width: 768px)
+    .personal-vl
+        &-form
+            &__label
+                top: -22px
+            &__content
+                display: block
+                > div
+                    margin-bottom: 30px
+                    &:not(:last-child)
+                        margin-right: 0
+        &-table
+            min-width: 800px
+        &-box
+            overflow: auto
+    .dates
+        margin: 0
+@media (max-width: 576px)
+    .dates
+        display: block
+        &__label
+            margin-bottom: 10px
+        &__box
+            margin-right: 0
+            margin-bottom: 10px
+            &::before
+                display: none

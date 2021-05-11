@@ -83,6 +83,29 @@ form label
     &__inner
         position: relative
         flex: 1 0 auto
+    &--white
+        .content__inner
+            background: #fff
+        .header
+            background: $accent-color
+            padding-bottom: 0
+            .menu
+                border-bottom: none
+        .breadcrumbs
+            padding-top: 17px
+            &__item
+                color: $gray-color
+                &--last
+                    color: rgba($gray-color, .5)
+        .fixed-contacts-btns
+            &__btn-item
+                color: $gray-color
+                border-color: $gray-color
+                &.email
+                    span
+                        background-image: url('../img/icons/mail-gray.svg')
+        .footer
+            padding-top: 11px
 
 .content.active
     filter: blur(3px)

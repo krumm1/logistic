@@ -312,8 +312,64 @@ $(document).ready(() => {
 		$(".popup-call__success").fadeOut();
 		$(".vl-popup").removeClass("vl-popup--active");
 		$(".personal-popup").removeClass("personal-popup--active");
+		$('.personal-vl-popup').removeClass('personal-vl-popup--active');
 		$("body").removeClass("overflow");
 	});
+
+	$('.js-open-partner-popup').on('click', function () {
+		$('body').addClass('overflow');
+		$('.personal-vl-popup')
+			.addClass('personal-vl-popup--active')
+			.find('.popup-call__wrapper').addClass('active');
+	});
+
+	$('.personal-vl-popup').on('click', function (e) {
+		if (e.target === this) {
+			$('.close-button').trigger('click');
+		}
+	});
+
+	$('[name="partner-type"]').on('change', function () {
+		$('.personal-vl-popup__content').html(getPartnerFormHtml(this.value));
+	})
+
+	function getPartnerFormHtml(partnerType = "entity") {
+		let html = '';
+
+		if (partnerType == "entity") {
+			html = `
+			<label for="partner-name" class="personal-vl-text">Наименование организации*</label>
+            <input type="text" id="partner-name" class="personal-vl-form__input">
+
+            <label for="partner-INN" class="personal-vl-text">ИНН*</label>
+            <input type="text" id="partner-INN" class="personal-vl-form__input">
+
+            <label for="partner-KPP" class="personal-vl-text">КПП*</label>
+            <input type="text" id="partner-KPP" class="personal-vl-form__input">
+
+            <label for="partner-address" class="personal-vl-text">Юридический адрес*</label>
+            <input type="text" class="personal-vl-form__input" id="partner-address">
+
+            <label for="partner-email" class="personal-vl-text">E-mail*</label>
+            <input type="email" class="personal-vl-form__input" id="partner-email">
+			`;
+		}
+
+		if (partnerType == "individual") {
+			html = `
+			<label for="partner-name" class="personal-vl-text">ФИО*</label>
+            <input type="text" id="partner-name" class="personal-vl-form__input">
+
+			<label for="partner-email" class="personal-vl-text">E-mail*</label>
+            <input type="text" id="partner-email" class="personal-vl-form__input">
+
+			<label for="partner-phone" class="personal-vl-text">Контактный телефон*</label>
+            <input type="text" id="partner-phone" class="personal-vl-form__input">
+			`;
+		}
+
+		return html;
+	}
 
 	$(".hamburger").click(() => {
 		$(".menu__nav-section").addClass("active");
@@ -1031,7 +1087,6 @@ function initMainSlider() {
 	function changeClassActive() {
 		let hash = document.location.hash;
 		let page = document.location.pathname;
-		console.log(page);
 		if (page === "/about-us/" && (hash === "#advantages" || hash === "#working-conditions" || hash === "#partners" || hash === "#documents")) {
 			$(hash).trigger('click');
 			$(window).trigger('scroll');
@@ -1044,7 +1099,6 @@ function initMainSlider() {
 		setTimeout(function () {
 			let hash = document.location.hash;
 			let page = document.location.pathname;
-			console.log(page);
 			if (page === "/about-us/" && (hash === "#advantages" || hash === "#working-conditions" || hash === "#partners" || hash === "#documents")) {
 				$(hash).trigger('click');
 				$(window).trigger('scroll');
@@ -1065,5 +1119,7 @@ function initMainSlider() {
 
 	$('.close-infobanner').on('click', function () {
 		$('.infobanner').fadeOut();
-	})
+	});
+
+	$('.vl-datepicker').datepicker();
 }

@@ -3,10 +3,25 @@
     position: relative
     cursor: pointer
     font-size: 12px
-    input[type="checkbox"]
+    &.text-uppercase
+        text-transform: uppercase
+    &.filled
+        color: $gray-color
+        input[type="checkbox"]:checked + span,
+        input[type="checkbox"]:not(:checked) + span,
+        input[type="radio"]:checked + span,
+        input[type="radio"]:not(:checked) + span
+            &::before
+                background-color: #c4c4c4
+            &::after
+                border-color: #fff
+    input[type="checkbox"],
+    input[type="radio"]
         display: none
     input[type="checkbox"]:checked + span,
-    input[type="checkbox"]:not(:checked) + span
+    input[type="checkbox"]:not(:checked) + span,
+    input[type="radio"]:checked + span,
+    input[type="radio"]:not(:checked) + span
         display: inline-block
         position: relative
         padding-left: 22px
@@ -33,7 +48,9 @@
             border-color: #cc44cc
             transform: rotate(-45deg)
             transition: .3s ease
-    input[type="checkbox"]:not(:checked) + span::after
+    input[type="checkbox"]:not(:checked) + span::after,
+    input[type="radio"]:not(:checked) + span::after
         opacity: 0
-    input[type="checkbox"]:checked + span::after
+    input[type="checkbox"]:checked + span::after,
+    input[type="radio"]:checked + span::after
         opacity: 1
